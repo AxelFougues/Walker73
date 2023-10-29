@@ -67,12 +67,10 @@ struct Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A;
 struct Action_1_tB93AB717F9D419A1BEC832FF76E74EAA32184CC1;
 // System.Action`1<NativeBLE/BtleDevice>
 struct Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66;
+// System.Action`1<NativeBLE/ConnectedDevice>
+struct Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B;
 // System.Action`2<System.Int32,System.Int32>
 struct Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8;
-// System.Action`2<System.Int32,System.Object>
-struct Action_2_tF55503802357CB8A9E95ED4B00CEEEE6BDEC9166;
-// System.Action`2<System.Int32,NativeBLE/ConnectedDevice>
-struct Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>
 struct Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180;
 // System.Func`3<System.Int32,System.String,TMPro.TMP_FontAsset>
@@ -270,8 +268,8 @@ struct ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5;
 // UnityEngine.RectTransform/ReapplyDrivenProperties
 struct ReapplyDrivenProperties_t3482EA130A01FF7EE2EEFE37F66A5215D08CFE24;
 
+IL2CPP_EXTERN_C RuntimeClass* Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AndroidMessagePrefixU5BU5D_tBD753C7A7F37C3C2AD076F8680CDE681725DE421_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AndroidMessagePrefix_t3CE95EA9789D18BAA255F8BBF459A269931389A0_il2cpp_TypeInfo_var;
@@ -293,21 +291,26 @@ IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE9945
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Queue_t82FD2BE12D138AF4D22C801CB5044DAEC2BA66BC_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* String_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass3_0_t0082FF6AD84259EA1E8596BE9CC4E9B04FA4E56F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____279BACEE9079B3CCBFA413FF279C708A367835A2261C01605B93E903F8C743E6_0_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD;
 IL2CPP_EXTERN_C String_t* _stringLiteral01FEE5BFAE8002803A5DEDD5D81E2CC3E4C41E94;
 IL2CPP_EXTERN_C String_t* _stringLiteral0767326DBE1DD31063256737FD019DC6682353E2;
 IL2CPP_EXTERN_C String_t* _stringLiteral0BDC7CD69C22904C12A1BF08FC87BB9A0A170166;
 IL2CPP_EXTERN_C String_t* _stringLiteral0FDFE0FD4BD4F3832053407A0EFB6F11655A54C6;
+IL2CPP_EXTERN_C String_t* _stringLiteral10BB7D1FEDFD100EAF2ECD6C57A699179AAAFE00;
 IL2CPP_EXTERN_C String_t* _stringLiteral1209DA8E082EA0AB89D6752F17E2C344724C888F;
 IL2CPP_EXTERN_C String_t* _stringLiteral158F3A8EBA35F33F74D6EE2F0DE6901C6C4BB25B;
 IL2CPP_EXTERN_C String_t* _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745;
+IL2CPP_EXTERN_C String_t* _stringLiteral276565662846912BD6C311C6C7B732FC149F12D5;
 IL2CPP_EXTERN_C String_t* _stringLiteral27E1E9940D161AD7BF05452F0737F4E0A73F9A9E;
 IL2CPP_EXTERN_C String_t* _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078;
+IL2CPP_EXTERN_C String_t* _stringLiteral620BA0F93E5976480937E5E5244E0D180B242528;
 IL2CPP_EXTERN_C String_t* _stringLiteral6CAE747681C1E9CC4D79E714B44A576724D270D8;
 IL2CPP_EXTERN_C String_t* _stringLiteral7AF7AA279E48CBE88058633418F5624BDA17A6C0;
 IL2CPP_EXTERN_C String_t* _stringLiteral86A2D3F60CAA8EACC042B49E74AB6C15311A9CCB;
@@ -317,30 +320,39 @@ IL2CPP_EXTERN_C String_t* _stringLiteral980E5B80F311F03C89986ADEC1B87B0E51D7B370
 IL2CPP_EXTERN_C String_t* _stringLiteral9D91C7ECF8D1671AE341DA6A052FFA936CE3149A;
 IL2CPP_EXTERN_C String_t* _stringLiteral9E10010E5AE8285C6A7ADBF58138F19FDA95A09C;
 IL2CPP_EXTERN_C String_t* _stringLiteralA6388683ABA9FE3D10CB7129CCE6D0B07CE14A92;
+IL2CPP_EXTERN_C String_t* _stringLiteralABDB69945EA24DB610930EB823D5354B7800B964;
+IL2CPP_EXTERN_C String_t* _stringLiteralB2746AB0D1EA91843B34A867C7C10F41AD4DE376;
+IL2CPP_EXTERN_C String_t* _stringLiteralB2B3B3273A9D0168B1739A1E0A24C5CA68595939;
 IL2CPP_EXTERN_C String_t* _stringLiteralC2E2C1659D6F0257C7B32E4AEF1C2D0CEA15A175;
 IL2CPP_EXTERN_C String_t* _stringLiteralD26DB2D8C30F23686891421CA1BC1B4E74114F58;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralDCB062DA5806A0E3DD31C8CA98BD65B442B1903D;
 IL2CPP_EXTERN_C String_t* _stringLiteralDE4C29EB5ACC744808B3535E969A7016310747B9;
 IL2CPP_EXTERN_C String_t* _stringLiteralE8AA4E3066259B95A5279352AA72429493F119E3;
+IL2CPP_EXTERN_C String_t* _stringLiteralF99E5B8BB587888B66986A5F3E5F335A15D9698E;
 IL2CPP_EXTERN_C String_t* _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9;
+IL2CPP_EXTERN_C String_t* _stringLiteralFEDA668D27507E94ED03804963AD6A9B453C9535;
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__11_0_mD1DC0066B83EF4853DD9D6EC5EABD7DFBFF14087_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onConnected_m8440EFBB4D34271F92E7BC35D13E9F432EA349B4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onDeviceFound_m353B85980DE1F2A6E976DC2DBFF097172698A013_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onConnected_mC72A6F0C24C8A4AEF6418399E2AB2E7DFE903D47_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onDeviceSelected_mD5D24E7965BC03F62269737879557D41C897894F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onScanResult_mD5FD1F4ACBBCBBF09CEE0B8FE773F88FC2A9D7DD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onServicesDiscovered_mF1B382DEBBDA2C245B7A9886769B38D68AF07144_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInParent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m5FB554DD7C0F662DAB84C0F292B221CAE3F0A5B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* DebugText_HandleLog_mCF10770A207EA008665CBB4889B686D8E2ED3E36_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisDeviceLine_t8E7A1CE3752E9FC84FD221FDC573D538EB1251BF_m899D7C3BF7272006276A4C4CB9D4C66152C1DD51_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisBtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99_m84BBEC4B7E39EB3F8105A13C743EC113FEDDDD5E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m708D6811CA89F8467F4780CC9A2B14E3B4E441E0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Contains_mA34B3C54C3DB0F3BE6711E460EE2BA036F1FF839_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mF60E807469E4751538C9F32DEA95061F21E6A4EF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m002192C406088F7BA156339AAA9B1BB5D69BE934_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass3_0_U3CsetU3Eb__0_m751F10E9B91F4F11EA13E47AA394D2AF0DEDFA1E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* AndroidMessagePrefix_t3CE95EA9789D18BAA255F8BBF459A269931389A0_0_0_0_var;
@@ -349,6 +361,7 @@ struct Delegate_t_marshaled_pinvoke;
 
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct AndroidMessagePrefixU5BU5D_tBD753C7A7F37C3C2AD076F8680CDE681725DE421;
 
 IL2CPP_EXTERN_C_BEGIN
@@ -535,20 +548,18 @@ struct ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5  : public Runti
 	BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* ___deviceInfo_0;
 	// System.Int32 NativeBLE/ConnectedDevice::state
 	int32_t ___state_1;
-	// System.String NativeBLE/ConnectedDevice::currentService
-	String_t* ___currentService_2;
 	// System.Collections.Generic.List`1<System.String> NativeBLE/ConnectedDevice::services
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___services_3;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___services_2;
 	// System.Collections.Generic.List`1<System.String> NativeBLE/ConnectedDevice::characteristics
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___characteristics_4;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___characteristics_3;
 	// System.Int32 NativeBLE/ConnectedDevice::mtu
-	int32_t ___mtu_5;
+	int32_t ___mtu_4;
 	// System.Int32 NativeBLE/ConnectedDevice::txPhy
-	int32_t ___txPhy_6;
+	int32_t ___txPhy_5;
 	// System.Int32 NativeBLE/ConnectedDevice::rxPhy
-	int32_t ___rxPhy_7;
+	int32_t ___rxPhy_6;
 	// System.Int32 NativeBLE/ConnectedDevice::rssi
-	int32_t ___rssi_8;
+	int32_t ___rssi_7;
 };
 
 // TMPro.TMP_TextProcessingStack`1<TMPro.FontWeight>
@@ -1081,6 +1092,21 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 	};
 };
 
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=10
+struct __StaticArrayInitTypeSizeU3D10_tC38CF142534A070C2B94C80666D4D49680A1F92A 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D10_tC38CF142534A070C2B94C80666D4D49680A1F92A__padding[10];
+	};
+};
+
 // TMPro.TMP_Text/SpecialCharacter
 struct SpecialCharacter_t6C1DBE8C490706D1620899BAB7F0B8091AD26777 
 {
@@ -1163,6 +1189,17 @@ struct TMP_TextProcessingStack_1_tB03E08F69415B281A5A81138F09E49EE58402DF9
 	int32_t ___m_RolloverSize_4;
 	// System.Int32 TMPro.TMP_TextProcessingStack`1::m_Count
 	int32_t ___m_Count_5;
+};
+
+// <PrivateImplementationDetails>
+struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA  : public RuntimeObject
+{
+};
+
+struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
+{
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=10 <PrivateImplementationDetails>::279BACEE9079B3CCBFA413FF279C708A367835A2261C01605B93E903F8C743E6
+	__StaticArrayInitTypeSizeU3D10_tC38CF142534A070C2B94C80666D4D49680A1F92A ___279BACEE9079B3CCBFA413FF279C708A367835A2261C01605B93E903F8C743E6_0;
 };
 
 // UnityEngine.UI.ColorBlock
@@ -1309,6 +1346,13 @@ struct ProfilerMarker_tA256E18DA86EDBC5528CE066FC91C96EE86501AD
 {
 	// System.IntPtr Unity.Profiling.ProfilerMarker::m_Ptr
 	intptr_t ___m_Ptr_0;
+};
+
+// System.RuntimeFieldHandle
+struct RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 
+{
+	// System.IntPtr System.RuntimeFieldHandle::value
+	intptr_t ___value_0;
 };
 
 // System.RuntimeTypeHandle
@@ -1482,13 +1526,8 @@ struct Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66  : public MulticastDel
 {
 };
 
-// System.Action`2<System.Int32,System.Object>
-struct Action_2_tF55503802357CB8A9E95ED4B00CEEEE6BDEC9166  : public MulticastDelegate_t
-{
-};
-
-// System.Action`2<System.Int32,NativeBLE/ConnectedDevice>
-struct Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85  : public MulticastDelegate_t
+// System.Action`1<NativeBLE/ConnectedDevice>
+struct Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B  : public MulticastDelegate_t
 {
 };
 
@@ -1930,18 +1969,20 @@ struct NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___unityActivity_6;
 	// System.Collections.Generic.List`1<NativeBLE/BtleDevice> NativeBLE::foundDevices
 	List_1_t6A17D1DB637D9F58E73549DA896A954C154FDE02* ___foundDevices_7;
+	// NativeBLE/ConnectedDevice NativeBLE::currentDevice
+	ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* ___currentDevice_8;
 	// System.Action`1<NativeBLE/BtleDevice> NativeBLE::onScanResult
-	Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* ___onScanResult_8;
-	// System.Action NativeBLE::onCharacteristicWrite
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___onCharacteristicWrite_9;
-	// System.Action`1<System.Int32> NativeBLE::onConnexionStateChanged
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onConnexionStateChanged_10;
-	// System.Action`2<System.Int32,NativeBLE/ConnectedDevice> NativeBLE::onConnected
-	Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* ___onConnected_11;
+	Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* ___onScanResult_9;
+	// System.Action`1<NativeBLE/ConnectedDevice> NativeBLE::onConnected
+	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* ___onConnected_10;
 	// System.Action`1<System.Int32> NativeBLE::onDisconnected
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onDisconnected_12;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onDisconnected_11;
+	// System.Action NativeBLE::onCharacteristicWrite
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___onCharacteristicWrite_12;
 	// System.Action NativeBLE::onDescriptorWrite
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___onDescriptorWrite_13;
+	// System.Action`1<NativeBLE/ConnectedDevice> NativeBLE::onservicesDiscovered
+	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* ___onservicesDiscovered_14;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -2656,12 +2697,45 @@ struct AndroidMessagePrefixU5BU5D_tBD753C7A7F37C3C2AD076F8680CDE681725DE421  : p
 		m_Items[index] = value;
 	}
 };
+// System.String[]
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
+{
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
 
 
 // System.Void System.Action`1<System.Object>::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Void System.Action`2<System.Int32,System.Object>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2__ctor_mE8DA76229BFE3CE94CA3DEF078C8B6F71B3615BF_gshared (Action_2_tF55503802357CB8A9E95ED4B00CEEEE6BDEC9166* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<System.Object>(T,UnityEngine.Transform)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m872899879F710B2E55BC157F35464F03877C8DFA_gshared (RuntimeObject* ___original0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___parent1, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<System.Object>()
@@ -2686,12 +2760,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonUtility_FromJson_TisRuntim
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
-// System.Void System.Action`2<System.Int32,System.Object>::Invoke(T1,T2)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m95790D6BE418027E71368AB7D2BF4BFA1AD45AC4_gshared_inline (Action_2_tF55503802357CB8A9E95ED4B00CEEEE6BDEC9166* __this, int32_t ___arg10, RuntimeObject* ___arg21, const RuntimeMethod* method) ;
 // System.Void System.Action`1<System.Int32>::Invoke(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_gshared_inline (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* __this, int32_t ___obj0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___index0, const RuntimeMethod* method) ;
 
 // System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m303AA1C4DC810349F285B4809E426CBBA8F834F9 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___target0, const RuntimeMethod* method) ;
@@ -2702,10 +2778,10 @@ inline void Action_1__ctor_m51B9444F9A851713825F64E548B5A0530EB1255D (Action_1_t
 }
 // System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m8B9D24CED35033C7FC56501DFE650F5CB7FF012C (Delegate_t* ___a0, Delegate_t* ___b1, const RuntimeMethod* method) ;
-// System.Void System.Action`2<System.Int32,NativeBLE/ConnectedDevice>::.ctor(System.Object,System.IntPtr)
-inline void Action_2__ctor_m8641E6481436DBF70F8A8BED03BDC6B39F873B6D (Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
+// System.Void System.Action`1<NativeBLE/ConnectedDevice>::.ctor(System.Object,System.IntPtr)
+inline void Action_1__ctor_m1A8DC5D37895C78D245D047DDCE20AEE1806CCA8 (Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_2__ctor_mE8DA76229BFE3CE94CA3DEF078C8B6F71B3615BF_gshared)(__this, ___object0, ___method1, method);
+	((  void (*) (Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared)(__this, ___object0, ___method1, method);
 }
 // UnityEngine.UI.Button/ButtonClickedEvent UnityEngine.UI.Button::get_onClick()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) ;
@@ -2735,6 +2811,12 @@ inline DeviceLine_t8E7A1CE3752E9FC84FD221FDC573D538EB1251BF* GameObject_GetCompo
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceLine_set_mDFC8EDF332B9D7AC14971452751359E68750A2EA (DeviceLine_t8E7A1CE3752E9FC84FD221FDC573D538EB1251BF* __this, BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* ___device0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GameObject::SetActive(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
+// System.Boolean NativeBLE::exploreServices()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_exploreServices_mC03EE0949C8A6631B60A5A61DBFB3A11B16F2134 (const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray(System.Array,System.RuntimeFieldHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_mE10C3436BA703E4D9D41B3F8F365E4C34F9926EF (RuntimeArray* ___array0, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___fldHandle1, const RuntimeMethod* method) ;
+// System.Boolean NativeBLE::writeCharacteristic(System.String,System.String,System.Byte[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_writeCharacteristic_m133BD18CAAF8FC9D392C9DA660EA4254974A8069 (String_t* ___service0, String_t* ___characteristic1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___data2, const RuntimeMethod* method) ;
 // System.Boolean NativeBLE::connectBLE(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_connectBLE_mA0BB5EF8AEAF68B2EF7A48DE09DAE0150FFF6A88 (String_t* ___address0, const RuntimeMethod* method) ;
 // System.Void NativeBLE::disconnectBLE()
@@ -2850,20 +2932,27 @@ inline void Action_1_Invoke_m0BFC01CD45A038EFF4F7A0FE004BA1092D4AEB11_inline (Ac
 {
 	((  void (*) (Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66*, BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___obj0, method);
 }
-// System.Void System.Action::Invoke()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, const RuntimeMethod* method) ;
+// T UnityEngine.JsonUtility::FromJson<NativeBLE/ConnectedDevice>(System.String)
+inline ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4 (String_t* ___json0, const RuntimeMethod* method)
+{
+	return ((  ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m3A645CB2B6525E4A5835EA8A8CEBD39C7E2C444A_gshared)(___json0, method);
+}
 // System.Void NativeBLE/ConnectedDevice::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectedDevice__ctor_m8D1515A40D295B5737042DA863D09435DCF67D14 (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* __this, const RuntimeMethod* method) ;
-// System.Void System.Action`2<System.Int32,NativeBLE/ConnectedDevice>::Invoke(T1,T2)
-inline void Action_2_Invoke_mAAEB851CA23192DE9FF1249B0B342690433A24CA_inline (Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* __this, int32_t ___arg10, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* ___arg21, const RuntimeMethod* method)
+// System.Void System.Action`1<NativeBLE/ConnectedDevice>::Invoke(T)
+inline void Action_1_Invoke_mC603B261D54161BBDB0B1E9F9E344F9D78FDA6BD_inline (Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* __this, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* ___obj0, const RuntimeMethod* method)
 {
-	((  void (*) (Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85*, int32_t, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*, const RuntimeMethod*))Action_2_Invoke_m95790D6BE418027E71368AB7D2BF4BFA1AD45AC4_gshared_inline)(__this, ___arg10, ___arg21, method);
+	((  void (*) (Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___obj0, method);
 }
+// System.Int32 System.Int32::Parse(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Int32_Parse_m59B9CC9D5E5B6C99C14251E57FB43BE6AB658767 (String_t* ___s0, const RuntimeMethod* method) ;
 // System.Void System.Action`1<System.Int32>::Invoke(T)
 inline void Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_inline (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* __this, int32_t ___obj0, const RuntimeMethod* method)
 {
 	((  void (*) (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404*, int32_t, const RuntimeMethod*))Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_gshared_inline)(__this, ___obj0, method);
 }
+// System.Void System.Action::Invoke()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, const RuntimeMethod* method) ;
 // System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m2570A2A5B32A5E9D9F0F38B37459DA18736C823E (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___handle0, const RuntimeMethod* method) ;
 // System.Array System.Enum::GetValues(System.Type)
@@ -2885,6 +2974,18 @@ inline void List_1__ctor_mF60E807469E4751538C9F32DEA95061F21E6A4EF (List_1_t6A17
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m0D685A924E5CD78078F248ED1726DA5A9D7D6AC0 (String_t* ___a0, String_t* ___b1, const RuntimeMethod* method) ;
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<System.String>::get_Count()
+inline int32_t List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
+// System.String System.String::Concat(System.String[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m6B0734B65813C8EA093D78E5C2D16534EB6FE8C0 (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___values0, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1<System.String>::get_Item(System.Int32)
+inline String_t* List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8 (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, int32_t ___index0, const RuntimeMethod* method)
+{
+	return ((  String_t* (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
+}
 // System.Void System.Collections.Generic.List`1<System.String>::.ctor()
 inline void List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
 {
@@ -2946,33 +3047,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_OnEnable_mFBD1D5AC31C64C7109
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_onConnected_m8440EFBB4D34271F92E7BC35D13E9F432EA349B4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_onDeviceFound_m353B85980DE1F2A6E976DC2DBFF097172698A013_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_onConnected_mC72A6F0C24C8A4AEF6418399E2AB2E7DFE903D47_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_onScanResult_mD5FD1F4ACBBCBBF09CEE0B8FE773F88FC2A9D7DD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_onServicesDiscovered_mF1B382DEBBDA2C245B7A9886769B38D68AF07144_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// NativeBLE.onScanResult += onDeviceFound;
+		// NativeBLE.onScanResult += this.onScanResult;
 		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* L_0 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_8;
+		Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* L_0 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_9;
 		Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* L_1 = (Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66*)il2cpp_codegen_object_new(Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var);
 		NullCheck(L_1);
-		Action_1__ctor_m51B9444F9A851713825F64E548B5A0530EB1255D(L_1, __this, (intptr_t)((void*)BikeManager_onDeviceFound_m353B85980DE1F2A6E976DC2DBFF097172698A013_RuntimeMethod_var), NULL);
+		Action_1__ctor_m51B9444F9A851713825F64E548B5A0530EB1255D(L_1, __this, (intptr_t)((void*)BikeManager_onScanResult_mD5FD1F4ACBBCBBF09CEE0B8FE773F88FC2A9D7DD_RuntimeMethod_var), NULL);
 		Delegate_t* L_2;
 		L_2 = Delegate_Combine_m8B9D24CED35033C7FC56501DFE650F5CB7FF012C(L_0, L_1, NULL);
-		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_8 = ((Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66*)Castclass((RuntimeObject*)L_2, Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var));
-		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_8), (void*)((Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66*)Castclass((RuntimeObject*)L_2, Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var)));
-		// NativeBLE.onConnected += onConnected;
-		Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* L_3 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_11;
-		Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* L_4 = (Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85*)il2cpp_codegen_object_new(Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_9 = ((Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66*)Castclass((RuntimeObject*)L_2, Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var));
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_9), (void*)((Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66*)Castclass((RuntimeObject*)L_2, Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66_il2cpp_TypeInfo_var)));
+		// NativeBLE.onConnected += this.onConnected;
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_3 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_10;
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_4 = (Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*)il2cpp_codegen_object_new(Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var);
 		NullCheck(L_4);
-		Action_2__ctor_m8641E6481436DBF70F8A8BED03BDC6B39F873B6D(L_4, __this, (intptr_t)((void*)BikeManager_onConnected_m8440EFBB4D34271F92E7BC35D13E9F432EA349B4_RuntimeMethod_var), NULL);
+		Action_1__ctor_m1A8DC5D37895C78D245D047DDCE20AEE1806CCA8(L_4, __this, (intptr_t)((void*)BikeManager_onConnected_mC72A6F0C24C8A4AEF6418399E2AB2E7DFE903D47_RuntimeMethod_var), NULL);
 		Delegate_t* L_5;
 		L_5 = Delegate_Combine_m8B9D24CED35033C7FC56501DFE650F5CB7FF012C(L_3, L_4, NULL);
-		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_11 = ((Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85*)Castclass((RuntimeObject*)L_5, Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85_il2cpp_TypeInfo_var));
-		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_11), (void*)((Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85*)Castclass((RuntimeObject*)L_5, Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85_il2cpp_TypeInfo_var)));
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_10 = ((Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*)Castclass((RuntimeObject*)L_5, Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var));
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_10), (void*)((Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*)Castclass((RuntimeObject*)L_5, Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var)));
+		// NativeBLE.onservicesDiscovered += this.onServicesDiscovered;
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_6 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onservicesDiscovered_14;
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_7 = (Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*)il2cpp_codegen_object_new(Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var);
+		NullCheck(L_7);
+		Action_1__ctor_m1A8DC5D37895C78D245D047DDCE20AEE1806CCA8(L_7, __this, (intptr_t)((void*)BikeManager_onServicesDiscovered_mF1B382DEBBDA2C245B7A9886769B38D68AF07144_RuntimeMethod_var), NULL);
+		Delegate_t* L_8;
+		L_8 = Delegate_Combine_m8B9D24CED35033C7FC56501DFE650F5CB7FF012C(L_6, L_7, NULL);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onservicesDiscovered_14 = ((Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*)Castclass((RuntimeObject*)L_8, Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var));
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onservicesDiscovered_14), (void*)((Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B*)Castclass((RuntimeObject*)L_8, Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B_il2cpp_TypeInfo_var)));
 		// }
 		return;
 	}
@@ -3110,8 +3221,8 @@ IL_0044:
 		return;
 	}
 }
-// System.Void BikeManager::onDeviceFound(NativeBLE/BtleDevice)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onDeviceFound_m353B85980DE1F2A6E976DC2DBFF097172698A013 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* ___btleDevice0, const RuntimeMethod* method) 
+// System.Void BikeManager::onScanResult(NativeBLE/BtleDevice)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onScanResult_mD5FD1F4ACBBCBBF09CEE0B8FE773F88FC2A9D7DD (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* ___btleDevice0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -3168,9 +3279,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onDeviceSelected_mD5D24E7965
 		return;
 	}
 }
-// System.Void BikeManager::onConnected(System.Int32,NativeBLE/ConnectedDevice)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onConnected_m8440EFBB4D34271F92E7BC35D13E9F432EA349B4 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, int32_t ___status0, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* ___device1, const RuntimeMethod* method) 
+// System.Void BikeManager::onConnected(NativeBLE/ConnectedDevice)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onConnected_mC72A6F0C24C8A4AEF6418399E2AB2E7DFE903D47 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* ___device0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// loadingOverlay.SetActive(false);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___loadingOverlay_5;
@@ -3184,6 +3301,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onConnected_m8440EFBB4D34271
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___connectPage_10;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
+		// NativeBLE.exploreServices();
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = NativeBLE_exploreServices_mC03EE0949C8A6631B60A5A61DBFB3A11B16F2134(NULL);
+		// }
+		return;
+	}
+}
+// System.Void BikeManager::onServicesDiscovered(NativeBLE/ConnectedDevice)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onServicesDiscovered_mF1B382DEBBDA2C245B7A9886769B38D68AF07144 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* ___device0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____279BACEE9079B3CCBFA413FF279C708A367835A2261C01605B93E903F8C743E6_0_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral10BB7D1FEDFD100EAF2ECD6C57A699179AAAFE00);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB2B3B3273A9D0168B1739A1E0A24C5CA68595939);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, new byte[] { 0x00, 0xD1, 0x01, 0x03, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00 });
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)10));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____279BACEE9079B3CCBFA413FF279C708A367835A2261C01605B93E903F8C743E6_0_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_mE10C3436BA703E4D9D41B3F8F365E4C34F9926EF((RuntimeArray*)L_1, L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = NativeBLE_writeCharacteristic_m133BD18CAAF8FC9D392C9DA660EA4254974A8069(_stringLiteral10BB7D1FEDFD100EAF2ECD6C57A699179AAAFE00, _stringLiteralB2B3B3273A9D0168B1739A1E0A24C5CA68595939, L_1, NULL);
 		// }
 		return;
 	}
@@ -4214,6 +4361,296 @@ IL_0059:
 		return L_13;
 	}
 }
+// System.Boolean NativeBLE::exploreServices()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_exploreServices_mC03EE0949C8A6631B60A5A61DBFB3A11B16F2134 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFEDA668D27507E94ED03804963AD6A9B453C9535);
+		s_Il2CppMethodInitialized = true;
+	}
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_0 = NULL;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	{
+		// if (Application.platform == RuntimePlatform.Android) {
+		int32_t L_0;
+		L_0 = Application_get_platform_m1AB34E71D9885B120F6021EB2B11DCB28CD6008D(NULL);
+		V_2 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)11)))? 1 : 0);
+		bool L_1 = V_2;
+		if (!L_1)
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		// unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_2 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_2, _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078, NULL);
+		V_0 = L_2;
+		// unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_3 = V_0;
+		NullCheck(L_3);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4;
+		L_4 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_3, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		V_1 = L_4;
+		// if (unityActivity != null) {
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = V_1;
+		V_3 = (bool)((!(((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_5) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_6 = V_3;
+		if (!L_6)
+		{
+			goto IL_004e;
+		}
+	}
+	{
+		// foundDevices.Clear();
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		List_1_t6A17D1DB637D9F58E73549DA896A954C154FDE02* L_7 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___foundDevices_7;
+		NullCheck(L_7);
+		List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_inline(L_7, List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var);
+		// return unityActivity.Call<bool>("exploreLeServices");
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_9;
+		L_9 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
+		NullCheck(L_8);
+		bool L_10;
+		L_10 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_8, _stringLiteralFEDA668D27507E94ED03804963AD6A9B453C9535, L_9, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		V_4 = L_10;
+		goto IL_0054;
+	}
+
+IL_004e:
+	{
+	}
+
+IL_004f:
+	{
+		// return false;
+		V_4 = (bool)0;
+		goto IL_0054;
+	}
+
+IL_0054:
+	{
+		// }
+		bool L_11 = V_4;
+		return L_11;
+	}
+}
+// System.Boolean NativeBLE::writeCharacteristic(System.String,System.String,System.Byte[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_writeCharacteristic_m133BD18CAAF8FC9D392C9DA660EA4254974A8069 (String_t* ___service0, String_t* ___characteristic1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___data2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral620BA0F93E5976480937E5E5244E0D180B242528);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9);
+		s_Il2CppMethodInitialized = true;
+	}
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_0 = NULL;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	{
+		// if (Application.platform == RuntimePlatform.Android) {
+		int32_t L_0;
+		L_0 = Application_get_platform_m1AB34E71D9885B120F6021EB2B11DCB28CD6008D(NULL);
+		V_2 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)11)))? 1 : 0);
+		bool L_1 = V_2;
+		if (!L_1)
+		{
+			goto IL_005c;
+		}
+	}
+	{
+		// unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_2 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_2, _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078, NULL);
+		V_0 = L_2;
+		// unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_3 = V_0;
+		NullCheck(L_3);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4;
+		L_4 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_3, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		V_1 = L_4;
+		// if (unityActivity != null) {
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = V_1;
+		V_3 = (bool)((!(((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_5) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_6 = V_3;
+		if (!L_6)
+		{
+			goto IL_005b;
+		}
+	}
+	{
+		// foundDevices.Clear();
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		List_1_t6A17D1DB637D9F58E73549DA896A954C154FDE02* L_7 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___foundDevices_7;
+		NullCheck(L_7);
+		List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_inline(L_7, List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var);
+		// return unityActivity.Call<bool>("writeCharacteristic", service, characteristic, data);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_9 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_10 = L_9;
+		String_t* L_11 = ___service0;
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, L_11);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_11);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12 = L_10;
+		String_t* L_13 = ___characteristic1;
+		NullCheck(L_12);
+		ArrayElementTypeCheck (L_12, L_13);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_13);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_14 = L_12;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15 = ___data2;
+		NullCheck(L_14);
+		ArrayElementTypeCheck (L_14, L_15);
+		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_15);
+		NullCheck(L_8);
+		bool L_16;
+		L_16 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_8, _stringLiteral620BA0F93E5976480937E5E5244E0D180B242528, L_14, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		V_4 = L_16;
+		goto IL_0061;
+	}
+
+IL_005b:
+	{
+	}
+
+IL_005c:
+	{
+		// return false;
+		V_4 = (bool)0;
+		goto IL_0061;
+	}
+
+IL_0061:
+	{
+		// }
+		bool L_17 = V_4;
+		return L_17;
+	}
+}
+// System.Boolean NativeBLE::readCharacteristic(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_readCharacteristic_m766B7A4B05245F21E780EB875986E0880D481558 (String_t* ___service0, String_t* ___characteristic1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF99E5B8BB587888B66986A5F3E5F335A15D9698E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9);
+		s_Il2CppMethodInitialized = true;
+	}
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_0 = NULL;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	{
+		// if (Application.platform == RuntimePlatform.Android) {
+		int32_t L_0;
+		L_0 = Application_get_platform_m1AB34E71D9885B120F6021EB2B11DCB28CD6008D(NULL);
+		V_2 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)11)))? 1 : 0);
+		bool L_1 = V_2;
+		if (!L_1)
+		{
+			goto IL_0058;
+		}
+	}
+	{
+		// unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_2 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_2, _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078, NULL);
+		V_0 = L_2;
+		// unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_3 = V_0;
+		NullCheck(L_3);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4;
+		L_4 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_3, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		V_1 = L_4;
+		// if (unityActivity != null) {
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = V_1;
+		V_3 = (bool)((!(((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_5) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_6 = V_3;
+		if (!L_6)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		// foundDevices.Clear();
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		List_1_t6A17D1DB637D9F58E73549DA896A954C154FDE02* L_7 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___foundDevices_7;
+		NullCheck(L_7);
+		List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_inline(L_7, List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_RuntimeMethod_var);
+		// return unityActivity.Call<bool>("readCharacteristic", service, characteristic);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_9 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_10 = L_9;
+		String_t* L_11 = ___service0;
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, L_11);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_11);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12 = L_10;
+		String_t* L_13 = ___characteristic1;
+		NullCheck(L_12);
+		ArrayElementTypeCheck (L_12, L_13);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_13);
+		NullCheck(L_8);
+		bool L_14;
+		L_14 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_8, _stringLiteralF99E5B8BB587888B66986A5F3E5F335A15D9698E, L_12, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		V_4 = L_14;
+		goto IL_005d;
+	}
+
+IL_0057:
+	{
+	}
+
+IL_0058:
+	{
+		// return false;
+		V_4 = (bool)0;
+		goto IL_005d;
+	}
+
+IL_005d:
+	{
+		// }
+		bool L_15 = V_4;
+		return L_15;
+	}
+}
 // System.Void NativeBLE::disconnectBLE()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnectBLE_mAD195D449610D0AF55B0730A7EA7AAB09F15DCA8 (const RuntimeMethod* method) 
 {
@@ -4327,7 +4764,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_scanResult_m2BD4A345500B9672B4
 		NullCheck(L_6);
 		List_1_Add_m708D6811CA89F8467F4780CC9A2B14E3B4E441E0_inline(L_6, L_7, List_1_Add_m708D6811CA89F8467F4780CC9A2B14E3B4E441E0_RuntimeMethod_var);
 		// onScanResult?.Invoke(btleDevice);
-		Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* L_8 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_8;
+		Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* L_8 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onScanResult_9;
 		Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* L_9 = L_8;
 		G_B2_0 = L_9;
 		if (L_9)
@@ -4357,247 +4794,423 @@ IL_003a:
 		return;
 	}
 }
-// System.Void NativeBLE::characteristicWrite()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_characteristicWrite_mB3A77F6E6944EB758240EB6EE6D8CD023BB4124F (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
-	{
-		// onCharacteristicWrite?.Invoke();
-		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onCharacteristicWrite_9;
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
-		G_B1_0 = L_1;
-		if (L_1)
-		{
-			G_B2_0 = L_1;
-			goto IL_000c;
-		}
-	}
-	{
-		goto IL_0012;
-	}
-
-IL_000c:
-	{
-		NullCheck(G_B2_0);
-		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B2_0, NULL);
-	}
-
-IL_0012:
-	{
-		// }
-		return;
-	}
-}
-// System.Void NativeBLE::connectionStateChange(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_connectionStateChange_mCE7A6933B3A78F14BEB5752D4FAD9A6E3844CAE9 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, int32_t ___status0, const RuntimeMethod* method) 
+// System.Void NativeBLE::connected(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_connected_m76DF3C8A111EABDFB5ADA49AFF350B9BD6C841D8 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* G_B3_0 = NULL;
-	Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* G_B2_0 = NULL;
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* G_B7_0 = NULL;
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* G_B6_0 = NULL;
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* G_B10_0 = NULL;
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* G_B9_0 = NULL;
+	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* G_B2_0 = NULL;
+	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* G_B1_0 = NULL;
 	{
-		// if (status == 0) onConnected?.Invoke(status, new ConnectedDevice());
-		int32_t L_0 = ___status0;
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
+		// onConnected?.Invoke(new ConnectedDevice());
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_3 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_10;
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_4 = L_3;
+		G_B1_0 = L_4;
+		if (L_4)
 		{
+			G_B2_0 = L_4;
 			goto IL_0022;
 		}
 	}
 	{
-		// if (status == 0) onConnected?.Invoke(status, new ConnectedDevice());
-		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnected_11;
-		Action_2_tD4772B9FECA2CFECE707C0DEE5E6562F22BD3C85* L_3 = L_2;
-		G_B2_0 = L_3;
-		if (L_3)
-		{
-			G_B3_0 = L_3;
-			goto IL_0014;
-		}
-	}
-	{
-		goto IL_0020;
-	}
-
-IL_0014:
-	{
-		int32_t L_4 = ___status0;
-		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_5 = (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*)il2cpp_codegen_object_new(ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_il2cpp_TypeInfo_var);
-		NullCheck(L_5);
-		ConnectedDevice__ctor_m8D1515A40D295B5737042DA863D09435DCF67D14(L_5, NULL);
-		NullCheck(G_B3_0);
-		Action_2_Invoke_mAAEB851CA23192DE9FF1249B0B342690433A24CA_inline(G_B3_0, L_4, L_5, NULL);
-	}
-
-IL_0020:
-	{
-		goto IL_0034;
+		goto IL_002d;
 	}
 
 IL_0022:
 	{
-		// else onDisconnected?.Invoke(status);
-		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_6 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onDisconnected_12;
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_7 = L_6;
-		G_B6_0 = L_7;
-		if (L_7)
-		{
-			G_B7_0 = L_7;
-			goto IL_002d;
-		}
-	}
-	{
-		goto IL_0034;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_5 = (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*)il2cpp_codegen_object_new(ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_il2cpp_TypeInfo_var);
+		NullCheck(L_5);
+		ConnectedDevice__ctor_m8D1515A40D295B5737042DA863D09435DCF67D14(L_5, NULL);
+		NullCheck(G_B2_0);
+		Action_1_Invoke_mC603B261D54161BBDB0B1E9F9E344F9D78FDA6BD_inline(G_B2_0, L_5, NULL);
 	}
 
 IL_002d:
-	{
-		int32_t L_8 = ___status0;
-		NullCheck(G_B7_0);
-		Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_inline(G_B7_0, L_8, NULL);
-	}
-
-IL_0034:
-	{
-		// onConnexionStateChanged?.Invoke(status);
-		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_9 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onConnexionStateChanged_10;
-		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_10 = L_9;
-		G_B9_0 = L_10;
-		if (L_10)
-		{
-			G_B10_0 = L_10;
-			goto IL_003f;
-		}
-	}
-	{
-		goto IL_0046;
-	}
-
-IL_003f:
-	{
-		int32_t L_11 = ___status0;
-		NullCheck(G_B10_0);
-		Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_inline(G_B10_0, L_11, NULL);
-	}
-
-IL_0046:
 	{
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::descriptorWrite()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_descriptorWrite_mED7A7B33BD76942EDAE6388F247DC047A4807E30 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::disconnected(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnected_mBCD6CA0EDFF9CA3F1F9D8E60FF79D59B4D0D2738 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___status0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* G_B2_0 = NULL;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* G_B1_0 = NULL;
+	{
+		// currentDevice = null;
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)(ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*)NULL);
+		// Debug.Log(status);
+		String_t* L_0 = ___status0;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_0, NULL);
+		// onDisconnected?.Invoke(int.Parse(status));
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_1 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onDisconnected_11;
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_2 = L_1;
+		G_B1_0 = L_2;
+		if (L_2)
+		{
+			G_B2_0 = L_2;
+			goto IL_0019;
+		}
+	}
+	{
+		goto IL_0025;
+	}
+
+IL_0019:
+	{
+		String_t* L_3 = ___status0;
+		int32_t L_4;
+		L_4 = Int32_Parse_m59B9CC9D5E5B6C99C14251E57FB43BE6AB658767(L_3, NULL);
+		NullCheck(G_B2_0);
+		Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_inline(G_B2_0, L_4, NULL);
+	}
+
+IL_0025:
+	{
+		// }
+		return;
+	}
+}
+// System.Void NativeBLE::characteristicWrite(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_characteristicWrite_m19D743C39AD909651D2EBE8E4C729A27B1083A5C (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		// onDescriptorWrite?.Invoke();
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
 		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onDescriptorWrite_13;
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
-		G_B1_0 = L_1;
-		if (L_1)
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
+		// onCharacteristicWrite?.Invoke();
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onCharacteristicWrite_12;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = L_3;
+		G_B1_0 = L_4;
+		if (L_4)
 		{
-			G_B2_0 = L_1;
-			goto IL_000c;
+			G_B2_0 = L_4;
+			goto IL_0022;
 		}
 	}
 	{
-		goto IL_0012;
+		goto IL_0028;
 	}
 
-IL_000c:
+IL_0022:
 	{
 		NullCheck(G_B2_0);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B2_0, NULL);
 	}
 
-IL_0012:
+IL_0028:
 	{
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::mtuChanged()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_mtuChanged_m86F7BF4A63202D275F0CCA1153275C54EFA64B78 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::descriptorWrite(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_descriptorWrite_m4BD031855A9E44746C671B49889A5DAAE21FBE72 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
+		// onDescriptorWrite?.Invoke();
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onDescriptorWrite_13;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = L_3;
+		G_B1_0 = L_4;
+		if (L_4)
+		{
+			G_B2_0 = L_4;
+			goto IL_0022;
+		}
+	}
+	{
+		goto IL_0028;
+	}
+
+IL_0022:
+	{
+		NullCheck(G_B2_0);
+		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B2_0, NULL);
+	}
+
+IL_0028:
 	{
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::phyRead()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_phyRead_m4793BE44227B2C7469933EAB691F151C3307245D (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::mtuChanged(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_mtuChanged_mE0D19000DC113DF31DBFE47D9004FF7B74C71172 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::phyUpdate()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_phyUpdate_mCF42CE1857477635F3517EFC6A556972C469A07B (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::phyRead(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_phyRead_mCA433BC1CCF12FCF2CEC4262CDB0A75E37FE2EF6 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::readRemoteRssi()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_readRemoteRssi_m562BCB8924285293A559CC668921110A85C97ED3 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::phyUpdate(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_phyUpdate_mE424074B68688099C26F1B585330F0304AD95ECC (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::reliableWriteCompleted()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_reliableWriteCompleted_m8EF2373FD5A4328993A07B45B134F0B32C745530 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::readRemoteRssi(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_readRemoteRssi_m3B59AAF7706FF43D3B37B7CE13BC72878F6F5B7C (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::serviceChanged()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_serviceChanged_m672B8987CF700F1982189E5AFA7F7072908D99CE (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::reliableWriteCompleted(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_reliableWriteCompleted_m60C656ABFD54F8F7A29DB2748265F0EAD90C42BD (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
 		// }
 		return;
 	}
 }
-// System.Void NativeBLE::servicesDiscovered()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_servicesDiscovered_m8EE0D8C51187C9A02D992FE4DC325B13BBD6116D (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, const RuntimeMethod* method) 
+// System.Void NativeBLE::serviceChanged(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_serviceChanged_m3A5A5EA2C5FE1BB81F7BA77FD9B264C721BA3E35 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
+		// }
+		return;
+	}
+}
+// System.Void NativeBLE::servicesDiscovered(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_servicesDiscovered_mD01BB60EC147F8E69F1B4477EF7DA17345CF6110 (NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93* __this, String_t* ___jsonDevice0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* G_B2_0 = NULL;
+	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* G_B1_0 = NULL;
+	{
+		// currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+		String_t* L_0 = ___jsonDevice0;
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1;
+		L_1 = JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4(L_0, JsonUtility_FromJson_TisConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5_mC2B2EAFDE7AF225F2FDB154E866E30343AE555D4_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)L_1);
+		// Debug.Log(currentDevice);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_2, NULL);
+		// onservicesDiscovered?.Invoke(currentDevice);
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_3 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___onservicesDiscovered_14;
+		Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* L_4 = L_3;
+		G_B1_0 = L_4;
+		if (L_4)
+		{
+			G_B2_0 = L_4;
+			goto IL_0022;
+		}
+	}
+	{
+		goto IL_002d;
+	}
+
+IL_0022:
+	{
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_5 = ((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8;
+		NullCheck(G_B2_0);
+		Action_1_Invoke_mC603B261D54161BBDB0B1E9F9E344F9D78FDA6BD_inline(G_B2_0, L_5, NULL);
+	}
+
+IL_002d:
 	{
 		// }
 		return;
@@ -4788,6 +5401,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE__cctor_mCB462C976056D2CFAC36C4
 		List_1__ctor_mF60E807469E4751538C9F32DEA95061F21E6A4EF(L_0, List_1__ctor_mF60E807469E4751538C9F32DEA95061F21E6A4EF_RuntimeMethod_var);
 		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___foundDevices_7 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___foundDevices_7), (void*)L_0);
+		// static ConnectedDevice currentDevice = null;
+		((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8 = (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields*)il2cpp_codegen_static_fields_for(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var))->___currentDevice_8), (void*)(ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5*)NULL);
 		return;
 	}
 }
@@ -4822,6 +5438,34 @@ IL_0015:
 		return L_4;
 	}
 }
+// System.String NativeBLE/BtleDevice::ToString()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BtleDevice_ToString_m52D397A52850D6A1A116CD73389A203F9EF7182D (BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0767326DBE1DD31063256737FD019DC6682353E2);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		// return name + " : " + address + "\n";
+		String_t* L_0 = __this->___name_1;
+		String_t* L_1 = __this->___address_0;
+		String_t* L_2;
+		L_2 = String_Concat_mF8B69BE42B5C5ABCAD3C176FBBE3010E0815D65D(L_0, _stringLiteral0767326DBE1DD31063256737FD019DC6682353E2, L_1, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD, NULL);
+		V_0 = L_2;
+		goto IL_001f;
+	}
+
+IL_001f:
+	{
+		// }
+		String_t* L_3 = V_0;
+		return L_3;
+	}
+}
 // System.Void NativeBLE/BtleDevice::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BtleDevice__ctor_mFE5A64EA2D37D9D64FFFBAF3C8681650E689AE38 (BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* __this, const RuntimeMethod* method) 
 {
@@ -4838,6 +5482,157 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BtleDevice__ctor_mFE5A64EA2D37D9D64FFFBA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.String NativeBLE/ConnectedDevice::ToString()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ConnectedDevice_ToString_mE476F7701C00EC64EB15C6AAF16502CC294569EE (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral276565662846912BD6C311C6C7B732FC149F12D5);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralABDB69945EA24DB610930EB823D5354B7800B964);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB2746AB0D1EA91843B34A867C7C10F41AD4DE376);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	bool V_3 = false;
+	bool V_4 = false;
+	String_t* V_5 = NULL;
+	{
+		// string s = deviceInfo.ToString();
+		BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* L_0 = __this->___deviceInfo_0;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_0);
+		V_0 = L_1;
+		// s += "Services: " + services.Count + " Characteristics: " + characteristics.Count + "\n";
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)6);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = L_2;
+		String_t* L_4 = V_0;
+		NullCheck(L_3);
+		ArrayElementTypeCheck (L_3, L_4);
+		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_4);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = L_3;
+		NullCheck(L_5);
+		ArrayElementTypeCheck (L_5, _stringLiteralB2746AB0D1EA91843B34A867C7C10F41AD4DE376);
+		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteralB2746AB0D1EA91843B34A867C7C10F41AD4DE376);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = L_5;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_7 = __this->___services_2;
+		NullCheck(L_7);
+		int32_t L_8;
+		L_8 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_7, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		V_1 = L_8;
+		String_t* L_9;
+		L_9 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
+		NullCheck(L_6);
+		ArrayElementTypeCheck (L_6, L_9);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_9);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_6;
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, _stringLiteral276565662846912BD6C311C6C7B732FC149F12D5);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral276565662846912BD6C311C6C7B732FC149F12D5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_12 = __this->___characteristics_3;
+		NullCheck(L_12);
+		int32_t L_13;
+		L_13 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_12, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		V_1 = L_13;
+		String_t* L_14;
+		L_14 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
+		NullCheck(L_11);
+		ArrayElementTypeCheck (L_11, L_14);
+		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_14);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_11;
+		NullCheck(L_15);
+		ArrayElementTypeCheck (L_15, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
+		String_t* L_16;
+		L_16 = String_Concat_m6B0734B65813C8EA093D78E5C2D16534EB6FE8C0(L_15, NULL);
+		V_0 = L_16;
+		// for (int i = 0; i < services.Count; i++) {
+		V_2 = 0;
+		goto IL_00ad;
+	}
+
+IL_0065:
+	{
+		// s += "### - " + services[i] + "\n";
+		String_t* L_17 = V_0;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_18 = __this->___services_2;
+		int32_t L_19 = V_2;
+		NullCheck(L_18);
+		String_t* L_20;
+		L_20 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_18, L_19, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
+		String_t* L_21;
+		L_21 = String_Concat_mF8B69BE42B5C5ABCAD3C176FBBE3010E0815D65D(L_17, _stringLiteralABDB69945EA24DB610930EB823D5354B7800B964, L_20, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD, NULL);
+		V_0 = L_21;
+		// if (characteristics.Count > i) s += characteristics[i];
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_22 = __this->___characteristics_3;
+		NullCheck(L_22);
+		int32_t L_23;
+		L_23 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_22, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		int32_t L_24 = V_2;
+		V_3 = (bool)((((int32_t)L_23) > ((int32_t)L_24))? 1 : 0);
+		bool L_25 = V_3;
+		if (!L_25)
+		{
+			goto IL_00a8;
+		}
+	}
+	{
+		// if (characteristics.Count > i) s += characteristics[i];
+		String_t* L_26 = V_0;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_27 = __this->___characteristics_3;
+		int32_t L_28 = V_2;
+		NullCheck(L_27);
+		String_t* L_29;
+		L_29 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_27, L_28, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
+		String_t* L_30;
+		L_30 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_26, L_29, NULL);
+		V_0 = L_30;
+	}
+
+IL_00a8:
+	{
+		// for (int i = 0; i < services.Count; i++) {
+		int32_t L_31 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_31, 1));
+	}
+
+IL_00ad:
+	{
+		// for (int i = 0; i < services.Count; i++) {
+		int32_t L_32 = V_2;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_33 = __this->___services_2;
+		NullCheck(L_33);
+		int32_t L_34;
+		L_34 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_33, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		V_4 = (bool)((((int32_t)L_32) < ((int32_t)L_34))? 1 : 0);
+		bool L_35 = V_4;
+		if (L_35)
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		// return s;
+		String_t* L_36 = V_0;
+		V_5 = L_36;
+		goto IL_00c6;
+	}
+
+IL_00c6:
+	{
+		// }
+		String_t* L_37 = V_5;
+		return L_37;
+	}
+}
 // System.Void NativeBLE/ConnectedDevice::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectedDevice__ctor_m8D1515A40D295B5737042DA863D09435DCF67D14 (ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* __this, const RuntimeMethod* method) 
 {
@@ -4846,35 +5641,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectedDevice__ctor_m8D1515A40D295B573
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		// public int state = 0;
 		__this->___state_1 = 0;
-		// public string currentService = "";
-		__this->___currentService_2 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentService_2), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		// public List<string> services = new List<string>();
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_0, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
-		__this->___services_3 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___services_3), (void*)L_0);
+		__this->___services_2 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___services_2), (void*)L_0);
 		// public List<string> characteristics = new List<string>();
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_1 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		NullCheck(L_1);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_1, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
-		__this->___characteristics_4 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___characteristics_4), (void*)L_1);
+		__this->___characteristics_3 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___characteristics_3), (void*)L_1);
 		// public int mtu = 0;
-		__this->___mtu_5 = 0;
+		__this->___mtu_4 = 0;
 		// public int txPhy = 0;
-		__this->___txPhy_6 = 0;
+		__this->___txPhy_5 = 0;
 		// public int rxPhy = 0;
-		__this->___rxPhy_7 = 0;
+		__this->___rxPhy_6 = 0;
 		// public int rssi = 0;
-		__this->___rssi_8 = 0;
+		__this->___rssi_7 = 0;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
@@ -5142,6 +5933,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass3_0_U3CsetU3Eb__0_m
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m704B5B98EAFE885978381E21B7F89D9DF83C2A60_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -5268,15 +6075,17 @@ IL_0034:
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m95790D6BE418027E71368AB7D2BF4BFA1AD45AC4_gshared_inline (Action_2_tF55503802357CB8A9E95ED4B00CEEEE6BDEC9166* __this, int32_t ___arg10, RuntimeObject* ___arg21, const RuntimeMethod* method) 
-{
-	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, RuntimeObject*, const RuntimeMethod*);
-	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___arg10, ___arg21, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mAC3C34BA1905AB5B79E483CD9BB082B7D667F703_gshared_inline (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* __this, int32_t ___obj0, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___obj0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = (int32_t)__this->____size_2;
+		return L_0;
+	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) 
 {

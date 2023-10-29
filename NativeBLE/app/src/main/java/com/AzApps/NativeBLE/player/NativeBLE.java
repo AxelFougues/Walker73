@@ -2,12 +2,14 @@ package com.AzApps.NativeBLE.player;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
@@ -16,16 +18,17 @@ import android.bluetooth.le.ScanResult;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-
 import com.google.gson.Gson;
 import com.unity3d.player.UnityPlayer;
 import com.unity3d.player.UnityPlayerActivity;
-
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.UUID;
 
-public class NativeBLE<LocalBroadcastManager> extends UnityPlayerActivity {
+public class NativeBLE extends UnityPlayerActivity {
     //Seems unused, need to check before removing it
     static final String TAG = "Unity";
     static int BLUETOOTH_SCAN_REQUEST_CODE = 0;
@@ -37,9 +40,9 @@ public class NativeBLE<LocalBroadcastManager> extends UnityPlayerActivity {
     private BluetoothAdapter bluetoothAdapter;
     private BluetoothLeScanner bluetoothLeScanner;
     private boolean scanning;
-    private Handler handler = new Handler();
+    private final Handler handler = new Handler();
 
-    private static final long SCAN_PERIOD = 3000;
+    private static final long SCAN_PERIOD = 5000;
 
     Hashtable<String, BluetoothDevice> availableDevices = new Hashtable<>();
     ConnectedDevice connectedDevice = null;
@@ -127,17 +130,6 @@ public class NativeBLE<LocalBroadcastManager> extends UnityPlayerActivity {
         return scanning;
     }
 
-    private ScanCallback leScanCallback = new ScanCallback() {
-        @Override
-        public void onScanResult(int callbackType, ScanResult result) {
-            //super.onScanResult(callbackType, result);
-            BtleDevice btleDevice = new BtleDevice(result.getDevice());
-            if(!availableDevices.containsKey(btleDevice.address)){
-                availableDevices.put(btleDevice.address, result.getDevice());
-                UnityPlayer.UnitySendMessage("NativeBLE", "scanResult", new Gson().toJson(btleDevice));
-            }
-        }
-    };
 
     @SuppressLint("MissingPermission")
     public boolean connectLeDevice(String address){
@@ -152,73 +144,167 @@ public class NativeBLE<LocalBroadcastManager> extends UnityPlayerActivity {
         }
     }
 
-    private BluetoothGattCallback leGattCallback = new BluetoothGattCallback() {
-        //@Override
-        //public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, byte[] value){
+    @SuppressLint("MissingPermission")
+    public boolean exploreLeServices(){
+        if(bluetoothGatt == null ) return false;
+        bluetoothGatt.discoverServices();
+        return true;
+    }
 
-        //}
-        //@Override
-        //public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, byte[] value, int status){
+    @SuppressLint("MissingPermission")
+    public boolean readCharacteristic(String service, String characteristic){
+        if(bluetoothGatt == null ) return false;
 
-        //}
-        @Override
-        public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "characteristicWrite", "");
+        UUID serviceUUID = UUID.fromString(service);
+        UUID characteristicUUID = UUID.fromString(characteristic);
+
+        BluetoothGattService serviceObj = bluetoothGatt.getService(serviceUUID);
+
+        BluetoothGattCharacteristic charObj = serviceObj.getCharacteristic(characteristicUUID);
+
+        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Reading characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
+        bluetoothGatt.readCharacteristic(charObj);
+        return true;
+    }
+
+
+    @SuppressLint("MissingPermission")
+    public boolean writeCharacteristic(String service, String characteristic, byte[] data){
+        if(bluetoothGatt == null ) return false;
+
+        UUID serviceUUID = UUID.fromString(service);
+        UUID characteristicUUID = UUID.fromString(characteristic);
+
+        BluetoothGattService serviceObj = bluetoothGatt.getService(serviceUUID);
+
+        if(serviceObj == null){
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Service " + serviceUUID.toString() + " is not available.");
+            return false;
         }
+        BluetoothGattCharacteristic charObj = serviceObj.getCharacteristic(characteristicUUID);
+        if(charObj == null){
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic " + characteristicUUID.toString() + " is not available in service "+ serviceUUID.toString());
+            return false;
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "SDK33+ Writing characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
+            bluetoothGatt.writeCharacteristic(charObj, data, BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
+        }else{
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "SDK32- Writing characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
+            charObj.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
+            charObj.setValue(data);
+            bluetoothGatt.writeCharacteristic(charObj);
+        }
+        return true;
+    }
+
+    @SuppressLint("MissingPermission")
+    public boolean disconnectLeDevice(){
+        if(bluetoothGatt == null ) return false;
+        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnecting");
+        bluetoothGatt.close();
+        return true;
+    }
+
+
+    //CALLBACKS
+    private final ScanCallback leScanCallback = new ScanCallback() {
         @Override
-        public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
-            if (newState == BluetoothProfile.STATE_CONNECTED) {
-                sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Connected");
-            } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
-                sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnected");
+        public void onScanResult(int callbackType, ScanResult result) {
+            //super.onScanResult(callbackType, result);
+            BtleDevice btleDevice = new BtleDevice(result.getDevice());
+            if(!availableDevices.containsKey(btleDevice.address)){
+                availableDevices.put(btleDevice.address, result.getDevice());
+                UnityPlayer.UnitySendMessage("NativeBLE", "scanResult", new Gson().toJson(btleDevice));
             }
-            UnityPlayer.UnitySendMessage("NativeBLE", "connectionStateChange", "");
-        }
-        //@Override
-        //public void onDescriptorRead(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status, byte[] value){
-
-        //}
-        @Override
-        public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "descriptorWrite", "");
-        }
-        @Override
-        public void onMtuChanged(BluetoothGatt gatt, int mtu, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "mtuChanged", "");
-        }
-        @Override
-        public void onPhyRead(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "phyRead", "");
-        }
-        @Override
-        public void onPhyUpdate(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "phyUpdate", "");
-        }
-        @Override
-        public void onReadRemoteRssi(BluetoothGatt gatt, int rssi, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "readRemoteRssi", "");
-        }
-        @Override
-        public void onReliableWriteCompleted(BluetoothGatt gatt, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "reliableWriteCompleted", "");
-        }
-        @Override
-        public void onServiceChanged(BluetoothGatt gatt){
-            UnityPlayer.UnitySendMessage("NativeBLE", "serviceChanged", "");
-        }
-        @Override
-        public void onServicesDiscovered(BluetoothGatt gatt, int status){
-            UnityPlayer.UnitySendMessage("NativeBLE", "servicesDiscovered", "");
         }
     };
 
-    @SuppressLint("MissingPermission")
-    public void disconnectLeDevice(){
-        if(bluetoothGatt != null ){
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnecting");
-            bluetoothGatt.close();
+
+    private final BluetoothGattCallback leGattCallback = new BluetoothGattCallback() {
+
+        @SuppressLint("MissingPermission")
+        @Override
+        public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+            bluetoothGatt = gatt;
+            if (newState == BluetoothProfile.STATE_CONNECTED) {
+                sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Connected");
+                connectedDevice = new ConnectedDevice(gatt, status);
+                UnityPlayer.UnitySendMessage("NativeBLE", "connected", new Gson().toJson(connectedDevice) );
+
+            } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
+                sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnected");
+                bluetoothGatt = null;
+                connectedDevice = null;
+                UnityPlayer.UnitySendMessage("NativeBLE", "disconnected", String.valueOf(status));
+            }
+
         }
-    }
+        @Override
+        public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic Written");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "characteristicWrite", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Descriptor Written");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "descriptorWrite", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onMtuChanged(BluetoothGatt gatt, int mtu, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Mtu changed");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "mtuChanged", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onPhyRead(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Phy read");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "phyRead", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onPhyUpdate(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Phy updated");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "phyUpdate", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onReadRemoteRssi(BluetoothGatt gatt, int rssi, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Rssi read");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "readRemoteRssi", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onReliableWriteCompleted(BluetoothGatt gatt, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Reliable read completed");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "reliableWriteCompleted", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onServiceChanged(BluetoothGatt gatt){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Service changed");
+            connectedDevice = new ConnectedDevice(gatt);
+            UnityPlayer.UnitySendMessage("NativeBLE", "serviceChanged", new Gson().toJson(connectedDevice) );
+        }
+        @Override
+        public void onServicesDiscovered(BluetoothGatt gatt, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Services discovered");
+            connectedDevice = new ConnectedDevice(gatt, status);
+            UnityPlayer.UnitySendMessage("NativeBLE", "servicesDiscovered", new Gson().toJson(connectedDevice) );
+        }
+    };
+
 
     //UNITY CALLED METHODS
 
@@ -249,13 +335,45 @@ public class NativeBLE<LocalBroadcastManager> extends UnityPlayerActivity {
     public class ConnectedDevice {
         public BtleDevice deviceInfo;
         public int state = 0;
-        public String currentService = "";
-        public String[] services;
-        public String[] characteristics;
+        public ArrayList<String> services;
+        public ArrayList<String> characteristics;
         public int mtu = 0;
         public int txPhy = 0;
         public int rxPhy = 0;
         public int rssi = 0;
+
+        public ConnectedDevice(BluetoothGatt gatt, int state) {
+            deviceInfo = new BtleDevice(gatt.getDevice());
+            this.state = state;
+            services = new ArrayList<>();
+            characteristics = new ArrayList<>();
+
+            for (BluetoothGattService service: gatt.getServices()) {
+                services.add(service.getUuid().toString());
+
+                String serviceCharacteristics = "";
+                for (BluetoothGattCharacteristic characteristic: service.getCharacteristics()) {
+                    serviceCharacteristics += characteristic.getUuid().toString() + "\n";
+                }
+                characteristics.add(serviceCharacteristics);
+            }
+        }
+
+        public ConnectedDevice(BluetoothGatt gatt) {
+            deviceInfo = new BtleDevice(gatt.getDevice());
+            services = new ArrayList<>();
+            characteristics = new ArrayList<>();
+
+            for (BluetoothGattService service: gatt.getServices()) {
+                services.add(service.getUuid().toString());
+
+                String serviceCharacteristics = "";
+                for (BluetoothGattCharacteristic characteristic: service.getCharacteristics()) {
+                    serviceCharacteristics += characteristic.getUuid().toString() + "\n";
+                }
+                characteristics.add(serviceCharacteristics);
+            }
+        }
     }
 
 }

@@ -30,8 +30,9 @@ public class BikeManager : MonoBehaviour{
     }
 
     private void OnEnable() {
-        NativeBLE.onScanResult += onDeviceFound;
-        NativeBLE.onConnected += onConnected;
+        NativeBLE.onScanResult += this.onScanResult;
+        NativeBLE.onConnected += this.onConnected;
+        NativeBLE.onservicesDiscovered += this.onServicesDiscovered;
     }
 
     private void Start() {
@@ -51,7 +52,7 @@ public class BikeManager : MonoBehaviour{
         NativeBLE.scanBLE();
     }
 
-    void onDeviceFound(BtleDevice btleDevice) {
+    void onScanResult(BtleDevice btleDevice) {
         DeviceLine line = Instantiate(deviceLine_prefab, deviceLineContainer).GetComponent<DeviceLine>();
         line.set(btleDevice);
         line.button.onClick.AddListener(onDeviceSelected);
@@ -61,10 +62,15 @@ public class BikeManager : MonoBehaviour{
         loadingOverlay.SetActive(true);
     }
 
-    void onConnected(int status, ConnectedDevice device) {
+    void onConnected(ConnectedDevice device) {
         loadingOverlay.SetActive(false);
         scanPage.SetActive(false);
         connectPage.SetActive(true);
+        NativeBLE.exploreServices();
+    }
+
+    void onServicesDiscovered(ConnectedDevice device) {
+        NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, new byte[] { 0x00, 0xD1, 0x01, 0x03, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00 });
     }
 
     #endregion

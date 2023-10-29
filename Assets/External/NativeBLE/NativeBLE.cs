@@ -13,18 +13,31 @@ public class NativeBLE : MonoBehaviour{
         public bool Equals(BtleDevice other) {
             return address == other.address;
         }
+
+        public override string ToString() {
+            return name + " : " + address + "\n";
+        }
     }
 
     public class ConnectedDevice {
         public BtleDevice deviceInfo;
         public int state = 0;
-        public string currentService = "";
         public List<string> services = new List<string>();
         public List<string> characteristics = new List<string>();
         public int mtu = 0;
         public int txPhy = 0;
         public int rxPhy = 0;
         public int rssi = 0;
+
+        public override string ToString() {
+            string s = deviceInfo.ToString();
+            s += "Services: " + services.Count + " Characteristics: " + characteristics.Count + "\n"; 
+            for (int i = 0; i < services.Count; i++) {
+                s += "### - " + services[i] + "\n";
+                if (characteristics.Count > i) s += characteristics[i];
+            }
+            return s;
+        }
     }
 
     public enum AndroidMessagePrefix {
@@ -36,6 +49,7 @@ public class NativeBLE : MonoBehaviour{
     static AndroidJavaObject unityActivity;
 
     static List<BtleDevice> foundDevices = new List<BtleDevice>();
+    static ConnectedDevice currentDevice = null;
 
     private void Awake() {
         gameObject.name = "NativeBLE";
@@ -78,6 +92,48 @@ public class NativeBLE : MonoBehaviour{
         return false;
     }
 
+    public static bool exploreServices() {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                foundDevices.Clear();
+                return unityActivity.Call<bool>("exploreLeServices");
+            }
+        }
+        return false;
+    }
+
+    public static bool writeCharacteristic(string service, string characteristic, byte[] data) {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                foundDevices.Clear();
+                return unityActivity.Call<bool>("writeCharacteristic", service, characteristic, data);
+            }
+        }
+        return false;
+    }
+
+    public static bool readCharacteristic(string service, string characteristic) {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                foundDevices.Clear();
+                return unityActivity.Call<bool>("readCharacteristic", service, characteristic);
+            }
+        }
+        return false;
+    }
+
     public static void disconnectBLE() {
         AndroidJavaClass unityClass;
         AndroidJavaObject unityActivity;
@@ -101,51 +157,71 @@ public class NativeBLE : MonoBehaviour{
         }
     }
 
+    
+
+    public static Action<ConnectedDevice> onConnected;
+    void connected(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
+        onConnected?.Invoke(new ConnectedDevice());
+    }
+
+    public static Action<int> onDisconnected;
+    void disconnected(string status) {
+        currentDevice = null;
+        Debug.Log(status);
+        onDisconnected?.Invoke(int.Parse(status));
+    }
+
     public static Action onCharacteristicWrite;
-    void characteristicWrite() {
+    void characteristicWrite(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
         onCharacteristicWrite?.Invoke();
     }
 
-    public static Action<int> onConnexionStateChanged;
-    public static Action<int, ConnectedDevice> onConnected;
-    public static Action<int> onDisconnected;
-    void connectionStateChange(int status) {
-        if (status == 0) onConnected?.Invoke(status, new ConnectedDevice());
-        else onDisconnected?.Invoke(status);
-        onConnexionStateChanged?.Invoke(status);
-    }
-
     public static Action onDescriptorWrite;
-    void descriptorWrite() {
+    void descriptorWrite(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
         onDescriptorWrite?.Invoke();
     }
 
-    void mtuChanged() {
-
+    void mtuChanged(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
     }
     
-    void phyRead() {
-
+    void phyRead(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
     }
 
-    void phyUpdate() {
-
+    void phyUpdate(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
     }
 
-    void readRemoteRssi() {
-
+    void readRemoteRssi(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
     }
     
-    void reliableWriteCompleted() {
-
+    void reliableWriteCompleted(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
     }
 
-    void serviceChanged() {
-
+    void serviceChanged(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
     }
 
-    void servicesDiscovered() {
-
+    public static Action<ConnectedDevice> onservicesDiscovered;
+    void servicesDiscovered(string jsonDevice) {
+        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
+        Debug.Log(currentDevice);
+        onservicesDiscovered?.Invoke(currentDevice);
     }
 
     void messageFromAndroid(string message) {
