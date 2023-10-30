@@ -48,14 +48,22 @@ public class BikeManager : MonoBehaviour{
     #region SCAN
 
     public void scan() {
-        foreach (Transform child in deviceLineContainer) Destroy(child.gameObject);
+        StartCoroutine(scanRoutine());
+    }
+
+    IEnumerator scanRoutine() {
+        foreach (Transform child in deviceLineContainer) if(child.name != "ScanButton") Destroy(child.gameObject);
         NativeBLE.scanBLE();
+        scanButton.interactable = false;
+        yield return new WaitForSecondsRealtime(5);
+        scanButton.interactable = true;
     }
 
     void onScanResult(BtleDevice btleDevice) {
         DeviceLine line = Instantiate(deviceLine_prefab, deviceLineContainer).GetComponent<DeviceLine>();
         line.set(btleDevice);
         line.button.onClick.AddListener(onDeviceSelected);
+        line.transform.SetAsFirstSibling();
     }
 
     void onDeviceSelected() {
@@ -72,6 +80,7 @@ public class BikeManager : MonoBehaviour{
     void onServicesDiscovered(ConnectedDevice device) {
         NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, new byte[] { 0x00, 0xD1, 0x01, 0x03, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00 });
     }
+
 
     #endregion
 

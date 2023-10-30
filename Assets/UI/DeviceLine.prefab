@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1143243979098559226}
   - component: {fileID: 1143243979098559224}
   - component: {fileID: 1143243979098559225}
+  - component: {fileID: 6104147003778337267}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -68,8 +69,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Device
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2d8c1997624387429700cb868368dbb, type: 2}
+  m_sharedMaterial: {fileID: 1893139496026396751, guid: d2d8c1997624387429700cb868368dbb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -135,6 +136,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6104147003778337267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143243979098559227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db4e58dd3b3587c45a135bdfc8bf0a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBackground: 0
+  isPanel: 0
+  isHighlight: 0
+  isBase: 1
+  isAccent: 0
+  isHalfTone: 0
+  gradientSide: 1
+  overrideTheme: {fileID: 0}
+  text: {fileID: 1143243979098559225}
+  textOld: {fileID: 0}
 --- !u!1 &1143243981065770677
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +171,7 @@ GameObject:
   - component: {fileID: 1143243981065770698}
   - component: {fileID: 1143243981065770699}
   - component: {fileID: 7654445058135635907}
+  - component: {fileID: 395108386048458710}
   m_Layer: 5
   m_Name: DeviceLine
   m_TagString: Untagged
@@ -204,7 +228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -213,7 +237,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.3
 --- !u!114 &1143243981065770699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +296,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1143243981065770699}
   text: {fileID: 1143243979098559225}
+--- !u!114 &395108386048458710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143243981065770677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fc53f1bff0c6e46af45a333a0b5e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBackground: 0
+  isPanel: 1
+  isHighlight: 0
+  isBase: 0
+  isAccent: 0
+  isHalfTone: 0
+  gradientSide: 1
+  overrideTheme: {fileID: 0}
+  sprite: {fileID: 1143243981065770698}
