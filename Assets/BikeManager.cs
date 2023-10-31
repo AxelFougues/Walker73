@@ -67,7 +67,7 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.onScanResult += this.onScanResult;
         NativeBLE.onConnected += this.onConnected;
         NativeBLE.onservicesDiscovered += this.onServicesDiscovered;
-        NativeBLE.on
+        NativeBLE.onCharacteristicRead += this.onCharacteristicRead;
     }
 
     private void Start() {
@@ -145,7 +145,7 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.exploreServices();
     }
 
-    void onServicesDiscovered(ConnectedDevice device) {
+    void onServicesDiscovered(ConnectedDevice device, int status) {
         applyState();
     }
 
@@ -194,8 +194,8 @@ public class BikeManager : MonoBehaviour {
         Debug.Log("Getting notifications");
     }
 
-    void onReadCharacteristic(byte[] data) {
-        string s = "Received : ";
+    void onCharacteristicRead(string characteristic, byte[] data) {
+        string s = "Received "+ characteristic +" : \n";
         foreach (byte b in data) s += (int)b + " ";
         Debug.Log(s);
     }
