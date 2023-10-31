@@ -43,6 +43,8 @@ public class BikeManager : MonoBehaviour {
     public GameObject debugPage;
     public Button readStateButton;
     public Button readNotificationsButton;
+    public Button clearButton;
+    public TMP_Text logText;
     [Space]
     [Header("Resources")]
     public Sprite lightOn;
@@ -94,6 +96,9 @@ public class BikeManager : MonoBehaviour {
         });
         readNotificationsButton.onClick.AddListener(delegate {
             readNotifications();
+        });
+        clearButton.onClick.AddListener(delegate {
+            logText.text = "";
         });
 
         modeButton.onClick.AddListener(delegate {
