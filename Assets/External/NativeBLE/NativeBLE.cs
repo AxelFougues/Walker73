@@ -189,7 +189,7 @@ public class NativeBLE : MonoBehaviour{
     void characteristicRead(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Characteristic write : " +  bleResponse.characteristic);
+        Debug.Log("Characteristic read : " +  bleResponse.characteristic);
         onCharacteristicRead?.Invoke(bleResponse.characteristic, bleResponse.data);
     }
 

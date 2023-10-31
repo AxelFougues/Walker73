@@ -23,7 +23,7 @@ public class BikeManager : MonoBehaviour {
     public GameObject connectPage;
     public Button bikeButton;
     public Button unitsButton;
-    public Button offButton;
+    public Button debugButton;
     public Button lightButton;
     public Image lightGraphic;
     public TMP_Text tempText;
@@ -38,6 +38,11 @@ public class BikeManager : MonoBehaviour {
     public TMP_Text speedUnitsText;
     public Button modeButton;
     public TMP_Text modeText;
+    [Space]
+    [Header("Debug")]
+    public GameObject debugPage;
+    public Button readStateButton;
+    public Button readNotificationsButton;
     [Space]
     [Header("Resources")]
     public Sprite lightOn;
@@ -80,6 +85,17 @@ public class BikeManager : MonoBehaviour {
         bikeButton.onClick.AddListener(delegate {
             disconnect();
         });
+        debugButton.onClick.AddListener(delegate {
+            connectPage.SetActive(false);
+            debugPage.SetActive(true);
+        });
+        readStateButton.onClick.AddListener(delegate {
+            readCurrentState();
+        });
+        readNotificationsButton.onClick.AddListener(delegate {
+            readNotifications();
+        });
+
         modeButton.onClick.AddListener(delegate {
             modeText.text = currentState.changeMode().ToString();
             applyState();
@@ -93,6 +109,7 @@ public class BikeManager : MonoBehaviour {
             lightGraphic.sprite = light ? lightOn : lightOff;
             applyState();
         });
+
 
         scan();
     }
@@ -182,14 +199,12 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, currentState.getData());
     }
 
-    public void getCurrentState(string device) {
-        currentDevice = device;
+    public void readCurrentState() {
         NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, currentStateId);
         NativeBLE.readCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_READ_CHARACTERISTIC);
     }
     
-    public void readNotifications(string device) {
-        currentDevice = device;
+    public void readNotifications() {
         NativeBLE.readCharacteristic(CURRENT_STATE_SERVICE, NOTIFICATIONS_CHARACTERISTIC);
         Debug.Log("Getting notifications");
     }

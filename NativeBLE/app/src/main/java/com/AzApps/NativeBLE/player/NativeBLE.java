@@ -229,7 +229,10 @@ public class NativeBLE extends UnityPlayerActivity {
             if (newState == BluetoothProfile.STATE_CONNECTED) {
                 sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Connected");
                 connectedDevice = new ConnectedDevice(gatt, newState);
-                UnityPlayer.UnitySendMessage("NativeBLE", "connected", new Gson().toJson(connectedDevice) );
+                BleResponse response = new BleResponse();
+                response.device = connectedDevice;
+                response.status = status;
+                UnityPlayer.UnitySendMessage("NativeBLE", "connected", new Gson().toJson(response) );
 
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                 sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnected");
