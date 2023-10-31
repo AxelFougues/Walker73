@@ -167,7 +167,6 @@ public class NativeBLE extends UnityPlayerActivity {
         return true;
     }
 
-
     @SuppressLint("MissingPermission")
     public boolean writeCharacteristic(String service, String characteristic, byte[] data){
         if(bluetoothGatt == null ) return false;
@@ -229,7 +228,7 @@ public class NativeBLE extends UnityPlayerActivity {
             bluetoothGatt = gatt;
             if (newState == BluetoothProfile.STATE_CONNECTED) {
                 sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Connected");
-                connectedDevice = new ConnectedDevice(gatt, status);
+                connectedDevice = new ConnectedDevice(gatt, newState);
                 UnityPlayer.UnitySendMessage("NativeBLE", "connected", new Gson().toJson(connectedDevice) );
 
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
@@ -241,67 +240,106 @@ public class NativeBLE extends UnityPlayerActivity {
 
         }
         @Override
+        public void onCharacteristicRead (BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, byte[] value, int status){
+            bluetoothGatt = gatt;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic Read");
+            connectedDevice = new ConnectedDevice(gatt);
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.characteristic = characteristic.getUuid().toString();
+            response.status = status;
+            response.data = value;
+            UnityPlayer.UnitySendMessage("NativeBLE", "characteristicRead", new Gson().toJson(response));
+        }
+        @Override
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic Written");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "characteristicWrite", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.characteristic = characteristic.getUuid().toString();
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "characteristicWrite", new Gson().toJson(response) );
         }
         @Override
         public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Descriptor Written");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "descriptorWrite", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "descriptorWrite", new Gson().toJson(response) );
         }
         @Override
         public void onMtuChanged(BluetoothGatt gatt, int mtu, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Mtu changed");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "mtuChanged", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "mtuChanged", new Gson().toJson(response) );
         }
         @Override
         public void onPhyRead(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Phy read");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "phyRead", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "phyRead", new Gson().toJson(response) );
         }
         @Override
         public void onPhyUpdate(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Phy updated");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "phyUpdate", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "phyUpdate", new Gson().toJson(response) );
         }
         @Override
         public void onReadRemoteRssi(BluetoothGatt gatt, int rssi, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Rssi read");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "readRemoteRssi", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "readRemoteRssi", new Gson().toJson(response) );
         }
         @Override
         public void onReliableWriteCompleted(BluetoothGatt gatt, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Reliable read completed");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "reliableWriteCompleted", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "reliableWriteCompleted", new Gson().toJson(response) );
         }
         @Override
         public void onServiceChanged(BluetoothGatt gatt){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Service changed");
             connectedDevice = new ConnectedDevice(gatt);
-            UnityPlayer.UnitySendMessage("NativeBLE", "serviceChanged", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            UnityPlayer.UnitySendMessage("NativeBLE", "serviceChanged", new Gson().toJson(response) );
         }
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status){
             bluetoothGatt = gatt;
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Services discovered");
             connectedDevice = new ConnectedDevice(gatt, status);
-            UnityPlayer.UnitySendMessage("NativeBLE", "servicesDiscovered", new Gson().toJson(connectedDevice) );
+            BleResponse response = new BleResponse();
+            response.device = connectedDevice;
+            response.status = status;
+            UnityPlayer.UnitySendMessage("NativeBLE", "servicesDiscovered", new Gson().toJson(response) );
         }
     };
 
@@ -374,6 +412,14 @@ public class NativeBLE extends UnityPlayerActivity {
                 characteristics.add(serviceCharacteristics);
             }
         }
+    }
+
+    public class BleResponse{
+        public ConnectedDevice device;
+        public int status = -1;
+        public byte[] data = null;
+        public String characteristic = null;
+        public String service = null;
     }
 
 }

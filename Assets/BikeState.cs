@@ -5,6 +5,13 @@ using UnityEngine;
 
 [Serializable]
 public class BikeState : MonoBehaviour {
+    public static List<string> modeDescriptors = new List<string> {
+        "25km/h - 250W",
+        "35km/h - 250W",
+        "45km/h - 850W",
+        "50km/h - 1200W"
+    };
+
     bool metric = true;
     int mode;
     int assist;
@@ -20,6 +27,7 @@ public class BikeState : MonoBehaviour {
     public int getMode() => mode;
     public int getAssist() => assist;
     public bool getLight() => light;
+    public string getModeDescriptor() { return modeDescriptors[mode]; }
 
     public int setMode(int value, bool save = true) {
         value = Mathf.Clamp(value, 0, 3);
@@ -44,7 +52,7 @@ public class BikeState : MonoBehaviour {
 
     public int changeAssist(bool save = true) {
         assist++;
-        if (assist > 3) assist = 0;
+        if (assist > 4) assist = 0;
         if (save) PlayerPrefs.SetInt("assist", assist);
         return assist;
     }
@@ -79,6 +87,17 @@ public class BikeState : MonoBehaviour {
                mode == state.mode &&
                assist == state.assist &&
                light == state.light;
+    }
+
+    public bool setData(byte[] data) {
+        if (data == null || data.Length != 10 || data[0] != 0x00 || data[1] != 0x03) return false;
+        if (data[2] > 0x01) return false;
+        if (data[3] > 0x04) return false;
+        if (data[4] > 0x03) return false;
+        light = data[2] == 0x01;
+        assist = data[3];
+        mode = data[4];
+        return true;
     }
 
     public byte[] getData() {

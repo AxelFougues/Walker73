@@ -19,6 +19,7 @@ public class NativeBLE : MonoBehaviour{
         }
     }
 
+    [Serializable]
     public class ConnectedDevice {
         public BtleDevice deviceInfo;
         public int state = 0;
@@ -38,6 +39,15 @@ public class NativeBLE : MonoBehaviour{
             }
             return s;
         }
+    }
+
+    [Serializable]
+    public class BleResponse {
+        public ConnectedDevice device;
+        public int status = -1;
+        public byte[] data = null;
+        public string characteristic = null;
+        public string service = null;
     }
 
     public enum AndroidMessagePrefix {
@@ -160,68 +170,99 @@ public class NativeBLE : MonoBehaviour{
     
 
     public static Action<ConnectedDevice> onConnected;
-    void connected(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
+    void connected(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Connected : " + currentDevice);
         onConnected?.Invoke(new ConnectedDevice());
     }
 
     public static Action<int> onDisconnected;
-    void disconnected(string status) {
+    void disconnected(string response) {
         currentDevice = null;
-        Debug.Log(status);
-        onDisconnected?.Invoke(int.Parse(status));
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        Debug.Log("Disconnected : " +  bleResponse.status);
+        onDisconnected?.Invoke(bleResponse.status);
     }
 
-    public static Action onCharacteristicWrite;
-    void characteristicWrite(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
-        onCharacteristicWrite?.Invoke();
+    public static Action<string, byte[]> onCharacteristicRead;
+    void characteristicRead(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Characteristic write : " +  bleResponse.characteristic);
+        onCharacteristicRead?.Invoke(bleResponse.characteristic, bleResponse.data);
     }
 
-    public static Action onDescriptorWrite;
-    void descriptorWrite(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
-        onDescriptorWrite?.Invoke();
+    public static Action<string> onCharacteristicWrite;
+    void characteristicWrite(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Characteristic write");
+        onCharacteristicWrite?.Invoke(bleResponse.characteristic);
     }
 
-    void mtuChanged(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
-    }
-    
-    void phyRead(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
+    public static Action<int> onDescriptorWrite;
+    void descriptorWrite(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Descriptor write");
+        onDescriptorWrite?.Invoke(bleResponse.status);
     }
 
-    void phyUpdate(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
+    public static Action<int> onMtuChanged;
+    void mtuChanged(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Mtu changed");
+        onMtuChanged?.Invoke(bleResponse.status);
     }
 
-    void readRemoteRssi(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
-    }
-    
-    void reliableWriteCompleted(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
+    public static Action<int> onPhyRead;
+    void phyRead(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Phy read");
+        onPhyRead?.Invoke(bleResponse.status);
     }
 
-    void serviceChanged(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
+    public static Action<int> onPhyUpdate;
+    void phyUpdate(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Phy update");
+        onPhyUpdate?.Invoke(bleResponse.status);
     }
 
-    public static Action<ConnectedDevice> onservicesDiscovered;
-    void servicesDiscovered(string jsonDevice) {
-        currentDevice = JsonUtility.FromJson<ConnectedDevice>(jsonDevice);
-        Debug.Log(currentDevice);
-        onservicesDiscovered?.Invoke(currentDevice);
+    public static Action<int> onReadRemoteRssi;
+    void readRemoteRssi(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Read remote rssi");
+        onReadRemoteRssi?.Invoke(bleResponse.status);
+    }
+
+    public static Action<int> onReliableWriteCompleted;
+    void reliableWriteCompleted(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Reliable write complete");
+        onReliableWriteCompleted?.Invoke(bleResponse.status);
+    }
+
+    public static Action onServiceChanged;
+    void serviceChanged(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Service changed : " + currentDevice);
+        onServiceChanged?.Invoke();
+    }
+
+    public static Action<ConnectedDevice, int> onservicesDiscovered;
+    void servicesDiscovered(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Services discovered : " + currentDevice);
+        onservicesDiscovered?.Invoke(currentDevice, bleResponse.status);
     }
 
     void messageFromAndroid(string message) {

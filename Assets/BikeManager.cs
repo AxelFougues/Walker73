@@ -50,6 +50,7 @@ public class BikeManager : MonoBehaviour {
     const string CURRENT_STATE_SERVICE = "00001554-1212-efde-1523-785feabcd123";
     const string CURRENT_STATE_READ_CHARACTERISTIC = "00001564-1212-efde-1523-785feabcd123";
     const string CURRENT_STATE_WRITE_CHARACTERISTIC = "0000155f-1212-efde-1523-785feabcd123";
+    const string NOTIFICATIONS_CHARACTERISTIC = "0000155e-1212-efde-1523-785feabcd123";
     byte[] currentStateId = { 0x03, 0x00 };
 
     //Internal
@@ -66,6 +67,7 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.onScanResult += this.onScanResult;
         NativeBLE.onConnected += this.onConnected;
         NativeBLE.onservicesDiscovered += this.onServicesDiscovered;
+        NativeBLE.on
     }
 
     private void Start() {
@@ -170,6 +172,7 @@ public class BikeManager : MonoBehaviour {
         connectPage.SetActive(false);
     }
 
+    
     #endregion
 
 
@@ -179,45 +182,25 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, currentState.getData());
     }
 
-    public void getCurrentState(string device, Action<BikeState> callback) {
+    public void getCurrentState(string device) {
         currentDevice = device;
         NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, currentStateId);
-        Debug.Log("Getting state 1/3");
-    }
-    void currentStateWriteResponse(string response) {
         NativeBLE.readCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_READ_CHARACTERISTIC);
-        Debug.Log("Getting state 2/3 " + response);
     }
-    void currentStateReadResponse(string response, byte[] data) {
-        string s = "Getting state 3/3 " + response + " : ";
+    
+    public void readNotifications(string device) {
+        currentDevice = device;
+        NativeBLE.readCharacteristic(CURRENT_STATE_SERVICE, NOTIFICATIONS_CHARACTERISTIC);
+        Debug.Log("Getting notifications");
+    }
+
+    void onReadCharacteristic(byte[] data) {
+        string s = "Received : ";
         foreach (byte b in data) s += (int)b + " ";
         Debug.Log(s);
     }
     #endregion
 
 
-    #region NOTIFICATIONS
-    const string NOTIFICATIONS_CHARACTERISTIC = "0000155e-1212-efde-1523-785feabcd123";
-    Action<BikeState> notificationsCallback;
 
-    public void subscribeToNotifications(string device, Action<BikeState> callback) {
-        currentDevice = device;
-        notificationsCallback = callback;
-        //BluetoothLEHardwareInterface.SubscribeCharacteristic(currentDevice, CURRENT_STATE_SERVICE, NOTIFICATIONS_CHARACTERISTIC, notificationResponse, characteristicUpdated);
-        Debug.Log("Getting notifications");
-    }
-    void notificationResponse(string response) {
-        Debug.Log("New notification " + response);
-    }
-    void characteristicUpdated(string uuid, byte[] data) {
-    }
-
-    public void unsubscribeToNotifications(Action<string> callback) {
-        //BluetoothLEHardwareInterface.UnSubscribeCharacteristic(currentDevice, CURRENT_STATE_SERVICE, NOTIFICATIONS_CHARACTERISTIC, callback);
-    }
-
-    #endregion
-
-
-    
 }
