@@ -38,6 +38,8 @@ public class BikeManager : MonoBehaviour {
     public TMP_Text speedUnitsText;
     public Button modeButton;
     public TMP_Text modeText;
+    public Button autoApplyButton;
+    public Image autoApplyGraphic;
     [Space]
     [Header("Debug")]
     public GameObject debugPage;
@@ -49,14 +51,16 @@ public class BikeManager : MonoBehaviour {
     [Header("Resources")]
     public Sprite lightOn;
     public Sprite lightOff;
+    public Sprite autoApplyOn;
+    public Sprite autoApplyOff;
     public List<Sprite> batteryLevels;
     public Sprite batteryCharging;
 
 
     //BT protocol
     const string CURRENT_STATE_SERVICE = "00001554-1212-efde-1523-785feabcd123";
-    const string CURRENT_STATE_READ_CHARACTERISTIC = "00001564-1212-efde-1523-785feabcd123";
-    const string CURRENT_STATE_WRITE_CHARACTERISTIC = "0000155f-1212-efde-1523-785feabcd123";
+    const string CURRENT_STATE_WRITE_CHARACTERISTIC = "00001564-1212-efde-1523-785feabcd123";
+    const string CURRENT_STATE_READ_CHARACTERISTIC = "0000155f-1212-efde-1523-785feabcd123";
     const string NOTIFICATIONS_CHARACTERISTIC = "0000155e-1212-efde-1523-785feabcd123";
     byte[] currentStateId = { 0x03, 0x00 };
 
@@ -75,6 +79,7 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.onConnected += this.onConnected;
         NativeBLE.onservicesDiscovered += this.onServicesDiscovered;
         NativeBLE.onCharacteristicRead += this.onCharacteristicRead;
+        NativeBLE.onCharacteristicWrite += this.onCharacteristicWrite;
     }
 
     private void Start() {
@@ -91,6 +96,13 @@ public class BikeManager : MonoBehaviour {
             connectPage.SetActive(false);
             debugPage.SetActive(true);
         });
+        autoApplyGraphic.sprite = PlayerPrefs.GetInt("auto", 1) == 1 ? autoApplyOn : autoApplyOff;
+        autoApplyButton.onClick.AddListener(delegate {
+            bool newAutoApply = !(PlayerPrefs.GetInt("auto", 1) == 1);
+            autoApplyGraphic.sprite = newAutoApply ? autoApplyOn : autoApplyOff;
+            PlayerPrefs.SetInt("auto", newAutoApply?1:0);
+        });
+
         readStateButton.onClick.AddListener(delegate {
             readCurrentState();
         });
@@ -160,6 +172,18 @@ public class BikeManager : MonoBehaviour {
         loadingOverlay.SetActive(true);
     }
 
+    #endregion
+
+
+
+
+    #region CONNECT
+
+    public void connect(BtleDevice device) {
+        NativeBLE.connectBLE(device.address);
+    }
+
+
     void onConnected(ConnectedDevice device) {
         loadingOverlay.SetActive(false);
         scanPage.SetActive(false);
@@ -168,22 +192,9 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onServicesDiscovered(ConnectedDevice device, int status) {
-        applyState();
+        if (PlayerPrefs.GetInt("auto", 1) == 1) applyState();
+        else readCurrentState();
     }
-
-
-    #endregion
-
-
-
-
-    #region CONNECT
-
-
-    public void connect(BtleDevice device) {
-        NativeBLE.connectBLE(device.address);
-    }
-
 
     public void disconnect() {
         NativeBLE.disconnectBLE();
@@ -206,7 +217,11 @@ public class BikeManager : MonoBehaviour {
 
     public void readCurrentState() {
         NativeBLE.writeCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_WRITE_CHARACTERISTIC, currentStateId);
+        Debug.Log("Getting current state");
+    }
+    public void readCurrentStateStep2() {
         NativeBLE.readCharacteristic(CURRENT_STATE_SERVICE, CURRENT_STATE_READ_CHARACTERISTIC);
+        Debug.Log("Getting current state 2");
     }
     
     public void readNotifications() {
@@ -214,10 +229,23 @@ public class BikeManager : MonoBehaviour {
         Debug.Log("Getting notifications");
     }
 
+    void onCharacteristicWrite(string characteristic) {
+        if (characteristic.Trim() == CURRENT_STATE_WRITE_CHARACTERISTIC) readCurrentStateStep2();
+    }
+
     void onCharacteristicRead(string characteristic, byte[] data) {
-        string s = "Received "+ characteristic +" : \n";
-        foreach (byte b in data) s += (int)b + " ";
-        Debug.Log(s);
+        if (characteristic == NOTIFICATIONS_CHARACTERISTIC) {
+            string s = "Notification: \n";
+            foreach (byte b in data) s += (int)b + " ";
+            Debug.Log(s);
+        } else if (characteristic == CURRENT_STATE_READ_CHARACTERISTIC) {
+            currentState.setData(data);
+            refreshDisplay(currentState);
+        } else {
+            string s = "Received " + characteristic + " : \n";
+            foreach (byte b in data) s += (int)b + " ";
+            Debug.Log(s);
+        }
     }
     #endregion
 

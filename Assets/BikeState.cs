@@ -90,13 +90,13 @@ public class BikeState : MonoBehaviour {
     }
 
     public bool setData(byte[] data) {
-        if (data == null || data.Length != 10 || data[0] != 0x00 || data[1] != 0x03) return false;
-        if (data[2] > 0x01) return false;
-        if (data[3] > 0x04) return false;
-        if (data[4] > 0x03) return false;
-        light = data[2] == 0x01;
-        assist = data[3];
-        mode = data[4];
+        if (data == null || data.Length != 10 || data[0] != 0x03) return false;
+        if (data[4] > 0x01) return false;
+        if (data[2] > 0x04) return false;
+        if (data[5] > 0x03) return false;
+        light = data[4] == 0x01;
+        assist = data[2];
+        mode = data[5];
         return true;
     }
 

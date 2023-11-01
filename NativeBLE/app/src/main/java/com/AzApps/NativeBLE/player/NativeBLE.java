@@ -210,7 +210,6 @@ public class NativeBLE extends UnityPlayerActivity {
     private final ScanCallback leScanCallback = new ScanCallback() {
         @Override
         public void onScanResult(int callbackType, ScanResult result) {
-            //super.onScanResult(callbackType, result);
             BtleDevice btleDevice = new BtleDevice(result.getDevice());
             if(!availableDevices.containsKey(btleDevice.address)){
                 availableDevices.put(btleDevice.address, result.getDevice());
