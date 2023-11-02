@@ -131,11 +131,11 @@ public class BikeState : MonoBehaviour {
     public bool processData(byte[] data) {
         if (data == null || data.Length != 10) return false;
 
-        if (dataIsId(data, BikeManager.SETTINGS_ID)) processSettingsData(data);
-        else if (dataIsId(data, BikeManager.SPEED_ID)) processWheelData(data);
-        else if (dataIsId(data, BikeManager.TOTAL_ID)) processTotalData(data);
-        else if (dataIsId(data, BikeManager.PEDAL_ID)) processPedalData(data);
-        else if (dataIsId(data, BikeManager.MOTOR_ID)) processMotorData(data);
+        if (dataIsId(data, BikeManager.SETTINGS_ID)) return processSettingsData(data);
+        else if (dataIsId(data, BikeManager.SPEED_ID)) return processWheelData(data);
+        else if (dataIsId(data, BikeManager.TOTAL_ID)) return processTotalData(data);
+        else if (dataIsId(data, BikeManager.PEDAL_ID)) return processPedalData(data);
+        else if (dataIsId(data, BikeManager.MOTOR_ID)) return processMotorData(data);
 
         return false;
     }
