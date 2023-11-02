@@ -95,7 +95,6 @@ public class NativeBLE : MonoBehaviour{
             unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
             if (unityActivity != null) {
-                foundDevices.Clear();
                 return unityActivity.Call<bool>("connectLeDevice", address);
             }
         }
@@ -109,7 +108,6 @@ public class NativeBLE : MonoBehaviour{
             unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
             if (unityActivity != null) {
-                foundDevices.Clear();
                 return unityActivity.Call<bool>("exploreLeServices");
             }
         }
@@ -123,7 +121,6 @@ public class NativeBLE : MonoBehaviour{
             unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
             if (unityActivity != null) {
-                foundDevices.Clear();
                 return unityActivity.Call<bool>("writeCharacteristic", service, characteristic, data);
             }
         }
@@ -137,8 +134,20 @@ public class NativeBLE : MonoBehaviour{
             unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
             if (unityActivity != null) {
-                foundDevices.Clear();
                 return unityActivity.Call<bool>("readCharacteristic", service, characteristic);
+            }
+        }
+        return false;
+    }
+
+    public static bool subscribeCharacteristic(string service, string characteristic, bool subscribe) {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                return unityActivity.Call<bool>("subscribeCharacteristic", service, characteristic, subscribe);
             }
         }
         return false;
@@ -199,6 +208,14 @@ public class NativeBLE : MonoBehaviour{
         currentDevice = bleResponse.device;
         Debug.Log("Characteristic write");
         onCharacteristicWrite?.Invoke(bleResponse.characteristic);
+    }
+
+    public static Action<string, byte[]> onCharacteristicChanged;
+    void characteristicChanged(string response) {
+        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
+        currentDevice = bleResponse.device;
+        Debug.Log("Characteristic changed : " + bleResponse.characteristic);
+        onCharacteristicChanged?.Invoke(bleResponse.characteristic, bleResponse.data);
     }
 
     public static Action<int> onDescriptorWrite;

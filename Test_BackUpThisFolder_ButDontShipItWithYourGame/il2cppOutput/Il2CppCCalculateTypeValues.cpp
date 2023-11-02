@@ -12965,18 +12965,18 @@ struct U3CU3Ec_tA54F8EBCAFF569C7ED6FE8EC10B21ABDFDA0FA27_StaticFields
 	U3CU3Ec_tA54F8EBCAFF569C7ED6FE8EC10B21ABDFDA0FA27* ___U3CU3E9_0;
 };
 
-// BikeManager/<scanRoutine>d__51
-struct U3CscanRoutineU3Ed__51_t2D772876CE2A4A5816EC11BE806BB34CC83623D2  : public RuntimeObject
+// BikeManager/<scanRoutine>d__53
+struct U3CscanRoutineU3Ed__53_tD62DF0CDA57A2264B6FA6B8CEE3A071796D68FA8  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<scanRoutine>d__51::<>1__state
+	// System.Int32 BikeManager/<scanRoutine>d__53::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<scanRoutine>d__51::<>2__current
+	// System.Object BikeManager/<scanRoutine>d__53::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<scanRoutine>d__51::<>4__this
+	// BikeManager BikeManager/<scanRoutine>d__53::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
-	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__51::<>s__1
+	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__53::<>s__1
 	RuntimeObject* ___U3CU3Es__1_3;
-	// UnityEngine.Transform BikeManager/<scanRoutine>d__51::<child>5__2
+	// UnityEngine.Transform BikeManager/<scanRoutine>d__53::<child>5__2
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CchildU3E5__2_4;
 };
 
@@ -46731,34 +46731,38 @@ struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D  : public MonoBehav
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___autoApplyButton_30;
 	// UnityEngine.UI.Image BikeManager::autoApplyGraphic
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___autoApplyGraphic_31;
+	// TMPro.TMP_Text BikeManager::notifText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___notifText_32;
 	// UnityEngine.GameObject BikeManager::debugPage
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___debugPage_32;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___debugPage_33;
 	// UnityEngine.UI.Button BikeManager::readStateButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___readStateButton_33;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___readStateButton_34;
 	// UnityEngine.UI.Button BikeManager::readNotificationsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___readNotificationsButton_34;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___readNotificationsButton_35;
 	// UnityEngine.UI.Button BikeManager::clearButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___clearButton_35;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___clearButton_36;
 	// TMPro.TMP_Text BikeManager::logText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___logText_36;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___logText_37;
 	// UnityEngine.Sprite BikeManager::lightOn
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_37;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_38;
 	// UnityEngine.Sprite BikeManager::lightOff
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_38;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_39;
 	// UnityEngine.Sprite BikeManager::autoApplyOn
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___autoApplyOn_39;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___autoApplyOn_40;
 	// UnityEngine.Sprite BikeManager::autoApplyOff
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___autoApplyOff_40;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___autoApplyOff_41;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> BikeManager::batteryLevels
-	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_41;
+	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_42;
 	// UnityEngine.Sprite BikeManager::batteryCharging
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_42;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_43;
 	// System.Byte[] BikeManager::currentStateId
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___currentStateId_47;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___currentStateId_48;
+	// System.Collections.Generic.List`1<System.String> BikeManager::notifs
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___notifs_49;
 	// System.String BikeManager::currentDevice
-	String_t* ___currentDevice_48;
+	String_t* ___currentDevice_50;
 	// BikeState BikeManager::currentState
-	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentState_49;
+	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentState_51;
 };
 
 struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields
@@ -47088,22 +47092,24 @@ struct NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields
 	Action_2_t6167C7DD369F0ADA5FD8FB5C2476453CF404C831* ___onCharacteristicRead_12;
 	// System.Action`1<System.String> NativeBLE::onCharacteristicWrite
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___onCharacteristicWrite_13;
+	// System.Action`2<System.String,System.Byte[]> NativeBLE::onCharacteristicChanged
+	Action_2_t6167C7DD369F0ADA5FD8FB5C2476453CF404C831* ___onCharacteristicChanged_14;
 	// System.Action`1<System.Int32> NativeBLE::onDescriptorWrite
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onDescriptorWrite_14;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onDescriptorWrite_15;
 	// System.Action`1<System.Int32> NativeBLE::onMtuChanged
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onMtuChanged_15;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onMtuChanged_16;
 	// System.Action`1<System.Int32> NativeBLE::onPhyRead
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onPhyRead_16;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onPhyRead_17;
 	// System.Action`1<System.Int32> NativeBLE::onPhyUpdate
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onPhyUpdate_17;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onPhyUpdate_18;
 	// System.Action`1<System.Int32> NativeBLE::onReadRemoteRssi
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onReadRemoteRssi_18;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onReadRemoteRssi_19;
 	// System.Action`1<System.Int32> NativeBLE::onReliableWriteCompleted
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onReliableWriteCompleted_19;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onReliableWriteCompleted_20;
 	// System.Action NativeBLE::onServiceChanged
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___onServiceChanged_20;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___onServiceChanged_21;
 	// System.Action`2<NativeBLE/ConnectedDevice,System.Int32> NativeBLE::onservicesDiscovered
-	Action_2_tD001F9C6FD55991603BE720A74B7B5B779D6EB85* ___onservicesDiscovered_21;
+	Action_2_tD001F9C6FD55991603BE720A74B7B5B779D6EB85* ___onservicesDiscovered_22;
 };
 
 // UnityEngine.UIElements.PopupWindow
@@ -56017,7 +56023,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3298 = { sizeof(Utility_t8BC
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299 = { sizeof(U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300 = { sizeof(U3CscanRoutineU3Ed__51_t2D772876CE2A4A5816EC11BE806BB34CC83623D2), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300 = { sizeof(U3CscanRoutineU3Ed__53_tD62DF0CDA57A2264B6FA6B8CEE3A071796D68FA8), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301 = { sizeof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D), -1, sizeof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302;
