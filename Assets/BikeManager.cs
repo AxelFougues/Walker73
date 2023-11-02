@@ -21,25 +21,33 @@ public class BikeManager : MonoBehaviour {
     [Space]
     [Header("Connect")]
     public GameObject connectPage;
-    public Button bikeButton;
-    public Button unitsButton;
-    public Button debugButton;
-    public Button lightButton;
-    public Image lightGraphic;
-    public TMP_Text tempText;
-    public TMP_Text tempUnitsText;
-    public TMP_Text voltText;
-    public TMP_Text voltUnitsText;
+    [Space]
+    public Button modeButton;
+    public TMP_Text modeText;
+    public TMP_Text speedText;
+    public TMP_Text speedUnitsText;
+    [Space]
     public Image levelGraphic;
     public TMP_Text levelText;
     public Button assistButton;
     public TMP_Text assistText;
-    public TMP_Text speedText;
-    public TMP_Text speedUnitsText;
-    public Button modeButton;
-    public TMP_Text modeText;
-    public Button autoApplyButton;
+    [Space]
+    public TMP_Text tempText;
+    public TMP_Text tempUnitsText;
+    public TMP_Text voltText;
+    public TMP_Text voltUnitsText;
+    [Space]
+    public Button lightButton;
+    public Image lightGraphic;
     public Image autoApplyGraphic;
+    public Button autoApplyButton;
+    public Button bikeButton;
+    public Button unitsButton;
+    public Button debugButton;
+    [Space]
+    public TMP_Text totalText;
+    public TMP_Text wheelRPMText;
+    public TMP_Text pedalRPMText;
     [Space]
     [Header("Debug")]
     public TMP_Text notifText;
@@ -82,19 +90,15 @@ public class BikeManager : MonoBehaviour {
     private void Awake() {
         DontDestroyOnLoad(this);
         instance = this;
+
         /*
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x1A, 0x04 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x05 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x07 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x04 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x07 }));
         Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x09 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x0B }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x0F }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x30, 0x16 }));
-        
-        int x = BitConverter.ToUInt16(new byte[] { 0x30, 0x16 });
-        Debug.Log(x);
-        Debug.Log(0.009876614 * x + 1.228228);
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x09 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x10 }));
         */
+ 
     }
 
     private void OnEnable() {
@@ -162,8 +166,12 @@ public class BikeManager : MonoBehaviour {
         modeText.text = state.getMode().ToString();
         assistText.text = state.getAssist().ToString();
         lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
-        speedText.text = state.getReadableSpeed();
-        levelText.text = state.getRawSpeed().ToString();
+
+        speedText.text = state.getReadableWheelSpeed();
+
+        totalText.text = state.getTotal().ToString();
+        wheelRPMText.text = state.getReadableWheelRPM();
+        pedalRPMText.text = state.getReadablePedalRPM();
     }
 
 

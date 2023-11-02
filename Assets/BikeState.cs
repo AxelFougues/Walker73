@@ -12,14 +12,24 @@ public class BikeState : MonoBehaviour {
         "50km/h - 1200W"
     };
 
+    public static float PEDAL_DIAMETRER_M = 0.125f;
+    public static float WHEEL_DIAMETRER_M = 0.57f;
+
     //settings
     bool metric = true;
     int mode;
     int assist;
     bool light;
+
     //metrics
-    double speed = 0f;
-    ushort rawSpeed = 0;
+    double wheelSpeed = 0f;
+    double wheelRPM = 0f;
+    ushort rawWheel = 0;
+
+    int total = 0;
+
+    double pedalRPM = 0f;
+    ushort rawPedal = 0;
 
     private void Awake() {
         mode = PlayerPrefs.GetInt("mode", 3);
@@ -28,30 +38,19 @@ public class BikeState : MonoBehaviour {
         metric = PlayerPrefs.GetInt("metric", 0) == 1;
     }
 
+
+    //SETTINGS
+
     public int getMode() => mode;
     public int getAssist() => assist;
     public bool getLight() => light;
     public string getModeDescriptor() { return modeDescriptors[mode]; }
-
-    public int setMode(int value, bool save = true) {
-        value = Mathf.Clamp(value, 0, 3);
-        mode = value;
-        if (save) PlayerPrefs.SetInt("mode", mode);
-        return mode;
-    }
 
     public int changeMode(bool save = true) {
         mode++;
         if (mode > 3) mode = 0;
         if (save) PlayerPrefs.SetInt("mode", mode);
         return mode;
-    }
-
-    public int setAssist(int value, bool save = true) {
-        value = Mathf.Clamp(value, 0, 3);
-        assist = value;
-        if (save) PlayerPrefs.SetInt("assist", assist);
-        return assist;
     }
 
     public int changeAssist(bool save = true) {
@@ -91,21 +90,42 @@ public class BikeState : MonoBehaviour {
         return new byte[] { 0x00, 0xD1, lightData, (byte)assist, (byte)mode, 0x00, 0x00, 0x00, 0x00, 0x00 };
     }
 
-    public double getSpeed() {
-        return speed;
+    //WHEEL
+
+    public double getWheelSpeed() {
+        return wheelSpeed;
     }
 
-    public string getReadableSpeed() {
-        return speed.ToString("0.0");
+    public string getReadableWheelSpeed() {
+        return wheelSpeed.ToString("0.0");
     }
 
-    public ushort getRawSpeed() {
-        return rawSpeed;
+    public double getWheelRPM() {
+        return wheelRPM;
+    }
+
+    public string getReadableWheelRPM() {
+        return wheelRPM.ToString("0.0");
+    }
+
+    //TOTAL
+
+    public int getTotal() {
+        return total;
+    }
+
+    //PEDAL
+
+    public double getPedalRPM() {
+        return pedalRPM;
+    }
+
+    public string getReadablePedalRPM() {
+        return pedalRPM.ToString("0.0");
     }
 
 
-
-
+    //DATA RECEIVE
 
     public bool setData(byte[] data) {
         if (data == null || data.Length != 10) return false;
@@ -128,14 +148,20 @@ public class BikeState : MonoBehaviour {
     bool processMovementData(byte[] data) {
         if (data[1] == 0x01) { //wheel spin
 
-            rawSpeed = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
-            speedFromLinear(rawSpeed);
+            rawWheel = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
+            wheelSpeedFromRaw();
+            wheelRPMFromSpeed();
             return true;
 
-        } else if (data[1] == 0x02) {// power?
+        } else if (data[1] == 0x02) {// distance
+
+            total = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 10;
 
         } else if (data[1] == 0x03) {//pedal
-            
+
+            rawPedal = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
+            pedalRPMFromRaw();
+
         }
         return false;
     }
@@ -144,9 +170,19 @@ public class BikeState : MonoBehaviour {
         return false;
     }
 
-    void speedFromLinear(float x) {
-        speed = 0.009876614 * x + 1.228228;
+    void wheelSpeedFromRaw() {
+        wheelSpeed = 0.009876614 * rawWheel + 1.228228;
     }
+
+    void wheelRPMFromSpeed() {
+        wheelRPM =  wheelSpeed/WHEEL_DIAMETRER_M/0.1885f;
+    }
+
+    void pedalRPMFromRaw() {
+        pedalRPM = 0.01926005 * rawPedal + 1.051926;
+    }
+
+    //OTHER
 
     public override bool Equals(object obj) {
         var state = obj as BikeState;
