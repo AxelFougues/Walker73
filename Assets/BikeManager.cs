@@ -54,17 +54,12 @@ public class BikeManager : MonoBehaviour {
     public Button debugButton;
     [Space]
     public TMP_Text totalText;
+    public TMP_Text totalUnitsText;
     public TMP_Text wheelRPMText;
     public TMP_Text pedalRPMText;
     [Space]
     [Header("Debug")]
     public TMP_Text notifText;
-
-    public GameObject debugPage;
-    public Button readStateButton;
-    public Button readNotificationsButton;
-    public Button clearButton;
-    public TMP_Text logText;
     [Space]
     [Header("Resources")]
     public Sprite lightOn;
@@ -80,6 +75,7 @@ public class BikeManager : MonoBehaviour {
     const string UUID_CHARACTERISTIC_REGISTER_ID = "00001564-1212-efde-1523-785feabcd123";
     const string UUID_CHARACTERISTIC_REGISTER = "0000155f-1212-efde-1523-785feabcd123";
     const string UUID_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
+    
 
     List<string> debugNotificationText = new List<string> {
         "2 1",
@@ -119,19 +115,33 @@ public class BikeManager : MonoBehaviour {
     private void Start() {
         scanPage.SetActive(true);
         connectPage.SetActive(false);
-        debugPage.SetActive(false);
+
         currentBikeState = gameObject.AddComponent<BikeState>();
         refreshDisplay(currentBikeState);
 
         scanButton.onClick.AddListener(delegate {
             scan();
         });
+        //
+        modeButton.onClick.AddListener(delegate {
+            modeText.text = currentBikeState.changeMode().ToString();
+            applySettings();
+        });
+        //
+        assistButton.onClick.AddListener(delegate {
+            assistText.text = currentBikeState.changeAssist().ToString();
+            applySettings();
+        });
+        //
+
+        //
+        lightButton.onClick.AddListener(delegate {
+            bool light = currentBikeState.toggleLight();
+            lightGraphic.sprite = light ? lightOn : lightOff;
+            applySettings();
+        });
         bikeButton.onClick.AddListener(delegate {
             disconnect();
-        });
-        debugButton.onClick.AddListener(delegate {
-            connectPage.SetActive(false);
-            debugPage.SetActive(true);
         });
         autoApplyGraphic.sprite = PlayerPrefs.GetInt("auto", 1) == 1 ? autoApplyOn : autoApplyOff;
         autoApplyButton.onClick.AddListener(delegate {
@@ -139,31 +149,10 @@ public class BikeManager : MonoBehaviour {
             autoApplyGraphic.sprite = newAutoApply ? autoApplyOn : autoApplyOff;
             PlayerPrefs.SetInt("auto", newAutoApply?1:0);
         });
-
-        readStateButton.onClick.AddListener(delegate {
-            registerSettings();
+        unitsButton.onClick.AddListener(delegate {
+            currentBikeState.toggleMetric();
+            refreshDisplay(currentBikeState);
         });
-        readNotificationsButton.onClick.AddListener(delegate {
-            readNotifications();
-        });
-        clearButton.onClick.AddListener(delegate {
-            logText.text = "";
-        });
-
-        modeButton.onClick.AddListener(delegate {
-            modeText.text = currentBikeState.changeMode().ToString();
-            applySettings();
-        });
-        assistButton.onClick.AddListener(delegate {
-            assistText.text = currentBikeState.changeAssist().ToString();
-            applySettings();
-        });
-        lightButton.onClick.AddListener(delegate {
-            bool light = currentBikeState.toggleLight();
-            lightGraphic.sprite = light ? lightOn : lightOff;
-            applySettings();
-        });
-
 
         scan();
     }
@@ -174,8 +163,13 @@ public class BikeManager : MonoBehaviour {
         lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
 
         speedText.text = state.getReadableWheelSpeed();
+        speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
 
-        totalText.text = state.getTotal().ToString();
+        tempUnitsText.text = state.getMetric() ? "°C" : "°F";
+
+        totalText.text = state.getReadableTotal();
+        totalUnitsText.text = state.getMetric() ? "km" : "mi";
+
         wheelRPMText.text = state.getReadableWheelRPM();
         pedalRPMText.text = state.getReadablePedalRPM();
     }

@@ -26,7 +26,7 @@ public class BikeState : MonoBehaviour {
     double wheelRPM = 0f;
     ushort rawWheel = 0;
 
-    int total = 0;
+    float total = 0;
 
     double pedalRPM = 0f;
     ushort rawPedal = 0;
@@ -44,6 +44,7 @@ public class BikeState : MonoBehaviour {
     public int getMode() => mode;
     public int getAssist() => assist;
     public bool getLight() => light;
+    public bool getMetric() => metric;
     public string getModeDescriptor() { return modeDescriptors[mode]; }
 
     public int changeMode(bool save = true) {
@@ -72,12 +73,6 @@ public class BikeState : MonoBehaviour {
         return light;
     }
 
-    public bool setMetric(bool value, bool save = true) {
-        metric = value;
-        if (save) PlayerPrefs.SetInt("metric", metric ? 1 : 0);
-        return metric;
-    }
-
     public bool toggleMetric(bool save = true) {
         metric = !metric;
         if (save) PlayerPrefs.SetInt("metric", metric ? 1 : 0);
@@ -93,11 +88,12 @@ public class BikeState : MonoBehaviour {
     //WHEEL
 
     public double getWheelSpeed() {
-        return wheelSpeed;
+        if (metric) return wheelSpeed;
+        else return wheelSpeed * 0.621371f;
     }
 
     public string getReadableWheelSpeed() {
-        return wheelSpeed.ToString("0.0");
+        return getWheelSpeed().ToString("0.0");
     }
 
     public double getWheelRPM() {
@@ -105,13 +101,18 @@ public class BikeState : MonoBehaviour {
     }
 
     public string getReadableWheelRPM() {
-        return wheelRPM.ToString("0.0");
+        return getWheelRPM().ToString("0.0");
     }
 
     //TOTAL
 
-    public int getTotal() {
-        return total;
+    public float getTotal() {
+        if (metric) return total;
+        else return total * 0.621371f;
+    }
+
+    public string getReadableTotal() {
+        return Mathf.RoundToInt(getTotal()).ToString();
     }
 
     //PEDAL
@@ -121,7 +122,7 @@ public class BikeState : MonoBehaviour {
     }
 
     public string getReadablePedalRPM() {
-        return pedalRPM.ToString("0.0");
+        return getPedalRPM().ToString("0.0");
     }
 
 
