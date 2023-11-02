@@ -82,7 +82,19 @@ public class BikeManager : MonoBehaviour {
     private void Awake() {
         DontDestroyOnLoad(this);
         instance = this;
-        Debug.Log(BitConverter.ToInt16(new byte[] { 0x1A, 0x4 }));
+        /*
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x1A, 0x04 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x05 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x07 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x09 }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x0B }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x0F }));
+        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x30, 0x16 }));
+        
+        int x = BitConverter.ToUInt16(new byte[] { 0x30, 0x16 });
+        Debug.Log(x);
+        Debug.Log(0.009876614 * x + 1.228228);
+        */
     }
 
     private void OnEnable() {
@@ -150,6 +162,8 @@ public class BikeManager : MonoBehaviour {
         modeText.text = state.getMode().ToString();
         assistText.text = state.getAssist().ToString();
         lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
+        speedText.text = state.getReadableSpeed();
+        levelText.text = state.getRawSpeed().ToString();
     }
 
 
@@ -254,11 +268,15 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onCharacteristicRead(string characteristic, byte[] data) {
-        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) {
-            if (data != null && data.Length == 10) processNotificationData(data);
+        
+        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) { // notif
 
-        } else if (characteristic == UUID_CHARACTERISTIC_REGISTER) {
-            if(currentState.setData(data)) refreshDisplay(currentState);
+            if (data != null && data.Length == 10) updateNotificationDebug(data);
+            if (currentState.setData(data)) refreshDisplay(currentState);
+
+        } else if (characteristic == UUID_CHARACTERISTIC_REGISTER) { // state
+
+            if (currentState.setData(data)) refreshDisplay(currentState);
 
         } else {
 
@@ -269,7 +287,7 @@ public class BikeManager : MonoBehaviour {
     }
 
 
-    void processNotificationData(byte[] data) {
+    void updateNotificationDebug(byte[] data) {
         string debugString = "";
         foreach (byte b in data) debugString += (int)b + " ";
 
@@ -280,42 +298,17 @@ public class BikeManager : MonoBehaviour {
             if (data[0] == 0x02 && data[1] == 0x01) notifs[0] = debugString;
             else if (data[0] == 0x02 && data[1] == 0x02) notifs[1] = debugString;
             else if (data[0] == 0x02 && data[1] == 0x03) notifs[2] = debugString;
-            processMoveNotification(data);
-
         } else if (data[0] == 0x03) {
             notifs[3] = debugString;
-            processPedalNotification(data);
 
         } else if (data[0] == 0x04) {
             notifs[4] = debugString;
-            processMotorNotification(data);
         }
 
         //debug text
         notifText.text = notifs[0] + "\n" + notifs[1] + "\n" + notifs[2] + "\n" + notifs[3] + "\n" + notifs[4];
     }
 
-    void processMoveNotification(byte[] data) {
-
-        if (data[1] == 0x01) {
-            
-
-        } else if (data[1] == 0x02) {
-
-        } else if (data[1] == 0x03) {
-
-            speedText.text = (Convert.ToInt16(new byte[]{data[2], data[2] })).ToString();
-
-        }
-    }
-
-    void processPedalNotification(byte[] data) {
-        return;
-    }
-
-    void processMotorNotification(byte[] data) {
-        return;
-    }
 
     #endregion
 

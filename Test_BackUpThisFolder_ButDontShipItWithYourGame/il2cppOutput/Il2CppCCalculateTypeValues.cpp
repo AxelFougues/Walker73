@@ -46782,6 +46782,10 @@ struct BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E  : public MonoBehavio
 	int32_t ___assist_7;
 	// System.Boolean BikeState::light
 	bool ___light_8;
+	// System.Double BikeState::speed
+	double ___speed_9;
+	// System.UInt16 BikeState::rawSpeed
+	uint16_t ___rawSpeed_10;
 };
 
 struct BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E_StaticFields

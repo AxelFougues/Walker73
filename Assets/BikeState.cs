@@ -12,10 +12,14 @@ public class BikeState : MonoBehaviour {
         "50km/h - 1200W"
     };
 
+    //settings
     bool metric = true;
     int mode;
     int assist;
     bool light;
+    //metrics
+    double speed = 0f;
+    ushort rawSpeed = 0;
 
     private void Awake() {
         mode = PlayerPrefs.GetInt("mode", 3);
@@ -81,16 +85,37 @@ public class BikeState : MonoBehaviour {
         return metric;
     }
 
-    public override bool Equals(object obj) {
-        var state = obj as BikeState;
-        return state != null &&
-               mode == state.mode &&
-               assist == state.assist &&
-               light == state.light;
+    public byte[] getData() {
+        byte lightData = 0x00;
+        if (light) lightData = 0x01;
+        return new byte[] { 0x00, 0xD1, lightData, (byte)assist, (byte)mode, 0x00, 0x00, 0x00, 0x00, 0x00 };
     }
 
+    public double getSpeed() {
+        return speed;
+    }
+
+    public string getReadableSpeed() {
+        return speed.ToString("0.0");
+    }
+
+    public ushort getRawSpeed() {
+        return rawSpeed;
+    }
+
+
+
+
+
     public bool setData(byte[] data) {
-        if (data == null || data.Length != 10 || data[0] != 0x03) return false;
+        if (data == null || data.Length != 10) return false;
+        if (data[0] == 0x02) return processMovementData(data);
+        else if (data[0] == 0x03) return processSettingsData(data);
+        else if (data[0] == 0x04) return processMotorData(data);
+        return false;
+    }
+
+    bool processSettingsData(byte[] data) {
         if (data[4] > 0x01) return false;
         if (data[2] > 0x04) return false;
         if (data[5] > 0x03) return false;
@@ -100,10 +125,35 @@ public class BikeState : MonoBehaviour {
         return true;
     }
 
-    public byte[] getData() {
-        byte lightData = 0x00;
-        if (light) lightData = 0x01;
-        return new byte[] { 0x00, 0xD1, lightData, (byte)assist, (byte)mode, 0x00, 0x00, 0x00, 0x00, 0x00 };
+    bool processMovementData(byte[] data) {
+        if (data[1] == 0x01) { //wheel spin
+
+            rawSpeed = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
+            speedFromLinear(rawSpeed);
+            return true;
+
+        } else if (data[1] == 0x02) {// power?
+
+        } else if (data[1] == 0x03) {//pedal
+            
+        }
+        return false;
+    }
+
+    bool processMotorData(byte[] data) {
+        return false;
+    }
+
+    void speedFromLinear(float x) {
+        speed = 0.009876614 * x + 1.228228;
+    }
+
+    public override bool Equals(object obj) {
+        var state = obj as BikeState;
+        return state != null &&
+               mode == state.mode &&
+               assist == state.assist &&
+               light == state.light;
     }
 
     public override string ToString() {

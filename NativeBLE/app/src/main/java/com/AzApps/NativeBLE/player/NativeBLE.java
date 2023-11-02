@@ -272,7 +272,7 @@ public class NativeBLE extends UnityPlayerActivity {
             response.device = connectedDevice;
             response.characteristic = characteristic.getUuid().toString();
             response.status = status;
-            response.data = value;
+            response.setData(value);
             UnityPlayer.UnitySendMessage("NativeBLE", "characteristicRead", new Gson().toJson(response));
         }
         @Override
@@ -294,7 +294,7 @@ public class NativeBLE extends UnityPlayerActivity {
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
             response.characteristic = characteristic.getUuid().toString();
-            response.data = value;
+            response.setData(value);
             UnityPlayer.UnitySendMessage("NativeBLE", "characteristicChanged", new Gson().toJson(response));
         }
         @Override
@@ -455,6 +455,10 @@ public class NativeBLE extends UnityPlayerActivity {
         public byte[] data = null;
         public String characteristic = null;
         public String service = null;
+
+        public void setData(byte[] data){
+            this.data = data;
+        }
     }
 
 }
