@@ -72,7 +72,13 @@ public class BikeManager : MonoBehaviour {
     const string UUID_CHARACTERISTIC_REGISTER_ID = "00001564-1212-efde-1523-785feabcd123";
     const string UUID_CHARACTERISTIC_REGISTER = "0000155f-1212-efde-1523-785feabcd123";
     const string UUID_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
-    byte[] currentStateId = { 0x03, 0x00 };
+    
+    public static byte[] SPEED_ID = { 0x02, 0x01 };
+    public static byte[] TOTAL_ID = { 0x02, 0x02 };
+    public static byte[] PEDAL_ID = { 0x02, 0x03 };
+    public static byte[] SETTINGS_ID = { 0x03, 0x00 };
+    public static byte[] MOTOR_ID = { 0x04, 0x01 };
+
 
     List<string> notifs = new List<string> {
         "2 1",
@@ -135,7 +141,7 @@ public class BikeManager : MonoBehaviour {
         });
 
         readStateButton.onClick.AddListener(delegate {
-            readCurrentState();
+            registerSettings();
         });
         readNotificationsButton.onClick.AddListener(delegate {
             readNotifications();
@@ -146,16 +152,16 @@ public class BikeManager : MonoBehaviour {
 
         modeButton.onClick.AddListener(delegate {
             modeText.text = currentState.changeMode().ToString();
-            applyState();
+            applySettings();
         });
         assistButton.onClick.AddListener(delegate {
             assistText.text = currentState.changeAssist().ToString();
-            applyState();
+            applySettings();
         });
         lightButton.onClick.AddListener(delegate {
             bool light = currentState.toggleLight();
             lightGraphic.sprite = light ? lightOn : lightOff;
-            applyState();
+            applySettings();
         });
 
 
@@ -229,8 +235,8 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onServicesDiscovered(ConnectedDevice device, int status) {
-        if (PlayerPrefs.GetInt("auto", 1) == 1) applyState();
-        else readCurrentState();
+        if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
+        else registerSettings();
         subscribeNotifications(true);
     }
 
@@ -249,19 +255,25 @@ public class BikeManager : MonoBehaviour {
 
     #region COMS
 
-    public void applyState() {
+    public void applySettings() {
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER, currentState.getData());
     }
 
-    public void readCurrentState() {
-        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, currentStateId);
-        Debug.Log("Getting current state");
+    public void registerSettings() {
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
+        Debug.Log("Registering settings");
     }
-    public void readCurrentStateStep2() {
+
+    public void registerTotal() {
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
+        Debug.Log("Registering total");
+    }
+
+    public void readRegister() {
         NativeBLE.readCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER);
-        Debug.Log("Getting current state 2");
+        Debug.Log("Reading register");
     }
-    
+
     public void readNotifications() {
         NativeBLE.readCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_NOTIFIER);
         Debug.Log("Getting notifications");
@@ -272,22 +284,16 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onCharacteristicWrite(string characteristic) {
-        if (characteristic.Trim() == UUID_CHARACTERISTIC_REGISTER_ID) readCurrentStateStep2();
+        if (characteristic.Trim() == UUID_CHARACTERISTIC_REGISTER_ID) readRegister();
     }
 
     void onCharacteristicRead(string characteristic, byte[] data) {
-        
-        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) { // notif
+        if (data != null && data.Length == 10) updateNotificationDebug(data);
+        if (currentState.processData(data)) refreshDisplay(currentState);
 
-            if (data != null && data.Length == 10) updateNotificationDebug(data);
-            if (currentState.setData(data)) refreshDisplay(currentState);
-
-        } else if (characteristic == UUID_CHARACTERISTIC_REGISTER) { // state
-
-            if (currentState.setData(data)) refreshDisplay(currentState);
-
-        } else {
-
+        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) Debug.Log("Recieved notification");
+        else if (characteristic == UUID_CHARACTERISTIC_REGISTER) Debug.Log("Recieved register");
+        else {
             string s = "Received " + characteristic + " : \n";
             foreach (byte b in data) s += (int)b + " ";
             Debug.Log(s);
@@ -300,7 +306,7 @@ public class BikeManager : MonoBehaviour {
         foreach (byte b in data) debugString += (int)b + " ";
 
         if (data[0] == 0x03) {
-            if (currentState.setData(data)) refreshDisplay(currentState);
+            if (currentState.processData(data)) refreshDisplay(currentState);
         }
         if (data[0] == 0x02) {
             if (data[0] == 0x02 && data[1] == 0x01) notifs[0] = debugString;

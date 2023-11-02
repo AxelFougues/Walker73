@@ -127,13 +127,18 @@ public class BikeState : MonoBehaviour {
 
     //DATA RECEIVE
 
-    public bool setData(byte[] data) {
+    public bool processData(byte[] data) {
         if (data == null || data.Length != 10) return false;
-        if (data[0] == 0x02) return processMovementData(data);
-        else if (data[0] == 0x03) return processSettingsData(data);
-        else if (data[0] == 0x04) return processMotorData(data);
+
+        if (dataIsId(data, BikeManager.SETTINGS_ID)) processSettingsData(data);
+        else if (dataIsId(data, BikeManager.SPEED_ID)) processWheelData(data);
+        else if (dataIsId(data, BikeManager.TOTAL_ID)) processTotalData(data);
+        else if (dataIsId(data, BikeManager.PEDAL_ID)) processPedalData(data);
+        else if (dataIsId(data, BikeManager.MOTOR_ID)) processMotorData(data);
+
         return false;
     }
+
 
     bool processSettingsData(byte[] data) {
         if (data[4] > 0x01) return false;
@@ -145,7 +150,7 @@ public class BikeState : MonoBehaviour {
         return true;
     }
 
-    bool processMovementData(byte[] data) {
+    bool processWheelData(byte[] data) {
         if (data[1] == 0x01) { //wheel spin
 
             rawWheel = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
@@ -166,9 +171,22 @@ public class BikeState : MonoBehaviour {
         return false;
     }
 
+    bool processTotalData(byte[] data) {
+        total = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 10;
+        return true;
+    }
+
+    bool processPedalData(byte[] data) {
+        rawPedal = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
+        pedalRPMFromRaw();
+        return true;
+    }
+
     bool processMotorData(byte[] data) {
         return false;
     }
+
+
 
     void wheelSpeedFromRaw() {
         wheelSpeed = 0.009876614 * rawWheel + 1.228228;
@@ -183,6 +201,10 @@ public class BikeState : MonoBehaviour {
     }
 
     //OTHER
+
+    public bool dataIsId(byte[] data, byte[] id) {
+        return data[0] == id[0] && data[1] == id[1];
+    }
 
     public override bool Equals(object obj) {
         var state = obj as BikeState;
