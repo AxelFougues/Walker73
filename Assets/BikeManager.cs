@@ -229,6 +229,7 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onServicesDiscovered(ConnectedDevice device, int status) {
+        registerTotal();
         if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
         else registerSettings();
         subscribeNotifications(true);

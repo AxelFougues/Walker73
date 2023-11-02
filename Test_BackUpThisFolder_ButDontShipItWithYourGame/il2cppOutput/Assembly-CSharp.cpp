@@ -3832,6 +3832,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetAsFirstSibling_mBE0D0E76099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_connectBLE_mA0BB5EF8AEAF68B2EF7A48DE09DAE0150FFF6A88 (String_t* ___address0, const RuntimeMethod* method) ;
 // System.Boolean NativeBLE::exploreServices()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_exploreServices_mC03EE0949C8A6631B60A5A61DBFB3A11B16F2134 (const RuntimeMethod* method) ;
+// System.Void BikeManager::registerTotal()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_registerTotal_m72D1A55207DB6FEAE10C1C44AFCC15D0967C9C61 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) ;
 // System.Void BikeManager::applySettings()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_applySettings_m719EA8F53818E0848123175A9C3A94F9C08FDF22 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) ;
 // System.Void BikeManager::registerSettings()
@@ -4923,6 +4925,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onServicesDiscovered_m72B0D3
 	}
 	bool V_0 = false;
 	{
+		// registerTotal();
+		BikeManager_registerTotal_m72D1A55207DB6FEAE10C1C44AFCC15D0967C9C61(__this, NULL);
 		// if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
 		int32_t L_0;
 		L_0 = PlayerPrefs_GetInt_mDCAA431AEC7CBAA6AF58857A8773E5B6B472285C(_stringLiteralF152B296BCB34070EE69020F0A59C611E4BBA10F, 1, NULL);
@@ -4930,22 +4934,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onServicesDiscovered_m72B0D3
 		bool L_1 = V_0;
 		if (!L_1)
 		{
-			goto IL_001c;
+			goto IL_0023;
 		}
 	}
 	{
 		// if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
 		BikeManager_applySettings_m719EA8F53818E0848123175A9C3A94F9C08FDF22(__this, NULL);
-		goto IL_0023;
+		goto IL_002a;
 	}
 
-IL_001c:
+IL_0023:
 	{
 		// else registerSettings();
 		BikeManager_registerSettings_m9D0BADE4ECE9091A2A5550FF3C51C5898F359F34(__this, NULL);
 	}
 
-IL_0023:
+IL_002a:
 	{
 		// subscribeNotifications(true);
 		BikeManager_subscribeNotifications_m8190518216CC00111AE977DC6826850BFC7B1539(__this, (bool)1, NULL);
@@ -7094,12 +7098,12 @@ IL_0011:
 	{
 		// if (data == null || data.Length != 10) return false;
 		V_1 = (bool)0;
-		goto IL_00a6;
+		goto IL_00a8;
 	}
 
 IL_001c:
 	{
-		// if (dataIsId(data, BikeManager.SETTINGS_ID)) processSettingsData(data);
+		// if (dataIsId(data, BikeManager.SETTINGS_ID)) return processSettingsData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = ___data0;
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___SETTINGS_ID_8;
@@ -7113,16 +7117,17 @@ IL_001c:
 		}
 	}
 	{
-		// if (dataIsId(data, BikeManager.SETTINGS_ID)) processSettingsData(data);
+		// if (dataIsId(data, BikeManager.SETTINGS_ID)) return processSettingsData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = ___data0;
 		bool L_8;
 		L_8 = BikeState_processSettingsData_m2E605997825D25CEA27A421450F1740C1906AAFB(__this, L_7, NULL);
-		goto IL_00a2;
+		V_1 = L_8;
+		goto IL_00a8;
 	}
 
 IL_0036:
 	{
-		// else if (dataIsId(data, BikeManager.SPEED_ID)) processWheelData(data);
+		// else if (dataIsId(data, BikeManager.SPEED_ID)) return processWheelData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = ___data0;
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___SPEED_ID_5;
@@ -7136,16 +7141,17 @@ IL_0036:
 		}
 	}
 	{
-		// else if (dataIsId(data, BikeManager.SPEED_ID)) processWheelData(data);
+		// else if (dataIsId(data, BikeManager.SPEED_ID)) return processWheelData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13 = ___data0;
 		bool L_14;
 		L_14 = BikeState_processWheelData_mE62996CF3936D264B27EAE6CB62CD5A2AA4FB0D4(__this, L_13, NULL);
-		goto IL_00a2;
+		V_1 = L_14;
+		goto IL_00a8;
 	}
 
 IL_0050:
 	{
-		// else if (dataIsId(data, BikeManager.TOTAL_ID)) processTotalData(data);
+		// else if (dataIsId(data, BikeManager.TOTAL_ID)) return processTotalData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15 = ___data0;
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_16 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___TOTAL_ID_6;
@@ -7159,16 +7165,17 @@ IL_0050:
 		}
 	}
 	{
-		// else if (dataIsId(data, BikeManager.TOTAL_ID)) processTotalData(data);
+		// else if (dataIsId(data, BikeManager.TOTAL_ID)) return processTotalData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = ___data0;
 		bool L_20;
 		L_20 = BikeState_processTotalData_m96098477EDB83A335F8A909452A2BAB397C5CBE7(__this, L_19, NULL);
-		goto IL_00a2;
+		V_1 = L_20;
+		goto IL_00a8;
 	}
 
 IL_006c:
 	{
-		// else if (dataIsId(data, BikeManager.PEDAL_ID)) processPedalData(data);
+		// else if (dataIsId(data, BikeManager.PEDAL_ID)) return processPedalData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_21 = ___data0;
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_22 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___PEDAL_ID_7;
@@ -7182,16 +7189,17 @@ IL_006c:
 		}
 	}
 	{
-		// else if (dataIsId(data, BikeManager.PEDAL_ID)) processPedalData(data);
+		// else if (dataIsId(data, BikeManager.PEDAL_ID)) return processPedalData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_25 = ___data0;
 		bool L_26;
 		L_26 = BikeState_processPedalData_m41DC249403FCB81C00122625D5B1DDE1377BA494(__this, L_25, NULL);
-		goto IL_00a2;
+		V_1 = L_26;
+		goto IL_00a8;
 	}
 
 IL_0088:
 	{
-		// else if (dataIsId(data, BikeManager.MOTOR_ID)) processMotorData(data);
+		// else if (dataIsId(data, BikeManager.MOTOR_ID)) return processMotorData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_27 = ___data0;
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_28 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___MOTOR_ID_9;
@@ -7201,24 +7209,26 @@ IL_0088:
 		bool L_30 = V_6;
 		if (!L_30)
 		{
-			goto IL_00a2;
+			goto IL_00a4;
 		}
 	}
 	{
-		// else if (dataIsId(data, BikeManager.MOTOR_ID)) processMotorData(data);
+		// else if (dataIsId(data, BikeManager.MOTOR_ID)) return processMotorData(data);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_31 = ___data0;
 		bool L_32;
 		L_32 = BikeState_processMotorData_m10A1F97998566D7929703B277C329F522CB66263(__this, L_31, NULL);
+		V_1 = L_32;
+		goto IL_00a8;
 	}
 
-IL_00a2:
+IL_00a4:
 	{
 		// return false;
 		V_1 = (bool)0;
-		goto IL_00a6;
+		goto IL_00a8;
 	}
 
-IL_00a6:
+IL_00a8:
 	{
 		// }
 		bool L_33 = V_1;
