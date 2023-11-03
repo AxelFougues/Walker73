@@ -53,14 +53,10 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 - LIGHT : headlight on (1/0)
 - MODE : riding power mode (0-7)
 
-The linear approximations to turn WSPEED and PSPEED into real units do not pass through 0 which is not ideal.
-Instead here are some slightly more costly power approximations that do zero out:
-- wheel speed (km/h) ~= ```0.01963741 * WSPEED ^ 0.9211116f```
-- pedal RPM ~=  ```0.2189381 * PSPEED ^ 0.02422947f```
+> The linear approximations to turn WSPEED and PSPEED into real units do not pass through 0 which is not ideal.
+Instead here are some slightly more costly power approximations that do zero out: wheel speed (km/h) ~= ```0.01963741 * WSPEED ^ 0.9211116f``` and pedal RPM ~=  ```0.2189381 * PSPEED ^ 0.02422947f```
 
-## Modes
-### EU
-| Byte  |NAME      |EU/US  | Max assist| Max power| Throttle | Description    |
+| MODE  |NAME      |EU/US  | Max assist| Max power| Throttle | Description    |
 | :---: | :------: | :---: | :--------:| :------: | :------: | :------------- |
 |0      |CLASS1    |US     | 32.2km/h  | ?        | NO       |                |
 |1      |CLASS2    |US     | 32.2km/h  | ?        | YES      |                |
@@ -71,4 +67,3 @@ Instead here are some slightly more costly power approximations that do zero out
 |6      |850W      |EU     | 45km/h    | 850W     | NO       |                |
 |6      |OFF_ROAD  |EU     | MAX       | MAX      | YES      |                |
 
-### US
