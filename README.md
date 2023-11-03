@@ -17,6 +17,9 @@ It can apply preset settings immediately when connecting to bypass some auto-res
 It does not require Internet or any account and doesn't collect any data. It is built on Unity for convenience but is kept light and fast.
 This app is not tested with every vehicle, use at your own risk and create tikets [HERE](https://github.com/AxelFougues/Walker73/issues) if you encounter issues or want to suggest features.
 
+# Building
+The project is currently on Unity 2021.3.4f1 and is ready to build with the target platform Android.
+
 # Reverse engineering 
 ## Services
 | Name                                   | UUID                                 | Description                            |
