@@ -17,6 +17,7 @@
   <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:minSdkVersion="31" android:usesPermissionFlags="neverForLocation"/>
   <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" android:minSdkVersion="31"/>
   <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" android:minSdkVersion="31"/>
+  <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" android:minSdkVersion="31"/>
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
 </manifest>

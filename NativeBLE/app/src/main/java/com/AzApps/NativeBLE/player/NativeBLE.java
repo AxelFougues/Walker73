@@ -1,7 +1,10 @@
 package com.AzApps.NativeBLE.player;
 
+import static android.app.PendingIntent.getBroadcast;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
@@ -16,13 +19,23 @@ import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
+import android.os.Parcel;
+import android.provider.Settings;
+
 import com.google.gson.Gson;
 import com.unity3d.player.UnityPlayer;
 import com.unity3d.player.UnityPlayerActivity;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.UUID;
@@ -67,6 +80,7 @@ public class NativeBLE extends UnityPlayerActivity {
     }
 */
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     void initialize() {
         if (checkSelfPermission(Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Requesting permission: BLUETOOTH_SCAN");
@@ -84,10 +98,27 @@ public class NativeBLE extends UnityPlayerActivity {
         if (bluetoothAdapter != null) bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
 
         if (!bluetoothAdapter.isEnabled() || bluetoothLeScanner == null) {
-            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, ENABLE_BT_REQUEST_CODE);
+            trySetBtOn();
         }else{
             initialized = true;
+        }
+    }
+
+    void trySetBtOn(){
+        String requiredPermission = "android.permission.WRITE_SECURE_SETTINGS";
+        int checkVal = checkCallingOrSelfPermission(requiredPermission);
+        if (checkVal == PackageManager.PERMISSION_GRANTED) {
+            Settings.Global.putString(this.getContentResolver(),Settings.Global.BLUETOOTH_ON, "1");
+            bluetoothAdapter.enable();
+            if(!bluetoothAdapter.isEnabled()){
+                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, ENABLE_BT_REQUEST_CODE);
+            }else{
+                initialize();
+            }
+        }else {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, ENABLE_BT_REQUEST_CODE);
         }
     }
 
@@ -106,6 +137,7 @@ public class NativeBLE extends UnityPlayerActivity {
 
     @SuppressLint("MissingPermission")
     public boolean scanLeDevice() {
+        if(!initialized) initialize();
         if (initialized && !scanning) {
             // Stops scanning after a predefined scan period.
             handler.postDelayed(new Runnable() {
@@ -458,6 +490,7 @@ public class NativeBLE extends UnityPlayerActivity {
     }
 
 }
+
 
 
 
