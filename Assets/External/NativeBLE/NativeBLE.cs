@@ -186,12 +186,11 @@ public class NativeBLE : MonoBehaviour{
         onConnected?.Invoke(new ConnectedDevice());
     }
 
-    public static Action<int> onDisconnected;
-    void disconnected(string response) {
+    public static Action<string> onDisconnected;
+    void disconnected(string status) {
         currentDevice = null;
-        BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
-        Debug.Log("Disconnected : " +  bleResponse.status);
-        onDisconnected?.Invoke(bleResponse.status);
+        Debug.Log("Disconnected : " + status);
+        onDisconnected?.Invoke(status);
     }
 
     public static Action<string, byte[]> onCharacteristicRead;

@@ -7112,8 +7112,8 @@ struct NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_StaticFields
 	Action_1_tBEBA7D79DE7A3E7490BB0EF0FC2D88284D0BAF66* ___onScanResult_9;
 	// System.Action`1<NativeBLE/ConnectedDevice> NativeBLE::onConnected
 	Action_1_tB27790D69255E0D86A8A8B3E20E3D013EC501C6B* ___onConnected_10;
-	// System.Action`1<System.Int32> NativeBLE::onDisconnected
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onDisconnected_11;
+	// System.Action`1<System.String> NativeBLE::onDisconnected
+	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___onDisconnected_11;
 	// System.Action`2<System.String,System.Byte[]> NativeBLE::onCharacteristicRead
 	Action_2_t6167C7DD369F0ADA5FD8FB5C2476453CF404C831* ___onCharacteristicRead_12;
 	// System.Action`1<System.String> NativeBLE::onCharacteristicWrite

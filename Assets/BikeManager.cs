@@ -106,6 +106,7 @@ public class BikeManager : MonoBehaviour {
     private void OnEnable() {
         NativeBLE.onScanResult += this.onScanResult;
         NativeBLE.onConnected += this.onConnected;
+        NativeBLE.onDisconnected += this.onDisconnected;
         NativeBLE.onservicesDiscovered += this.onServicesDiscovered;
         NativeBLE.onCharacteristicRead += this.onCharacteristicRead;
         NativeBLE.onCharacteristicWrite += this.onCharacteristicWrite;
@@ -202,12 +203,7 @@ public class BikeManager : MonoBehaviour {
         scanButtonloadingIcon.SetActive(false);
         DeviceLine line = Instantiate(deviceLine_prefab, deviceLineContainer).GetComponent<DeviceLine>();
         line.set(btleDevice);
-        line.button.onClick.AddListener(onDeviceSelected);
         line.transform.SetAsFirstSibling();
-    }
-
-    void onDeviceSelected() {
-        loadingOverlay.SetActive(true);
     }
 
     #endregion
@@ -218,7 +214,8 @@ public class BikeManager : MonoBehaviour {
     #region CONNECT
 
     public void connect(BtleDevice device) {
-        NativeBLE.connectBLE(device.address);
+        if (NativeBLE.connectBLE(device.address)) loadingOverlay.SetActive(true);
+        else scan();
     }
 
     void onConnected(ConnectedDevice device) {
@@ -239,9 +236,11 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.disconnectBLE();
     }
 
-    void onDisconnected(int status) {
+    void onDisconnected(string status) {
         scanPage.SetActive(true);
+        loadingOverlay.SetActive(false);
         connectPage.SetActive(false);
+        scan();
     }
 
     

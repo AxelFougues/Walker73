@@ -15,6 +15,8 @@ public class BikeState : MonoBehaviour {
     public static float PEDAL_DIAMETRER_M = 0.125f;
     public static float WHEEL_DIAMETRER_M = 0.57f;
 
+    
+
     //settings
     bool metric = true;
     int mode;
@@ -152,24 +154,10 @@ public class BikeState : MonoBehaviour {
     }
 
     bool processWheelData(byte[] data) {
-        if (data[1] == 0x01) { //wheel spin
-
-            rawWheel = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
-            wheelSpeedFromRaw();
-            wheelRPMFromSpeed();
-            return true;
-
-        } else if (data[1] == 0x02) {// distance
-
-            total = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 10;
-
-        } else if (data[1] == 0x03) {//pedal
-
-            rawPedal = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
-            pedalRPMFromRaw();
-
-        }
-        return false;
+        rawWheel = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
+        wheelSpeedFromRaw();
+        wheelRPMFromSpeed();
+        return true;
     }
 
     bool processTotalData(byte[] data) {
@@ -179,7 +167,7 @@ public class BikeState : MonoBehaviour {
 
     bool processPedalData(byte[] data) {
         rawPedal = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
-        pedalRPMFromRaw();
+        pedalRPMFromRawPower();
         return true;
     }
 
@@ -188,9 +176,12 @@ public class BikeState : MonoBehaviour {
     }
 
 
+    void wheelSpeedFromRawPower() {
+        wheelSpeed = 0;
+    }
 
     void wheelSpeedFromRaw() {
-        wheelSpeed = 0.009876614 * rawWheel + 1.228228;
+        wheelSpeed = 0.01963741 * Mathf.Pow(rawWheel, 0.9211116f);
     }
 
     void wheelRPMFromSpeed() {
@@ -199,6 +190,10 @@ public class BikeState : MonoBehaviour {
 
     void pedalRPMFromRaw() {
         pedalRPM = 0.01926005 * rawPedal + 1.051926;
+    }
+
+    void pedalRPMFromRawPower() {
+        pedalRPM = 0.2189381 * Mathf.Pow(rawPedal, 0.02422947f);
     }
 
     //OTHER
