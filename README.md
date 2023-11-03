@@ -20,9 +20,9 @@ Alternative open-source Bluetooth dashboard for e-bikes equipped with a Comodule
 | SETTINGS      |  0x03 | 0x00  | ASSIST | WALK   | LIGHT  | MODE   | 0x00   | 0x00   | 0x00   | 0x00   |
 | POWER         |  0x04 | 0x01  | Unknown| 0x00   | 0x00   | 0x00   | Unknown| 0x00   | 0x00   | 0x00   |
 
-- WSPEED : UInt16, wheel speed (km/h) ~= 0.009876614 * WSPEED + 1.228228
-- PSPEED : UInt16, pedal RPM ~=  0.01926005 * PSPEED + 1.051926
-- TOTAL : UInt16, total (km) ~= TOTAL / 10
+- WSPEED : UInt16, wheel speed (km/h) ~= ```0.009876614 * WSPEED + 1.228228```
+- PSPEED : UInt16, pedal RPM ~=  ```0.01926005 * PSPEED + 1.051926```
+- TOTAL : UInt16, total (km) ~= ```TOTAL / 10```
 - ASSIST : pedal assist level (0-4)
 - WALK : walk (push along) assist (0/90?)
 - LIGHT : headlight on (1/0)
@@ -30,5 +30,5 @@ Alternative open-source Bluetooth dashboard for e-bikes equipped with a Comodule
 
 The linear approximations to turn WSPEED and PSPEED into real units do not pass through 0 which is not ideal.
 Instead here are some slightly more costly power approximations that do zero out:
-- wheel speed (km/h) ~= 0.01963741 * WSPEED ^ 0.9211116f
-- pedal RPM ~=  0.2189381 * PSPEED ^ 0.02422947f
+- wheel speed (km/h) ~= ```0.01963741 * WSPEED ^ 0.9211116f```
+- pedal RPM ~=  ```0.2189381 * PSPEED ^ 0.02422947f```
