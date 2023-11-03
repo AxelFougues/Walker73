@@ -11,10 +11,6 @@ public class BikeState : MonoBehaviour {
         "45km/h - 850W",
         "50km/h - 1200W"
     };
-
-    public static float PEDAL_DIAMETRER_M = 0.125f;
-    public static float WHEEL_DIAMETRER_M = 0.57f;
-
     
 
     //settings
@@ -185,7 +181,7 @@ public class BikeState : MonoBehaviour {
     }
 
     void wheelRPMFromSpeed() {
-        wheelRPM =  wheelSpeed/WHEEL_DIAMETRER_M/0.1885f;
+        wheelRPM =  wheelSpeed/PlayerPrefs.GetFloat("WHEEL_DIAMETRER_M", BikeManager.WHEEL_DIAMETRER_M) /0.1885f;
     }
 
     void pedalRPMFromRaw() {

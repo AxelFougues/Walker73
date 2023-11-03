@@ -9,6 +9,15 @@ using static NativeBLE;
 public class BikeManager : MonoBehaviour {
     public static BikeManager instance;
 
+
+    //Base prefs
+    public static float PEDAL_DIAMETRER_M = 0.125f;
+    public static float WHEEL_DIAMETRER_M = 0.57f;
+    public static float MAX_VOLTAGE_V = 0.57f;
+    public static float MIN_VOLTAGE_V = 0.57f;
+    public static float TOTAL_RANGE_KM = 60f;
+
+
     public static byte[] SPEED_ID = { 0x02, 0x01 };
     public static byte[] TOTAL_ID = { 0x02, 0x02 };
     public static byte[] PEDAL_ID = { 0x02, 0x03 };
@@ -51,7 +60,7 @@ public class BikeManager : MonoBehaviour {
     public Button autoApplyButton;
     public Button bikeButton;
     public Button unitsButton;
-    public Button debugButton;
+    public Button prefsButton;
     [Space]
     public TMP_Text totalText;
     public TMP_Text totalUnitsText;
@@ -60,6 +69,7 @@ public class BikeManager : MonoBehaviour {
     [Space]
     [Header("Debug")]
     public TMP_Text notifText;
+    public GameObject prefsOverlay;
     [Space]
     [Header("Resources")]
     public Sprite lightOn;
@@ -116,6 +126,8 @@ public class BikeManager : MonoBehaviour {
     private void Start() {
         scanPage.SetActive(true);
         connectPage.SetActive(false);
+        prefsOverlay.SetActive(false);
+        loadingOverlay.SetActive(false);
 
         currentBikeState = gameObject.AddComponent<BikeState>();
         refreshDisplay(currentBikeState);
@@ -153,6 +165,9 @@ public class BikeManager : MonoBehaviour {
         unitsButton.onClick.AddListener(delegate {
             currentBikeState.toggleMetric();
             refreshDisplay(currentBikeState);
+        });
+        prefsButton.onClick.AddListener(delegate {
+            prefsOverlay.SetActive(true);
         });
 
         scan();
