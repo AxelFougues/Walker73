@@ -19,11 +19,12 @@ This app is not tested with every vehicle, use at your own risk and create tiket
 
 # Building
 The project is currently on Unity 2021.3.4f1 and is ready to build with the target platform Android.
-Project settings : 
-Minimum API Level - 28
-Target API Level - 33
-Scripting Backend - IL2CPP
-ARMv7 + ARM64
+- Project settings : 
+- Minimum API Level - 28
+- Target API Level - 33
+- Scripting Backend - IL2CPP
+- ARMv7 + ARM64
+- Uses custom Main Manifest
 
 # Reverse engineering 
 ## Services
