@@ -5302,7 +5302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildOutputName: app-debug.aar
-  libBuildPath: P:/Super73/NativeBLE/app/build/outputs/aar
+  libBuildPath: P:/Walker73/NativeBLE/app/build/outputs/aar
   localLibPath: Assets/Plugins/Android
 --- !u!114 &1231928046
 MonoBehaviour:

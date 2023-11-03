@@ -2,7 +2,6 @@ package com.AzApps.NativeBLE.player;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
@@ -35,7 +34,7 @@ public class NativeBLE extends UnityPlayerActivity {
     static int BLUETOOTH_CONNECT_REQUEST_CODE = 1;
     static int ENABLE_BT_REQUEST_CODE = 2;
     //True upon initialization, not strictly necessary. Should consider removing if initialization can't fail
-    boolean available = false;
+    boolean initialized = false;
 
     private BluetoothAdapter bluetoothAdapter;
     private BluetoothLeScanner bluetoothLeScanner;
@@ -81,36 +80,33 @@ public class NativeBLE extends UnityPlayerActivity {
         }
 
         BluetoothManager manager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
-        if (manager == null) {
-            sendToUnity(AndroidMessagePrefix.DEBUG_ERROR, "Failed to get Bluetooth manager");
-            return;
-        } else {
-            bluetoothAdapter = manager.getAdapter();
-            available = true;
-        }
-        bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
+        if (manager != null) bluetoothAdapter = manager.getAdapter();
+        if (bluetoothAdapter != null) bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
 
         if (!bluetoothAdapter.isEnabled() || bluetoothLeScanner == null) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, ENABLE_BT_REQUEST_CODE);
+        }else{
+            initialized = true;
         }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if(!available) initialize();
+        if(!initialized) initialize();
     }
 
     @Override
     public  void onActivityResult(int requestCode, int resultCode, Intent data){
-        if(!available) initialize();
+        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Activity result " + resultCode + " initialized: "+ initialized);
+        if(!initialized) initialize();
     }
 
     //BLE
 
     @SuppressLint("MissingPermission")
     public boolean scanLeDevice() {
-        if (!scanning) {
+        if (initialized && !scanning) {
             // Stops scanning after a predefined scan period.
             handler.postDelayed(new Runnable() {
                 @SuppressLint("MissingPermission")
@@ -382,8 +378,8 @@ public class NativeBLE extends UnityPlayerActivity {
     //UNITY CALLED METHODS
 
     public boolean androidAvailable() {
-        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Native lib available: " + available);
-        return available;
+        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Native lib available: " + initialized);
+        return initialized;
     }
 
     public static void sendToUnity(AndroidMessagePrefix prefix, String msg) {
