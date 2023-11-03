@@ -22,7 +22,7 @@ public class BikeManager : MonoBehaviour {
     public static byte[] TOTAL_ID = { 0x02, 0x02 };
     public static byte[] PEDAL_ID = { 0x02, 0x03 };
     public static byte[] SETTINGS_ID = { 0x03, 0x00 };
-    public static byte[] MOTOR_ID = { 0x04, 0x01 };
+    public static byte[] POWER_ID = { 0x04, 0x01 };
 
 
     [Header("Loading")]
@@ -97,6 +97,7 @@ public class BikeManager : MonoBehaviour {
 
     //Internal
     BikeState currentBikeState;
+    bool registerAvailable = true;
 
     #region INITIALIZATION
     private void Awake() {
@@ -241,10 +242,16 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onServicesDiscovered(ConnectedDevice device, int status) {
-        registerTotal();
         if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
-        else registerSettings();
+        StartCoroutine(getStartupInfoRoutine());
         subscribeNotifications(true);
+    }
+
+    IEnumerator getStartupInfoRoutine() {
+        yield return new WaitUntil(() => registerAvailable);
+        registerSettings();
+        yield return new WaitUntil(() => registerAvailable);
+        registerTotal();
     }
 
     public void disconnect() {
@@ -268,14 +275,26 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER, currentBikeState.getData());
     }
 
+    //Notifications
+    public void subscribeNotifications(bool subscribe) {
+        NativeBLE.subscribeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_NOTIFIER, subscribe);
+    }
+
+    //Register
     public void registerSettings() {
+        registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
         Debug.Log("Registering settings");
     }
 
     public void registerTotal() {
+        registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
         Debug.Log("Registering total");
+    }
+
+    void onCharacteristicWrite(string characteristic) {
+        readRegister();
     }
 
     public void readRegister() {
@@ -283,28 +302,22 @@ public class BikeManager : MonoBehaviour {
         Debug.Log("Reading register");
     }
 
-    public void readNotifications() {
-        NativeBLE.readCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_NOTIFIER);
-        Debug.Log("Getting notifications");
-    }
-
-    public void subscribeNotifications(bool subscribe) {
-        NativeBLE.subscribeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_NOTIFIER, subscribe);
-    }
-
-    void onCharacteristicWrite(string characteristic) {
-        if (characteristic.Trim() == UUID_CHARACTERISTIC_REGISTER_ID) readRegister();
-    }
-
+    
+    //Results
     void onCharacteristicRead(string characteristic, byte[] data) {
         if (data != null && data.Length == 10) { //Valid data
             updateNotificationDebug(data);
             if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
         }
 
-        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) Debug.Log("Recieved notification");
-        else if (characteristic == UUID_CHARACTERISTIC_REGISTER) Debug.Log("Recieved register");
-        else {
+        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) {
+            Debug.Log("Recieved notification");
+
+        } else if (characteristic == UUID_CHARACTERISTIC_REGISTER) {
+            registerAvailable = true;
+            Debug.Log("Recieved register");
+
+        } else {
             string s = "Received " + characteristic + " : \n";
             foreach (byte b in data) s += (int)b + " ";
             Debug.Log(s);
@@ -316,18 +329,19 @@ public class BikeManager : MonoBehaviour {
         string debugString = "";
         foreach (byte b in data) debugString += (int)b + " ";
 
-        if (data[0] == 0x03) {
-            if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
-        }
         if (data[0] == 0x02) {
             if (data[0] == 0x02 && data[1] == 0x01) debugNotificationText[0] = debugString;
-            else if (data[0] == 0x02 && data[1] == 0x02) debugNotificationText[1] = debugString;
-            else if (data[0] == 0x02 && data[1] == 0x03) debugNotificationText[2] = debugString;
+            else if (data[0] == 0x02 && data[1] == 0x02) {
+                tempText.text = BitConverter.ToUInt16(new byte[] { data[2], data[3] }).ToString();
+                debugNotificationText[1] = debugString;
+            } else if (data[0] == 0x02 && data[1] == 0x03) debugNotificationText[2] = debugString;
         } else if (data[0] == 0x03) {
             debugNotificationText[3] = debugString;
 
         } else if (data[0] == 0x04) {
             debugNotificationText[4] = debugString;
+            voltText.text = BitConverter.ToUInt16(new byte[] { data[2], data[3] }).ToString();
+            levelText.text = BitConverter.ToUInt16(new byte[] { data[5], data[6] }).ToString();
         }
 
         //debug text

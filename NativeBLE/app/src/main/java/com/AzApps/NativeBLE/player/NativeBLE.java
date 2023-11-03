@@ -88,7 +88,7 @@ public class NativeBLE extends UnityPlayerActivity {
             return;
         }
         if (checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Requesting permission: BLUETOOTH_SCAN");
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Requesting permission: BLUETOOTH_CONNECT");
             requestPermissions(new String[]{Manifest.permission.BLUETOOTH_CONNECT}, BLUETOOTH_CONNECT_REQUEST_CODE);
             return;
         }
@@ -190,7 +190,6 @@ public class NativeBLE extends UnityPlayerActivity {
 
         BluetoothGattCharacteristic charObj = serviceObj.getCharacteristic(characteristicUUID);
 
-        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Reading characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
         bluetoothGatt.readCharacteristic(charObj);
         return true;
     }
@@ -214,10 +213,8 @@ public class NativeBLE extends UnityPlayerActivity {
             return false;
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "SDK33+ Writing characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
             bluetoothGatt.writeCharacteristic(charObj, data, BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
         }else{
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "SDK32- Writing characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
             charObj.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
             charObj.setValue(data);
             bluetoothGatt.writeCharacteristic(charObj);
@@ -242,7 +239,6 @@ public class NativeBLE extends UnityPlayerActivity {
             sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic " + characteristicUUID.toString() + " is not available in service "+ serviceUUID.toString());
             return false;
         }
-        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Subscribing characteristic " + charObj.getUuid() + " from " + serviceObj.getUuid());
         bluetoothGatt.setCharacteristicNotification(charObj, enable);
         return true;
     }
@@ -250,7 +246,6 @@ public class NativeBLE extends UnityPlayerActivity {
     @SuppressLint("MissingPermission")
     public boolean disconnectLeDevice(){
         if(bluetoothGatt == null ) return false;
-        sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnecting");
         bluetoothGatt.close();
         return true;
     }
@@ -276,7 +271,6 @@ public class NativeBLE extends UnityPlayerActivity {
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             bluetoothGatt = gatt;
             if (newState == BluetoothProfile.STATE_CONNECTED) {
-                sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Connected");
                 connectedDevice = new ConnectedDevice(gatt, newState);
                 BleResponse response = new BleResponse();
                 response.device = connectedDevice;
@@ -284,7 +278,6 @@ public class NativeBLE extends UnityPlayerActivity {
                 UnityPlayer.UnitySendMessage("NativeBLE", "connected", new Gson().toJson(response) );
 
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
-                sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Disconnected");
                 bluetoothGatt = null;
                 connectedDevice = null;
                 UnityPlayer.UnitySendMessage("NativeBLE", "disconnected", String.valueOf(status));
@@ -294,7 +287,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onCharacteristicRead (BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, byte[] value, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic Read");
             connectedDevice = new ConnectedDevice(gatt);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -306,7 +298,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic Written");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -317,7 +308,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onCharacteristicChanged (BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, byte[] value){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic Changed");
             connectedDevice = new ConnectedDevice(gatt);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -328,7 +318,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Descriptor Written");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -338,7 +327,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onMtuChanged(BluetoothGatt gatt, int mtu, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Mtu changed");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -348,7 +336,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onPhyRead(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Phy read");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -358,7 +345,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onPhyUpdate(BluetoothGatt gatt, int txPhy, int rxPhy, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Phy updated");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -368,7 +354,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onReadRemoteRssi(BluetoothGatt gatt, int rssi, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Rssi read");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -378,7 +363,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onReliableWriteCompleted(BluetoothGatt gatt, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Reliable read completed");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -388,7 +372,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onServiceChanged(BluetoothGatt gatt){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Service changed");
             connectedDevice = new ConnectedDevice(gatt);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;
@@ -397,7 +380,6 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status){
             bluetoothGatt = gatt;
-            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Services discovered");
             connectedDevice = new ConnectedDevice(gatt, status);
             BleResponse response = new BleResponse();
             response.device = connectedDevice;

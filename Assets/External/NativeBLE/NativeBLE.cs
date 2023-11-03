@@ -189,7 +189,6 @@ public class NativeBLE : MonoBehaviour{
     public static Action<string> onDisconnected;
     void disconnected(string status) {
         currentDevice = null;
-        Debug.Log("Disconnected : " + status);
         onDisconnected?.Invoke(status);
     }
 
@@ -197,7 +196,6 @@ public class NativeBLE : MonoBehaviour{
     void characteristicRead(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Characteristic read : " +  bleResponse.characteristic);
         onCharacteristicRead?.Invoke(bleResponse.characteristic, bleResponse.data);
     }
 
@@ -205,7 +203,6 @@ public class NativeBLE : MonoBehaviour{
     void characteristicWrite(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Characteristic write");
         onCharacteristicWrite?.Invoke(bleResponse.characteristic);
     }
 
@@ -213,7 +210,6 @@ public class NativeBLE : MonoBehaviour{
     void characteristicChanged(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Characteristic changed : " + bleResponse.characteristic);
         onCharacteristicChanged?.Invoke(bleResponse.characteristic, bleResponse.data);
     }
 
@@ -221,7 +217,6 @@ public class NativeBLE : MonoBehaviour{
     void descriptorWrite(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Descriptor write");
         onDescriptorWrite?.Invoke(bleResponse.status);
     }
 
@@ -229,7 +224,6 @@ public class NativeBLE : MonoBehaviour{
     void mtuChanged(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Mtu changed");
         onMtuChanged?.Invoke(bleResponse.status);
     }
 
@@ -237,7 +231,6 @@ public class NativeBLE : MonoBehaviour{
     void phyRead(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Phy read");
         onPhyRead?.Invoke(bleResponse.status);
     }
 
@@ -245,7 +238,6 @@ public class NativeBLE : MonoBehaviour{
     void phyUpdate(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Phy update");
         onPhyUpdate?.Invoke(bleResponse.status);
     }
 
@@ -253,7 +245,6 @@ public class NativeBLE : MonoBehaviour{
     void readRemoteRssi(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Read remote rssi");
         onReadRemoteRssi?.Invoke(bleResponse.status);
     }
 
@@ -261,7 +252,6 @@ public class NativeBLE : MonoBehaviour{
     void reliableWriteCompleted(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Reliable write complete");
         onReliableWriteCompleted?.Invoke(bleResponse.status);
     }
 
@@ -269,7 +259,6 @@ public class NativeBLE : MonoBehaviour{
     void serviceChanged(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Service changed : " + currentDevice);
         onServiceChanged?.Invoke();
     }
 
@@ -277,7 +266,6 @@ public class NativeBLE : MonoBehaviour{
     void servicesDiscovered(string response) {
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
-        Debug.Log("Services discovered : " + currentDevice);
         onservicesDiscovered?.Invoke(currentDevice, bleResponse.status);
     }
 

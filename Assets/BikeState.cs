@@ -9,7 +9,8 @@ public class BikeState : MonoBehaviour {
         "25km/h - 250W",
         "35km/h - 250W",
         "45km/h - 850W",
-        "50km/h - 1200W"
+        "50km/h - 1200W",
+        "EU default"
     };
     
 
@@ -47,14 +48,14 @@ public class BikeState : MonoBehaviour {
 
     public int changeMode(bool save = true) {
         mode++;
-        if (mode > 3) mode = 0;
+        if (mode > 8) mode = 0;
         if (save) PlayerPrefs.SetInt("mode", mode);
         return mode;
     }
 
     public int changeAssist(bool save = true) {
         assist++;
-        if (assist > 4) assist = 0;
+        if (assist > 5) assist = 0;
         if (save) PlayerPrefs.SetInt("assist", assist);
         return assist;
     }
@@ -133,19 +134,24 @@ public class BikeState : MonoBehaviour {
         else if (dataIsId(data, BikeManager.SPEED_ID)) return processWheelData(data);
         else if (dataIsId(data, BikeManager.TOTAL_ID)) return processTotalData(data);
         else if (dataIsId(data, BikeManager.PEDAL_ID)) return processPedalData(data);
-        else if (dataIsId(data, BikeManager.MOTOR_ID)) return processMotorData(data);
+        else if (dataIsId(data, BikeManager.POWER_ID)) return processPowerData(data);
 
         return false;
     }
 
 
     bool processSettingsData(byte[] data) {
-        if (data[4] > 0x01) return false;
-        if (data[2] > 0x04) return false;
-        if (data[5] > 0x03) return false;
+        Debug.Log("##");
+        string s = "";
+        foreach (byte b in data) s += (int)b + " ";
+        Debug.Log(s);
+        //if (data[4] > 0x01) return false;
+        //if (data[2] > 0x04) return false;
+        //if (data[5] > 0x07) return false;
         light = data[4] == 0x01;
         assist = data[2];
         mode = data[5];
+        Debug.Log("###");
         return true;
     }
 
@@ -167,7 +173,7 @@ public class BikeState : MonoBehaviour {
         return true;
     }
 
-    bool processMotorData(byte[] data) {
+    bool processPowerData(byte[] data) {
         return false;
     }
 
