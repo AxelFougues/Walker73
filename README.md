@@ -65,5 +65,14 @@ Instead here are some slightly more costly power approximations that do zero out
 |4      |EPAC      |EU     | 25km/h    | 250W     | NO       | EU default     |
 |5      |250W      |EU     | 35km/h    | 250W     | NO       |                |
 |6      |850W      |EU     | 45km/h    | 850W     | NO       |                |
-|6      |OFF_ROAD  |EU     | MAX       | MAX      | YES      |                |
+|7      |OFF_ROAD  |EU     | MAX       | MAX      | YES      |                |
+|8+     |-         |-      | 0km/h     | 0        | NO       |Unimplemented   |
 
+| ASSIST|NAME      |Assist level  | Description    |
+| :---: | :------: | :----------: | :------------- |
+|0      |PAS0      |0%            |                |
+|1      |PAS1      |25%           |                |
+|2      |PAS2      |50%           |                |
+|3      |PAS3      |75%           |                |
+|4+     |PAS4      |100%          |                |
+|5+     |-         |0%            |Unimplemented   |
