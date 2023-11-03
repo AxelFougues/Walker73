@@ -37,13 +37,13 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 
 ## Notifications
 
-|  Notification |  ID 0 |  ID 1 | Data 2 | Data 3 | Data 4 | Data 5 | Data 6 | Data 7 | Data 8 | Data 9 |
-| :------------ | :---: | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| WHEEL         |  0x02 | 0x01  | WSPEED | WSPEED | 0x00   | 0x00   | 0x00   | 0x00   | 0x00   | 0x00   |
-| TOTAL         |  0x02 | 0x02  | 0x00   | Unknown| 0x00   | 0x00   | TOTAL  | TOTAL  | 0x00   | 0x00   |
-| PEDAL         |  0x02 | 0x02  | PSPEED | PSPEED | 0x00   | 0x00   | 0x00   | 0x00   | Unknown| 0x00   |
-| SETTINGS      |  0x03 | 0x00  | ASSIST | WALK   | LIGHT  | MODE   | 0x00   | 0x00   | 0x00   | 0x00   |
-| POWER         |  0x04 | 0x01  | Unknown| 0x00   | 0x00   | 0x00   | Unknown| 0x00   | 0x00   | 0x00   |
+|  Notification |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8 | Data 9 |
+| :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :----: | :----: |
+| WHEEL         |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00   | 0x00   |
+| TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00   | 0x00   |
+| PEDAL         |  0x02 | 0x02  | **PSPEED** | **PSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | Unknown| 0x00   |
+| SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00   | 0x00   |
+| POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00   | 0x00   |
 
 - WSPEED : UInt16, wheel speed (km/h) ~= ```0.009876614 * WSPEED + 1.228228```
 - PSPEED : UInt16, pedal RPM ~=  ```0.01926005 * PSPEED + 1.051926```
@@ -51,7 +51,7 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 - ASSIST : pedal assist level (0-4)
 - WALK : walk (push along) assist (0/90?)
 - LIGHT : headlight on (1/0)
-- MODE : riding power mode (0-3)
+- MODE : riding power mode (0-4)
 
 The linear approximations to turn WSPEED and PSPEED into real units do not pass through 0 which is not ideal.
 Instead here are some slightly more costly power approximations that do zero out:
