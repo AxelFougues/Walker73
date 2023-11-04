@@ -73,6 +73,9 @@ public class NativeBLE : MonoBehaviour{
         }
     }
 
+    public static ConnectedDevice getConnectedDevice() {
+        return currentDevice;
+    }
 
     public static bool scanBLE() {
         AndroidJavaClass unityClass;
@@ -83,6 +86,20 @@ public class NativeBLE : MonoBehaviour{
             if (unityActivity != null) {
                 foundDevices.Clear();
                 return unityActivity.Call<bool>("scanLeDevice");
+            }
+        }
+        return false;
+    }
+
+    public static bool scanBLEfilter(string serviceUUID) {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                foundDevices.Clear();
+                return unityActivity.Call<bool>("scanLeDeviceFilter", serviceUUID);
             }
         }
         return false;

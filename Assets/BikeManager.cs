@@ -38,6 +38,7 @@ public class BikeManager : MonoBehaviour {
     [Space]
     [Header("Connect")]
     public GameObject connectPage;
+    public Button bikeButton;
     [Space]
     public Button modeButton;
     public TMP_Text modeText;
@@ -56,16 +57,16 @@ public class BikeManager : MonoBehaviour {
     [Space]
     public Button lightButton;
     public Image lightGraphic;
-    public Image autoApplyGraphic;
-    public Button autoApplyButton;
-    public Button bikeButton;
-    public Button unitsButton;
-    public Button prefsButton;
-    [Space]
     public TMP_Text totalText;
     public TMP_Text totalUnitsText;
+    [Space]
     public TMP_Text wheelRPMText;
     public TMP_Text pedalRPMText;
+    //
+    public Toggle autoApplyToggle;
+    public Toggle autoConnectToggle;
+    public Button unitsButton;
+    public Button prefsButton;
     [Space]
     [Header("Debug")]
     public TMP_Text notifText;
@@ -74,8 +75,6 @@ public class BikeManager : MonoBehaviour {
     [Header("Resources")]
     public Sprite lightOn;
     public Sprite lightOff;
-    public Sprite autoApplyOn;
-    public Sprite autoApplyOff;
     public List<Sprite> batteryLevels;
     public Sprite batteryCharging;
 
@@ -157,11 +156,9 @@ public class BikeManager : MonoBehaviour {
         bikeButton.onClick.AddListener(delegate {
             disconnect();
         });
-        autoApplyGraphic.sprite = PlayerPrefs.GetInt("auto", 1) == 1 ? autoApplyOn : autoApplyOff;
-        autoApplyButton.onClick.AddListener(delegate {
-            bool newAutoApply = !(PlayerPrefs.GetInt("auto", 1) == 1);
-            autoApplyGraphic.sprite = newAutoApply ? autoApplyOn : autoApplyOff;
-            PlayerPrefs.SetInt("auto", newAutoApply?1:0);
+        autoApplyToggle.isOn = PlayerPrefs.GetInt("auto", 1) == 1;
+        autoApplyToggle.onValueChanged.AddListener(delegate {
+            PlayerPrefs.SetInt("auto", autoApplyToggle.isOn ? 1 : 0);
         });
         unitsButton.onClick.AddListener(delegate {
             currentBikeState.toggleMetric();
@@ -170,6 +167,7 @@ public class BikeManager : MonoBehaviour {
         prefsButton.onClick.AddListener(delegate {
             prefsOverlay.SetActive(true);
         });
+        
 
         scan();
     }
@@ -215,11 +213,15 @@ public class BikeManager : MonoBehaviour {
 
     void onScanResult(BtleDevice btleDevice) {
         if (string.IsNullOrEmpty(btleDevice.name)) return;
-        scanButtonText.SetActive(true);
-        scanButtonloadingIcon.SetActive(false);
-        DeviceLine line = Instantiate(deviceLine_prefab, deviceLineContainer).GetComponent<DeviceLine>();
-        line.set(btleDevice);
-        line.transform.SetAsFirstSibling();
+        if (PlayerPrefs.HasKey(btleDevice.address)) {
+            BikeManager.instance.connect(btleDevice);
+        } else {
+            scanButtonText.SetActive(true);
+            scanButtonloadingIcon.SetActive(false);
+            DeviceLine line = Instantiate(deviceLine_prefab, deviceLineContainer).GetComponent<DeviceLine>();
+            line.set(btleDevice);
+            line.transform.SetAsFirstSibling();
+        }
     }
 
     #endregion
@@ -245,6 +247,17 @@ public class BikeManager : MonoBehaviour {
         if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
         StartCoroutine(getStartupInfoRoutine());
         subscribeNotifications(true);
+        autoConnectToggle.isOn = PlayerPrefs.HasKey(device.deviceInfo.address);
+        autoConnectToggle.onValueChanged.AddListener(delegate {
+            if (autoConnectToggle.isOn) {
+                ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
+                if (connectedDevice != null) PlayerPrefs.SetInt(connectedDevice.deviceInfo.address, 1);
+                else autoConnectToggle.isOn = false;
+            } else {
+                ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
+                if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
+            }
+        });
     }
 
     IEnumerator getStartupInfoRoutine() {

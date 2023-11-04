@@ -16,7 +16,9 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
+import android.bluetooth.le.ScanFilter;
 import android.bluetooth.le.ScanResult;
+import android.bluetooth.le.ScanSettings;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -28,6 +30,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Parcel;
+import android.os.ParcelUuid;
 import android.provider.Settings;
 
 import com.google.gson.Gson;
@@ -38,6 +41,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.UUID;
 
 public class NativeBLE extends UnityPlayerActivity {
@@ -158,6 +162,34 @@ public class NativeBLE extends UnityPlayerActivity {
         return scanning;
     }
 
+    @SuppressLint("MissingPermission")
+    public boolean scanLeDeviceFilter(String service ) {
+        if(!initialized) initialize();
+        if (initialized && !scanning) {
+            // Stops scanning after a predefined scan period.
+            handler.postDelayed(new Runnable() {
+                @SuppressLint("MissingPermission")
+                @Override
+                public void run() {
+                    scanning = false;
+                    sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Stopped scanning");
+                    bluetoothLeScanner.stopScan(leScanCallback);
+                }
+            }, SCAN_PERIOD);
+
+            List<ScanFilter> filters = new ArrayList<>();
+            filters.add(new ScanFilter.Builder().setServiceUuid(new ParcelUuid(UUID.fromString(service))).build());
+
+            scanning = true;
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Scanning");
+            availableDevices.clear();
+            bluetoothLeScanner.startScan(filters,
+                    new ScanSettings.Builder().setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).setCallbackType(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).build(),
+                    leScanCallback);
+        }
+        return scanning;
+    }
+
 
     @SuppressLint("MissingPermission")
     public boolean connectLeDevice(String address){
@@ -256,6 +288,7 @@ public class NativeBLE extends UnityPlayerActivity {
         @Override
         public void onScanResult(int callbackType, ScanResult result) {
             BtleDevice btleDevice = new BtleDevice(result.getDevice());
+
             if(!availableDevices.containsKey(btleDevice.address)){
                 availableDevices.put(btleDevice.address, result.getDevice());
                 UnityPlayer.UnitySendMessage("NativeBLE", "scanResult", new Gson().toJson(btleDevice));
