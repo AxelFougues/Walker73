@@ -26,7 +26,7 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 - ARMv7 + ARM64
 - Uses custom Main Manifest
 
-# Reverse engineering 
+# Reverse engineering bluetooth coms
 ## Services
 | Name                                   | UUID                                 | Description                            |
 | :------------------------------------- | :----------------------------------- | :------------------------------------- |
@@ -66,7 +66,7 @@ Instead here are some slightly more costly power approximations that do zero out
 |5      |250W      |EU     | 35km/h    | 250W     | NO       |                |
 |6      |850W      |EU     | 45km/h    | 850W     | NO       |                |
 |7      |OFF_ROAD  |EU     | MAX       | MAX      | YES      |                |
-|8+     |-         |-      | 0km/h     | 0        | NO       |Unimplemented   |
+|8+     |-         |-      | 0km/h     | 0W        | NO       |Unimplemented   |
 
 | ASSIST|NAME      |Assist level  | Description    |
 | :---: | :------: | :----------: | :------------- |
