@@ -58,9 +58,9 @@ Instead here are some slightly more costly power approximations that do zero out
 
 | MODE  |NAME      |EU/US  | Max assist| Max power| Throttle | Description    |
 | :---: | :------: | :---: | :--------:| :------: | :------: | :------------- |
-|0      |CLASS1    |US     | 32.2km/h  | ?        | NO       |                |
-|1      |CLASS2    |US     | 32.2km/h  | ?        | YES      |                |
-|2      |CLASS3    |US     | 45km/h    | ?        | NO       |                |
+|0      |CLASS1    |US     | 32.2km/h  | 750W     | NO       |                |
+|1      |CLASS2    |US     | 32.2km/h  | 750W     | YES      |                |
+|2      |CLASS3    |US     | 45km/h    | 750W      | NO       |                |
 |3      |OFF_ROAD  |US     | MAX       | MAX      | YES      |                |
 |4      |EPAC      |EU     | 25km/h    | 250W     | NO       | EU default     |
 |5      |250W      |EU     | 35km/h    | 250W     | NO       |                |
