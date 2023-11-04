@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -32,6 +33,7 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.ParcelUuid;
 import android.provider.Settings;
+import android.view.ContextThemeWrapper;
 
 import com.google.gson.Gson;
 import com.unity3d.player.UnityPlayer;
@@ -434,6 +436,22 @@ public class NativeBLE extends UnityPlayerActivity {
         UnityPlayer.UnitySendMessage("NativeBLE", "messageFromAndroid", prefix.toString() + "#" + msg);
     }
 
+    public int androidTheme(ContextThemeWrapper ctw) {
+        if (Build.VERSION.SDK_INT < 29) {  // Need minimum android Q
+            return 0;  // Unspecified
+        }
+
+        switch (ctw.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                return 2;
+            case Configuration.UI_MODE_NIGHT_NO:
+                return 1;
+        }
+
+        return 0;  // Unspecified
+    }
+    
+    //MORE
     public enum AndroidMessagePrefix {
         DEBUG_LOG, DEBUG_ERROR
     }

@@ -124,6 +124,9 @@ public class BikeManager : MonoBehaviour {
     }
 
     private void Start() {
+        if (NativeBLE.androidTheme == DeviceTheme.DARK) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
+        else if (NativeBLE.androidTheme == DeviceTheme.LIGHT) ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
+
         scanPage.SetActive(true);
         connectPage.SetActive(false);
         prefsOverlay.SetActive(false);

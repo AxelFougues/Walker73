@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NativeBLE : MonoBehaviour{
 
+
     [Serializable]
     public class BtleDevice : IEquatable<BtleDevice> {
         public string address;
@@ -61,6 +62,8 @@ public class NativeBLE : MonoBehaviour{
     static List<BtleDevice> foundDevices = new List<BtleDevice>();
     static ConnectedDevice currentDevice = null;
 
+    public static DeviceTheme androidTheme = DeviceTheme.UNSPECIFIED;
+
     private void Awake() {
         gameObject.name = "NativeBLE";
 
@@ -71,6 +74,8 @@ public class NativeBLE : MonoBehaviour{
                 available = true;
             }
         }
+
+        androidTheme = getDeviceTheme();
     }
 
     public static ConnectedDevice getConnectedDevice() {
@@ -285,6 +290,26 @@ public class NativeBLE : MonoBehaviour{
         BleResponse bleResponse = JsonUtility.FromJson<BleResponse>(response);
         currentDevice = bleResponse.device;
         onservicesDiscovered?.Invoke(currentDevice, bleResponse.status);
+    }
+
+    #endregion
+
+    #region ANDROID_UTILITIES
+
+    public enum DeviceTheme {
+        UNSPECIFIED, LIGHT, DARK
+    }
+    public static DeviceTheme getDeviceTheme() {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                return (DeviceTheme)unityActivity.Call<int>("androidTheme", unityActivity);
+            }
+        }
+        return DeviceTheme.UNSPECIFIED;
     }
 
     void messageFromAndroid(string message) {

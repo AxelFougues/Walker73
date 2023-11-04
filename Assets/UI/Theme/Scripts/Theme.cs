@@ -17,6 +17,7 @@ public class Theme : ScriptableObject{
     public int highlightAngle = -45;
     [Space]
     public Color baseColor;
+    public Color baseNegativeColor;
     public Color accentColor;
     public Color halfTone;
 

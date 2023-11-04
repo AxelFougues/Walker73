@@ -11,8 +11,4 @@ public class ThemedSprite : ThemedElement{
         sprite.color = getColor(sprite.color, theme);
     }
 
-    private void Start() {
-        applyTheme();
-    }
-
 }

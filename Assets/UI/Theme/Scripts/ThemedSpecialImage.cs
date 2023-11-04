@@ -8,11 +8,6 @@ public class ThemedSpecialImage : ThemedElement {
     [Space]
     public Image image;
 
-
-    private void Start() {
-        applyTheme();
-    }
-
     public override void applyTheme(Theme theme = null) {
         if (theme == null) theme = ColorManager.instance.theme;
         if (overrideTheme != null) theme = overrideTheme;

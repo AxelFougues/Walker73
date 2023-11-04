@@ -13,8 +13,4 @@ public class ThemedText : ThemedElement{
         if(textOld != null) textOld.color = getColor(textOld.color, theme);
     }
 
-    private void Start() {
-        applyTheme();
-    }
-
 }
