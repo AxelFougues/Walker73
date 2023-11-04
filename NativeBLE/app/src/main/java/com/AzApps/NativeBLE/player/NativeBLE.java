@@ -278,6 +278,7 @@ public class NativeBLE extends UnityPlayerActivity {
     @SuppressLint("MissingPermission")
     public boolean disconnectLeDevice(){
         if(bluetoothGatt == null ) return false;
+        bluetoothGatt.disconnect();
         bluetoothGatt.close();
         return true;
     }

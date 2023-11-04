@@ -170,16 +170,17 @@ public class NativeBLE : MonoBehaviour{
         return false;
     }
 
-    public static void disconnectBLE() {
+    public static bool disconnectBLE() {
         AndroidJavaClass unityClass;
         AndroidJavaObject unityActivity;
         if (Application.platform == RuntimePlatform.Android) {
             unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
             if (unityActivity != null) {
-                unityActivity.Call("disconnectLeDevice");
+                return unityActivity.Call<bool>("disconnectLeDevice");
             }
         }
+        return false;
     }
 
     #region FROM_UNITY

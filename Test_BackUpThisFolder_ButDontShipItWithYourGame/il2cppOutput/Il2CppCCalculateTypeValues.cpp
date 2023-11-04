@@ -12965,29 +12965,29 @@ struct U3CU3Ec_tA54F8EBCAFF569C7ED6FE8EC10B21ABDFDA0FA27_StaticFields
 	U3CU3Ec_tA54F8EBCAFF569C7ED6FE8EC10B21ABDFDA0FA27* ___U3CU3E9_0;
 };
 
-// BikeManager/<getStartupInfoRoutine>d__67
-struct U3CgetStartupInfoRoutineU3Ed__67_t38213BF87F96E0015024DE63137BDE37E5562438  : public RuntimeObject
+// BikeManager/<getStartupInfoRoutine>d__65
+struct U3CgetStartupInfoRoutineU3Ed__65_t75293BB6BB1635D55D5192E859B9FA457A1D9699  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<getStartupInfoRoutine>d__67::<>1__state
+	// System.Int32 BikeManager/<getStartupInfoRoutine>d__65::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<getStartupInfoRoutine>d__67::<>2__current
+	// System.Object BikeManager/<getStartupInfoRoutine>d__65::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<getStartupInfoRoutine>d__67::<>4__this
+	// BikeManager BikeManager/<getStartupInfoRoutine>d__65::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
 };
 
-// BikeManager/<scanRoutine>d__62
-struct U3CscanRoutineU3Ed__62_t4F4F7D9D30E3D63F839781F74782CB0E8B3D02F9  : public RuntimeObject
+// BikeManager/<scanRoutine>d__60
+struct U3CscanRoutineU3Ed__60_t5BDCEDF6005964BC2A5EA2A8F03911DD649AF170  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<scanRoutine>d__62::<>1__state
+	// System.Int32 BikeManager/<scanRoutine>d__60::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<scanRoutine>d__62::<>2__current
+	// System.Object BikeManager/<scanRoutine>d__60::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<scanRoutine>d__62::<>4__this
+	// BikeManager BikeManager/<scanRoutine>d__60::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
-	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__62::<>s__1
+	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__60::<>s__1
 	RuntimeObject* ___U3CU3Es__1_3;
-	// UnityEngine.Transform BikeManager/<scanRoutine>d__62::<child>5__2
+	// UnityEngine.Transform BikeManager/<scanRoutine>d__60::<child>5__2
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CchildU3E5__2_4;
 };
 
@@ -46711,52 +46711,52 @@ struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___deviceLine_prefab_21;
 	// UnityEngine.GameObject BikeManager::connectPage
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___connectPage_22;
-	// UnityEngine.UI.Button BikeManager::modeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___modeButton_23;
-	// TMPro.TMP_Text BikeManager::modeText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___modeText_24;
-	// TMPro.TMP_Text BikeManager::speedText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedText_25;
-	// TMPro.TMP_Text BikeManager::speedUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedUnitsText_26;
-	// UnityEngine.UI.Image BikeManager::levelGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___levelGraphic_27;
-	// TMPro.TMP_Text BikeManager::levelText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___levelText_28;
-	// UnityEngine.UI.Button BikeManager::assistButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___assistButton_29;
-	// TMPro.TMP_Text BikeManager::assistText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___assistText_30;
-	// TMPro.TMP_Text BikeManager::tempText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempText_31;
-	// TMPro.TMP_Text BikeManager::tempUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempUnitsText_32;
-	// TMPro.TMP_Text BikeManager::voltText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltText_33;
-	// TMPro.TMP_Text BikeManager::voltUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltUnitsText_34;
-	// UnityEngine.UI.Button BikeManager::lightButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___lightButton_35;
-	// UnityEngine.UI.Image BikeManager::lightGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lightGraphic_36;
-	// UnityEngine.UI.Image BikeManager::autoApplyGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___autoApplyGraphic_37;
-	// UnityEngine.UI.Button BikeManager::autoApplyButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___autoApplyButton_38;
 	// UnityEngine.UI.Button BikeManager::bikeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___bikeButton_39;
-	// UnityEngine.UI.Button BikeManager::unitsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___unitsButton_40;
-	// UnityEngine.UI.Button BikeManager::prefsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___prefsButton_41;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___bikeButton_23;
+	// UnityEngine.UI.Button BikeManager::modeButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___modeButton_24;
+	// TMPro.TMP_Text BikeManager::modeText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___modeText_25;
+	// TMPro.TMP_Text BikeManager::speedText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedText_26;
+	// TMPro.TMP_Text BikeManager::speedUnitsText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedUnitsText_27;
+	// UnityEngine.UI.Image BikeManager::levelGraphic
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___levelGraphic_28;
+	// TMPro.TMP_Text BikeManager::levelText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___levelText_29;
+	// UnityEngine.UI.Button BikeManager::assistButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___assistButton_30;
+	// TMPro.TMP_Text BikeManager::assistText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___assistText_31;
+	// TMPro.TMP_Text BikeManager::tempText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempText_32;
+	// TMPro.TMP_Text BikeManager::tempUnitsText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempUnitsText_33;
+	// TMPro.TMP_Text BikeManager::voltText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltText_34;
+	// TMPro.TMP_Text BikeManager::voltUnitsText
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltUnitsText_35;
+	// UnityEngine.UI.Button BikeManager::lightButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___lightButton_36;
+	// UnityEngine.UI.Image BikeManager::lightGraphic
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lightGraphic_37;
 	// TMPro.TMP_Text BikeManager::totalText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalText_42;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalText_38;
 	// TMPro.TMP_Text BikeManager::totalUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalUnitsText_43;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalUnitsText_39;
 	// TMPro.TMP_Text BikeManager::wheelRPMText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___wheelRPMText_44;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___wheelRPMText_40;
 	// TMPro.TMP_Text BikeManager::pedalRPMText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___pedalRPMText_45;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___pedalRPMText_41;
+	// UnityEngine.UI.Toggle BikeManager::autoApplyToggle
+	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoApplyToggle_42;
+	// UnityEngine.UI.Toggle BikeManager::autoConnectToggle
+	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoConnectToggle_43;
+	// UnityEngine.UI.Button BikeManager::unitsButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___unitsButton_44;
+	// UnityEngine.UI.Button BikeManager::prefsButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___prefsButton_45;
 	// TMPro.TMP_Text BikeManager::notifText
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___notifText_46;
 	// UnityEngine.GameObject BikeManager::prefsOverlay
@@ -46765,20 +46765,16 @@ struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D  : public MonoBehav
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_48;
 	// UnityEngine.Sprite BikeManager::lightOff
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_49;
-	// UnityEngine.Sprite BikeManager::autoApplyOn
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___autoApplyOn_50;
-	// UnityEngine.Sprite BikeManager::autoApplyOff
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___autoApplyOff_51;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> BikeManager::batteryLevels
-	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_52;
+	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_50;
 	// UnityEngine.Sprite BikeManager::batteryCharging
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_53;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_51;
 	// System.Collections.Generic.List`1<System.String> BikeManager::debugNotificationText
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___debugNotificationText_58;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___debugNotificationText_56;
 	// BikeState BikeManager::currentBikeState
-	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentBikeState_59;
+	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentBikeState_57;
 	// System.Boolean BikeManager::registerAvailable
-	bool ___registerAvailable_60;
+	bool ___registerAvailable_58;
 };
 
 struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields
@@ -56090,9 +56086,9 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299 = { sizeof(Utility_t8BC
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3300 = { sizeof(U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301 = { sizeof(U3CscanRoutineU3Ed__62_t4F4F7D9D30E3D63F839781F74782CB0E8B3D02F9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3301 = { sizeof(U3CscanRoutineU3Ed__60_t5BDCEDF6005964BC2A5EA2A8F03911DD649AF170), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302 = { sizeof(U3CgetStartupInfoRoutineU3Ed__67_t38213BF87F96E0015024DE63137BDE37E5562438), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3302 = { sizeof(U3CgetStartupInfoRoutineU3Ed__65_t75293BB6BB1635D55D5192E859B9FA457A1D9699), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3303;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3303 = { sizeof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D), -1, sizeof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3304;

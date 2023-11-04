@@ -482,6 +482,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745
 IL2CPP_EXTERN_C String_t* _stringLiteral24D8C4411CEED609657E7345D25B37DF1E859BC4;
 IL2CPP_EXTERN_C String_t* _stringLiteral276565662846912BD6C311C6C7B732FC149F12D5;
 IL2CPP_EXTERN_C String_t* _stringLiteral27E1E9940D161AD7BF05452F0737F4E0A73F9A9E;
+IL2CPP_EXTERN_C String_t* _stringLiteral3463DA4BFE7371BE5AC7127107E20BA06ECCDB66;
 IL2CPP_EXTERN_C String_t* _stringLiteral488A85A32BB77D6DC6641C762F74E6D68671DD94;
 IL2CPP_EXTERN_C String_t* _stringLiteral49E61D52FB419274DC29676F5DEF1232001F16DE;
 IL2CPP_EXTERN_C String_t* _stringLiteral4C24EDC253291360D13DEA461754B891944A6256;
@@ -4217,8 +4218,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_getStartupInfoRout
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_subscribeNotifications_m8190518216CC00111AE977DC6826850BFC7B1539 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, bool ___subscribe0, const RuntimeMethod* method) ;
 // System.Void BikeManager/<getStartupInfoRoutine>d__65::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__65__ctor_mF203D158C00CF2D9FEA17ECA9F4AF4C4957D725D (U3CgetStartupInfoRoutineU3Ed__65_t75293BB6BB1635D55D5192E859B9FA457A1D9699* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
-// System.Void NativeBLE::disconnectBLE()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnectBLE_mAD195D449610D0AF55B0730A7EA7AAB09F15DCA8 (const RuntimeMethod* method) ;
 // System.Byte[] BikeState::getData()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BikeState_getData_m83D1CF0EEEF853EBE8C7DD3C2C83E55B8AAE103C (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
 // System.Boolean NativeBLE::writeCharacteristic(System.String,System.String,System.Byte[])
@@ -4278,18 +4277,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BikeState_changeMode_m6CEA9C53DE61857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BikeState_changeAssist_mDBA90450130BD0A87927AC42F223344B729EFBB7 (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, bool ___save0, const RuntimeMethod* method) ;
 // System.Boolean BikeState::toggleLight(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeState_toggleLight_mA58328E59042ED8E47778DBB2607F965B03A143D (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, bool ___save0, const RuntimeMethod* method) ;
-// System.Void BikeManager::disconnect()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_disconnect_m0C2A25B92D353639578D9E1D2B0917F51A4AAA3A (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) ;
+// NativeBLE/ConnectedDevice NativeBLE::getConnectedDevice()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* NativeBLE_getConnectedDevice_m0AD1AA1D936B432F20A1A0E20A919A28536AEB12 (const RuntimeMethod* method) ;
+// System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_DeleteKey_m8F4F85F8D9F807130C6B848E60432ECC28F1301F (String_t* ___key0, const RuntimeMethod* method) ;
+// System.Boolean NativeBLE::disconnectBLE()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_disconnectBLE_m240D3B95FEE7DFDA54F4ADB8F3B7113A29BF9F46 (const RuntimeMethod* method) ;
+// System.Void BikeManager::onDisconnected(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onDisconnected_m726545915A79D71F209AF0F28A1790FEC16A27E4 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, String_t* ___status0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.UI.Toggle::get_isOn()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619 (Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.PlayerPrefs::SetInt(System.String,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetInt_mDC9617BFD56FEC670626A1002D9A5FE963D8D175 (String_t* ___key0, int32_t ___value1, const RuntimeMethod* method) ;
 // System.Boolean BikeState::toggleMetric(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeState_toggleMetric_m2C693F52875A9A5DCCF8791E48C512D4051A3762 (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, bool ___save0, const RuntimeMethod* method) ;
-// NativeBLE/ConnectedDevice NativeBLE::getConnectedDevice()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* NativeBLE_getConnectedDevice_m0AD1AA1D936B432F20A1A0E20A919A28536AEB12 (const RuntimeMethod* method) ;
-// System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_DeleteKey_m8F4F85F8D9F807130C6B848E60432ECC28F1301F (String_t* ___key0, const RuntimeMethod* method) ;
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator UnityEngine.Transform::GetEnumerator()
@@ -4423,8 +4424,6 @@ inline void List_1_Clear_mF98D39B2E06E557DCE5C17BE5D4DB8008DA0F04A_inline (List_
 {
 	((  void (*) (List_1_t6A17D1DB637D9F58E73549DA896A954C154FDE02*, const RuntimeMethod*))List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline)(__this, method);
 }
-// System.Void UnityEngine.AndroidJavaObject::Call(System.String,System.Object[])
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___methodName0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___args1, const RuntimeMethod* method) ;
 // T UnityEngine.JsonUtility::FromJson<NativeBLE/BtleDevice>(System.String)
 inline BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* JsonUtility_FromJson_TisBtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99_m84BBEC4B7E39EB3F8105A13C743EC113FEDDDD5E (String_t* ___json0, const RuntimeMethod* method)
 {
@@ -4884,7 +4883,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Start_m4EC93E59B56ABED0A94F5
 		NullCheck(L_17);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_17, L_18, NULL);
 		// bikeButton.onClick.AddListener(delegate {
-		//     disconnect();
+		//     //Disable auto-connect
+		//     ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
+		//     if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
+		//     //Close connexion
+		//     if (NativeBLE.disconnectBLE()) onDisconnected("User disconnected.");
 		// });
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___bikeButton_23;
 		NullCheck(L_19);
@@ -5447,23 +5450,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_getStartupInfoRout
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
 		return L_1;
-	}
-}
-// System.Void BikeManager::disconnect()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_disconnect_m0C2A25B92D353639578D9E1D2B0917F51A4AAA3A (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// NativeBLE.disconnectBLE();
-		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
-		NativeBLE_disconnectBLE_mAD195D449610D0AF55B0730A7EA7AAB09F15DCA8(NULL);
-		// }
-		return;
 	}
 }
 // System.Void BikeManager::onDisconnected(System.String)
@@ -6456,9 +6442,86 @@ IL_0025:
 // System.Void BikeManager::<Start>b__57_4()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__57_4_m20D7077C9C93BBC60B75305E2C973202B4A84C36 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		// disconnect();
-		BikeManager_disconnect_m0C2A25B92D353639578D9E1D2B0917F51A4AAA3A(__this, NULL);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3463DA4BFE7371BE5AC7127107E20BA06ECCDB66);
+		s_Il2CppMethodInitialized = true;
+	}
+	ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	int32_t G_B3_0 = 0;
+	{
+		// ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_0;
+		L_0 = NativeBLE_getConnectedDevice_m0AD1AA1D936B432F20A1A0E20A919A28536AEB12(NULL);
+		V_0 = L_0;
+		// if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_2 = V_0;
+		NullCheck(L_2);
+		BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* L_3 = L_2->___deviceInfo_0;
+		NullCheck(L_3);
+		String_t* L_4 = L_3->___address_0;
+		bool L_5;
+		L_5 = PlayerPrefs_HasKey_m9EB15A18BE611107251F2E2F6CE70636F88CAB5F(L_4, NULL);
+		G_B3_0 = ((int32_t)(L_5));
+		goto IL_001d;
+	}
+
+IL_001c:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_001d:
+	{
+		V_1 = (bool)G_B3_0;
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		// if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
+		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_7 = V_0;
+		NullCheck(L_7);
+		BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* L_8 = L_7->___deviceInfo_0;
+		NullCheck(L_8);
+		String_t* L_9 = L_8->___address_0;
+		PlayerPrefs_DeleteKey_m8F4F85F8D9F807130C6B848E60432ECC28F1301F(L_9, NULL);
+	}
+
+IL_0032:
+	{
+		// if (NativeBLE.disconnectBLE()) onDisconnected("User disconnected.");
+		il2cpp_codegen_runtime_class_init_inline(NativeBLE_tC68B5EE3309F842B67EE27BFE164F87F7453CB93_il2cpp_TypeInfo_var);
+		bool L_10;
+		L_10 = NativeBLE_disconnectBLE_m240D3B95FEE7DFDA54F4ADB8F3B7113A29BF9F46(NULL);
+		V_2 = L_10;
+		bool L_11 = V_2;
+		if (!L_11)
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		// if (NativeBLE.disconnectBLE()) onDisconnected("User disconnected.");
+		BikeManager_onDisconnected_m726545915A79D71F209AF0F28A1790FEC16A27E4(__this, _stringLiteral3463DA4BFE7371BE5AC7127107E20BA06ECCDB66, NULL);
+	}
+
+IL_0047:
+	{
 		// });
 		return;
 	}
@@ -9834,13 +9897,14 @@ IL_005b:
 		return L_18;
 	}
 }
-// System.Void NativeBLE::disconnectBLE()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnectBLE_mAD195D449610D0AF55B0730A7EA7AAB09F15DCA8 (const RuntimeMethod* method) 
+// System.Boolean NativeBLE::disconnectBLE()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeBLE_disconnectBLE_m240D3B95FEE7DFDA54F4ADB8F3B7113A29BF9F46 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078);
@@ -9852,6 +9916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnectBLE_mAD195D449610D0A
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
 	bool V_2 = false;
 	bool V_3 = false;
+	bool V_4 = false;
 	{
 		// if (Application.platform == RuntimePlatform.Android) {
 		int32_t L_0;
@@ -9860,7 +9925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnectBLE_mAD195D449610D0A
 		bool L_1 = V_2;
 		if (!L_1)
 		{
-			goto IL_0042;
+			goto IL_0044;
 		}
 	}
 	{
@@ -9881,26 +9946,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeBLE_disconnectBLE_mAD195D449610D0A
 		bool L_6 = V_3;
 		if (!L_6)
 		{
-			goto IL_0041;
+			goto IL_0043;
 		}
 	}
 	{
-		// unityActivity.Call("disconnectLeDevice");
+		// return unityActivity.Call<bool>("disconnectLeDevice");
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_7 = V_1;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8;
 		L_8 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
 		NullCheck(L_7);
-		AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C(L_7, _stringLiteralDE4C29EB5ACC744808B3535E969A7016310747B9, L_8, NULL);
+		bool L_9;
+		L_9 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_7, _stringLiteralDE4C29EB5ACC744808B3535E969A7016310747B9, L_8, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		V_4 = L_9;
+		goto IL_0049;
 	}
 
-IL_0041:
+IL_0043:
 	{
 	}
 
-IL_0042:
+IL_0044:
+	{
+		// return false;
+		V_4 = (bool)0;
+		goto IL_0049;
+	}
+
+IL_0049:
 	{
 		// }
-		return;
+		bool L_10 = V_4;
+		return L_10;
 	}
 }
 // System.Void NativeBLE::scanResult(System.String)
