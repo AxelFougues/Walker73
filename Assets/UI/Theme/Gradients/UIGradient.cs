@@ -18,7 +18,7 @@ public class UIGradient : BaseMeshEffect{
 
     protected override void Start() {
         applyTheme();
-        ColorManager.instance.onThemeChange += applyTheme;
+        if(ColorManager.instance != null) ColorManager.instance.onThemeChange += applyTheme;
     }
 
     private void OnDestroy() {

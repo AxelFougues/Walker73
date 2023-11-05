@@ -165,11 +165,7 @@ public class BikeManager : MonoBehaviour {
             applySettings();
         });
         bikeButton.onClick.AddListener(delegate {
-            //Disable auto-connect
-            ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
-            if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
-            //Close connexion
-            if (NativeBLE.disconnectBLE()) onDisconnected("User disconnected.");
+            disconnect();
         });
         autoApplyToggle.isOn = PlayerPrefs.GetInt("auto", 1) == 1;
         autoApplyToggle.onValueChanged.AddListener(delegate {
@@ -269,6 +265,10 @@ public class BikeManager : MonoBehaviour {
     }
 
     void onServicesDiscovered(ConnectedDevice device, int status) {
+        if (!device.services.Contains(UUID_METRICS_SERVICE)) {
+            disconnect();
+            return;
+        }
         if (PlayerPrefs.GetInt("auto", 1) == 1) applySettings();
         StartCoroutine(getStartupInfoRoutine());
         subscribeNotifications(true);
@@ -290,6 +290,14 @@ public class BikeManager : MonoBehaviour {
         registerSettings();
         yield return new WaitUntil(() => registerAvailable);
         registerTotal();
+    }
+
+    void disconnect() {
+        //Disable auto-connect
+        ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
+        if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
+        //Close connection
+        if (NativeBLE.disconnectBLE()) onDisconnected("User disconnected.");
     }
 
     void onDisconnected(string status) {
