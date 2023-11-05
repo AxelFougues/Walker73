@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ColorManager : MonoBehaviour{
@@ -15,7 +14,7 @@ public class ColorManager : MonoBehaviour{
 
     public void setTheme(Theme newTheme) {
         this.theme = newTheme;
-        onThemeChange?.Invoke(this.theme);
+        onThemeChange?.Invoke(null);
     }
 
     public Theme theme;

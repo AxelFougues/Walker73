@@ -450,7 +450,7 @@ public class NativeBLE extends UnityPlayerActivity {
 
         return 0;  // Unspecified
     }
-    
+
     //MORE
     public enum AndroidMessagePrefix {
         DEBUG_LOG, DEBUG_ERROR

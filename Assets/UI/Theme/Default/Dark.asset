@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdbc7088fdfee4b4b8cd754ed23559d7, type: 3}
   m_Name: Dark
   m_EditorClassIdentifier: 
-  background1: {r: 0.019607844, g: 0.019607844, b: 0.019607844, a: 1}
-  background2: {r: 0.02, g: 0.02, b: 0.02, a: 1}
+  background1: {r: 0.014999995, g: 0.15, b: 0.15, a: 1}
+  background2: {r: 0.0049019605, g: 0.049019612, b: 0.05, a: 1}
   backgroundAngle: 0
   panel1: {r: 1, g: 0.9780702, b: 0.9780702, a: 0.29803923}
   panel2: {r: 0.9803922, g: 0.9803922, b: 0.9803922, a: 0.101960786}
   panelAngle: 0
-  highlight1: {r: 1, g: 0.92549026, b: 0.06666667, a: 1}
-  highlight2: {r: 1, g: 0.92549026, b: 0.06666667, a: 0.5019608}
+  highlight1: {r: 0.96862745, g: 1, b: 0.5019608, a: 1}
+  highlight2: {r: 0.9411765, g: 1, b: 0.003921569, a: 1}
   highlightAngle: 0
-  baseColor: {r: 0.019607844, g: 0.019607844, b: 0.019607844, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   baseNegativeColor: {r: 1, g: 1, b: 1, a: 1}
-  accentColor: {r: 1, g: 0.927013, b: 0.06572771, a: 1}
+  accentColor: {r: 0.9411765, g: 1, b: 0.003921569, a: 1}
   halfTone: {r: 1, g: 1, b: 1, a: 0.5019608}

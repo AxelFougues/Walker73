@@ -24,7 +24,7 @@ public class BikeManager : MonoBehaviour {
     public static byte[] SETTINGS_ID = { 0x03, 0x00 };
     public static byte[] POWER_ID = { 0x04, 0x01 };
 
-
+    public Button themeButton;
     [Header("Loading")]
     public GameObject loadingOverlay;
     [Space]
@@ -110,7 +110,6 @@ public class BikeManager : MonoBehaviour {
         Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x09 }));
         Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x10 }));
         */
- 
     }
 
     private void OnEnable() {
@@ -124,8 +123,7 @@ public class BikeManager : MonoBehaviour {
     }
 
     private void Start() {
-        if (NativeBLE.androidTheme == DeviceTheme.DARK) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
-        else if (NativeBLE.androidTheme == DeviceTheme.LIGHT) ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
+        StartCoroutine(setThemeRoutine());
 
         scanPage.SetActive(true);
         connectPage.SetActive(false);
@@ -135,6 +133,16 @@ public class BikeManager : MonoBehaviour {
         currentBikeState = gameObject.AddComponent<BikeState>();
         refreshDisplay(currentBikeState);
 
+        themeButton.onClick.AddListener(delegate {
+            if (ColorManager.instance.theme == ColorManager.instance.darkTheme) {
+                ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
+                PlayerPrefs.SetString("theme", DeviceTheme.LIGHT.ToString());
+            } else {
+                ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
+                PlayerPrefs.SetString("theme", DeviceTheme.DARK.ToString());
+            }
+        });
+        //
         scanButton.onClick.AddListener(delegate {
             scan();
         });
@@ -177,6 +185,16 @@ public class BikeManager : MonoBehaviour {
         
 
         scan();
+    }
+
+
+    IEnumerator setThemeRoutine() {
+        yield return new WaitForEndOfFrame();
+        if (PlayerPrefs.HasKey("theme")) {
+            if (PlayerPrefs.GetString("theme", "") == DeviceTheme.DARK.ToString()) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
+            else ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
+        } else if (NativeBLE.androidTheme == DeviceTheme.DARK) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
+        else if (NativeBLE.androidTheme == DeviceTheme.LIGHT) ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
     }
 
     void refreshDisplay(BikeState state) {

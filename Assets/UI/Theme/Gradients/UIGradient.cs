@@ -47,6 +47,7 @@ public class UIGradient : BaseMeshEffect{
             m_color2 = theme.highlight2;
             m_angle = theme.highlightAngle;
         }
+        this.graphic.SetVerticesDirty();
     }
 
     public override void ModifyMesh(VertexHelper vh)
