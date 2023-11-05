@@ -374,7 +374,6 @@ public class BikeManager : MonoBehaviour {
         if (data[0] == 0x02) {
             if (data[0] == 0x02 && data[1] == 0x01) debugNotificationText[0] = debugString;
             else if (data[0] == 0x02 && data[1] == 0x02) {
-                tempText.text = BitConverter.ToUInt16(new byte[] { data[2], data[3] }).ToString();
                 debugNotificationText[1] = debugString;
             } else if (data[0] == 0x02 && data[1] == 0x03) debugNotificationText[2] = debugString;
         } else if (data[0] == 0x03) {
@@ -382,8 +381,6 @@ public class BikeManager : MonoBehaviour {
 
         } else if (data[0] == 0x04) {
             debugNotificationText[4] = debugString;
-            voltText.text = BitConverter.ToUInt16(new byte[] { data[2], data[3] }).ToString();
-            levelText.text = BitConverter.ToUInt16(new byte[] { data[5], data[6] }).ToString();
         }
 
         //debug text
