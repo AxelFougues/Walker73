@@ -1,5 +1,17 @@
 # Walker73
-Walker73 is an alternative open-source Bluetooth dashboard for e-bikes/scooters equipped with a Comodule Diamond Display :
+Walker73 is an alternative open-source Bluetooth dashboard for e-bikes/scooters equipped with a Comodule Diamond Display.
+- Fast auto connects to your bike's Bluetooth
+- Auto applies previous settings, bypass EU mode reset
+- No need for an internet connection or an account, fully privacy-friendly
+- Speed, RPM, Odometer, and more just like the official app
+- Light and Dark high-contrast themes for all situations
+- Ergonomic UI for quick mid-ride adjustments 
+- Modifiable base values for modders and hackers
+- Free, light, open-source, and no ads
+
+[ Currently missing battery and power stats. Explore more and give feedback on Github: https://github.com/AxelFougues/Walker73 ]
+
+Compatible with electric bike brands using the Comodule diamond display:
 - Super73
 - MATE.
 - Swapfiets
