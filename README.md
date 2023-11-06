@@ -73,9 +73,17 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 | UUID_SECURITY_HASH_CHARACTERISTIC              | 00002557-1212-efde-1523-785feabcd123 | Security hash                                        |   N   |   Y   |    N   |    N     |
 | UUID_SECURITY_AUTH_CHARACTERISTIC              | 00002558-1212-efde-1523-785feabcd123 | Auth                                                 |   Y   |   N   |    N   |    N     |
 |                                                |                                      |                                                      |       |       |        |          |
+| **UUID_SECURE_DFU_SERVICE**                    | 0000fe59-0000-1000-8000-00805f9b34fb | (1)                                                  |       |       |        |          |
+|                                                |                                      |                                                      |       |       |        |          |
+| UUID_SECURE_DFU_BUTTONLESS_DFU_CHARACTERISTIC  | 8ec90003-f315-4f60-9fb8-838830daea50 | Buttonless DFU (2)                                   |   N   |   Y   |    N   |    Y     |
+|                                                |                                      |                                                      |       |       |        |          |
 | **UUID_UNKNOWN_SERVICE**                       | 00001580-0000-1000-8000-00805f9b34fb |                                                      |       |       |        |          |
 |                                                |                                      |                                                      |       |       |        |          |
 | UUID_UNKNOWN_CHARACTERISTIC                    | 00001581-0000-1000-8000-00805f9b34fb | "client characteristic configuration"?               |   N   |   N   |    Y   |    N     |
+
+> (1) Custom UUID of Nordic Semiconductor ASA  "Secure DFU service"
+
+> (2) DFU Control Point characteristic or Buttonless DFU, see: https://nordicsemiconductor.github.io/Nordic-Thingy52-FW/documentation/firmware_architecture.html#arch_battery
 
 ## Notifications
 Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER``` subscritpion or writing 2 byte ID at ```UUID_CHARACTERISTIC_REGISTER_ID``` and then reading ```UUID_CHARACTERISTIC_REGISTER```.
