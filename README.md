@@ -40,12 +40,36 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 
 # Reverse engineering bluetooth coms
 ## Services
-| Name                                   | UUID                                 | Description                            |
-| :------------------------------------- | :----------------------------------- | :------------------------------------- |
-| UUID_METRICS_SERVICE                   | 00001554-1212-efde-1523-785feabcd123 |                                        |
-| UUID_CHARACTERISTIC_REGISTER_ID        | 00001564-1212-efde-1523-785feabcd123 | Register a notification id for reading |
-| UUID_CHARACTERISTIC_REGISTER           | 0000155f-1212-efde-1523-785feabcd123 | Read last registered notification      |
-| UUID_CHARACTERISTIC_REGISTER_NOTIFIER  | 0000155e-1212-efde-1523-785feabcd123 | Subscribe to all notifications         |
+| Name                                           | UUID                                 | Description                                          | Read  | Write | Notify | Indicate |
+| :--------------------------------------------- | :----------------------------------- | :--------------------------------------------------- | :---: | :---: | :----: | :------: |
+| UUID_METRICS_SERVICE                           | 00001554-1212-efde-1523-785feabcd123 |                                                      |       |       |        |          |
+| UUID_CHARACTERISTIC_REGISTER_ID                | 00001564-1212-efde-1523-785feabcd123 | Register a notification id for reading               |   Y   |   Y   |    N   |    N     |
+| UUID_CHARACTERISTIC_REGISTER                   | 0000155f-1212-efde-1523-785feabcd123 | Read last registered notification                    |   Y   |   Y   |    N   |    N     |
+| UUID_CHARACTERISTIC_REGISTER_NOTIFIER          | 0000155e-1212-efde-1523-785feabcd123 | Subscribe to all notifications                       |   Y   |   N   |    Y   |    N     |
+|                                                |                                      |                                                      |       |       |        |          |
+| UUID_GENERIC_ACCESS_SERVICE                    | 00001800-0000-1000-8000-00805f9b34fb |                                                      |       |       |        |          |
+| UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC        | 00002a00-0000-1000-8000-00805f9b34fb | Gets device name [string]                            |   Y   |   N   |    N   |    N     |
+| UUID_GENERIC_ACCESS_APPEARANCE_CHARACTERISTIC  | 00002a01-0000-1000-8000-00805f9b34fb | A generic category: "Cycling"                        |   Y   |   N   |    N   |    N     |
+| UUID_GENERIC_ACCESS_PPCP_CHARACTERISTIC        | 00002a04-0000-1000-8000-00805f9b34fb | Peripheral Preferred Connection Parameters           |   Y   |   N   |    N   |    N     |
+| UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC         | 00002aa6-0000-1000-8000-00805f9b34fb | Central Address Resolution: "Supported"              |   Y   |   N   |    N   |    N     |
+|                                                |                                      |                                                      |       |       |        |          |
+| UUID_GENERIC_ATTRIBUTE_SERVICE                 | 00001801-0000-1000-8000-00805f9b34fb |                                                      |       |       |        |          |
+| UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC         | 00002a05-0000-1000-8000-00805f9b34fb | Service Changed                                      |   N   |   N   |    N   |    Y     |
+|                                                |                                      |                                                      |       |       |        |          |
+| UUID_DEVICE_INFO_SERVICE                       | 0000180a-0000-1000-8000-00805f9b34fb |                                                      |       |       |        |          |
+| UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC   | 00002a29-0000-1000-8000-00805f9b34fb | Gets device manufacturer name [string]               |   Y   |   N   |    N   |    N     |
+| UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC       | 00002a27-0000-1000-8000-00805f9b34fb | Hardware Revision [string]                           |   Y   |   N   |    N   |    N     |
+| UUID_DEVICE_INFO_FIRMWARE_CHARACTERISTIC       | 00002a26-0000-1000-8000-00805f9b34fb | Firmware Revision [string]                           |   Y   |   N   |    N   |    N     |
+| UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC       | 00002a28-0000-1000-8000-00805f9b34fb | Software Revision [string]                           |   Y   |   N   |    N   |    N     |
+|                                                |                                      |                                                      |       |       |        |          |
+| UUID_SECURITY_SERVICE                          | 00002554-1212-efde-1523-785feabcd123 |                                                      |       |       |        |          |
+| UUID_SECURITY_PRIVATE_KEY_CHARACTERISTIC       | 00002555-1212-efde-1523-785feabcd123 | Private key                                          |   N   |   Y   |    N   |    N     |
+| UUID_SECURITY_PUBLIC_KEY_CHARACTERISTIC        | 00002556-1212-efde-1523-785feabcd123 | Public key [20 bytes]                                |   Y   |   N   |    N   |    N     |
+| UUID_SECURITY_HASH_CHARACTERISTIC              | 00002557-1212-efde-1523-785feabcd123 | Security hash                                        |   N   |   Y   |    N   |    N     |
+| UUID_SECURITY_AUTH_CHARACTERISTIC              | 00002558-1212-efde-1523-785feabcd123 | Auth                                                 |   Y   |   N   |    N   |    N     |
+|                                                |                                      |                                                      |       |       |        |          |
+| UUID_UNKNOWN_SERVICE                           | 00001580-0000-1000-8000-00805f9b34fb |                                                      |       |       |        |          |
+| UUID_UNKNOWN_CHARACTERISTIC                    | 00001581-0000-1000-8000-00805f9b34fb | "client characteristic configuration"?               |   N   |   N   |    Y   |    N     |
 
 ## Notifications
 
