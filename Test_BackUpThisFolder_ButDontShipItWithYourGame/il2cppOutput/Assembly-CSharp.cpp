@@ -199,6 +199,8 @@ struct AdaptToSafeArea_t29441D7B0FDCB5081E6D8A354725FEC31E9BC8B2;
 struct AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03;
 // UnityEngine.AndroidJavaObject
 struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0;
+// UnityEngine.AnimationCurve
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354;
 // UnityEngine.UI.AnimationTriggers
 struct AnimationTriggers_tA0DC06F89C5280C6DD972F6F4C8A56D7F4F79074;
 // UnityEngine.UI.BaseMeshEffect
@@ -387,12 +389,12 @@ struct WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD;
 struct LogCallback_tCFFF3C009186124A6A83A1E6BB7E360C5674C413;
 // BikeManager/<>c
 struct U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933;
-// BikeManager/<getStartupInfoRoutine>d__91
-struct U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD;
-// BikeManager/<scanRoutine>d__86
-struct U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3;
-// BikeManager/<setThemeRoutine>d__83
-struct U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D;
+// BikeManager/<getStartupInfoRoutine>d__92
+struct U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0;
+// BikeManager/<scanRoutine>d__87
+struct U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D;
+// BikeManager/<setThemeRoutine>d__84
+struct U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E;
 // UnityEngine.UI.Button/ButtonClickedEvent
 struct ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C;
 // UnityEngine.Camera/CameraCallback
@@ -468,9 +470,9 @@ IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass4_0_tFA7DA44E6B354F710994EB2033A441844601EF8F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UIGradientUtils_tB4FE52575581D9C014D11BB54647EF10FA677965_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9_il2cpp_TypeInfo_var;
@@ -557,20 +559,20 @@ IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Call_TisBoolean_t09A6377A
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Call_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mDC5FD095AFC55DFE596907E5B055B5774DA5B5AC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_1_m266D019D1DF77E206E6B371A9C62A47C84116465_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_2_mAF9402C5B87EEA9AA83C95E2C731C8CF3FEACC23_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_3_mEF199841C533B55872306AA22264DA1CDEE306DF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_4_m2C370E8FDD64FA9C1787075432B97B6DCFD1F4AD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_5_mEC13D7304C6BD7D5249ECD0ECD4EB2407279DB6D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_6_m732C121E9D30DC7F11016B97B18C66BE2B9DB0F7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_7_mE6615EE4BC9FC05A4DDCB6EBE174E18CC548585E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__82_8_mE56740E367F573CC9E6BA4A4BD0D1F1F483CB9A4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__91_0_m0EA208483351779151BF57C020AA2A48BCBB2DAC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__91_1_m950EED81653B102C7673E15E09C2E792CBAF6C30_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__91_2_m5E0928164AE88CB55C7E1B2870CF22B90B40FFD9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__91_3_m987254863B7DB04F1E30627C865B43150C5B7402_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__91_4_mB4432ECF4CAF8A158820150444F07B3E0EA07A0C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3ConServicesDiscoveredU3Eb__90_0_m20F59A3EC84BA17521C1BA60BAB239CAFD48E861_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_1_mAC43087F01C11F26B9D72F96678B531A10053FB0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_2_m3FBEA88F04D6F2A1BF9B0E7A32BAE8122F8507F3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_3_m23C9B9DD47330A0816487B5B0DB8275BC26C5779_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_4_mDC3F6032B9CDFA9663A2FABCB0FF2E432A3FC43A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_5_mA3E07478AE2A4963F51DD0C34096713879C3618C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_6_m94DE583BCEF7BD4517D633038F188A957D4929C9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_7_m54A6C5BA61601DB541C0793B9510D5EEDE22AB56_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CStartU3Eb__83_8_m7BF94E902AF0269AD252FE3FA93DBBD8AE28EB83_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__92_0_m89394C4DB2C87D12B1487037B268EB380730F7F0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__92_1_m8DB9A997698CB20E79D1827AB9B977CEA7538B56_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__92_2_m41D6601222BAD91A8ABF2BA80C3412F646C9B4BB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__92_3_m83451C22EF1405799CBB30E9CF0A4A09948554EB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3CgetStartupInfoRoutineU3Eb__92_4_m86629016BCC73E3F9C80DDD97CFF393AF8DA1970_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_U3ConServicesDiscoveredU3Eb__91_0_m2740D53E25C2298511B69F9EB214247CA2C81A83_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onCharacteristicRead_m7CD96236B6A461B0F3BDC5687A84552F74F54C4C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onCharacteristicWrite_m876EA631AA4D96546D3B2727157B1020BCA518DE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BikeManager_onConnected_mC72A6F0C24C8A4AEF6418399E2AB2E7DFE903D47_RuntimeMethod_var;
@@ -602,11 +604,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* PrefsOverlay_U3CStartU3Eb__5_2_mBCAE39FC4AD
 IL2CPP_EXTERN_C const RuntimeMethod* PrefsOverlay_U3CStartU3Eb__5_3_m3B35FF52CB9CAFD9FFE6CD795D364D6382A695FA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PrefsOverlay_U3CStartU3Eb__5_4_m5F0C53136F6A83AF00931FCDE9241DC6287CEAB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_op_Implicit_m05AEC4D2A90CEC9EAC98791A1AA40D9398CBB3A2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CStartU3Eb__82_0_m875B3B00048013A2AF4F0CFB92457F96C724AD67_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CStartU3Eb__83_0_mC461B0283ACFF58E4C5C08104ED22A05343FE648_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass4_0_U3CsetU3Eb__0_m8056FE72A0F57A8DE95063D8121BA9C2676CD3F4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CgetStartupInfoRoutineU3Ed__91_System_Collections_IEnumerator_Reset_mBC9E014047A495B0E2C020D10A544186662A2C70_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CscanRoutineU3Ed__86_System_Collections_IEnumerator_Reset_m5CE4815979F52331A7365FF7C5F1CD06A451A0DD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CsetThemeRoutineU3Ed__83_System_Collections_IEnumerator_Reset_m269837AA1C89F70B29C8378BE0FE8710F93D01A4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_Reset_m70750595A23B4364ECEC3B6067A0239BE04EE6A1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_Reset_mE82D840A1CFCC9A932287AACA798179D2A68DF81_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_Reset_m19A7648B0583FBC2836D3402104FA7D5F4EAB21A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UIGradient_applyTheme_m4D87FD9D40DFD063E37110F19D0F041393C0AA09_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var;
@@ -822,44 +824,44 @@ struct U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields
 {
 	// BikeManager/<>c BikeManager/<>c::<>9
 	U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933* ___U3CU3E9_0;
-	// UnityEngine.Events.UnityAction BikeManager/<>c::<>9__82_0
-	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___U3CU3E9__82_0_1;
+	// UnityEngine.Events.UnityAction BikeManager/<>c::<>9__83_0
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___U3CU3E9__83_0_1;
 };
 
-// BikeManager/<getStartupInfoRoutine>d__91
-struct U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD  : public RuntimeObject
+// BikeManager/<getStartupInfoRoutine>d__92
+struct U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<getStartupInfoRoutine>d__91::<>1__state
+	// System.Int32 BikeManager/<getStartupInfoRoutine>d__92::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<getStartupInfoRoutine>d__91::<>2__current
+	// System.Object BikeManager/<getStartupInfoRoutine>d__92::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<getStartupInfoRoutine>d__91::<>4__this
+	// BikeManager BikeManager/<getStartupInfoRoutine>d__92::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
 };
 
-// BikeManager/<scanRoutine>d__86
-struct U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3  : public RuntimeObject
+// BikeManager/<scanRoutine>d__87
+struct U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<scanRoutine>d__86::<>1__state
+	// System.Int32 BikeManager/<scanRoutine>d__87::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<scanRoutine>d__86::<>2__current
+	// System.Object BikeManager/<scanRoutine>d__87::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<scanRoutine>d__86::<>4__this
+	// BikeManager BikeManager/<scanRoutine>d__87::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
-	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__86::<>s__1
+	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__87::<>s__1
 	RuntimeObject* ___U3CU3Es__1_3;
-	// UnityEngine.Transform BikeManager/<scanRoutine>d__86::<child>5__2
+	// UnityEngine.Transform BikeManager/<scanRoutine>d__87::<child>5__2
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CchildU3E5__2_4;
 };
 
-// BikeManager/<setThemeRoutine>d__83
-struct U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D  : public RuntimeObject
+// BikeManager/<setThemeRoutine>d__84
+struct U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<setThemeRoutine>d__83::<>1__state
+	// System.Int32 BikeManager/<setThemeRoutine>d__84::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<setThemeRoutine>d__83::<>2__current
+	// System.Object BikeManager/<setThemeRoutine>d__84::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<setThemeRoutine>d__83::<>4__this
+	// BikeManager BikeManager/<setThemeRoutine>d__84::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
 };
 
@@ -1647,6 +1649,23 @@ struct TMP_TextProcessingStack_1_tB03E08F69415B281A5A81138F09E49EE58402DF9
 	int32_t ___m_RolloverSize_4;
 	// System.Int32 TMPro.TMP_TextProcessingStack`1::m_Count
 	int32_t ___m_Count_5;
+};
+
+// UnityEngine.AnimationCurve
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354  : public RuntimeObject
+{
+	// System.IntPtr UnityEngine.AnimationCurve::m_Ptr
+	intptr_t ___m_Ptr_0;
+};
+// Native definition for P/Invoke marshalling of UnityEngine.AnimationCurve
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr_0;
+};
+// Native definition for COM marshalling of UnityEngine.AnimationCurve
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_marshaled_com
+{
+	intptr_t ___m_Ptr_0;
 };
 
 // UnityEngine.UI.ColorBlock
@@ -2651,92 +2670,94 @@ struct AdaptToSafeArea_t29441D7B0FDCB5081E6D8A354725FEC31E9BC8B2  : public MonoB
 // BikeManager
 struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.AnimationCurve BikeManager::li_ionDischargeCurve
+	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___li_ionDischargeCurve_16;
 	// UnityEngine.UI.Button BikeManager::themeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___themeButton_16;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___themeButton_17;
 	// UnityEngine.GameObject BikeManager::loadingOverlay
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loadingOverlay_17;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loadingOverlay_18;
 	// UnityEngine.GameObject BikeManager::scanPage
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanPage_18;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanPage_19;
 	// UnityEngine.UI.Button BikeManager::scanButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___scanButton_19;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___scanButton_20;
 	// UnityEngine.GameObject BikeManager::scanButtonText
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonText_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonText_21;
 	// UnityEngine.GameObject BikeManager::scanButtonloadingIcon
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonloadingIcon_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonloadingIcon_22;
 	// UnityEngine.Transform BikeManager::deviceLineContainer
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___deviceLineContainer_22;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___deviceLineContainer_23;
 	// UnityEngine.GameObject BikeManager::deviceLine_prefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___deviceLine_prefab_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___deviceLine_prefab_24;
 	// UnityEngine.GameObject BikeManager::connectPage
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___connectPage_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___connectPage_25;
 	// UnityEngine.UI.Button BikeManager::bikeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___bikeButton_25;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___bikeButton_26;
 	// UnityEngine.UI.Button BikeManager::modeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___modeButton_26;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___modeButton_27;
 	// TMPro.TMP_Text BikeManager::modeText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___modeText_27;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___modeText_28;
 	// TMPro.TMP_Text BikeManager::speedText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedText_28;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedText_29;
 	// TMPro.TMP_Text BikeManager::speedUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedUnitsText_29;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedUnitsText_30;
 	// UnityEngine.UI.Image BikeManager::levelGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___levelGraphic_30;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___levelGraphic_31;
 	// TMPro.TMP_Text BikeManager::levelText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___levelText_31;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___levelText_32;
 	// UnityEngine.UI.Button BikeManager::assistButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___assistButton_32;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___assistButton_33;
 	// TMPro.TMP_Text BikeManager::assistText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___assistText_33;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___assistText_34;
 	// TMPro.TMP_Text BikeManager::tempText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempText_34;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempText_35;
 	// TMPro.TMP_Text BikeManager::tempUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempUnitsText_35;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempUnitsText_36;
 	// TMPro.TMP_Text BikeManager::voltText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltText_36;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltText_37;
 	// TMPro.TMP_Text BikeManager::voltUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltUnitsText_37;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltUnitsText_38;
 	// UnityEngine.UI.Button BikeManager::lightButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___lightButton_38;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___lightButton_39;
 	// UnityEngine.UI.Image BikeManager::lightGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lightGraphic_39;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lightGraphic_40;
 	// TMPro.TMP_Text BikeManager::rangeText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeText_40;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeText_41;
 	// TMPro.TMP_Text BikeManager::rangeUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeUnitsText_41;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeUnitsText_42;
 	// TMPro.TMP_Text BikeManager::wheelRPMText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___wheelRPMText_42;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___wheelRPMText_43;
 	// TMPro.TMP_Text BikeManager::pedalRPMText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___pedalRPMText_43;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___pedalRPMText_44;
 	// TMPro.TMP_Text BikeManager::totalText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalText_44;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalText_45;
 	// TMPro.TMP_Text BikeManager::totalUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalUnitsText_45;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalUnitsText_46;
 	// UnityEngine.UI.Toggle BikeManager::autoApplyToggle
-	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoApplyToggle_46;
+	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoApplyToggle_47;
 	// UnityEngine.UI.Toggle BikeManager::autoConnectToggle
-	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoConnectToggle_47;
+	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoConnectToggle_48;
 	// UnityEngine.UI.Button BikeManager::unitsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___unitsButton_48;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___unitsButton_49;
 	// UnityEngine.UI.Button BikeManager::prefsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___prefsButton_49;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___prefsButton_50;
 	// TMPro.TMP_Text BikeManager::notifText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___notifText_50;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___notifText_51;
 	// UnityEngine.GameObject BikeManager::prefsOverlay
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___prefsOverlay_51;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___prefsOverlay_52;
 	// UnityEngine.Sprite BikeManager::lightOn
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_52;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_53;
 	// UnityEngine.Sprite BikeManager::lightOff
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_53;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_54;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> BikeManager::batteryLevels
-	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_54;
+	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_55;
 	// UnityEngine.Sprite BikeManager::batteryCharging
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_55;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_56;
 	// System.Collections.Generic.List`1<System.String> BikeManager::debugNotificationText
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___debugNotificationText_81;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___debugNotificationText_82;
 	// BikeState BikeManager::currentBikeState
-	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentBikeState_82;
+	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentBikeState_83;
 	// System.Boolean BikeManager::registerAvailable
-	bool ___registerAvailable_83;
+	bool ___registerAvailable_84;
 };
 
 struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields
@@ -4249,8 +4270,8 @@ inline void UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD (
 }
 // System.Void BikeManager::scan()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_scan_m93F37F81ADEA308A503E46A3CB3F45996AB2735F (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) ;
-// System.Void BikeManager/<setThemeRoutine>d__83::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__83__ctor_mA44E576C22D2E345BF3AF320C8E63BDBA94230DD (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void BikeManager/<setThemeRoutine>d__84::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__84__ctor_m49330A81521C18BDA39C798941D8B840107CEF9E (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Int32 BikeState::getMode()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BikeState_getMode_m969854188D2685AE5C610BAE1141B011E7E0CAB0_inline (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
 // System.String System.Int32::ToString()
@@ -4279,8 +4300,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BikeState_getReadableWheelRPM_m872F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BikeState_getReadablePedalRPM_mF8AFD6D6985006D791C6C80DB5DF9C7A6F530C7E (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator BikeManager::scanRoutine()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_scanRoutine_m3176209A60F078C0A34C3367D3D4C4E65A3D3EB7 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) ;
-// System.Void BikeManager/<scanRoutine>d__86::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__86__ctor_m6DEF08260B7438D522C1BEBD70E8420128025316 (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void BikeManager/<scanRoutine>d__87::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__87__ctor_mFB3A20A246A6301367D4DACBC9D248B78022D19E (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Boolean System.String::IsNullOrEmpty(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A (String_t* ___value0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
@@ -4322,8 +4343,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_getStartupInfoRout
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_subscribeNotifications_m8190518216CC00111AE977DC6826850BFC7B1539 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, bool ___subscribe0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219 (RuntimeObject* ___message0, const RuntimeMethod* method) ;
-// System.Void BikeManager/<getStartupInfoRoutine>d__91::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__91__ctor_mA24CB1E4B00801BC4287EE6C67EC6C8314EABAC1 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void BikeManager/<getStartupInfoRoutine>d__92::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__92__ctor_m7BA29F75224B6DBF10B8DC021A70EE7FA1EF7372 (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // NativeBLE/ConnectedDevice NativeBLE::getConnectedDevice()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* NativeBLE_getConnectedDevice_m0AD1AA1D936B432F20A1A0E20A919A28536AEB12 (const RuntimeMethod* method) ;
 // System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
@@ -4492,8 +4513,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState_batteryLevelFromRawRange_m050F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState_voltageFromBatteryLevel_mCDF95C1A70567C5B9957BAA7B2DD6D1E5F7DAF47 (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
 // System.Single UnityEngine.PlayerPrefs::GetFloat(System.String,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float PlayerPrefs_GetFloat_m8DA6A99E54E6E463048B06988520021347012293 (String_t* ___key0, float ___defaultValue1, const RuntimeMethod* method) ;
-// System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_mFB4910B358B986AFB22114ED90458E8341867479_inline (float ___a0, float ___b1, float ___t2, const RuntimeMethod* method) ;
+// System.Single UnityEngine.AnimationCurve::Evaluate(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AnimationCurve_Evaluate_m50B857043DE251A186032ADBCBB4CEF817F4EE3C (AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* __this, float ___time0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___x0, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___y1, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponentInParent<UnityEngine.Canvas>()
@@ -4798,10 +4819,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThemedElement__ctor_m673D306B3C7AFDC642FC5C0AB4DAE4A8F753EF63 (ThemedElement_t9B23725E5CA349B8770294CC22AF81F45D86F2C6* __this, const RuntimeMethod* method) ;
 // UnityEngine.Color ThemedElement::getColor(UnityEngine.Color,Theme)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ThemedElement_getColor_m8963D1312EE8A5C5606B5273F8D81E77F3AC752E (ThemedElement_t9B23725E5CA349B8770294CC22AF81F45D86F2C6* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___original0, Theme_tB91F583874A5EA696DB8E8E2B24B02E62C5DB25E* ___theme1, const RuntimeMethod* method) ;
-// System.Single UnityEngine.Mathf::Clamp01(System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mD921B23F47F5347996C56DC789D1DE16EE27D9B1_inline (float ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___r0, float ___g1, float ___b2, float ___a3, const RuntimeMethod* method) ;
+// System.Single UnityEngine.Mathf::Clamp01(System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mD921B23F47F5347996C56DC789D1DE16EE27D9B1_inline (float ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Color32::.ctor(System.Byte,System.Byte,System.Byte,System.Byte)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___r0, uint8_t ___g1, uint8_t ___b2, uint8_t ___a3, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Vector2::Normalize()
@@ -4946,16 +4967,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Start_m4EC93E59B56ABED0A94F5
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_1_m266D019D1DF77E206E6B371A9C62A47C84116465_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_2_mAF9402C5B87EEA9AA83C95E2C731C8CF3FEACC23_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_3_mEF199841C533B55872306AA22264DA1CDEE306DF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_4_m2C370E8FDD64FA9C1787075432B97B6DCFD1F4AD_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_5_mEC13D7304C6BD7D5249ECD0ECD4EB2407279DB6D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_6_m732C121E9D30DC7F11016B97B18C66BE2B9DB0F7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_7_mE6615EE4BC9FC05A4DDCB6EBE174E18CC548585E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__82_8_mE56740E367F573CC9E6BA4A4BD0D1F1F483CB9A4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_1_mAC43087F01C11F26B9D72F96678B531A10053FB0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_2_m3FBEA88F04D6F2A1BF9B0E7A32BAE8122F8507F3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_3_m23C9B9DD47330A0816487B5B0DB8275BC26C5779_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_4_mDC3F6032B9CDFA9663A2FABCB0FF2E432A3FC43A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_5_mA3E07478AE2A4963F51DD0C34096713879C3618C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_6_m94DE583BCEF7BD4517D633038F188A957D4929C9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_7_m54A6C5BA61601DB541C0793B9510D5EEDE22AB56_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CStartU3Eb__83_8_m7BF94E902AF0269AD252FE3FA93DBBD8AE28EB83_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisBikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E_mE903F19D1BD96022B102F6B0708832D66C908408_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CStartU3Eb__82_0_m875B3B00048013A2AF4F0CFB92457F96C724AD67_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CStartU3Eb__83_0_mC461B0283ACFF58E4C5C08104ED22A05343FE648_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
@@ -4974,19 +4995,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Start_m4EC93E59B56ABED0A94F5
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
 		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
 		// scanPage.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___scanPage_18;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___scanPage_19;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
 		// connectPage.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___connectPage_24;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___connectPage_25;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
 		// prefsOverlay.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___prefsOverlay_51;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___prefsOverlay_52;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
 		// loadingOverlay.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___loadingOverlay_17;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___loadingOverlay_18;
 		NullCheck(L_5);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)0, NULL);
 		// currentBikeState = gameObject.AddComponent<BikeState>();
@@ -4995,10 +5016,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Start_m4EC93E59B56ABED0A94F5
 		NullCheck(L_6);
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_7;
 		L_7 = GameObject_AddComponent_TisBikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E_mE903F19D1BD96022B102F6B0708832D66C908408(L_6, GameObject_AddComponent_TisBikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E_mE903F19D1BD96022B102F6B0708832D66C908408_RuntimeMethod_var);
-		__this->___currentBikeState_82 = L_7;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentBikeState_82), (void*)L_7);
+		__this->___currentBikeState_83 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentBikeState_83), (void*)L_7);
 		// refreshDisplay(currentBikeState);
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_8 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_8 = __this->___currentBikeState_83;
 		BikeManager_refreshDisplay_m37256D672F2731C16E72ED0C22AB4EB9A71143D0(__this, L_8, NULL);
 		// themeButton.onClick.AddListener(delegate {
 		//     if (ColorManager.instance.theme == ColorManager.instance.darkTheme) {
@@ -5009,12 +5030,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Start_m4EC93E59B56ABED0A94F5
 		//         PlayerPrefs.SetString("theme", DeviceTheme.DARK.ToString());
 		//     }
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_9 = __this->___themeButton_16;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_9 = __this->___themeButton_17;
 		NullCheck(L_9);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_10;
 		L_10 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_11 = ((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9__82_0_1;
+		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_11 = ((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9__83_0_1;
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_12 = L_11;
 		G_B1_0 = L_12;
 		G_B1_1 = L_10;
@@ -5030,10 +5051,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Start_m4EC93E59B56ABED0A94F5
 		U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933* L_13 = ((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9_0;
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_14 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_14);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_14, L_13, (intptr_t)((void*)U3CU3Ec_U3CStartU3Eb__82_0_m875B3B00048013A2AF4F0CFB92457F96C724AD67_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_14, L_13, (intptr_t)((void*)U3CU3Ec_U3CStartU3Eb__83_0_mC461B0283ACFF58E4C5C08104ED22A05343FE648_RuntimeMethod_var), NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_15 = L_14;
-		((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9__82_0_1 = L_15;
-		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9__82_0_1), (void*)L_15);
+		((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9__83_0_1 = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_il2cpp_TypeInfo_var))->___U3CU3E9__83_0_1), (void*)L_15);
 		G_B2_0 = L_15;
 		G_B2_1 = G_B1_1;
 	}
@@ -5045,39 +5066,39 @@ IL_008a:
 		// scanButton.onClick.AddListener(delegate {
 		//     scan();
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___scanButton_19;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___scanButton_20;
 		NullCheck(L_16);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_17;
 		L_17 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_16, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_18 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_18);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_18, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_1_m266D019D1DF77E206E6B371A9C62A47C84116465_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_18, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_1_mAC43087F01C11F26B9D72F96678B531A10053FB0_RuntimeMethod_var), NULL);
 		NullCheck(L_17);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_17, L_18, NULL);
 		// modeButton.onClick.AddListener(delegate {
 		//     modeText.text = currentBikeState.changeMode().ToString();
 		//     applySettings();
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___modeButton_26;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___modeButton_27;
 		NullCheck(L_19);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_20;
 		L_20 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_19, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_21 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_21);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_21, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_2_mAF9402C5B87EEA9AA83C95E2C731C8CF3FEACC23_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_21, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_2_m3FBEA88F04D6F2A1BF9B0E7A32BAE8122F8507F3_RuntimeMethod_var), NULL);
 		NullCheck(L_20);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_20, L_21, NULL);
 		// assistButton.onClick.AddListener(delegate {
 		//     assistText.text = currentBikeState.changeAssist().ToString();
 		//     applySettings();
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_22 = __this->___assistButton_32;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_22 = __this->___assistButton_33;
 		NullCheck(L_22);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_23;
 		L_23 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_22, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_24 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_24);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_24, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_3_mEF199841C533B55872306AA22264DA1CDEE306DF_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_24, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_3_m23C9B9DD47330A0816487B5B0DB8275BC26C5779_RuntimeMethod_var), NULL);
 		NullCheck(L_23);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_23, L_24, NULL);
 		// lightButton.onClick.AddListener(delegate {
@@ -5085,29 +5106,29 @@ IL_008a:
 		//     lightGraphic.sprite = light ? lightOn : lightOff;
 		//     applySettings();
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25 = __this->___lightButton_38;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25 = __this->___lightButton_39;
 		NullCheck(L_25);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_26;
 		L_26 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_25, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_27 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_27);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_27, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_4_m2C370E8FDD64FA9C1787075432B97B6DCFD1F4AD_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_27, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_4_mDC3F6032B9CDFA9663A2FABCB0FF2E432A3FC43A_RuntimeMethod_var), NULL);
 		NullCheck(L_26);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_26, L_27, NULL);
 		// bikeButton.onClick.AddListener(delegate {
 		//     disconnect();
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = __this->___bikeButton_25;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = __this->___bikeButton_26;
 		NullCheck(L_28);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_29;
 		L_29 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_28, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_30 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_30);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_30, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_5_mEC13D7304C6BD7D5249ECD0ECD4EB2407279DB6D_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_30, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_5_mA3E07478AE2A4963F51DD0C34096713879C3618C_RuntimeMethod_var), NULL);
 		NullCheck(L_29);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_29, L_30, NULL);
 		// autoApplyToggle.isOn = PlayerPrefs.GetInt("auto", 1) == 1;
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_31 = __this->___autoApplyToggle_46;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_31 = __this->___autoApplyToggle_47;
 		int32_t L_32;
 		L_32 = PlayerPrefs_GetInt_mDCAA431AEC7CBAA6AF58857A8773E5B6B472285C(_stringLiteralF152B296BCB34070EE69020F0A59C611E4BBA10F, 1, NULL);
 		NullCheck(L_31);
@@ -5115,37 +5136,37 @@ IL_008a:
 		// autoApplyToggle.onValueChanged.AddListener(delegate {
 		//     PlayerPrefs.SetInt("auto", autoApplyToggle.isOn ? 1 : 0);
 		// });
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_33 = __this->___autoApplyToggle_46;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_33 = __this->___autoApplyToggle_47;
 		NullCheck(L_33);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_34 = L_33->___onValueChanged_23;
 		UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9* L_35 = (UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9*)il2cpp_codegen_object_new(UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9_il2cpp_TypeInfo_var);
 		NullCheck(L_35);
-		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_35, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_6_m732C121E9D30DC7F11016B97B18C66BE2B9DB0F7_RuntimeMethod_var), NULL);
+		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_35, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_6_m94DE583BCEF7BD4517D633038F188A957D4929C9_RuntimeMethod_var), NULL);
 		NullCheck(L_34);
 		UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD(L_34, L_35, UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_RuntimeMethod_var);
 		// unitsButton.onClick.AddListener(delegate {
 		//     currentBikeState.toggleMetric();
 		//     refreshDisplay(currentBikeState);
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_36 = __this->___unitsButton_48;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_36 = __this->___unitsButton_49;
 		NullCheck(L_36);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_37;
 		L_37 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_36, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_38 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_38);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_38, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_7_mE6615EE4BC9FC05A4DDCB6EBE174E18CC548585E_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_38, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_7_m54A6C5BA61601DB541C0793B9510D5EEDE22AB56_RuntimeMethod_var), NULL);
 		NullCheck(L_37);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_37, L_38, NULL);
 		// prefsButton.onClick.AddListener(delegate {
 		//     prefsOverlay.SetActive(true);
 		// });
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_39 = __this->___prefsButton_49;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_39 = __this->___prefsButton_50;
 		NullCheck(L_39);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_40;
 		L_40 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C(L_39, NULL);
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_41 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		NullCheck(L_41);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_41, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__82_8_mE56740E367F573CC9E6BA4A4BD0D1F1F483CB9A4_RuntimeMethod_var), NULL);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_41, __this, (intptr_t)((void*)BikeManager_U3CStartU3Eb__83_8_m7BF94E902AF0269AD252FE3FA93DBBD8AE28EB83_RuntimeMethod_var), NULL);
 		NullCheck(L_40);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_40, L_41, NULL);
 		// scan();
@@ -5160,14 +5181,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_setThemeRoutine_m5
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* L_0 = (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D*)il2cpp_codegen_object_new(U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D_il2cpp_TypeInfo_var);
+		U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* L_0 = (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E*)il2cpp_codegen_object_new(U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		U3CsetThemeRoutineU3Ed__83__ctor_mA44E576C22D2E345BF3AF320C8E63BDBA94230DD(L_0, 0, NULL);
-		U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* L_1 = L_0;
+		U3CsetThemeRoutineU3Ed__84__ctor_m49330A81521C18BDA39C798941D8B840107CEF9E(L_0, 0, NULL);
+		U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
@@ -5211,7 +5232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_refreshDisplay_m37256D672F27
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* G_B15_1 = NULL;
 	{
 		// modeText.text = state.getMode().ToString();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___modeText_27;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___modeText_28;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_1 = ___state0;
 		NullCheck(L_1);
 		int32_t L_2;
@@ -5222,7 +5243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_refreshDisplay_m37256D672F27
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, L_3);
 		// assistText.text = state.getAssist().ToString();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___assistText_33;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___assistText_34;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_5 = ___state0;
 		NullCheck(L_5);
 		int32_t L_6;
@@ -5233,7 +5254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_refreshDisplay_m37256D672F27
 		NullCheck(L_4);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_4, L_7);
 		// lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = __this->___lightGraphic_39;
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = __this->___lightGraphic_40;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_9 = ___state0;
 		NullCheck(L_9);
 		bool L_10;
@@ -5246,7 +5267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_refreshDisplay_m37256D672F27
 		}
 	}
 	{
-		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_11 = __this->___lightOff_53;
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_11 = __this->___lightOff_54;
 		G_B3_0 = L_11;
 		G_B3_1 = G_B1_0;
 		goto IL_0051;
@@ -5254,7 +5275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_refreshDisplay_m37256D672F27
 
 IL_004b:
 	{
-		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_12 = __this->___lightOn_52;
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_12 = __this->___lightOn_53;
 		G_B3_0 = L_12;
 		G_B3_1 = G_B2_0;
 	}
@@ -5264,7 +5285,7 @@ IL_0051:
 		NullCheck(G_B3_1);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(G_B3_1, G_B3_0, NULL);
 		// speedText.text = state.getReadableWheelSpeed();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_13 = __this->___speedText_28;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_13 = __this->___speedText_29;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_14 = ___state0;
 		NullCheck(L_14);
 		String_t* L_15;
@@ -5272,7 +5293,7 @@ IL_0051:
 		NullCheck(L_13);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_13, L_15);
 		// speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_16 = __this->___speedUnitsText_29;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_16 = __this->___speedUnitsText_30;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_17 = ___state0;
 		NullCheck(L_17);
 		bool L_18;
@@ -5301,7 +5322,7 @@ IL_0083:
 		NullCheck(G_B6_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, G_B6_1, G_B6_0);
 		// rangeText.text = state.getReadableRange();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_19 = __this->___rangeText_40;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_19 = __this->___rangeText_41;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_20 = ___state0;
 		NullCheck(L_20);
 		String_t* L_21;
@@ -5309,7 +5330,7 @@ IL_0083:
 		NullCheck(L_19);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_19, L_21);
 		// rangeUnitsText.text = state.getMetric() ? "km" : "mi";
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_22 = __this->___rangeUnitsText_41;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_22 = __this->___rangeUnitsText_42;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_23 = ___state0;
 		NullCheck(L_23);
 		bool L_24;
@@ -5338,7 +5359,7 @@ IL_00b5:
 		NullCheck(G_B9_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, G_B9_1, G_B9_0);
 		// tempUnitsText.text = state.getMetric() ? "?C" : "?F";
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_25 = __this->___tempUnitsText_35;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_25 = __this->___tempUnitsText_36;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_26 = ___state0;
 		NullCheck(L_26);
 		bool L_27;
@@ -5367,7 +5388,7 @@ IL_00d5:
 		NullCheck(G_B12_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, G_B12_1, G_B12_0);
 		// voltText.text = state.getReadableVoltage();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_28 = __this->___voltText_36;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_28 = __this->___voltText_37;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_29 = ___state0;
 		NullCheck(L_29);
 		String_t* L_30;
@@ -5375,7 +5396,7 @@ IL_00d5:
 		NullCheck(L_28);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_28, L_30);
 		// levelText.text = state.getReadableBatteryLevel();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_31 = __this->___levelText_31;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_31 = __this->___levelText_32;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_32 = ___state0;
 		NullCheck(L_32);
 		String_t* L_33;
@@ -5383,7 +5404,7 @@ IL_00d5:
 		NullCheck(L_31);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_31, L_33);
 		// totalText.text = state.getReadableTotal();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_34 = __this->___totalText_44;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_34 = __this->___totalText_45;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_35 = ___state0;
 		NullCheck(L_35);
 		String_t* L_36;
@@ -5391,7 +5412,7 @@ IL_00d5:
 		NullCheck(L_34);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_34, L_36);
 		// totalUnitsText.text = state.getMetric() ? "km" : "mi";
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_37 = __this->___totalUnitsText_45;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_37 = __this->___totalUnitsText_46;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_38 = ___state0;
 		NullCheck(L_38);
 		bool L_39;
@@ -5420,7 +5441,7 @@ IL_012b:
 		NullCheck(G_B15_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, G_B15_1, G_B15_0);
 		// wheelRPMText.text = state.getReadableWheelRPM();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_40 = __this->___wheelRPMText_42;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_40 = __this->___wheelRPMText_43;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_41 = ___state0;
 		NullCheck(L_41);
 		String_t* L_42;
@@ -5428,7 +5449,7 @@ IL_012b:
 		NullCheck(L_40);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_40, L_42);
 		// pedalRPMText.text = state.getReadablePedalRPM();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_43 = __this->___pedalRPMText_43;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_43 = __this->___pedalRPMText_44;
 		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_44 = ___state0;
 		NullCheck(L_44);
 		String_t* L_45;
@@ -5458,14 +5479,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_scanRoutine_m31762
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* L_0 = (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3*)il2cpp_codegen_object_new(U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3_il2cpp_TypeInfo_var);
+		U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* L_0 = (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D*)il2cpp_codegen_object_new(U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		U3CscanRoutineU3Ed__86__ctor_m6DEF08260B7438D522C1BEBD70E8420128025316(L_0, 0, NULL);
-		U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* L_1 = L_0;
+		U3CscanRoutineU3Ed__87__ctor_mFB3A20A246A6301367D4DACBC9D248B78022D19E(L_0, 0, NULL);
+		U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
@@ -5534,16 +5555,16 @@ IL_0012:
 IL_0031:
 	{
 		// scanButtonText.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___scanButtonText_20;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___scanButtonText_21;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)1, NULL);
 		// scanButtonloadingIcon.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___scanButtonloadingIcon_21;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___scanButtonloadingIcon_22;
 		NullCheck(L_11);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, (bool)0, NULL);
 		// DeviceLine line = Instantiate(deviceLine_prefab, deviceLineContainer).GetComponent<DeviceLine>();
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___deviceLine_prefab_23;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = __this->___deviceLineContainer_22;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___deviceLine_prefab_24;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = __this->___deviceLineContainer_23;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14;
 		L_14 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m002192C406088F7BA156339AAA9B1BB5D69BE934(L_12, L_13, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m002192C406088F7BA156339AAA9B1BB5D69BE934_RuntimeMethod_var);
@@ -5598,7 +5619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_connect_m2DC638E3939851F806D
 	}
 	{
 		// if (NativeBLE.connectBLE(device.address)) loadingOverlay.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___loadingOverlay_17;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___loadingOverlay_18;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)1, NULL);
 		goto IL_0026;
@@ -5627,15 +5648,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onConnected_mC72A6F0C24C8A4A
 	}
 	{
 		// loadingOverlay.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___loadingOverlay_17;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___loadingOverlay_18;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
 		// scanPage.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___scanPage_18;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___scanPage_19;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
 		// connectPage.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___connectPage_24;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___connectPage_25;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
 		// NativeBLE.exploreServices();
@@ -5652,7 +5673,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onServicesDiscovered_m72B0D3
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3ConServicesDiscoveredU3Eb__90_0_m20F59A3EC84BA17521C1BA60BAB239CAFD48E861_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3ConServicesDiscoveredU3Eb__91_0_m2740D53E25C2298511B69F9EB214247CA2C81A83_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m359254483BE42CAD4DCA8FBAFB87473FB4CF00E1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9_il2cpp_TypeInfo_var);
@@ -5712,7 +5733,7 @@ IL_003b:
 		// subscribeNotifications(true);
 		BikeManager_subscribeNotifications_m8190518216CC00111AE977DC6826850BFC7B1539(__this, (bool)1, NULL);
 		// autoConnectToggle.isOn = PlayerPrefs.HasKey(device.deviceInfo.address);
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_8 = __this->___autoConnectToggle_47;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_8 = __this->___autoConnectToggle_48;
 		ConnectedDevice_t33AF86D5679FFF4ECFF928947549B71258CD21E5* L_9 = ___device0;
 		NullCheck(L_9);
 		BtleDevice_tD1B8EBB1833B35EC42449AD70D5A772B764DCF99* L_10 = L_9->___deviceInfo_0;
@@ -5732,12 +5753,12 @@ IL_003b:
 		//         if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
 		//     }
 		// });
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_13 = __this->___autoConnectToggle_47;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_13 = __this->___autoConnectToggle_48;
 		NullCheck(L_13);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_14 = L_13->___onValueChanged_23;
 		UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9* L_15 = (UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9*)il2cpp_codegen_object_new(UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9_il2cpp_TypeInfo_var);
 		NullCheck(L_15);
-		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_15, __this, (intptr_t)((void*)BikeManager_U3ConServicesDiscoveredU3Eb__90_0_m20F59A3EC84BA17521C1BA60BAB239CAFD48E861_RuntimeMethod_var), NULL);
+		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_15, __this, (intptr_t)((void*)BikeManager_U3ConServicesDiscoveredU3Eb__91_0_m2740D53E25C2298511B69F9EB214247CA2C81A83_RuntimeMethod_var), NULL);
 		NullCheck(L_14);
 		UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD(L_14, L_15, UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_RuntimeMethod_var);
 		// Debug.Log(device);
@@ -5758,14 +5779,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BikeManager_getStartupInfoRout
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* L_0 = (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD*)il2cpp_codegen_object_new(U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD_il2cpp_TypeInfo_var);
+		U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* L_0 = (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0*)il2cpp_codegen_object_new(U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		U3CgetStartupInfoRoutineU3Ed__91__ctor_mA24CB1E4B00801BC4287EE6C67EC6C8314EABAC1(L_0, 0, NULL);
-		U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* L_1 = L_0;
+		U3CgetStartupInfoRoutineU3Ed__92__ctor_m7BA29F75224B6DBF10B8DC021A70EE7FA1EF7372(L_0, 0, NULL);
+		U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
@@ -5864,15 +5885,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_onDisconnected_m726545915A79
 {
 	{
 		// scanPage.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___scanPage_18;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___scanPage_19;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
 		// loadingOverlay.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___loadingOverlay_17;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___loadingOverlay_18;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
 		// connectPage.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___connectPage_24;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___connectPage_25;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
 		// scan();
@@ -5894,7 +5915,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_applySettings_m719EA8F53818E
 	}
 	{
 		// NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER, currentBikeState.getData());
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_0 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_0 = __this->___currentBikeState_83;
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1;
 		L_1 = BikeState_getData_m83D1CF0EEEF853EBE8C7DD3C2C83E55B8AAE103C(L_0, NULL);
@@ -5942,7 +5963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_registerSettings_m9D0BADE4EC
 	}
 	{
 		// registerAvailable = false;
-		__this->___registerAvailable_83 = (bool)0;
+		__this->___registerAvailable_84 = (bool)0;
 		// NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___SETTINGS_ID_14;
@@ -5972,7 +5993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_registerTotal_m72D1A55207DB6
 	}
 	{
 		// registerAvailable = false;
-		__this->___registerAvailable_83 = (bool)0;
+		__this->___registerAvailable_84 = (bool)0;
 		// NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___TOTAL_ID_12;
@@ -6002,7 +6023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_registerPedal_m101256E3CF0C9
 	}
 	{
 		// registerAvailable = false;
-		__this->___registerAvailable_83 = (bool)0;
+		__this->___registerAvailable_84 = (bool)0;
 		// NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, PEDAL_ID);
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___PEDAL_ID_13;
@@ -6032,7 +6053,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_registerPower_m6031AFAC2C071
 	}
 	{
 		// registerAvailable = false;
-		__this->___registerAvailable_83 = (bool)0;
+		__this->___registerAvailable_84 = (bool)0;
 		// NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, POWER_ID);
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___POWER_ID_15;
@@ -6062,7 +6083,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_registerSpeed_m8FF93BC1F3F6F
 	}
 	{
 		// registerAvailable = false;
-		__this->___registerAvailable_83 = (bool)0;
+		__this->___registerAvailable_84 = (bool)0;
 		// NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SPEED_ID);
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___SPEED_ID_11;
@@ -6167,7 +6188,7 @@ IL_000e:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = ___data1;
 		BikeManager_updateNotificationDebug_m217526E292627D155B50364CD6AEA944BE0EF428(__this, L_3, NULL);
 		// if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_4 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_4 = __this->___currentBikeState_83;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5 = ___data1;
 		NullCheck(L_4);
 		bool L_6;
@@ -6181,7 +6202,7 @@ IL_000e:
 	}
 	{
 		// if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_8 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_8 = __this->___currentBikeState_83;
 		BikeManager_refreshDisplay_m37256D672F2731C16E72ED0C22AB4EB9A71143D0(__this, L_8, NULL);
 	}
 
@@ -6221,7 +6242,7 @@ IL_004c:
 	}
 	{
 		// registerAvailable = true;
-		__this->___registerAvailable_83 = (bool)1;
+		__this->___registerAvailable_84 = (bool)1;
 		goto IL_00a0;
 	}
 
@@ -6339,7 +6360,7 @@ IL_0031:
 	}
 	{
 		// if (data[0] == 0x02 && data[1] == 0x01) debugNotificationText[0] = debugString;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_14 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_14 = __this->___debugNotificationText_82;
 		String_t* L_15 = V_0;
 		NullCheck(L_14);
 		List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C(L_14, 0, L_15, List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C_RuntimeMethod_var);
@@ -6383,7 +6404,7 @@ IL_0054:
 	}
 	{
 		// debugNotificationText[1] = debugString;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_23 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_23 = __this->___debugNotificationText_82;
 		String_t* L_24 = V_0;
 		NullCheck(L_23);
 		List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C(L_23, 1, L_24, List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C_RuntimeMethod_var);
@@ -6427,7 +6448,7 @@ IL_0079:
 	}
 	{
 		// } else if (data[0] == 0x02 && data[1] == 0x03) debugNotificationText[2] = debugString;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_32 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_32 = __this->___debugNotificationText_82;
 		String_t* L_33 = V_0;
 		NullCheck(L_32);
 		List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C(L_32, 2, L_33, List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C_RuntimeMethod_var);
@@ -6454,7 +6475,7 @@ IL_0090:
 	}
 	{
 		// debugNotificationText[3] = debugString;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_38 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_38 = __this->___debugNotificationText_82;
 		String_t* L_39 = V_0;
 		NullCheck(L_38);
 		List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C(L_38, 3, L_39, List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C_RuntimeMethod_var);
@@ -6477,7 +6498,7 @@ IL_00ae:
 	}
 	{
 		// debugNotificationText[4] = debugString;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_44 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_44 = __this->___debugNotificationText_82;
 		String_t* L_45 = V_0;
 		NullCheck(L_44);
 		List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C(L_44, 4, L_45, List_1_set_Item_m6A72B7648178616800F05C13DB492E4EDB866B7C_RuntimeMethod_var);
@@ -6486,10 +6507,10 @@ IL_00ae:
 IL_00ca:
 	{
 		// notifText.text = debugNotificationText[0] + "\n" + debugNotificationText[1] + "\n" + debugNotificationText[2] + "\n" + debugNotificationText[3] + "\n" + debugNotificationText[4];
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_46 = __this->___notifText_50;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_46 = __this->___notifText_51;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_47 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_48 = L_47;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_49 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_49 = __this->___debugNotificationText_82;
 		NullCheck(L_49);
 		String_t* L_50;
 		L_50 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_49, 0, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
@@ -6501,7 +6522,7 @@ IL_00ca:
 		ArrayElementTypeCheck (L_51, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		(L_51)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_52 = L_51;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_53 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_53 = __this->___debugNotificationText_82;
 		NullCheck(L_53);
 		String_t* L_54;
 		L_54 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_53, 1, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
@@ -6513,7 +6534,7 @@ IL_00ca:
 		ArrayElementTypeCheck (L_55, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		(L_55)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_56 = L_55;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_57 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_57 = __this->___debugNotificationText_82;
 		NullCheck(L_57);
 		String_t* L_58;
 		L_58 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_57, 2, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
@@ -6525,7 +6546,7 @@ IL_00ca:
 		ArrayElementTypeCheck (L_59, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		(L_59)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_60 = L_59;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_61 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_61 = __this->___debugNotificationText_82;
 		NullCheck(L_61);
 		String_t* L_62;
 		L_62 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_61, 3, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
@@ -6537,7 +6558,7 @@ IL_00ca:
 		ArrayElementTypeCheck (L_63, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		(L_63)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_64 = L_63;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_65 = __this->___debugNotificationText_81;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_65 = __this->___debugNotificationText_82;
 		NullCheck(L_65);
 		String_t* L_66;
 		L_66 = List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8(L_65, 4, List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var);
@@ -6594,10 +6615,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager__ctor_m6C2113CE9A0F4F0565E68
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_5 = L_4;
 		NullCheck(L_5);
 		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_5, _stringLiteral1C5195B312DEB08DE55EBD52EC81C300B868FA48, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		__this->___debugNotificationText_81 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___debugNotificationText_81), (void*)L_5);
+		__this->___debugNotificationText_82 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___debugNotificationText_82), (void*)L_5);
 		// bool registerAvailable = true;
-		__this->___registerAvailable_83 = (bool)1;
+		__this->___registerAvailable_84 = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -6675,8 +6696,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager__cctor_m595BD005278BCCCDF9A7
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_1()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_1_m266D019D1DF77E206E6B371A9C62A47C84116465 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_1()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_1_mAC43087F01C11F26B9D72F96678B531A10053FB0 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// scan();
@@ -6685,14 +6706,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_1_m266D019D
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_2()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_2_mAF9402C5B87EEA9AA83C95E2C731C8CF3FEACC23 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_2()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_2_m3FBEA88F04D6F2A1BF9B0E7A32BAE8122F8507F3 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
 		// modeText.text = currentBikeState.changeMode().ToString();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___modeText_27;
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_1 = __this->___currentBikeState_82;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___modeText_28;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_1 = __this->___currentBikeState_83;
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = BikeState_changeMode_m6CEA9C53DE618579D9E67846B5B16FC8C6790C3C(L_1, (bool)1, NULL);
@@ -6707,14 +6728,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_2_mAF9402C5
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_3()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_3_mEF199841C533B55872306AA22264DA1CDEE306DF (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_3()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_3_m23C9B9DD47330A0816487B5B0DB8275BC26C5779 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
 		// assistText.text = currentBikeState.changeAssist().ToString();
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___assistText_33;
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_1 = __this->___currentBikeState_82;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___assistText_34;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_1 = __this->___currentBikeState_83;
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = BikeState_changeAssist_mDBA90450130BD0A87927AC42F223344B729EFBB7(L_1, (bool)1, NULL);
@@ -6729,8 +6750,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_3_mEF199841
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_4()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_4_m2C370E8FDD64FA9C1787075432B97B6DCFD1F4AD (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_4()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_4_mDC3F6032B9CDFA9663A2FABCB0FF2E432A3FC43A (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B2_0 = NULL;
@@ -6739,13 +6760,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_4_m2C370E8F
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B3_1 = NULL;
 	{
 		// bool light = currentBikeState.toggleLight();
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_0 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_0 = __this->___currentBikeState_83;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = BikeState_toggleLight_mA58328E59042ED8E47778DBB2607F965B03A143D(L_0, (bool)1, NULL);
 		V_0 = L_1;
 		// lightGraphic.sprite = light ? lightOn : lightOff;
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___lightGraphic_39;
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___lightGraphic_40;
 		bool L_3 = V_0;
 		G_B1_0 = L_2;
 		if (L_3)
@@ -6755,7 +6776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_4_m2C370E8F
 		}
 	}
 	{
-		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_4 = __this->___lightOff_53;
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_4 = __this->___lightOff_54;
 		G_B3_0 = L_4;
 		G_B3_1 = G_B1_0;
 		goto IL_0025;
@@ -6763,7 +6784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_4_m2C370E8F
 
 IL_001f:
 	{
-		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_5 = __this->___lightOn_52;
+		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_5 = __this->___lightOn_53;
 		G_B3_0 = L_5;
 		G_B3_1 = G_B2_0;
 	}
@@ -6778,8 +6799,8 @@ IL_0025:
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_5()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_5_mEC13D7304C6BD7D5249ECD0ECD4EB2407279DB6D (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_5()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_5_mA3E07478AE2A4963F51DD0C34096713879C3618C (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// disconnect();
@@ -6788,8 +6809,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_5_mEC13D730
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_6(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_6_m732C121E9D30DC7F11016B97B18C66BE2B9DB0F7 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, bool ___U3Cp0U3E0, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_6(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_6_m94DE583BCEF7BD4517D633038F188A957D4929C9 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, bool ___U3Cp0U3E0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -6803,7 +6824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_6_m732C121E
 	String_t* G_B3_1 = NULL;
 	{
 		// PlayerPrefs.SetInt("auto", autoApplyToggle.isOn ? 1 : 0);
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___autoApplyToggle_46;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___autoApplyToggle_47;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_0, NULL);
@@ -6833,36 +6854,36 @@ IL_0017:
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_7()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_7_mE6615EE4BC9FC05A4DDCB6EBE174E18CC548585E (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_7()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_7_m54A6C5BA61601DB541C0793B9510D5EEDE22AB56 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// currentBikeState.toggleMetric();
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_0 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_0 = __this->___currentBikeState_83;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = BikeState_toggleMetric_m2C693F52875A9A5DCCF8791E48C512D4051A3762(L_0, (bool)1, NULL);
 		// refreshDisplay(currentBikeState);
-		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_2 = __this->___currentBikeState_82;
+		BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* L_2 = __this->___currentBikeState_83;
 		BikeManager_refreshDisplay_m37256D672F2731C16E72ED0C22AB4EB9A71143D0(__this, L_2, NULL);
 		// });
 		return;
 	}
 }
-// System.Void BikeManager::<Start>b__82_8()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__82_8_mE56740E367F573CC9E6BA4A4BD0D1F1F483CB9A4 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager::<Start>b__83_8()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3CStartU3Eb__83_8_m7BF94E902AF0269AD252FE3FA93DBBD8AE28EB83 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// prefsOverlay.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___prefsOverlay_51;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___prefsOverlay_52;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
 		// });
 		return;
 	}
 }
-// System.Void BikeManager::<onServicesDiscovered>b__90_0(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3ConServicesDiscoveredU3Eb__90_0_m20F59A3EC84BA17521C1BA60BAB239CAFD48E861 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, bool ___U3Cp0U3E0, const RuntimeMethod* method) 
+// System.Void BikeManager::<onServicesDiscovered>b__91_0(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3ConServicesDiscoveredU3Eb__91_0_m2740D53E25C2298511B69F9EB214247CA2C81A83 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, bool ___U3Cp0U3E0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -6878,7 +6899,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3ConServicesDiscoveredU3Eb_
 	int32_t G_B8_0 = 0;
 	{
 		// if (autoConnectToggle.isOn) {
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___autoConnectToggle_47;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___autoConnectToggle_48;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_0, NULL);
@@ -6918,7 +6939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_U3ConServicesDiscoveredU3Eb_
 IL_0033:
 	{
 		// else autoConnectToggle.isOn = false;
-		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_9 = __this->___autoConnectToggle_47;
+		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_9 = __this->___autoConnectToggle_48;
 		NullCheck(L_9);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_9, (bool)0, NULL);
 	}
@@ -6988,48 +7009,48 @@ IL_0078:
 		return;
 	}
 }
-// System.Boolean BikeManager::<getStartupInfoRoutine>b__91_0()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__91_0_m0EA208483351779151BF57C020AA2A48BCBB2DAC (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager::<getStartupInfoRoutine>b__92_0()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__92_0_m89394C4DB2C87D12B1487037B268EB380730F7F0 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// yield return new WaitUntil(() => registerAvailable);
-		bool L_0 = __this->___registerAvailable_83;
+		bool L_0 = __this->___registerAvailable_84;
 		return L_0;
 	}
 }
-// System.Boolean BikeManager::<getStartupInfoRoutine>b__91_1()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__91_1_m950EED81653B102C7673E15E09C2E792CBAF6C30 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager::<getStartupInfoRoutine>b__92_1()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__92_1_m8DB9A997698CB20E79D1827AB9B977CEA7538B56 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// yield return new WaitUntil(() => registerAvailable);
-		bool L_0 = __this->___registerAvailable_83;
+		bool L_0 = __this->___registerAvailable_84;
 		return L_0;
 	}
 }
-// System.Boolean BikeManager::<getStartupInfoRoutine>b__91_2()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__91_2_m5E0928164AE88CB55C7E1B2870CF22B90B40FFD9 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager::<getStartupInfoRoutine>b__92_2()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__92_2_m41D6601222BAD91A8ABF2BA80C3412F646C9B4BB (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// yield return new WaitUntil(() => registerAvailable);
-		bool L_0 = __this->___registerAvailable_83;
+		bool L_0 = __this->___registerAvailable_84;
 		return L_0;
 	}
 }
-// System.Boolean BikeManager::<getStartupInfoRoutine>b__91_3()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__91_3_m987254863B7DB04F1E30627C865B43150C5B7402 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager::<getStartupInfoRoutine>b__92_3()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__92_3_m83451C22EF1405799CBB30E9CF0A4A09948554EB (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// yield return new WaitUntil(() => registerAvailable);
-		bool L_0 = __this->___registerAvailable_83;
+		bool L_0 = __this->___registerAvailable_84;
 		return L_0;
 	}
 }
-// System.Boolean BikeManager::<getStartupInfoRoutine>b__91_4()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__91_4_mB4432ECF4CAF8A158820150444F07B3E0EA07A0C (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager::<getStartupInfoRoutine>b__92_4()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeManager_U3CgetStartupInfoRoutineU3Eb__92_4_m86629016BCC73E3F9C80DDD97CFF393AF8DA1970 (BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* __this, const RuntimeMethod* method) 
 {
 	{
 		// yield return new WaitUntil(() => registerAvailable);
-		bool L_0 = __this->___registerAvailable_83;
+		bool L_0 = __this->___registerAvailable_84;
 		return L_0;
 	}
 }
@@ -7067,8 +7088,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mA94EF8086F7B1619E26C6AB64
 		return;
 	}
 }
-// System.Void BikeManager/<>c::<Start>b__82_0()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CStartU3Eb__82_0_m875B3B00048013A2AF4F0CFB92457F96C724AD67 (U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<>c::<Start>b__83_0()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CStartU3Eb__83_0_mC461B0283ACFF58E4C5C08104ED22A05343FE648 (U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -7147,8 +7168,8 @@ IL_0082:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void BikeManager/<setThemeRoutine>d__83::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__83__ctor_mA44E576C22D2E345BF3AF320C8E63BDBA94230DD (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void BikeManager/<setThemeRoutine>d__84::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__84__ctor_m49330A81521C18BDA39C798941D8B840107CEF9E (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -7157,15 +7178,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__83__ctor_mA44E57
 		return;
 	}
 }
-// System.Void BikeManager/<setThemeRoutine>d__83::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__83_System_IDisposable_Dispose_mE2F0F6A35A4FA497890C3840CC0CB22B6E899719 (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<setThemeRoutine>d__84::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__84_System_IDisposable_Dispose_mDF66C8E9C3D4D737D598B397D493BD1284F2CCC7 (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean BikeManager/<setThemeRoutine>d__83::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CsetThemeRoutineU3Ed__83_MoveNext_mE868635C36596C473A92D5520DD41DAB9A7E9BDD (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager/<setThemeRoutine>d__84::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CsetThemeRoutineU3Ed__84_MoveNext_m29439DA678F9455D9A9019F4658E8B7AC1894D4F (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -7345,26 +7366,26 @@ IL_00e8:
 		return (bool)0;
 	}
 }
-// System.Object BikeManager/<setThemeRoutine>d__83::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CsetThemeRoutineU3Ed__83_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m592A0D09EE868F2E0ADE54EA40213172B0041C36 (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, const RuntimeMethod* method) 
+// System.Object BikeManager/<setThemeRoutine>d__84::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CsetThemeRoutineU3Ed__84_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m89FFF8D3E20B6B7B0FCEEA1622B9A842461FEE82 (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void BikeManager/<setThemeRoutine>d__83::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__83_System_Collections_IEnumerator_Reset_m269837AA1C89F70B29C8378BE0FE8710F93D01A4 (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<setThemeRoutine>d__84::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_Reset_m19A7648B0583FBC2836D3402104FA7D5F4EAB21A (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CsetThemeRoutineU3Ed__83_System_Collections_IEnumerator_Reset_m269837AA1C89F70B29C8378BE0FE8710F93D01A4_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_Reset_m19A7648B0583FBC2836D3402104FA7D5F4EAB21A_RuntimeMethod_var)));
 	}
 }
-// System.Object BikeManager/<setThemeRoutine>d__83::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CsetThemeRoutineU3Ed__83_System_Collections_IEnumerator_get_Current_m890A4F96801F343F248F40992E60028CFA536DBC (U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D* __this, const RuntimeMethod* method) 
+// System.Object BikeManager/<setThemeRoutine>d__84::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_get_Current_m0B542EFE538E52D3CF1686EDFF620EC01B629748 (U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
@@ -7379,8 +7400,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CsetThemeRoutineU3Ed__83_Sys
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void BikeManager/<scanRoutine>d__86::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__86__ctor_m6DEF08260B7438D522C1BEBD70E8420128025316 (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void BikeManager/<scanRoutine>d__87::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__87__ctor_mFB3A20A246A6301367D4DACBC9D248B78022D19E (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -7389,15 +7410,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__86__ctor_m6DEF08260B
 		return;
 	}
 }
-// System.Void BikeManager/<scanRoutine>d__86::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__86_System_IDisposable_Dispose_mFFC9085297E09C0CE06F5F64A77C666B0F25D677 (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<scanRoutine>d__87::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__87_System_IDisposable_Dispose_m52BC0CF51AEF9B9959F182BA5B35C76790ADDB3B (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean BikeManager/<scanRoutine>d__86::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CscanRoutineU3Ed__86_MoveNext_m96E3948FA0EDF72FF7C0839E9FC23E1792A67413 (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager/<scanRoutine>d__87::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CscanRoutineU3Ed__87_MoveNext_m107E8563C7743FDF52E67DE3E90789DD7BF63A14 (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -7460,19 +7481,19 @@ IL_001b:
 		// scanButtonText.SetActive(false);
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_3 = __this->___U3CU3E4__this_2;
 		NullCheck(L_3);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = L_3->___scanButtonText_20;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = L_3->___scanButtonText_21;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
 		// scanButtonloadingIcon.SetActive(true);
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_5 = __this->___U3CU3E4__this_2;
 		NullCheck(L_5);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = L_5->___scanButtonloadingIcon_21;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = L_5->___scanButtonloadingIcon_22;
 		NullCheck(L_6);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)1, NULL);
 		// foreach (Transform child in deviceLineContainer) if (!child.gameObject.CompareTag("Static")) Destroy(child.gameObject);
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_7 = __this->___U3CU3E4__this_2;
 		NullCheck(L_7);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = L_7->___deviceLineContainer_22;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = L_7->___deviceLineContainer_23;
 		NullCheck(L_8);
 		RuntimeObject* L_9;
 		L_9 = Transform_GetEnumerator_mA7E1C882ACA0C33E284711CD09971DEA3FFEF404(L_8, NULL);
@@ -7585,7 +7606,7 @@ IL_00d0:
 		// scanButton.interactable = false;
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_24 = __this->___U3CU3E4__this_2;
 		NullCheck(L_24);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25 = L_24->___scanButton_19;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25 = L_24->___scanButton_20;
 		NullCheck(L_25);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_25, (bool)0, NULL);
 		// yield return new WaitForSecondsRealtime(5);
@@ -7604,45 +7625,45 @@ IL_0108:
 		// scanButton.interactable = true;
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_27 = __this->___U3CU3E4__this_2;
 		NullCheck(L_27);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = L_27->___scanButton_19;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = L_27->___scanButton_20;
 		NullCheck(L_28);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_28, (bool)1, NULL);
 		// scanButtonText.SetActive(true);
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_29 = __this->___U3CU3E4__this_2;
 		NullCheck(L_29);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = L_29->___scanButtonText_20;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = L_29->___scanButtonText_21;
 		NullCheck(L_30);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_30, (bool)1, NULL);
 		// scanButtonloadingIcon.SetActive(false);
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_31 = __this->___U3CU3E4__this_2;
 		NullCheck(L_31);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = L_31->___scanButtonloadingIcon_21;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = L_31->___scanButtonloadingIcon_22;
 		NullCheck(L_32);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_32, (bool)0, NULL);
 		// }
 		return (bool)0;
 	}
 }
-// System.Object BikeManager/<scanRoutine>d__86::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CscanRoutineU3Ed__86_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m848DF7F9439E3C2CD60E42794D1B96304BDBCFA1 (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, const RuntimeMethod* method) 
+// System.Object BikeManager/<scanRoutine>d__87::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CscanRoutineU3Ed__87_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m980AC218B02229A3D2EBF6D6BB96A63CA6C67346 (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void BikeManager/<scanRoutine>d__86::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__86_System_Collections_IEnumerator_Reset_m5CE4815979F52331A7365FF7C5F1CD06A451A0DD (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<scanRoutine>d__87::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_Reset_mE82D840A1CFCC9A932287AACA798179D2A68DF81 (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CscanRoutineU3Ed__86_System_Collections_IEnumerator_Reset_m5CE4815979F52331A7365FF7C5F1CD06A451A0DD_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_Reset_mE82D840A1CFCC9A932287AACA798179D2A68DF81_RuntimeMethod_var)));
 	}
 }
-// System.Object BikeManager/<scanRoutine>d__86::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CscanRoutineU3Ed__86_System_Collections_IEnumerator_get_Current_m09051E5E6DB83CF918F7F5471BDFEA85EE93173D (U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3* __this, const RuntimeMethod* method) 
+// System.Object BikeManager/<scanRoutine>d__87::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_get_Current_m36C897C4F5CE789BA48FB7C589928AD6944E40D2 (U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
@@ -7657,8 +7678,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CscanRoutineU3Ed__86_System_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void BikeManager/<getStartupInfoRoutine>d__91::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__91__ctor_mA24CB1E4B00801BC4287EE6C67EC6C8314EABAC1 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void BikeManager/<getStartupInfoRoutine>d__92::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__92__ctor_m7BA29F75224B6DBF10B8DC021A70EE7FA1EF7372 (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -7667,24 +7688,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__91__ctor_m
 		return;
 	}
 }
-// System.Void BikeManager/<getStartupInfoRoutine>d__91::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__91_System_IDisposable_Dispose_mD936A4E112337143E83AE423CAEEE679EC3189C0 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<getStartupInfoRoutine>d__92::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__92_System_IDisposable_Dispose_m775F4257BF0FEA18DB0E3C362EC93E441078DF00 (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean BikeManager/<getStartupInfoRoutine>d__91::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CgetStartupInfoRoutineU3Ed__91_MoveNext_mE4BA57BFFC88930A37DDB76F6E88F716C1FB61B2 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, const RuntimeMethod* method) 
+// System.Boolean BikeManager/<getStartupInfoRoutine>d__92::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CgetStartupInfoRoutineU3Ed__92_MoveNext_m74376AB42F1163B3947D6540CBD8607BD86A1150 (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__91_0_m0EA208483351779151BF57C020AA2A48BCBB2DAC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__91_1_m950EED81653B102C7673E15E09C2E792CBAF6C30_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__91_2_m5E0928164AE88CB55C7E1B2870CF22B90B40FFD9_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__91_3_m987254863B7DB04F1E30627C865B43150C5B7402_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__91_4_mB4432ECF4CAF8A158820150444F07B3E0EA07A0C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__92_0_m89394C4DB2C87D12B1487037B268EB380730F7F0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__92_1_m8DB9A997698CB20E79D1827AB9B977CEA7538B56_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__92_2_m41D6601222BAD91A8ABF2BA80C3412F646C9B4BB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__92_3_m83451C22EF1405799CBB30E9CF0A4A09948554EB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_U3CgetStartupInfoRoutineU3Eb__92_4_m86629016BCC73E3F9C80DDD97CFF393AF8DA1970_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
@@ -7770,7 +7791,7 @@ IL_003e:
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_2 = __this->___U3CU3E4__this_2;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_3 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		NullCheck(L_3);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_3, L_2, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__91_0_m0EA208483351779151BF57C020AA2A48BCBB2DAC_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_3, L_2, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__92_0_m89394C4DB2C87D12B1487037B268EB380730F7F0_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_4 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		NullCheck(L_4);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_4, L_3, NULL);
@@ -7791,7 +7812,7 @@ IL_006b:
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_6 = __this->___U3CU3E4__this_2;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_7 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		NullCheck(L_7);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_7, L_6, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__91_1_m950EED81653B102C7673E15E09C2E792CBAF6C30_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_7, L_6, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__92_1_m8DB9A997698CB20E79D1827AB9B977CEA7538B56_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_8 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		NullCheck(L_8);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_8, L_7, NULL);
@@ -7812,7 +7833,7 @@ IL_00a3:
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_10 = __this->___U3CU3E4__this_2;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_11 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		NullCheck(L_11);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_11, L_10, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__91_2_m5E0928164AE88CB55C7E1B2870CF22B90B40FFD9_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_11, L_10, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__92_2_m41D6601222BAD91A8ABF2BA80C3412F646C9B4BB_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_12 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		NullCheck(L_12);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_12, L_11, NULL);
@@ -7833,7 +7854,7 @@ IL_00db:
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_14 = __this->___U3CU3E4__this_2;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_15 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		NullCheck(L_15);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_15, L_14, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__91_3_m987254863B7DB04F1E30627C865B43150C5B7402_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_15, L_14, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__92_3_m83451C22EF1405799CBB30E9CF0A4A09948554EB_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_16 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		NullCheck(L_16);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_16, L_15, NULL);
@@ -7854,7 +7875,7 @@ IL_0113:
 		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_18 = __this->___U3CU3E4__this_2;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_19 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		NullCheck(L_19);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_19, L_18, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__91_4_mB4432ECF4CAF8A158820150444F07B3E0EA07A0C_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_19, L_18, (intptr_t)((void*)BikeManager_U3CgetStartupInfoRoutineU3Eb__92_4_m86629016BCC73E3F9C80DDD97CFF393AF8DA1970_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_20 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		NullCheck(L_20);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_20, L_19, NULL);
@@ -7878,26 +7899,26 @@ IL_014b:
 		return (bool)0;
 	}
 }
-// System.Object BikeManager/<getStartupInfoRoutine>d__91::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CgetStartupInfoRoutineU3Ed__91_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m76C935705E2D46CA1693452A8D934CA5156D92E8 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, const RuntimeMethod* method) 
+// System.Object BikeManager/<getStartupInfoRoutine>d__92::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CgetStartupInfoRoutineU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDCABB1552506554CD9D25D2DE8BEF59142D3417A (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void BikeManager/<getStartupInfoRoutine>d__91::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__91_System_Collections_IEnumerator_Reset_mBC9E014047A495B0E2C020D10A544186662A2C70 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, const RuntimeMethod* method) 
+// System.Void BikeManager/<getStartupInfoRoutine>d__92::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_Reset_m70750595A23B4364ECEC3B6067A0239BE04EE6A1 (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CgetStartupInfoRoutineU3Ed__91_System_Collections_IEnumerator_Reset_mBC9E014047A495B0E2C020D10A544186662A2C70_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_Reset_m70750595A23B4364ECEC3B6067A0239BE04EE6A1_RuntimeMethod_var)));
 	}
 }
-// System.Object BikeManager/<getStartupInfoRoutine>d__91::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CgetStartupInfoRoutineU3Ed__91_System_Collections_IEnumerator_get_Current_mC47B7A50466723045F5468B7BFCB6A7A2DB895D9 (U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD* __this, const RuntimeMethod* method) 
+// System.Object BikeManager/<getStartupInfoRoutine>d__92::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_get_Current_mA2E612CA3AE8022FADC616E1ADDB45902C0567E4 (U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
@@ -9354,13 +9375,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState_voltageFromBatteryLevel_mCDF95
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// voltage = Mathf.Lerp(BikeManager.MIN_VOLTAGE_V, BikeManager.MAX_VOLTAGE_V, batteryLevel / 100f);
+		// voltage = BikeManager.instance.li_ionDischargeCurve.Evaluate(batteryLevel); //Mathf.Lerp(BikeManager.MIN_VOLTAGE_V, BikeManager.MAX_VOLTAGE_V, batteryLevel / 100f);
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
-		float L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___MIN_VOLTAGE_V_8;
-		float L_1 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___MAX_VOLTAGE_V_7;
+		BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* L_0 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___instance_4;
+		NullCheck(L_0);
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_1 = L_0->___li_ionDischargeCurve_16;
 		float L_2 = __this->___batteryLevel_16;
+		NullCheck(L_1);
 		float L_3;
-		L_3 = Mathf_Lerp_mFB4910B358B986AFB22114ED90458E8341867479_inline(L_0, L_1, ((float)(L_2/(100.0f))), NULL);
+		L_3 = AnimationCurve_Evaluate_m50B857043DE251A186032ADBCBB4CEF817F4EE3C(L_1, L_2, NULL);
 		__this->___voltage_18 = L_3;
 		// }
 		return;
@@ -15312,26 +15335,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float BikeState_getVoltage_mD1999
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_mFB4910B358B986AFB22114ED90458E8341867479_inline (float ___a0, float ___b1, float ___t2, const RuntimeMethod* method) 
-{
-	float V_0 = 0.0f;
-	{
-		float L_0 = ___a0;
-		float L_1 = ___b1;
-		float L_2 = ___a0;
-		float L_3 = ___t2;
-		float L_4;
-		L_4 = Mathf_Clamp01_mD921B23F47F5347996C56DC789D1DE16EE27D9B1_inline(L_3, NULL);
-		V_0 = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_2)), L_4))));
-		goto IL_0010;
-	}
-
-IL_0010:
-	{
-		float L_5 = V_0;
-		return L_5;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m704B5B98EAFE885978381E21B7F89D9DF83C2A60_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -15971,6 +15974,20 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___r0, float ___g1, float ___b2, float ___a3, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___r0;
+		__this->___r_0 = L_0;
+		float L_1 = ___g1;
+		__this->___g_1 = L_1;
+		float L_2 = ___b2;
+		__this->___b_2 = L_2;
+		float L_3 = ___a3;
+		__this->___a_3 = L_3;
+		return;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mD921B23F47F5347996C56DC789D1DE16EE27D9B1_inline (float ___value0, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -16016,20 +16033,6 @@ IL_002d:
 	{
 		float L_5 = V_1;
 		return L_5;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___r0, float ___g1, float ___b2, float ___a3, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = ___r0;
-		__this->___r_0 = L_0;
-		float L_1 = ___g1;
-		__this->___g_1 = L_1;
-		float L_2 = ___b2;
-		__this->___b_2 = L_2;
-		float L_3 = ___a3;
-		__this->___a_3 = L_3;
-		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___r0, uint8_t ___g1, uint8_t ___b2, uint8_t ___a3, const RuntimeMethod* method) 

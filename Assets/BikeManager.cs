@@ -84,38 +84,38 @@ public class BikeManager : MonoBehaviour {
 
 
     //BT protocol
-    const string UUID_UNKNOWN1_SERVICE         = "00001800-0000-1000-8000-00805f9b34fb";   //Generic Access
-    const string UUID_UNKNOWN1_CHARACTERISTIC1 = "00002a00-0000-1000-8000-00805f9b34fb"; // read  53 55 50 45 52 37 33  Device Name
-    const string UUID_UNKNOWN1_CHARACTERISTIC2 = "00002a01-0000-1000-8000-00805f9b34fb"; // read  00 04                  Appearance "Cycling"
-    const string UUID_UNKNOWN1_CHARACTERISTIC3 = "00002a04-0000-1000-8000-00805f9b34fb"; // read  0C 00 24 00 00 00 00 01 Peripheral Preferred Connection Parameters
-    const string UUID_UNKNOWN1_CHARACTERISTIC4 = "00002aa6-0000-1000-8000-00805f9b34fb"; // read  01  Central Address Resolution "Supported"
+    const string UUID_GENERIC_ACCESS_SERVICE         = "00001800-0000-1000-8000-00805f9b34fb";
+    const string UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC = "00002a00-0000-1000-8000-00805f9b34fb"; // 53 55 50 45 52 37 33
+    const string UUID_GENERIC_ACCESS_APPEARANCE_CHARACTERISTIC = "00002a01-0000-1000-8000-00805f9b34fb"; //00 04 
+    const string UUID_GENERIC_ACCESS_PPCP_CHARACTERISTIC = "00002a04-0000-1000-8000-00805f9b34fb"; //0C 00 24 00 00 00 00 01
+    const string UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC = "00002aa6-0000-1000-8000-00805f9b34fb"; //01
 
-    const string UUID_UNKNOWN2_SERVICE         = "00001801-0000-1000-8000-00805f9b34fb";  //Generic Attribute
-    const string UUID_UNKNOWN2_CHARACTERISTIC1 = "00002a05-0000-1000-8000-00805f9b34fb"; //indicate - Service Changed 
+    const string UUID_GENERIC_ATTRIBUTE_SERVICE         = "00001801-0000-1000-8000-00805f9b34fb";
+    const string UUID_GENERIC_ATTRIBUTE_SERVICE_CHANGED_CHARACTERISTIC = "00002a05-0000-1000-8000-00805f9b34fb";
 
-    const string UUID_UNKNOWN3_SERVICE         = "0000fe59-0000-1000-8000-00805f9b34fb";  // Custom UUID of Nordic Semiconductor ASA  "Secure DFU service"
-    const string UUID_UNKNOWN3_CHARACTERISTIC1 = "8ec90003-f315-4f60-9fb8-838830daea50"; //DFU Control Point characteristic or Buttonless dfu indicate/write - https://nordicsemiconductor.github.io/Nordic-Thingy52-FW/documentation/firmware_architecture.html#arch_battery
+    const string UUID_SECURE_DFU_SERVICE         = "0000fe59-0000-1000-8000-00805f9b34fb";
+    const string UUID_SECURE_DFU_BUTTONLESS_DFU_CHARACTERISTIC = "8ec90003-f315-4f60-9fb8-838830daea50";
 
-    const string UUID_UNKNOWN4_SERVICE         = "0000180a-0000-1000-8000-00805f9b34fb"; //Device info 
-    const string UUID_UNKNOWN4_CHARACTERISTIC1 = "00002a29-0000-1000-8000-00805f9b34fb"; // read  43 4F 4D 4F 44 55 4C 45  Manufacturer Name String
-    const string UUID_UNKNOWN4_CHARACTERISTIC2 = "00002a27-0000-1000-8000-00805f9b34fb"; // read  76 33 2E 32 2E 30 Hardware Revision String
-    const string UUID_UNKNOWN4_CHARACTERISTIC3 = "00002a26-0000-1000-8000-00805f9b34fb"; // read  32 32 31 31 32 32  NRF version    Firmware Revision String
-    const string UUID_UNKNOWN4_CHARACTERISTIC4 = "00002a28-0000-1000-8000-00805f9b34fb"; // read  32 32 31 31 32 32   Software Revision String
+    const string UUID_DEVICE_INFO_SERVICE         = "0000180a-0000-1000-8000-00805f9b34fb"; 
+    const string UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC = "00002a29-0000-1000-8000-00805f9b34fb"; // 43 4F 4D 4F 44 55 4C 45
+    const string UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC = "00002a27-0000-1000-8000-00805f9b34fb"; // 76 33 2E 32 2E 30
+    const string UUID_DEVICE_INFO_FIRMWARE_CHARACTERISTIC = "00002a26-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
+    const string UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC = "00002a28-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
 
 
-    const string UUID_UNKNOWN5_SERVICE         = "00001580-0000-1000-8000-00805f9b34fb"; 
-    const string UUID_UNKNOWN5_CHARACTERISTIC1 = "00001581-0000-1000-8000-00805f9b34fb"; //notify client characteristic configuration "disabled"
+    const string UUID_UNKNOWN_SERVICE         = "00001580-0000-1000-8000-00805f9b34fb"; 
+    const string UUID_UNKNOWN_CHARACTERISTIC = "00001581-0000-1000-8000-00805f9b34fb";
 
-    const string UUID_UNKNOWN6_SERVICE         = "00002554-1212-efde-1523-785feabcd123"; //Security?
-    const string UUID_UNKNOWN6_CHARACTERISTIC1 = "00002555-1212-efde-1523-785feabcd123";   // private key  write 
-    const string UUID_UNKNOWN6_CHARACTERISTIC2 = "00002556-1212-efde-1523-785feabcd123";   // public key  read 1A 00 00 00 24 00 71 00 00 00 3A 42 00 00 75 19 00 00 00 00
-    const string UUID_UNKNOWN6_CHARACTERISTIC3 = "00002557-1212-efde-1523-785feabcd123";   // security hash write -
-    const string UUID_UNKNOWN6_CHARACTERISTIC4 = "00002558-1212-efde-1523-785feabcd123";   // auth   read 01
+    const string UUID_SECURITY_SERVICE         = "00002554-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_PRIVATE_KEY_CHARACTERISTIC = "00002555-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_PUBLIC_KEY_CHARACTERISTIC = "00002556-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_HASH_CHARACTERISTIC = "00002557-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_AUTH_CHARACTERISTIC = "00002558-1212-efde-1523-785feabcd123";
 
     const string UUID_METRICS_SERVICE                          = "00001554-1212-efde-1523-785feabcd123";
-    const string UUID_METRICS_CHARACTERISTIC_REGISTER_ID       = "00001564-1212-efde-1523-785feabcd123";// read write
-    const string UUID_METRICS_CHARACTERISTIC_REGISTER          = "0000155f-1212-efde-1523-785feabcd123";//read write
-    const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";// notify read
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER_ID       = "00001564-1212-efde-1523-785feabcd123";
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER          = "0000155f-1212-efde-1523-785feabcd123";
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
 
 
 
@@ -329,41 +329,6 @@ public class BikeManager : MonoBehaviour {
         registerPower();
         yield return new WaitUntil(() => registerAvailable);
         registerSpeed();
-
-        /*
-         * yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC1));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC2));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC3));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC4));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN2_SERVICE, UUID_UNKNOWN2_CHARACTERISTIC1));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN3_SERVICE, UUID_UNKNOWN3_CHARACTERISTIC1));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC1));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC2));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC3));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC4));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN5_SERVICE, UUID_UNKNOWN5_CHARACTERISTIC1));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC1));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC2));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC3));
-        yield return new WaitForSecondsRealtime(6);
-        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC4));
-        */
-        Debug.Log("### Done");
-        
     }
 
     void disconnect() {

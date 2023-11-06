@@ -258,6 +258,8 @@ struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0;
 struct AndroidJavaRunnable_tF23B9BBDA8C99A48BCEEA6335A47DA3C0EF34A7F;
 // UnityEngine.Animation
 struct Animation_t6593B06C39E3B139808B19F2C719C860F3F61040;
+// UnityEngine.AnimationCurve
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354;
 // UnityEngine.AnimationState
 struct AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE;
 // System.Collections.ArrayList
@@ -1710,44 +1712,44 @@ struct U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields
 {
 	// BikeManager/<>c BikeManager/<>c::<>9
 	U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933* ___U3CU3E9_0;
-	// UnityEngine.Events.UnityAction BikeManager/<>c::<>9__82_0
-	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___U3CU3E9__82_0_1;
+	// UnityEngine.Events.UnityAction BikeManager/<>c::<>9__83_0
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___U3CU3E9__83_0_1;
 };
 
-// BikeManager/<getStartupInfoRoutine>d__91
-struct U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD  : public RuntimeObject
+// BikeManager/<getStartupInfoRoutine>d__92
+struct U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<getStartupInfoRoutine>d__91::<>1__state
+	// System.Int32 BikeManager/<getStartupInfoRoutine>d__92::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<getStartupInfoRoutine>d__91::<>2__current
+	// System.Object BikeManager/<getStartupInfoRoutine>d__92::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<getStartupInfoRoutine>d__91::<>4__this
+	// BikeManager BikeManager/<getStartupInfoRoutine>d__92::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
 };
 
-// BikeManager/<scanRoutine>d__86
-struct U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3  : public RuntimeObject
+// BikeManager/<scanRoutine>d__87
+struct U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<scanRoutine>d__86::<>1__state
+	// System.Int32 BikeManager/<scanRoutine>d__87::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<scanRoutine>d__86::<>2__current
+	// System.Object BikeManager/<scanRoutine>d__87::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<scanRoutine>d__86::<>4__this
+	// BikeManager BikeManager/<scanRoutine>d__87::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
-	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__86::<>s__1
+	// System.Collections.IEnumerator BikeManager/<scanRoutine>d__87::<>s__1
 	RuntimeObject* ___U3CU3Es__1_3;
-	// UnityEngine.Transform BikeManager/<scanRoutine>d__86::<child>5__2
+	// UnityEngine.Transform BikeManager/<scanRoutine>d__87::<child>5__2
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CchildU3E5__2_4;
 };
 
-// BikeManager/<setThemeRoutine>d__83
-struct U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D  : public RuntimeObject
+// BikeManager/<setThemeRoutine>d__84
+struct U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E  : public RuntimeObject
 {
-	// System.Int32 BikeManager/<setThemeRoutine>d__83::<>1__state
+	// System.Int32 BikeManager/<setThemeRoutine>d__84::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BikeManager/<setThemeRoutine>d__83::<>2__current
+	// System.Object BikeManager/<setThemeRoutine>d__84::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BikeManager BikeManager/<setThemeRoutine>d__83::<>4__this
+	// BikeManager BikeManager/<setThemeRoutine>d__84::<>4__this
 	BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D* ___U3CU3E4__this_2;
 };
 
@@ -6962,92 +6964,94 @@ struct AdaptToSafeArea_t29441D7B0FDCB5081E6D8A354725FEC31E9BC8B2  : public MonoB
 // BikeManager
 struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.AnimationCurve BikeManager::li_ionDischargeCurve
+	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___li_ionDischargeCurve_16;
 	// UnityEngine.UI.Button BikeManager::themeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___themeButton_16;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___themeButton_17;
 	// UnityEngine.GameObject BikeManager::loadingOverlay
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loadingOverlay_17;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loadingOverlay_18;
 	// UnityEngine.GameObject BikeManager::scanPage
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanPage_18;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanPage_19;
 	// UnityEngine.UI.Button BikeManager::scanButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___scanButton_19;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___scanButton_20;
 	// UnityEngine.GameObject BikeManager::scanButtonText
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonText_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonText_21;
 	// UnityEngine.GameObject BikeManager::scanButtonloadingIcon
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonloadingIcon_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scanButtonloadingIcon_22;
 	// UnityEngine.Transform BikeManager::deviceLineContainer
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___deviceLineContainer_22;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___deviceLineContainer_23;
 	// UnityEngine.GameObject BikeManager::deviceLine_prefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___deviceLine_prefab_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___deviceLine_prefab_24;
 	// UnityEngine.GameObject BikeManager::connectPage
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___connectPage_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___connectPage_25;
 	// UnityEngine.UI.Button BikeManager::bikeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___bikeButton_25;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___bikeButton_26;
 	// UnityEngine.UI.Button BikeManager::modeButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___modeButton_26;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___modeButton_27;
 	// TMPro.TMP_Text BikeManager::modeText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___modeText_27;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___modeText_28;
 	// TMPro.TMP_Text BikeManager::speedText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedText_28;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedText_29;
 	// TMPro.TMP_Text BikeManager::speedUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedUnitsText_29;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___speedUnitsText_30;
 	// UnityEngine.UI.Image BikeManager::levelGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___levelGraphic_30;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___levelGraphic_31;
 	// TMPro.TMP_Text BikeManager::levelText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___levelText_31;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___levelText_32;
 	// UnityEngine.UI.Button BikeManager::assistButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___assistButton_32;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___assistButton_33;
 	// TMPro.TMP_Text BikeManager::assistText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___assistText_33;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___assistText_34;
 	// TMPro.TMP_Text BikeManager::tempText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempText_34;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempText_35;
 	// TMPro.TMP_Text BikeManager::tempUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempUnitsText_35;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___tempUnitsText_36;
 	// TMPro.TMP_Text BikeManager::voltText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltText_36;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltText_37;
 	// TMPro.TMP_Text BikeManager::voltUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltUnitsText_37;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___voltUnitsText_38;
 	// UnityEngine.UI.Button BikeManager::lightButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___lightButton_38;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___lightButton_39;
 	// UnityEngine.UI.Image BikeManager::lightGraphic
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lightGraphic_39;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lightGraphic_40;
 	// TMPro.TMP_Text BikeManager::rangeText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeText_40;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeText_41;
 	// TMPro.TMP_Text BikeManager::rangeUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeUnitsText_41;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___rangeUnitsText_42;
 	// TMPro.TMP_Text BikeManager::wheelRPMText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___wheelRPMText_42;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___wheelRPMText_43;
 	// TMPro.TMP_Text BikeManager::pedalRPMText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___pedalRPMText_43;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___pedalRPMText_44;
 	// TMPro.TMP_Text BikeManager::totalText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalText_44;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalText_45;
 	// TMPro.TMP_Text BikeManager::totalUnitsText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalUnitsText_45;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___totalUnitsText_46;
 	// UnityEngine.UI.Toggle BikeManager::autoApplyToggle
-	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoApplyToggle_46;
+	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoApplyToggle_47;
 	// UnityEngine.UI.Toggle BikeManager::autoConnectToggle
-	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoConnectToggle_47;
+	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___autoConnectToggle_48;
 	// UnityEngine.UI.Button BikeManager::unitsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___unitsButton_48;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___unitsButton_49;
 	// UnityEngine.UI.Button BikeManager::prefsButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___prefsButton_49;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___prefsButton_50;
 	// TMPro.TMP_Text BikeManager::notifText
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___notifText_50;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___notifText_51;
 	// UnityEngine.GameObject BikeManager::prefsOverlay
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___prefsOverlay_51;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___prefsOverlay_52;
 	// UnityEngine.Sprite BikeManager::lightOn
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_52;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOn_53;
 	// UnityEngine.Sprite BikeManager::lightOff
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_53;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___lightOff_54;
 	// System.Collections.Generic.List`1<UnityEngine.Sprite> BikeManager::batteryLevels
-	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_54;
+	List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206* ___batteryLevels_55;
 	// UnityEngine.Sprite BikeManager::batteryCharging
-	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_55;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___batteryCharging_56;
 	// System.Collections.Generic.List`1<System.String> BikeManager::debugNotificationText
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___debugNotificationText_81;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___debugNotificationText_82;
 	// BikeState BikeManager::currentBikeState
-	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentBikeState_82;
+	BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* ___currentBikeState_83;
 	// System.Boolean BikeManager::registerAvailable
-	bool ___registerAvailable_83;
+	bool ___registerAvailable_84;
 };
 
 struct BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields
@@ -7938,19 +7942,19 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3266[3] =
 	static_cast<int32_t>(offsetof(PermissionCallbacks_t6C5002298E6649261FCB52C244695459E5C9890F, ___PermissionGranted_4)),static_cast<int32_t>(offsetof(PermissionCallbacks_t6C5002298E6649261FCB52C244695459E5C9890F, ___PermissionDenied_5)),static_cast<int32_t>(offsetof(PermissionCallbacks_t6C5002298E6649261FCB52C244695459E5C9890F, ___PermissionDeniedAndDontAskAgain_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3269[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields, ___U3CU3E9_0)),static_cast<int32_t>(offsetof(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields, ___U3CU3E9__82_0_1)),};
+	static_cast<int32_t>(offsetof(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields, ___U3CU3E9_0)),static_cast<int32_t>(offsetof(U3CU3Ec_tE1D8B98694BFD06605CCEF3416621F8E7072E933_StaticFields, ___U3CU3E9__83_0_1)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3270[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CsetThemeRoutineU3Ed__83_t5EB8CBD054490798D62B07AE0E771C791BCE0D9D, ___U3CU3E4__this_2)),};
+	static_cast<int32_t>(offsetof(U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CsetThemeRoutineU3Ed__84_t9082DBC0E7FCD4ECEC3B619468381F715E94D99E, ___U3CU3E4__this_2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3271[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3, ___U3CU3Es__1_3)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__86_tF8E43DEAD619DB73736ABD9DA4CC127C234DB0B3, ___U3CchildU3E5__2_4)),};
+	static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D, ___U3CU3Es__1_3)),static_cast<int32_t>(offsetof(U3CscanRoutineU3Ed__87_t48B493C3BA2EA92C293DD4B2C1E1CE0F7FE45D6D, ___U3CchildU3E5__2_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3272[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CgetStartupInfoRoutineU3Ed__91_t3BC90AF56F6F676B56A5750BE87D5CA82E5386AD, ___U3CU3E4__this_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3273[80] = 
+	static_cast<int32_t>(offsetof(U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CgetStartupInfoRoutineU3Ed__92_tCE247CEC872D269BE26CE4E31090D0FB21BC66D0, ___U3CU3E4__this_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3273[81] = 
 {
-	static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___PEDAL_DIAMETRER_M_5)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___WHEEL_DIAMETRER_M_6)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___MAX_VOLTAGE_V_7)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___MIN_VOLTAGE_V_8)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___BASE_TOTAL_RANGE_KM_9)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___REAL_TOTAL_RANGE_KM_10)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___SPEED_ID_11)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___TOTAL_ID_12)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___PEDAL_ID_13)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___SETTINGS_ID_14)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___POWER_ID_15)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___themeButton_16)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___loadingOverlay_17)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanPage_18)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanButton_19)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanButtonText_20)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanButtonloadingIcon_21)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___deviceLineContainer_22)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___deviceLine_prefab_23)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___connectPage_24)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___bikeButton_25)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___modeButton_26)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___modeText_27)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___speedText_28)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___speedUnitsText_29)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___levelGraphic_30)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___levelText_31)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___assistButton_32)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___assistText_33)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___tempText_34)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___tempUnitsText_35)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___voltText_36)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___voltUnitsText_37)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightButton_38)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightGraphic_39)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___rangeText_40)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___rangeUnitsText_41)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___wheelRPMText_42)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___pedalRPMText_43)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___totalText_44)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___totalUnitsText_45)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___autoApplyToggle_46)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___autoConnectToggle_47)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___unitsButton_48)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___prefsButton_49)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___notifText_50)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___prefsOverlay_51)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightOn_52)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightOff_53)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___batteryLevels_54)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___batteryCharging_55)),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___debugNotificationText_81)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___currentBikeState_82)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___registerAvailable_83)),};
+	static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___PEDAL_DIAMETRER_M_5)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___WHEEL_DIAMETRER_M_6)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___MAX_VOLTAGE_V_7)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___MIN_VOLTAGE_V_8)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___BASE_TOTAL_RANGE_KM_9)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___REAL_TOTAL_RANGE_KM_10)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___SPEED_ID_11)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___TOTAL_ID_12)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___PEDAL_ID_13)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___SETTINGS_ID_14)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields, ___POWER_ID_15)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___li_ionDischargeCurve_16)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___themeButton_17)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___loadingOverlay_18)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanPage_19)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanButton_20)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanButtonText_21)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___scanButtonloadingIcon_22)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___deviceLineContainer_23)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___deviceLine_prefab_24)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___connectPage_25)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___bikeButton_26)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___modeButton_27)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___modeText_28)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___speedText_29)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___speedUnitsText_30)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___levelGraphic_31)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___levelText_32)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___assistButton_33)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___assistText_34)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___tempText_35)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___tempUnitsText_36)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___voltText_37)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___voltUnitsText_38)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightButton_39)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightGraphic_40)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___rangeText_41)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___rangeUnitsText_42)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___wheelRPMText_43)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___pedalRPMText_44)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___totalText_45)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___totalUnitsText_46)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___autoApplyToggle_47)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___autoConnectToggle_48)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___unitsButton_49)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___prefsButton_50)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___notifText_51)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___prefsOverlay_52)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightOn_53)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___lightOff_54)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___batteryLevels_55)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___batteryCharging_56)),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___debugNotificationText_82)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___currentBikeState_83)),static_cast<int32_t>(offsetof(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D, ___registerAvailable_84)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3274[15] = 
 {
 	static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E_StaticFields, ___modeDescriptors_4)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___metric_5)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___mode_6)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___assist_7)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___light_8)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___wheelSpeed_9)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___wheelRPM_10)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___rawWheel_11)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___total_12)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___pedalRPM_13)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___rawPedal_14)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___rawRange_15)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___batteryLevel_16)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___range_17)),static_cast<int32_t>(offsetof(BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E, ___voltage_18)),};
