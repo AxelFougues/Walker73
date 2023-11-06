@@ -10,13 +10,12 @@ public class BikeManager : MonoBehaviour {
     public static BikeManager instance;
 
 
-    //Base prefs
     public static float PEDAL_DIAMETRER_M = 0.125f;
     public static float WHEEL_DIAMETRER_M = 0.57f;
     public static float MAX_VOLTAGE_V = 54.6f;
     public static float MIN_VOLTAGE_V = 32.5f;
-    public static float BASE_TOTAL_RANGE_KM = 60f;
-    public static float REAL_TOTAL_RANGE_KM = 60f;
+    public static float BASE_MAX_RANGE_KM = 60f;
+    public static float REAL_MAX_RANGE_KM = 60f;
 
     public static byte[] SPEED_ID = { 0x02, 0x01 };
     public static byte[] TOTAL_ID = { 0x02, 0x02 };
@@ -135,7 +134,17 @@ public class BikeManager : MonoBehaviour {
     private void Awake() {
         DontDestroyOnLoad(this);
         instance = this;
-    }
+        //Base Prefs
+
+        if (!PlayerPrefs.HasKey("PEDAL_DIAMETRER_M")) PlayerPrefs.SetFloat("PEDAL_DIAMETRER_M", PEDAL_DIAMETRER_M);
+        if (!PlayerPrefs.HasKey("WHEEL_DIAMETRER_M")) PlayerPrefs.SetFloat("WHEEL_DIAMETRER_M", WHEEL_DIAMETRER_M);
+        if (!PlayerPrefs.HasKey("MAX_VOLTAGE_V")) PlayerPrefs.SetFloat("MAX_VOLTAGE_V", MAX_VOLTAGE_V);
+        if (!PlayerPrefs.HasKey("MIN_VOLTAGE_V")) PlayerPrefs.SetFloat("MIN_VOLTAGE_V", MIN_VOLTAGE_V);
+        if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
+        if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
+
+                
+}
 
     private void OnEnable() {
         NativeBLE.onScanResult += this.onScanResult;

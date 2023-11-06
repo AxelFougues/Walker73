@@ -206,16 +206,12 @@ public class BikeState : MonoBehaviour {
     }
 
 
-    void wheelSpeedFromRawPower() {
-        wheelSpeed = 0;
-    }
-
     void wheelSpeedFromRaw() {
         wheelSpeed = 0.01963741 * Mathf.Pow(rawWheel, 0.9211116f);
     }
 
     void wheelRPMFromSpeed() {
-        wheelRPM =  wheelSpeed/PlayerPrefs.GetFloat("WHEEL_DIAMETRER_M", BikeManager.WHEEL_DIAMETRER_M) /0.1885f;
+        wheelRPM =  wheelSpeed/PlayerPrefs.GetFloat("WHEEL_DIAMETRER_M") /0.1885f;
     }
 
     void pedalRPMFromRaw() {
@@ -227,11 +223,11 @@ public class BikeState : MonoBehaviour {
     }
 
     void rangeFromBatteryLevel() {
-        range = (rawRange / BikeManager.BASE_TOTAL_RANGE_KM) * BikeManager.REAL_TOTAL_RANGE_KM;
+        range = (rawRange / PlayerPrefs.GetFloat("BASE_TOTAL_RANGE_KM")) * PlayerPrefs.GetFloat("REAL_TOTAL_RANGE_KM");
     }
 
     void batteryLevelFromRawRange() {
-        batteryLevel = (rawRange / BikeManager.BASE_TOTAL_RANGE_KM) * 100f;
+        batteryLevel = (rawRange / PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM")) * 100f;
     }
 
     void voltageFromBatteryLevel() {
