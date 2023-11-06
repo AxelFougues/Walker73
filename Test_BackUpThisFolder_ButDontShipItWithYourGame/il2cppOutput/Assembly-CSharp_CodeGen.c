@@ -66,76 +66,76 @@ extern void BikeManager_updateNotificationDebug_m217526E292627D155B50364CD6AEA94
 extern void BikeManager__ctor_m6C2113CE9A0F4F0565E68D7DDC8D6B2DC479804D (void);
 // 0x0000001B System.Void BikeManager::.cctor()
 extern void BikeManager__cctor_m595BD005278BCCCDF9A7E3827B396E90B369A9C3 (void);
-// 0x0000001C System.Void BikeManager::<Start>b__83_1()
-extern void BikeManager_U3CStartU3Eb__83_1_mAC43087F01C11F26B9D72F96678B531A10053FB0 (void);
-// 0x0000001D System.Void BikeManager::<Start>b__83_2()
-extern void BikeManager_U3CStartU3Eb__83_2_m3FBEA88F04D6F2A1BF9B0E7A32BAE8122F8507F3 (void);
-// 0x0000001E System.Void BikeManager::<Start>b__83_3()
-extern void BikeManager_U3CStartU3Eb__83_3_m23C9B9DD47330A0816487B5B0DB8275BC26C5779 (void);
-// 0x0000001F System.Void BikeManager::<Start>b__83_4()
-extern void BikeManager_U3CStartU3Eb__83_4_mDC3F6032B9CDFA9663A2FABCB0FF2E432A3FC43A (void);
-// 0x00000020 System.Void BikeManager::<Start>b__83_5()
-extern void BikeManager_U3CStartU3Eb__83_5_mA3E07478AE2A4963F51DD0C34096713879C3618C (void);
-// 0x00000021 System.Void BikeManager::<Start>b__83_6(System.Boolean)
-extern void BikeManager_U3CStartU3Eb__83_6_m94DE583BCEF7BD4517D633038F188A957D4929C9 (void);
-// 0x00000022 System.Void BikeManager::<Start>b__83_7()
-extern void BikeManager_U3CStartU3Eb__83_7_m54A6C5BA61601DB541C0793B9510D5EEDE22AB56 (void);
-// 0x00000023 System.Void BikeManager::<Start>b__83_8()
-extern void BikeManager_U3CStartU3Eb__83_8_m7BF94E902AF0269AD252FE3FA93DBBD8AE28EB83 (void);
-// 0x00000024 System.Void BikeManager::<onServicesDiscovered>b__91_0(System.Boolean)
-extern void BikeManager_U3ConServicesDiscoveredU3Eb__91_0_m2740D53E25C2298511B69F9EB214247CA2C81A83 (void);
-// 0x00000025 System.Boolean BikeManager::<getStartupInfoRoutine>b__92_0()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__92_0_m89394C4DB2C87D12B1487037B268EB380730F7F0 (void);
-// 0x00000026 System.Boolean BikeManager::<getStartupInfoRoutine>b__92_1()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__92_1_m8DB9A997698CB20E79D1827AB9B977CEA7538B56 (void);
-// 0x00000027 System.Boolean BikeManager::<getStartupInfoRoutine>b__92_2()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__92_2_m41D6601222BAD91A8ABF2BA80C3412F646C9B4BB (void);
-// 0x00000028 System.Boolean BikeManager::<getStartupInfoRoutine>b__92_3()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__92_3_m83451C22EF1405799CBB30E9CF0A4A09948554EB (void);
-// 0x00000029 System.Boolean BikeManager::<getStartupInfoRoutine>b__92_4()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__92_4_m86629016BCC73E3F9C80DDD97CFF393AF8DA1970 (void);
+// 0x0000001C System.Void BikeManager::<Start>b__84_1()
+extern void BikeManager_U3CStartU3Eb__84_1_m0F566F61E7D31BA5E797A000A903EE0D33BA993C (void);
+// 0x0000001D System.Void BikeManager::<Start>b__84_2()
+extern void BikeManager_U3CStartU3Eb__84_2_mB83CA6DF7CE818BD3AE2E5C07FE8C9174D55CAA0 (void);
+// 0x0000001E System.Void BikeManager::<Start>b__84_3()
+extern void BikeManager_U3CStartU3Eb__84_3_mEC4E1A27DFCCE6CD96393ECC0677712A63FAAC0E (void);
+// 0x0000001F System.Void BikeManager::<Start>b__84_4()
+extern void BikeManager_U3CStartU3Eb__84_4_mBCF23FD7CF2134F0066D39147CB8AF2EFDF6C096 (void);
+// 0x00000020 System.Void BikeManager::<Start>b__84_5()
+extern void BikeManager_U3CStartU3Eb__84_5_m7A0316BB8CC81B00A5DB300FF49271D9793E6785 (void);
+// 0x00000021 System.Void BikeManager::<Start>b__84_6(System.Boolean)
+extern void BikeManager_U3CStartU3Eb__84_6_m728B2645F4DC223BD08980D861A9856ACA7BA045 (void);
+// 0x00000022 System.Void BikeManager::<Start>b__84_7()
+extern void BikeManager_U3CStartU3Eb__84_7_mB55107D94D4941DAD2787A7DCB3D59144C71527F (void);
+// 0x00000023 System.Void BikeManager::<Start>b__84_8()
+extern void BikeManager_U3CStartU3Eb__84_8_m4D67B7E47B69202B8D8D02930C5EF3484B65EB04 (void);
+// 0x00000024 System.Void BikeManager::<onServicesDiscovered>b__92_0(System.Boolean)
+extern void BikeManager_U3ConServicesDiscoveredU3Eb__92_0_m1B513A170A27C6840F81997FBC58D5FE59A17F51 (void);
+// 0x00000025 System.Boolean BikeManager::<getStartupInfoRoutine>b__93_0()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__93_0_mDE76F712AC81902B1D06533F8D2FD2ECB519A5EA (void);
+// 0x00000026 System.Boolean BikeManager::<getStartupInfoRoutine>b__93_1()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__93_1_mB893F916BAB155BC857B68DC5690C8D121B8037E (void);
+// 0x00000027 System.Boolean BikeManager::<getStartupInfoRoutine>b__93_2()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__93_2_m76BA207F5AA696C4EFB81EBBC5703E690CEC7A88 (void);
+// 0x00000028 System.Boolean BikeManager::<getStartupInfoRoutine>b__93_3()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__93_3_m70C7CE7B50FAC6A2280A12EEE70178458BAC4864 (void);
+// 0x00000029 System.Boolean BikeManager::<getStartupInfoRoutine>b__93_4()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__93_4_m21CEFD63BB49869DC262D6B411A7BEF907282C77 (void);
 // 0x0000002A System.Void BikeManager/<>c::.cctor()
 extern void U3CU3Ec__cctor_mB8820353BD8AB96927BFE96420C9D00DABC217D0 (void);
 // 0x0000002B System.Void BikeManager/<>c::.ctor()
 extern void U3CU3Ec__ctor_mA94EF8086F7B1619E26C6AB6476569E11C558FC7 (void);
-// 0x0000002C System.Void BikeManager/<>c::<Start>b__83_0()
-extern void U3CU3Ec_U3CStartU3Eb__83_0_mC461B0283ACFF58E4C5C08104ED22A05343FE648 (void);
-// 0x0000002D System.Void BikeManager/<setThemeRoutine>d__84::.ctor(System.Int32)
-extern void U3CsetThemeRoutineU3Ed__84__ctor_m49330A81521C18BDA39C798941D8B840107CEF9E (void);
-// 0x0000002E System.Void BikeManager/<setThemeRoutine>d__84::System.IDisposable.Dispose()
-extern void U3CsetThemeRoutineU3Ed__84_System_IDisposable_Dispose_mDF66C8E9C3D4D737D598B397D493BD1284F2CCC7 (void);
-// 0x0000002F System.Boolean BikeManager/<setThemeRoutine>d__84::MoveNext()
-extern void U3CsetThemeRoutineU3Ed__84_MoveNext_m29439DA678F9455D9A9019F4658E8B7AC1894D4F (void);
-// 0x00000030 System.Object BikeManager/<setThemeRoutine>d__84::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CsetThemeRoutineU3Ed__84_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m89FFF8D3E20B6B7B0FCEEA1622B9A842461FEE82 (void);
-// 0x00000031 System.Void BikeManager/<setThemeRoutine>d__84::System.Collections.IEnumerator.Reset()
-extern void U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_Reset_m19A7648B0583FBC2836D3402104FA7D5F4EAB21A (void);
-// 0x00000032 System.Object BikeManager/<setThemeRoutine>d__84::System.Collections.IEnumerator.get_Current()
-extern void U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_get_Current_m0B542EFE538E52D3CF1686EDFF620EC01B629748 (void);
-// 0x00000033 System.Void BikeManager/<scanRoutine>d__87::.ctor(System.Int32)
-extern void U3CscanRoutineU3Ed__87__ctor_mFB3A20A246A6301367D4DACBC9D248B78022D19E (void);
-// 0x00000034 System.Void BikeManager/<scanRoutine>d__87::System.IDisposable.Dispose()
-extern void U3CscanRoutineU3Ed__87_System_IDisposable_Dispose_m52BC0CF51AEF9B9959F182BA5B35C76790ADDB3B (void);
-// 0x00000035 System.Boolean BikeManager/<scanRoutine>d__87::MoveNext()
-extern void U3CscanRoutineU3Ed__87_MoveNext_m107E8563C7743FDF52E67DE3E90789DD7BF63A14 (void);
-// 0x00000036 System.Object BikeManager/<scanRoutine>d__87::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CscanRoutineU3Ed__87_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m980AC218B02229A3D2EBF6D6BB96A63CA6C67346 (void);
-// 0x00000037 System.Void BikeManager/<scanRoutine>d__87::System.Collections.IEnumerator.Reset()
-extern void U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_Reset_mE82D840A1CFCC9A932287AACA798179D2A68DF81 (void);
-// 0x00000038 System.Object BikeManager/<scanRoutine>d__87::System.Collections.IEnumerator.get_Current()
-extern void U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_get_Current_m36C897C4F5CE789BA48FB7C589928AD6944E40D2 (void);
-// 0x00000039 System.Void BikeManager/<getStartupInfoRoutine>d__92::.ctor(System.Int32)
-extern void U3CgetStartupInfoRoutineU3Ed__92__ctor_m7BA29F75224B6DBF10B8DC021A70EE7FA1EF7372 (void);
-// 0x0000003A System.Void BikeManager/<getStartupInfoRoutine>d__92::System.IDisposable.Dispose()
-extern void U3CgetStartupInfoRoutineU3Ed__92_System_IDisposable_Dispose_m775F4257BF0FEA18DB0E3C362EC93E441078DF00 (void);
-// 0x0000003B System.Boolean BikeManager/<getStartupInfoRoutine>d__92::MoveNext()
-extern void U3CgetStartupInfoRoutineU3Ed__92_MoveNext_m74376AB42F1163B3947D6540CBD8607BD86A1150 (void);
-// 0x0000003C System.Object BikeManager/<getStartupInfoRoutine>d__92::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CgetStartupInfoRoutineU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDCABB1552506554CD9D25D2DE8BEF59142D3417A (void);
-// 0x0000003D System.Void BikeManager/<getStartupInfoRoutine>d__92::System.Collections.IEnumerator.Reset()
-extern void U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_Reset_m70750595A23B4364ECEC3B6067A0239BE04EE6A1 (void);
-// 0x0000003E System.Object BikeManager/<getStartupInfoRoutine>d__92::System.Collections.IEnumerator.get_Current()
-extern void U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_get_Current_mA2E612CA3AE8022FADC616E1ADDB45902C0567E4 (void);
+// 0x0000002C System.Void BikeManager/<>c::<Start>b__84_0()
+extern void U3CU3Ec_U3CStartU3Eb__84_0_m16AEE217C917ACB3FE46D29A1C73536972467756 (void);
+// 0x0000002D System.Void BikeManager/<setThemeRoutine>d__85::.ctor(System.Int32)
+extern void U3CsetThemeRoutineU3Ed__85__ctor_mC78595256C3DA185C97A2349E7EA535EAB4D3E49 (void);
+// 0x0000002E System.Void BikeManager/<setThemeRoutine>d__85::System.IDisposable.Dispose()
+extern void U3CsetThemeRoutineU3Ed__85_System_IDisposable_Dispose_m61C27B775072C0799B6BEC55302B70F4527FE873 (void);
+// 0x0000002F System.Boolean BikeManager/<setThemeRoutine>d__85::MoveNext()
+extern void U3CsetThemeRoutineU3Ed__85_MoveNext_mE8868D0C555682329746CB0B11802F97534F6159 (void);
+// 0x00000030 System.Object BikeManager/<setThemeRoutine>d__85::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CsetThemeRoutineU3Ed__85_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF36D7AAA3BB66048227735C3DF8EC557209437F6 (void);
+// 0x00000031 System.Void BikeManager/<setThemeRoutine>d__85::System.Collections.IEnumerator.Reset()
+extern void U3CsetThemeRoutineU3Ed__85_System_Collections_IEnumerator_Reset_m178690E732612EF2EF52F82AEA55D65525FDBAC2 (void);
+// 0x00000032 System.Object BikeManager/<setThemeRoutine>d__85::System.Collections.IEnumerator.get_Current()
+extern void U3CsetThemeRoutineU3Ed__85_System_Collections_IEnumerator_get_Current_m803C73C81EFD6C4F4D2F3EE182C4550144CD4C7C (void);
+// 0x00000033 System.Void BikeManager/<scanRoutine>d__88::.ctor(System.Int32)
+extern void U3CscanRoutineU3Ed__88__ctor_mC0ECD5E2D781485878C04C096B52576E40E47961 (void);
+// 0x00000034 System.Void BikeManager/<scanRoutine>d__88::System.IDisposable.Dispose()
+extern void U3CscanRoutineU3Ed__88_System_IDisposable_Dispose_m6A8ADFC4362718361440E8DDD03D54CD6C12831B (void);
+// 0x00000035 System.Boolean BikeManager/<scanRoutine>d__88::MoveNext()
+extern void U3CscanRoutineU3Ed__88_MoveNext_m9A489A33B814B2AA07200B26563B998A722CC54E (void);
+// 0x00000036 System.Object BikeManager/<scanRoutine>d__88::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CscanRoutineU3Ed__88_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m136FCC81D87930CBA181747C357684222B351A8F (void);
+// 0x00000037 System.Void BikeManager/<scanRoutine>d__88::System.Collections.IEnumerator.Reset()
+extern void U3CscanRoutineU3Ed__88_System_Collections_IEnumerator_Reset_m89579133CD8576D7A6E2310E2EBBB4B83E7FC0FA (void);
+// 0x00000038 System.Object BikeManager/<scanRoutine>d__88::System.Collections.IEnumerator.get_Current()
+extern void U3CscanRoutineU3Ed__88_System_Collections_IEnumerator_get_Current_m99C3D045B3EA2AD5C9EB0ADFA554929B98370D6A (void);
+// 0x00000039 System.Void BikeManager/<getStartupInfoRoutine>d__93::.ctor(System.Int32)
+extern void U3CgetStartupInfoRoutineU3Ed__93__ctor_m7D9994B68C2E7B6B7001999C2138F74BB9F80C40 (void);
+// 0x0000003A System.Void BikeManager/<getStartupInfoRoutine>d__93::System.IDisposable.Dispose()
+extern void U3CgetStartupInfoRoutineU3Ed__93_System_IDisposable_Dispose_m616583ECF3348EDF217E01C0D20C25C7EAAE15E2 (void);
+// 0x0000003B System.Boolean BikeManager/<getStartupInfoRoutine>d__93::MoveNext()
+extern void U3CgetStartupInfoRoutineU3Ed__93_MoveNext_m879EB5BEFAF2CBE00745D31005DD085E36D6C6AC (void);
+// 0x0000003C System.Object BikeManager/<getStartupInfoRoutine>d__93::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CgetStartupInfoRoutineU3Ed__93_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE303F40D97887489DE3EA1892F384EE4178080F9 (void);
+// 0x0000003D System.Void BikeManager/<getStartupInfoRoutine>d__93::System.Collections.IEnumerator.Reset()
+extern void U3CgetStartupInfoRoutineU3Ed__93_System_Collections_IEnumerator_Reset_mB1A735AFF13C70607AACA4D89930A9FB85C3B310 (void);
+// 0x0000003E System.Object BikeManager/<getStartupInfoRoutine>d__93::System.Collections.IEnumerator.get_Current()
+extern void U3CgetStartupInfoRoutineU3Ed__93_System_Collections_IEnumerator_get_Current_m4F734249D094E3FB42F7B5CC859243DAE4F89E20 (void);
 // 0x0000003F System.Void BikeState::Awake()
 extern void BikeState_Awake_m215A48389DC48A0E01D4462C91561F20FDFB53E8 (void);
 // 0x00000040 System.Int32 BikeState::getMode()
@@ -200,134 +200,134 @@ extern void BikeState_processTotalData_m96098477EDB83A335F8A909452A2BAB397C5CBE7
 extern void BikeState_processPedalData_m41DC249403FCB81C00122625D5B1DDE1377BA494 (void);
 // 0x0000005E System.Boolean BikeState::processPowerData(System.Byte[])
 extern void BikeState_processPowerData_mAFDF2961F330C00ED9DED31BA7BA3141F5CB2373 (void);
-// 0x0000005F System.Void BikeState::wheelSpeedFromRawPower()
-extern void BikeState_wheelSpeedFromRawPower_m5C2F7F4662DA9FA5FE28DDC5C4214DFE66503AB8 (void);
-// 0x00000060 System.Void BikeState::wheelSpeedFromRaw()
+// 0x0000005F System.Void BikeState::wheelSpeedFromRaw()
 extern void BikeState_wheelSpeedFromRaw_m750599E5654046FD2D541EEE491FFB529DE177E7 (void);
-// 0x00000061 System.Void BikeState::wheelRPMFromSpeed()
+// 0x00000060 System.Void BikeState::wheelRPMFromSpeed()
 extern void BikeState_wheelRPMFromSpeed_mBF4D2ED27C8F53C3E8F63156F0BDF9F873790001 (void);
-// 0x00000062 System.Void BikeState::pedalRPMFromRaw()
+// 0x00000061 System.Void BikeState::pedalRPMFromRaw()
 extern void BikeState_pedalRPMFromRaw_m1F554D768634C0D1AF28AA77EF566A8B34D10A9E (void);
-// 0x00000063 System.Void BikeState::pedalRPMFromRawPower()
+// 0x00000062 System.Void BikeState::pedalRPMFromRawPower()
 extern void BikeState_pedalRPMFromRawPower_mEC76FE81F9CCAA8AB419C73F0855A53250C04341 (void);
-// 0x00000064 System.Void BikeState::rangeFromBatteryLevel()
+// 0x00000063 System.Void BikeState::rangeFromBatteryLevel()
 extern void BikeState_rangeFromBatteryLevel_mB13BAA841372FA2F83923229FEE353B7810130ED (void);
-// 0x00000065 System.Void BikeState::batteryLevelFromRawRange()
+// 0x00000064 System.Void BikeState::batteryLevelFromRawRange()
 extern void BikeState_batteryLevelFromRawRange_m050FEA50B3D2070181C15C2015C4B2C07754805B (void);
-// 0x00000066 System.Void BikeState::voltageFromBatteryLevel()
+// 0x00000065 System.Void BikeState::voltageFromBatteryLevel()
 extern void BikeState_voltageFromBatteryLevel_mCDF95C1A70567C5B9957BAA7B2DD6D1E5F7DAF47 (void);
-// 0x00000067 System.Boolean BikeState::dataIsId(System.Byte[],System.Byte[])
+// 0x00000066 System.Boolean BikeState::dataIsId(System.Byte[],System.Byte[])
 extern void BikeState_dataIsId_m5FD44299F4904A192B369EF3ABCA7019BAD033F3 (void);
-// 0x00000068 System.Boolean BikeState::Equals(System.Object)
+// 0x00000067 System.Boolean BikeState::Equals(System.Object)
 extern void BikeState_Equals_m6D5D3B813E71A4D0A32294F3BCC065BFDFFE7DBB (void);
-// 0x00000069 System.String BikeState::ToString()
+// 0x00000068 System.String BikeState::ToString()
 extern void BikeState_ToString_mBFE84ED64E1BF289BD0AE41BFD36AC16D3347263 (void);
-// 0x0000006A System.Void BikeState::.ctor()
+// 0x00000069 System.Void BikeState::.ctor()
 extern void BikeState__ctor_m7ED683829739BB253DF0CAF4BCECAF1E9C8FB35C (void);
-// 0x0000006B System.Void BikeState::.cctor()
+// 0x0000006A System.Void BikeState::.cctor()
 extern void BikeState__cctor_mC7C3FABD429B40297D96437B0F86442DE505AD8A (void);
-// 0x0000006C System.Void AdaptToSafeArea::Start()
+// 0x0000006B System.Void AdaptToSafeArea::Start()
 extern void AdaptToSafeArea_Start_mDCFBFF3C863B6BF5F9FFA80D5D22F1EBDD2F18D0 (void);
-// 0x0000006D System.Void AdaptToSafeArea::applySafeArea(UnityEngine.RectTransform)
+// 0x0000006C System.Void AdaptToSafeArea::applySafeArea(UnityEngine.RectTransform)
 extern void AdaptToSafeArea_applySafeArea_m740D56CA4E96B27E08ED9E40146A59D9B644802F (void);
-// 0x0000006E System.Void AdaptToSafeArea::.ctor()
+// 0x0000006D System.Void AdaptToSafeArea::.ctor()
 extern void AdaptToSafeArea__ctor_m2E7E26F94AEEE98419E269F6F63A0826E64FC42D (void);
-// 0x0000006F System.Void DebugText::Awake()
+// 0x0000006E System.Void DebugText::Awake()
 extern void DebugText_Awake_mFC4001865F0F57196C22BFEFEA9E87B81F47BDB4 (void);
-// 0x00000070 System.Void DebugText::OnEnable()
+// 0x0000006F System.Void DebugText::OnEnable()
 extern void DebugText_OnEnable_mA9B5C81117E330ACB050D660788E13590A38806E (void);
-// 0x00000071 System.Void DebugText::OnDisable()
+// 0x00000070 System.Void DebugText::OnDisable()
 extern void DebugText_OnDisable_m07E63376E03A469B8B236F0B7D92CE36BF552874 (void);
-// 0x00000072 System.Void DebugText::HandleLog(System.String,System.String,UnityEngine.LogType)
+// 0x00000071 System.Void DebugText::HandleLog(System.String,System.String,UnityEngine.LogType)
 extern void DebugText_HandleLog_mCF10770A207EA008665CBB4889B686D8E2ED3E36 (void);
-// 0x00000073 System.Void DebugText::.ctor()
+// 0x00000072 System.Void DebugText::.ctor()
 extern void DebugText__ctor_m6DD57C61A6534302F9D2708163BBDB0C7BCC566C (void);
-// 0x00000074 System.Void NativeBLE::Awake()
+// 0x00000073 System.Void NativeBLE::Awake()
 extern void NativeBLE_Awake_mCAA5CB3D549C6431F30DBD824C245564167A27B3 (void);
-// 0x00000075 NativeBLE/ConnectedDevice NativeBLE::getConnectedDevice()
+// 0x00000074 NativeBLE/ConnectedDevice NativeBLE::getConnectedDevice()
 extern void NativeBLE_getConnectedDevice_m0AD1AA1D936B432F20A1A0E20A919A28536AEB12 (void);
-// 0x00000076 System.Boolean NativeBLE::scanBLE()
+// 0x00000075 System.Boolean NativeBLE::scanBLE()
 extern void NativeBLE_scanBLE_mBF352B23CE72C49B96CC4D7329591C24C5E56CF3 (void);
-// 0x00000077 System.Boolean NativeBLE::scanBLEfilter(System.String)
+// 0x00000076 System.Boolean NativeBLE::scanBLEfilter(System.String)
 extern void NativeBLE_scanBLEfilter_m6FDEDD097D1BB35B0CE0FB33468D1D1FC70690D4 (void);
-// 0x00000078 System.Boolean NativeBLE::connectBLE(System.String)
+// 0x00000077 System.Boolean NativeBLE::connectBLE(System.String)
 extern void NativeBLE_connectBLE_mA0BB5EF8AEAF68B2EF7A48DE09DAE0150FFF6A88 (void);
-// 0x00000079 System.Boolean NativeBLE::exploreServices()
+// 0x00000078 System.Boolean NativeBLE::exploreServices()
 extern void NativeBLE_exploreServices_mC03EE0949C8A6631B60A5A61DBFB3A11B16F2134 (void);
-// 0x0000007A System.Boolean NativeBLE::writeCharacteristic(System.String,System.String,System.Byte[])
+// 0x00000079 System.Boolean NativeBLE::writeCharacteristic(System.String,System.String,System.Byte[])
 extern void NativeBLE_writeCharacteristic_m133BD18CAAF8FC9D392C9DA660EA4254974A8069 (void);
-// 0x0000007B System.Boolean NativeBLE::readCharacteristic(System.String,System.String)
+// 0x0000007A System.Boolean NativeBLE::readCharacteristic(System.String,System.String)
 extern void NativeBLE_readCharacteristic_m766B7A4B05245F21E780EB875986E0880D481558 (void);
-// 0x0000007C System.Boolean NativeBLE::subscribeCharacteristic(System.String,System.String,System.Boolean)
+// 0x0000007B System.Boolean NativeBLE::subscribeCharacteristic(System.String,System.String,System.Boolean)
 extern void NativeBLE_subscribeCharacteristic_m25B261406812CC8C28FA83DC98FE27E1035260FB (void);
-// 0x0000007D System.Boolean NativeBLE::disconnectBLE()
+// 0x0000007C System.Boolean NativeBLE::disconnectBLE()
 extern void NativeBLE_disconnectBLE_m240D3B95FEE7DFDA54F4ADB8F3B7113A29BF9F46 (void);
-// 0x0000007E System.Void NativeBLE::scanResult(System.String)
+// 0x0000007D System.Void NativeBLE::scanResult(System.String)
 extern void NativeBLE_scanResult_m2BD4A345500B9672B4949227C114B55B684D491A (void);
-// 0x0000007F System.Void NativeBLE::connected(System.String)
+// 0x0000007E System.Void NativeBLE::connected(System.String)
 extern void NativeBLE_connected_m76DF3C8A111EABDFB5ADA49AFF350B9BD6C841D8 (void);
-// 0x00000080 System.Void NativeBLE::disconnected(System.String)
+// 0x0000007F System.Void NativeBLE::disconnected(System.String)
 extern void NativeBLE_disconnected_mBCD6CA0EDFF9CA3F1F9D8E60FF79D59B4D0D2738 (void);
-// 0x00000081 System.Void NativeBLE::characteristicRead(System.String)
+// 0x00000080 System.Void NativeBLE::characteristicRead(System.String)
 extern void NativeBLE_characteristicRead_mEF24FC6DFD4382F82A98A2012C930E967A21937C (void);
-// 0x00000082 System.Void NativeBLE::characteristicWrite(System.String)
+// 0x00000081 System.Void NativeBLE::characteristicWrite(System.String)
 extern void NativeBLE_characteristicWrite_m19D743C39AD909651D2EBE8E4C729A27B1083A5C (void);
-// 0x00000083 System.Void NativeBLE::characteristicChanged(System.String)
+// 0x00000082 System.Void NativeBLE::characteristicChanged(System.String)
 extern void NativeBLE_characteristicChanged_m163E3E90344E42D1CCCE89EBBAB80478AADC4675 (void);
-// 0x00000084 System.Void NativeBLE::descriptorWrite(System.String)
+// 0x00000083 System.Void NativeBLE::descriptorWrite(System.String)
 extern void NativeBLE_descriptorWrite_m4BD031855A9E44746C671B49889A5DAAE21FBE72 (void);
-// 0x00000085 System.Void NativeBLE::mtuChanged(System.String)
+// 0x00000084 System.Void NativeBLE::mtuChanged(System.String)
 extern void NativeBLE_mtuChanged_mE0D19000DC113DF31DBFE47D9004FF7B74C71172 (void);
-// 0x00000086 System.Void NativeBLE::phyRead(System.String)
+// 0x00000085 System.Void NativeBLE::phyRead(System.String)
 extern void NativeBLE_phyRead_mCA433BC1CCF12FCF2CEC4262CDB0A75E37FE2EF6 (void);
-// 0x00000087 System.Void NativeBLE::phyUpdate(System.String)
+// 0x00000086 System.Void NativeBLE::phyUpdate(System.String)
 extern void NativeBLE_phyUpdate_mE424074B68688099C26F1B585330F0304AD95ECC (void);
-// 0x00000088 System.Void NativeBLE::readRemoteRssi(System.String)
+// 0x00000087 System.Void NativeBLE::readRemoteRssi(System.String)
 extern void NativeBLE_readRemoteRssi_m3B59AAF7706FF43D3B37B7CE13BC72878F6F5B7C (void);
-// 0x00000089 System.Void NativeBLE::reliableWriteCompleted(System.String)
+// 0x00000088 System.Void NativeBLE::reliableWriteCompleted(System.String)
 extern void NativeBLE_reliableWriteCompleted_m60C656ABFD54F8F7A29DB2748265F0EAD90C42BD (void);
-// 0x0000008A System.Void NativeBLE::serviceChanged(System.String)
+// 0x00000089 System.Void NativeBLE::serviceChanged(System.String)
 extern void NativeBLE_serviceChanged_m3A5A5EA2C5FE1BB81F7BA77FD9B264C721BA3E35 (void);
-// 0x0000008B System.Void NativeBLE::servicesDiscovered(System.String)
+// 0x0000008A System.Void NativeBLE::servicesDiscovered(System.String)
 extern void NativeBLE_servicesDiscovered_mD01BB60EC147F8E69F1B4477EF7DA17345CF6110 (void);
-// 0x0000008C NativeBLE/DeviceTheme NativeBLE::getDeviceTheme()
+// 0x0000008B NativeBLE/DeviceTheme NativeBLE::getDeviceTheme()
 extern void NativeBLE_getDeviceTheme_m6815B87E184AB5C16AAA0B3999BC588624C61C9B (void);
-// 0x0000008D System.Void NativeBLE::messageFromAndroid(System.String)
+// 0x0000008C System.Void NativeBLE::messageFromAndroid(System.String)
 extern void NativeBLE_messageFromAndroid_mB0AF305174044FB03F91D3423489BFAE09C27C34 (void);
-// 0x0000008E System.Void NativeBLE::.ctor()
+// 0x0000008D System.Void NativeBLE::.ctor()
 extern void NativeBLE__ctor_m2948183A5FDFA6BD06F37577AFE74E402BA0F438 (void);
-// 0x0000008F System.Void NativeBLE::.cctor()
+// 0x0000008E System.Void NativeBLE::.cctor()
 extern void NativeBLE__cctor_mCB462C976056D2CFAC36C47887CE334B4983CC4E (void);
-// 0x00000090 System.Boolean NativeBLE/BtleDevice::Equals(NativeBLE/BtleDevice)
+// 0x0000008F System.Boolean NativeBLE/BtleDevice::Equals(NativeBLE/BtleDevice)
 extern void BtleDevice_Equals_m61CCB5F0B6053F5DA6B2C9862A33D06BF209EBF2 (void);
-// 0x00000091 System.String NativeBLE/BtleDevice::ToString()
+// 0x00000090 System.String NativeBLE/BtleDevice::ToString()
 extern void BtleDevice_ToString_m52D397A52850D6A1A116CD73389A203F9EF7182D (void);
-// 0x00000092 System.Void NativeBLE/BtleDevice::.ctor()
+// 0x00000091 System.Void NativeBLE/BtleDevice::.ctor()
 extern void BtleDevice__ctor_mFE5A64EA2D37D9D64FFFBAF3C8681650E689AE38 (void);
-// 0x00000093 System.String NativeBLE/ConnectedDevice::ToString()
+// 0x00000092 System.String NativeBLE/ConnectedDevice::ToString()
 extern void ConnectedDevice_ToString_mE476F7701C00EC64EB15C6AAF16502CC294569EE (void);
-// 0x00000094 System.Void NativeBLE/ConnectedDevice::.ctor()
+// 0x00000093 System.Void NativeBLE/ConnectedDevice::.ctor()
 extern void ConnectedDevice__ctor_m8D1515A40D295B5737042DA863D09435DCF67D14 (void);
-// 0x00000095 System.Void NativeBLE/BleResponse::.ctor()
+// 0x00000094 System.Void NativeBLE/BleResponse::.ctor()
 extern void BleResponse__ctor_m6B59AADB0BDD4EBBBE4CCE2CA1A274400E9964FF (void);
-// 0x00000096 System.Void UpdateAndroidLib::updateLib()
+// 0x00000095 System.Void UpdateAndroidLib::updateLib()
 extern void UpdateAndroidLib_updateLib_m133580AAC72294313BE7F471A0A824F420D6E9D6 (void);
-// 0x00000097 System.Void UpdateAndroidLib::.ctor()
+// 0x00000096 System.Void UpdateAndroidLib::.ctor()
 extern void UpdateAndroidLib__ctor_m0A6EDD2FDD19F2B0B6DC2D3EB9CC8BB9753B1A27 (void);
-// 0x00000098 System.Void PrefsOverlay::Start()
+// 0x00000097 System.Void PrefsOverlay::Start()
 extern void PrefsOverlay_Start_mB5BE5DE0CC979E71D2F8F741AC94EBA3E13B07F4 (void);
-// 0x00000099 System.Void PrefsOverlay::.ctor()
+// 0x00000098 System.Void PrefsOverlay::.ctor()
 extern void PrefsOverlay__ctor_m9C898BA525173BFE4507DD3DAECF8D2F52570152 (void);
-// 0x0000009A System.Void PrefsOverlay::<Start>b__5_0()
-extern void PrefsOverlay_U3CStartU3Eb__5_0_mB19C546D3F92A198718F1D89D9802C7CA904B6BD (void);
-// 0x0000009B System.Void PrefsOverlay::<Start>b__5_1(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__5_1_m45EA8EF48504337B53FDC10F7F8D13FB789AC63F (void);
-// 0x0000009C System.Void PrefsOverlay::<Start>b__5_2(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__5_2_mBCAE39FC4AD740D0DDE86C328B289E5D9B09F32C (void);
-// 0x0000009D System.Void PrefsOverlay::<Start>b__5_3(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__5_3_m3B35FF52CB9CAFD9FFE6CD795D364D6382A695FA (void);
-// 0x0000009E System.Void PrefsOverlay::<Start>b__5_4(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__5_4_m5F0C53136F6A83AF00931FCDE9241DC6287CEAB4 (void);
+// 0x00000099 System.Void PrefsOverlay::<Start>b__6_0()
+extern void PrefsOverlay_U3CStartU3Eb__6_0_mEAE746C82060FEF5CC289347C52CED20BB862B3B (void);
+// 0x0000009A System.Void PrefsOverlay::<Start>b__6_1(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__6_1_m9D91B79F8B2011000AFCC58BCBCE62845C7530CC (void);
+// 0x0000009B System.Void PrefsOverlay::<Start>b__6_2(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__6_2_mB1EF41E6FC37862FF7967D6452FE6B28FDB5C622 (void);
+// 0x0000009C System.Void PrefsOverlay::<Start>b__6_3(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__6_3_m0BEB6172975B546E79EDF33C03A9BAB76FD56980 (void);
+// 0x0000009D System.Void PrefsOverlay::<Start>b__6_4(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__6_4_mFF0A54CF1D323154820690701F5AB2F7F3C4D51D (void);
+// 0x0000009E System.Void PrefsOverlay::<Start>b__6_5(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__6_5_mBBE6E66F5B15F6AF89BE53D4FE57C877055C493E (void);
 // 0x0000009F System.Void DeviceLine::set(NativeBLE/BtleDevice)
 extern void DeviceLine_set_mDFC8EDF332B9D7AC14971452751359E68750A2EA (void);
 // 0x000000A0 System.Void DeviceLine::.ctor()
@@ -446,41 +446,41 @@ static Il2CppMethodPointer s_methodPointers[203] =
 	BikeManager_updateNotificationDebug_m217526E292627D155B50364CD6AEA944BE0EF428,
 	BikeManager__ctor_m6C2113CE9A0F4F0565E68D7DDC8D6B2DC479804D,
 	BikeManager__cctor_m595BD005278BCCCDF9A7E3827B396E90B369A9C3,
-	BikeManager_U3CStartU3Eb__83_1_mAC43087F01C11F26B9D72F96678B531A10053FB0,
-	BikeManager_U3CStartU3Eb__83_2_m3FBEA88F04D6F2A1BF9B0E7A32BAE8122F8507F3,
-	BikeManager_U3CStartU3Eb__83_3_m23C9B9DD47330A0816487B5B0DB8275BC26C5779,
-	BikeManager_U3CStartU3Eb__83_4_mDC3F6032B9CDFA9663A2FABCB0FF2E432A3FC43A,
-	BikeManager_U3CStartU3Eb__83_5_mA3E07478AE2A4963F51DD0C34096713879C3618C,
-	BikeManager_U3CStartU3Eb__83_6_m94DE583BCEF7BD4517D633038F188A957D4929C9,
-	BikeManager_U3CStartU3Eb__83_7_m54A6C5BA61601DB541C0793B9510D5EEDE22AB56,
-	BikeManager_U3CStartU3Eb__83_8_m7BF94E902AF0269AD252FE3FA93DBBD8AE28EB83,
-	BikeManager_U3ConServicesDiscoveredU3Eb__91_0_m2740D53E25C2298511B69F9EB214247CA2C81A83,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__92_0_m89394C4DB2C87D12B1487037B268EB380730F7F0,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__92_1_m8DB9A997698CB20E79D1827AB9B977CEA7538B56,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__92_2_m41D6601222BAD91A8ABF2BA80C3412F646C9B4BB,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__92_3_m83451C22EF1405799CBB30E9CF0A4A09948554EB,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__92_4_m86629016BCC73E3F9C80DDD97CFF393AF8DA1970,
+	BikeManager_U3CStartU3Eb__84_1_m0F566F61E7D31BA5E797A000A903EE0D33BA993C,
+	BikeManager_U3CStartU3Eb__84_2_mB83CA6DF7CE818BD3AE2E5C07FE8C9174D55CAA0,
+	BikeManager_U3CStartU3Eb__84_3_mEC4E1A27DFCCE6CD96393ECC0677712A63FAAC0E,
+	BikeManager_U3CStartU3Eb__84_4_mBCF23FD7CF2134F0066D39147CB8AF2EFDF6C096,
+	BikeManager_U3CStartU3Eb__84_5_m7A0316BB8CC81B00A5DB300FF49271D9793E6785,
+	BikeManager_U3CStartU3Eb__84_6_m728B2645F4DC223BD08980D861A9856ACA7BA045,
+	BikeManager_U3CStartU3Eb__84_7_mB55107D94D4941DAD2787A7DCB3D59144C71527F,
+	BikeManager_U3CStartU3Eb__84_8_m4D67B7E47B69202B8D8D02930C5EF3484B65EB04,
+	BikeManager_U3ConServicesDiscoveredU3Eb__92_0_m1B513A170A27C6840F81997FBC58D5FE59A17F51,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__93_0_mDE76F712AC81902B1D06533F8D2FD2ECB519A5EA,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__93_1_mB893F916BAB155BC857B68DC5690C8D121B8037E,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__93_2_m76BA207F5AA696C4EFB81EBBC5703E690CEC7A88,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__93_3_m70C7CE7B50FAC6A2280A12EEE70178458BAC4864,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__93_4_m21CEFD63BB49869DC262D6B411A7BEF907282C77,
 	U3CU3Ec__cctor_mB8820353BD8AB96927BFE96420C9D00DABC217D0,
 	U3CU3Ec__ctor_mA94EF8086F7B1619E26C6AB6476569E11C558FC7,
-	U3CU3Ec_U3CStartU3Eb__83_0_mC461B0283ACFF58E4C5C08104ED22A05343FE648,
-	U3CsetThemeRoutineU3Ed__84__ctor_m49330A81521C18BDA39C798941D8B840107CEF9E,
-	U3CsetThemeRoutineU3Ed__84_System_IDisposable_Dispose_mDF66C8E9C3D4D737D598B397D493BD1284F2CCC7,
-	U3CsetThemeRoutineU3Ed__84_MoveNext_m29439DA678F9455D9A9019F4658E8B7AC1894D4F,
-	U3CsetThemeRoutineU3Ed__84_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m89FFF8D3E20B6B7B0FCEEA1622B9A842461FEE82,
-	U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_Reset_m19A7648B0583FBC2836D3402104FA7D5F4EAB21A,
-	U3CsetThemeRoutineU3Ed__84_System_Collections_IEnumerator_get_Current_m0B542EFE538E52D3CF1686EDFF620EC01B629748,
-	U3CscanRoutineU3Ed__87__ctor_mFB3A20A246A6301367D4DACBC9D248B78022D19E,
-	U3CscanRoutineU3Ed__87_System_IDisposable_Dispose_m52BC0CF51AEF9B9959F182BA5B35C76790ADDB3B,
-	U3CscanRoutineU3Ed__87_MoveNext_m107E8563C7743FDF52E67DE3E90789DD7BF63A14,
-	U3CscanRoutineU3Ed__87_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m980AC218B02229A3D2EBF6D6BB96A63CA6C67346,
-	U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_Reset_mE82D840A1CFCC9A932287AACA798179D2A68DF81,
-	U3CscanRoutineU3Ed__87_System_Collections_IEnumerator_get_Current_m36C897C4F5CE789BA48FB7C589928AD6944E40D2,
-	U3CgetStartupInfoRoutineU3Ed__92__ctor_m7BA29F75224B6DBF10B8DC021A70EE7FA1EF7372,
-	U3CgetStartupInfoRoutineU3Ed__92_System_IDisposable_Dispose_m775F4257BF0FEA18DB0E3C362EC93E441078DF00,
-	U3CgetStartupInfoRoutineU3Ed__92_MoveNext_m74376AB42F1163B3947D6540CBD8607BD86A1150,
-	U3CgetStartupInfoRoutineU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDCABB1552506554CD9D25D2DE8BEF59142D3417A,
-	U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_Reset_m70750595A23B4364ECEC3B6067A0239BE04EE6A1,
-	U3CgetStartupInfoRoutineU3Ed__92_System_Collections_IEnumerator_get_Current_mA2E612CA3AE8022FADC616E1ADDB45902C0567E4,
+	U3CU3Ec_U3CStartU3Eb__84_0_m16AEE217C917ACB3FE46D29A1C73536972467756,
+	U3CsetThemeRoutineU3Ed__85__ctor_mC78595256C3DA185C97A2349E7EA535EAB4D3E49,
+	U3CsetThemeRoutineU3Ed__85_System_IDisposable_Dispose_m61C27B775072C0799B6BEC55302B70F4527FE873,
+	U3CsetThemeRoutineU3Ed__85_MoveNext_mE8868D0C555682329746CB0B11802F97534F6159,
+	U3CsetThemeRoutineU3Ed__85_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF36D7AAA3BB66048227735C3DF8EC557209437F6,
+	U3CsetThemeRoutineU3Ed__85_System_Collections_IEnumerator_Reset_m178690E732612EF2EF52F82AEA55D65525FDBAC2,
+	U3CsetThemeRoutineU3Ed__85_System_Collections_IEnumerator_get_Current_m803C73C81EFD6C4F4D2F3EE182C4550144CD4C7C,
+	U3CscanRoutineU3Ed__88__ctor_mC0ECD5E2D781485878C04C096B52576E40E47961,
+	U3CscanRoutineU3Ed__88_System_IDisposable_Dispose_m6A8ADFC4362718361440E8DDD03D54CD6C12831B,
+	U3CscanRoutineU3Ed__88_MoveNext_m9A489A33B814B2AA07200B26563B998A722CC54E,
+	U3CscanRoutineU3Ed__88_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m136FCC81D87930CBA181747C357684222B351A8F,
+	U3CscanRoutineU3Ed__88_System_Collections_IEnumerator_Reset_m89579133CD8576D7A6E2310E2EBBB4B83E7FC0FA,
+	U3CscanRoutineU3Ed__88_System_Collections_IEnumerator_get_Current_m99C3D045B3EA2AD5C9EB0ADFA554929B98370D6A,
+	U3CgetStartupInfoRoutineU3Ed__93__ctor_m7D9994B68C2E7B6B7001999C2138F74BB9F80C40,
+	U3CgetStartupInfoRoutineU3Ed__93_System_IDisposable_Dispose_m616583ECF3348EDF217E01C0D20C25C7EAAE15E2,
+	U3CgetStartupInfoRoutineU3Ed__93_MoveNext_m879EB5BEFAF2CBE00745D31005DD085E36D6C6AC,
+	U3CgetStartupInfoRoutineU3Ed__93_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE303F40D97887489DE3EA1892F384EE4178080F9,
+	U3CgetStartupInfoRoutineU3Ed__93_System_Collections_IEnumerator_Reset_mB1A735AFF13C70607AACA4D89930A9FB85C3B310,
+	U3CgetStartupInfoRoutineU3Ed__93_System_Collections_IEnumerator_get_Current_m4F734249D094E3FB42F7B5CC859243DAE4F89E20,
 	BikeState_Awake_m215A48389DC48A0E01D4462C91561F20FDFB53E8,
 	BikeState_getMode_m969854188D2685AE5C610BAE1141B011E7E0CAB0,
 	BikeState_getAssist_m2AD9286D5E68E464A54A75058C978E181B9C825D,
@@ -513,7 +513,6 @@ static Il2CppMethodPointer s_methodPointers[203] =
 	BikeState_processTotalData_m96098477EDB83A335F8A909452A2BAB397C5CBE7,
 	BikeState_processPedalData_m41DC249403FCB81C00122625D5B1DDE1377BA494,
 	BikeState_processPowerData_mAFDF2961F330C00ED9DED31BA7BA3141F5CB2373,
-	BikeState_wheelSpeedFromRawPower_m5C2F7F4662DA9FA5FE28DDC5C4214DFE66503AB8,
 	BikeState_wheelSpeedFromRaw_m750599E5654046FD2D541EEE491FFB529DE177E7,
 	BikeState_wheelRPMFromSpeed_mBF4D2ED27C8F53C3E8F63156F0BDF9F873790001,
 	BikeState_pedalRPMFromRaw_m1F554D768634C0D1AF28AA77EF566A8B34D10A9E,
@@ -572,11 +571,12 @@ static Il2CppMethodPointer s_methodPointers[203] =
 	UpdateAndroidLib__ctor_m0A6EDD2FDD19F2B0B6DC2D3EB9CC8BB9753B1A27,
 	PrefsOverlay_Start_mB5BE5DE0CC979E71D2F8F741AC94EBA3E13B07F4,
 	PrefsOverlay__ctor_m9C898BA525173BFE4507DD3DAECF8D2F52570152,
-	PrefsOverlay_U3CStartU3Eb__5_0_mB19C546D3F92A198718F1D89D9802C7CA904B6BD,
-	PrefsOverlay_U3CStartU3Eb__5_1_m45EA8EF48504337B53FDC10F7F8D13FB789AC63F,
-	PrefsOverlay_U3CStartU3Eb__5_2_mBCAE39FC4AD740D0DDE86C328B289E5D9B09F32C,
-	PrefsOverlay_U3CStartU3Eb__5_3_m3B35FF52CB9CAFD9FFE6CD795D364D6382A695FA,
-	PrefsOverlay_U3CStartU3Eb__5_4_m5F0C53136F6A83AF00931FCDE9241DC6287CEAB4,
+	PrefsOverlay_U3CStartU3Eb__6_0_mEAE746C82060FEF5CC289347C52CED20BB862B3B,
+	PrefsOverlay_U3CStartU3Eb__6_1_m9D91B79F8B2011000AFCC58BCBCE62845C7530CC,
+	PrefsOverlay_U3CStartU3Eb__6_2_mB1EF41E6FC37862FF7967D6452FE6B28FDB5C622,
+	PrefsOverlay_U3CStartU3Eb__6_3_m0BEB6172975B546E79EDF33C03A9BAB76FD56980,
+	PrefsOverlay_U3CStartU3Eb__6_4_mFF0A54CF1D323154820690701F5AB2F7F3C4D51D,
+	PrefsOverlay_U3CStartU3Eb__6_5_mBBE6E66F5B15F6AF89BE53D4FE57C877055C493E,
 	DeviceLine_set_mDFC8EDF332B9D7AC14971452751359E68750A2EA,
 	DeviceLine__ctor_m2FA3D847B099D6439256F84F643231857C8864A6,
 	U3CU3Ec__DisplayClass4_0__ctor_m86919AE88A49EE868424E01D6788FF68EA1B3B67,
@@ -731,7 +731,6 @@ static const int32_t s_InvokerIndices[203] =
 	3468,
 	3468,
 	3468,
-	3468,
 	950,
 	1982,
 	3376,
@@ -784,6 +783,7 @@ static const int32_t s_InvokerIndices[203] =
 	3468,
 	3468,
 	3468,
+	2810,
 	2810,
 	2810,
 	2810,

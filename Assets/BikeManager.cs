@@ -43,6 +43,7 @@ public class BikeManager : MonoBehaviour {
     [Space]
     public Button modeButton;
     public TMP_Text modeText;
+    public TMP_Text modeDescriptorText;
     public TMP_Text speedText;
     public TMP_Text speedUnitsText;
     [Space]
@@ -228,27 +229,29 @@ public class BikeManager : MonoBehaviour {
     }
 
     void refreshDisplay(BikeState state) {
-        modeText.text = state.getMode().ToString();
-        assistText.text = state.getAssist().ToString();
-        lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
+        if(modeText!= null) modeText.text = state.getMode().ToString();
+        if (modeDescriptorText != null) modeDescriptorText.text = state.getModeDescriptor();
 
-        speedText.text = state.getReadableWheelSpeed();
-        speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
+        if (assistText != null) assistText.text = state.getAssist().ToString();
+        if (lightGraphic != null) lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
 
-        rangeText.text = state.getReadableRange();
-        rangeUnitsText.text = state.getMetric() ? "km" : "mi";
+        if (speedText != null) speedText.text = state.getReadableWheelSpeed();
+        if (speedUnitsText != null) speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
 
-        tempUnitsText.text = state.getMetric() ? "°C" : "°F";
+        if (rangeText != null) rangeText.text = state.getReadableRange();
+        if (rangeUnitsText != null) rangeUnitsText.text = state.getMetric() ? "km" : "mi";
 
-        voltText.text = state.getReadableVoltage();
+        if (tempUnitsText != null) tempUnitsText.text = state.getMetric() ? "°C" : "°F";
 
-        levelText.text = state.getReadableBatteryLevel();
+        if (voltText != null) voltText.text = state.getReadableVoltage();
 
-        totalText.text = state.getReadableTotal();
-        totalUnitsText.text = state.getMetric() ? "km" : "mi";
+        if (levelText != null) levelText.text = state.getReadableBatteryLevel();
 
-        wheelRPMText.text = state.getReadableWheelRPM();
-        pedalRPMText.text = state.getReadablePedalRPM();
+        if (totalText != null) totalText.text = state.getReadableTotal();
+        if (totalUnitsText != null) totalUnitsText.text = state.getMetric() ? "km" : "mi";
+
+        if (wheelRPMText != null) wheelRPMText.text = state.getReadableWheelRPM();
+        if (pedalRPMText != null) pedalRPMText.text = state.getReadablePedalRPM();
     }
 
 

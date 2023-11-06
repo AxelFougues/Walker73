@@ -6,13 +6,26 @@ using UnityEngine;
 [Serializable]
 public class BikeState : MonoBehaviour {
     public static List<string> modeDescriptors = new List<string> {
-        "25km/h - 250W",
-        "35km/h - 250W",
-        "45km/h - 850W",
-        "50km/h - 1200W",
-        "EU default"
+        "US CLASS1 32.2km/h 750W",
+        "US CLASS2 32.2km/h 750W Throttle",
+        "US CLASS3 45km/h 750W",
+        "US OFF-ROAD Unlimited Throttle",
+        "EU EPAC 25km/h 250W",
+        "EU MID 35km/h 250W",
+        "EU HIGH 45km/h 850W",
+        "EU OFF-ROAD Unlimited Throttle",
     };
-    
+
+    public static List<string> modeDescriptorsImperial = new List<string> {
+        "US CLASS1 20mph 750W",
+        "US CLASS2 20mph 750W Throttle",
+        "US CLASS3 28mph 750W",
+        "US OFF-ROAD Unlimited Throttle",
+        "EU EPAC 15.5mph 250W",
+        "EU MID 22mph 250W",
+        "EU HIGH 28mph 850W",
+        "EU OFF-ROAD Unlimited Throttle",
+    };
 
     //settings
     bool metric = true;
@@ -51,7 +64,7 @@ public class BikeState : MonoBehaviour {
     public float getBatteryLevel() => batteryLevel;
     public float getVoltage() => voltage;
     public bool getMetric() => metric;
-    public string getModeDescriptor() { return modeDescriptors[mode]; }
+    public string getModeDescriptor() { if (metric) return modeDescriptors[mode]; else return modeDescriptorsImperial[mode]; }
 
     public int changeMode(bool save = true) {
         mode++;
