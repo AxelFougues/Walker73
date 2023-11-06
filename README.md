@@ -78,14 +78,15 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 | UUID_UNKNOWN_CHARACTERISTIC                    | 00001581-0000-1000-8000-00805f9b34fb | "client characteristic configuration"?               |   N   |   N   |    Y   |    N     |
 
 ## Notifications
+Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER``` subscritpion or writing 2 byte ID at ```UUID_CHARACTERISTIC_REGISTER_ID``` and then reading ```UUID_CHARACTERISTIC_REGISTER```.
 
-|  Notification |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8 | Data 9 |
-| :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :----: | :----: |
-| WHEEL         |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00   | 0x00   |
-| TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00   | 0x00   |
-| PEDAL         |  0x02 | 0x02  | **PSPEED** | **PSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | Unknown| 0x00   |
-| SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00   | 0x00   |
-| POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00   | 0x00   |
+|  Notification |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8    | Data 9    |
+| :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
+| WHEEL         |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
+| TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
+| PEDAL         |  0x02 | 0x03  | **PSPEED** | **PSPEED** | Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
+| SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
+| POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00      | 0x00      |
 
 - WSPEED : UInt16, wheel speed (km/h) ~= ```0.009876614 * WSPEED + 1.228228```
 - PSPEED : UInt16, pedal RPM ~=  ```0.01926005 * PSPEED + 1.051926```
@@ -94,6 +95,7 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 - WALK : walk (push along) assist (0/90?)
 - LIGHT : headlight on (1/0)
 - MODE : riding power mode (0-7)
+- RANGE : remaining range from battery in km
 
 > The linear approximations to turn WSPEED and PSPEED into real units do not pass through 0 which is not ideal.
 Instead here are some slightly more costly power approximations that do zero out: wheel speed (km/h) ~= ```0.01963741 * WSPEED ^ 0.9211116f``` and pedal RPM ~=  ```0.2189381 * PSPEED ^ 0.02422947f```
@@ -102,13 +104,13 @@ Instead here are some slightly more costly power approximations that do zero out
 | :---: | :------: | :---: | :--------:| :------: | :------: | :------------- |
 |0      |CLASS1    |US     | 32.2km/h  | 750W     | NO       |                |
 |1      |CLASS2    |US     | 32.2km/h  | 750W     | YES      |                |
-|2      |CLASS3    |US     | 45km/h    | 750W      | NO       |                |
+|2      |CLASS3    |US     | 45km/h    | 750W     | NO       |                |
 |3      |OFF_ROAD  |US     | MAX       | MAX      | YES      |                |
 |4      |EPAC      |EU     | 25km/h    | 250W     | NO       | EU default     |
 |5      |250W      |EU     | 35km/h    | 250W     | NO       |                |
 |6      |850W      |EU     | 45km/h    | 850W     | NO       |                |
 |7      |OFF_ROAD  |EU     | MAX       | MAX      | YES      |                |
-|8+     |-         |-      | 0km/h     | 0W        | NO       |Unimplemented   |
+|8+     |-         |-      | 0km/h     | 0W       | NO       |Unimplemented   |
 
 | ASSIST|NAME      |Assist level  | Description    |
 | :---: | :------: | :----------: | :------------- |
