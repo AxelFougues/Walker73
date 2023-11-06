@@ -30,6 +30,11 @@ public class BikeState : MonoBehaviour {
     double pedalRPM = 0f;
     ushort rawPedal = 0;
 
+    ushort rawRange = 0;
+    float batteryLevel = 0;
+    float range = 0;
+    float voltage = 0;
+
     private void Awake() {
         mode = PlayerPrefs.GetInt("mode", 3);
         assist = PlayerPrefs.GetInt("assist", 3);
@@ -43,6 +48,8 @@ public class BikeState : MonoBehaviour {
     public int getMode() => mode;
     public int getAssist() => assist;
     public bool getLight() => light;
+    public float getBatteryLevel() => batteryLevel;
+    public float getVoltage() => voltage;
     public bool getMetric() => metric;
     public string getModeDescriptor() { return modeDescriptors[mode]; }
 
@@ -124,6 +131,24 @@ public class BikeState : MonoBehaviour {
         return getPedalRPM().ToString("0.0");
     }
 
+    //RANGE
+
+    public string getReadableBatteryLevel() {
+        return Mathf.RoundToInt(getBatteryLevel()).ToString();
+    }
+
+    public float getRange() {
+        if (metric) return range;
+        else return range * 0.621371f;
+    }
+
+    public string getReadableRange() {
+        return getRange().ToString("0.0");
+    }
+
+    public string getReadableVoltage() {
+        return getVoltage().ToString("0.0");
+    }
 
     //DATA RECEIVE
 
@@ -141,7 +166,6 @@ public class BikeState : MonoBehaviour {
 
 
     bool processSettingsData(byte[] data) {
-        Debug.Log("##");
         string s = "";
         foreach (byte b in data) s += (int)b + " ";
         Debug.Log(s);
@@ -151,7 +175,6 @@ public class BikeState : MonoBehaviour {
         light = data[4] == 0x01;
         assist = data[2];
         mode = data[5];
-        Debug.Log("###");
         return true;
     }
 
@@ -170,6 +193,11 @@ public class BikeState : MonoBehaviour {
     bool processPedalData(byte[] data) {
         rawPedal = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
         pedalRPMFromRawPower();
+        rawRange = BitConverter.ToUInt16(new byte[] { data[8], data[9] });
+        rangeFromBatteryLevel();
+        batteryLevelFromRawRange();
+        voltageFromBatteryLevel();
+
         return true;
     }
 
@@ -196,6 +224,18 @@ public class BikeState : MonoBehaviour {
 
     void pedalRPMFromRawPower() {
         pedalRPM = 0.2189381 * Mathf.Pow(rawPedal, 0.02422947f);
+    }
+
+    void rangeFromBatteryLevel() {
+        range = (rawRange / BikeManager.BASE_TOTAL_RANGE_KM) * BikeManager.REAL_TOTAL_RANGE_KM;
+    }
+
+    void batteryLevelFromRawRange() {
+        batteryLevel = (rawRange / BikeManager.BASE_TOTAL_RANGE_KM) * 100f;
+    }
+
+    void voltageFromBatteryLevel() {
+        voltage = BikeManager.instance.li_ionDischargeCurve.Evaluate(batteryLevel); //Mathf.Lerp(BikeManager.MIN_VOLTAGE_V, BikeManager.MAX_VOLTAGE_V, batteryLevel / 100f);
     }
 
     //OTHER

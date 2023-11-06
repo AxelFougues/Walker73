@@ -35,7 +35,7 @@ public class NativeBLE : MonoBehaviour{
             string s = deviceInfo.ToString();
             s += "Services: " + services.Count + " Characteristics: " + characteristics.Count + "\n"; 
             for (int i = 0; i < services.Count; i++) {
-                s += "### - " + services[i] + "\n";
+                s += "    - " + services[i] + "\n";
                 if (characteristics.Count > i) s += characteristics[i];
             }
             return s;
@@ -162,7 +162,7 @@ public class NativeBLE : MonoBehaviour{
         return false;
     }
 
-    public static bool subscribeCharacteristic(string service, string characteristic, bool subscribe) {
+    public static bool subscribeCharacteristic(string service, string characteristic, bool subscribe = true) {
         AndroidJavaClass unityClass;
         AndroidJavaObject unityActivity;
         if (Application.platform == RuntimePlatform.Android) {

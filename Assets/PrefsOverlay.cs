@@ -50,14 +50,14 @@ public class PrefsOverlay : MonoBehaviour{
             }
         });
 
-        totalRange.text = PlayerPrefs.GetFloat("TOTAL_RANGE_KM", BikeManager.TOTAL_RANGE_KM).ToString();
+        totalRange.text = PlayerPrefs.GetFloat("TOTAL_RANGE_KM", BikeManager.BASE_TOTAL_RANGE_KM).ToString();
         totalRange.onValueChanged.AddListener(delegate {
             float newRange = -1;
             if (float.TryParse(totalRange.text, out newRange) && newRange > 0) {
                 PlayerPrefs.SetFloat("TOTAL_RANGE_KM", newRange);
             } else {
-                PlayerPrefs.SetFloat("TOTAL_RANGE_KM", BikeManager.TOTAL_RANGE_KM);
-                totalRange.text = PlayerPrefs.GetFloat("TOTAL_RANGE_KM", BikeManager.TOTAL_RANGE_KM).ToString();
+                PlayerPrefs.SetFloat("TOTAL_RANGE_KM", BikeManager.BASE_TOTAL_RANGE_KM);
+                totalRange.text = PlayerPrefs.GetFloat("TOTAL_RANGE_KM", BikeManager.BASE_TOTAL_RANGE_KM).ToString();
             }
         });
 

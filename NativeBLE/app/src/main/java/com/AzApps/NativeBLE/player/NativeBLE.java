@@ -221,9 +221,15 @@ public class NativeBLE extends UnityPlayerActivity {
         UUID characteristicUUID = UUID.fromString(characteristic);
 
         BluetoothGattService serviceObj = bluetoothGatt.getService(serviceUUID);
-
+        if(serviceObj == null){
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Service " + serviceUUID.toString() + " is not available.");
+            return false;
+        }
         BluetoothGattCharacteristic charObj = serviceObj.getCharacteristic(characteristicUUID);
-
+        if(charObj == null){
+            sendToUnity(AndroidMessagePrefix.DEBUG_LOG, "Characteristic " + characteristicUUID.toString() + " is not available in service "+ serviceUUID.toString());
+            return false;
+        }
         bluetoothGatt.readCharacteristic(charObj);
         return true;
     }

@@ -13,16 +13,18 @@ public class BikeManager : MonoBehaviour {
     //Base prefs
     public static float PEDAL_DIAMETRER_M = 0.125f;
     public static float WHEEL_DIAMETRER_M = 0.57f;
-    public static float MAX_VOLTAGE_V = 0.57f;
-    public static float MIN_VOLTAGE_V = 0.57f;
-    public static float TOTAL_RANGE_KM = 60f;
-
+    public static float MAX_VOLTAGE_V = 54.6f;
+    public static float MIN_VOLTAGE_V = 32.5f;
+    public static float BASE_TOTAL_RANGE_KM = 60f;
+    public static float REAL_TOTAL_RANGE_KM = 60f;
 
     public static byte[] SPEED_ID = { 0x02, 0x01 };
     public static byte[] TOTAL_ID = { 0x02, 0x02 };
     public static byte[] PEDAL_ID = { 0x02, 0x03 };
     public static byte[] SETTINGS_ID = { 0x03, 0x00 };
     public static byte[] POWER_ID = { 0x04, 0x01 };
+
+    public AnimationCurve li_ionDischargeCurve;
 
     public Button themeButton;
     [Header("Loading")]
@@ -57,12 +59,14 @@ public class BikeManager : MonoBehaviour {
     [Space]
     public Button lightButton;
     public Image lightGraphic;
-    public TMP_Text totalText;
-    public TMP_Text totalUnitsText;
+    public TMP_Text rangeText;
+    public TMP_Text rangeUnitsText;
     [Space]
     public TMP_Text wheelRPMText;
     public TMP_Text pedalRPMText;
-    //
+    public TMP_Text totalText;
+    public TMP_Text totalUnitsText;
+    [Space]
     public Toggle autoApplyToggle;
     public Toggle autoConnectToggle;
     public Button unitsButton;
@@ -80,11 +84,40 @@ public class BikeManager : MonoBehaviour {
 
 
     //BT protocol
-    const string UUID_METRICS_SERVICE = "00001554-1212-efde-1523-785feabcd123";
-    const string UUID_CHARACTERISTIC_REGISTER_ID = "00001564-1212-efde-1523-785feabcd123";
-    const string UUID_CHARACTERISTIC_REGISTER = "0000155f-1212-efde-1523-785feabcd123";
-    const string UUID_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
-    
+    const string UUID_UNKNOWN1_SERVICE         = "00001800-0000-1000-8000-00805f9b34fb";   //Generic Access
+    const string UUID_UNKNOWN1_CHARACTERISTIC1 = "00002a00-0000-1000-8000-00805f9b34fb"; // read  53 55 50 45 52 37 33  Device Name
+    const string UUID_UNKNOWN1_CHARACTERISTIC2 = "00002a01-0000-1000-8000-00805f9b34fb"; // read  00 04                  Appearance "Cycling"
+    const string UUID_UNKNOWN1_CHARACTERISTIC3 = "00002a04-0000-1000-8000-00805f9b34fb"; // read  0C 00 24 00 00 00 00 01 Peripheral Preferred Connection Parameters
+    const string UUID_UNKNOWN1_CHARACTERISTIC4 = "00002aa6-0000-1000-8000-00805f9b34fb"; // read  01  Central Address Resolution "Supported"
+
+    const string UUID_UNKNOWN2_SERVICE         = "00001801-0000-1000-8000-00805f9b34fb";  //Generic Attribute
+    const string UUID_UNKNOWN2_CHARACTERISTIC1 = "00002a05-0000-1000-8000-00805f9b34fb"; //indicate - Service Changed 
+
+    const string UUID_UNKNOWN3_SERVICE         = "0000fe59-0000-1000-8000-00805f9b34fb";  // Custom UUID of Nordic Semiconductor ASA  "Secure DFU service"
+    const string UUID_UNKNOWN3_CHARACTERISTIC1 = "8ec90003-f315-4f60-9fb8-838830daea50"; //DFU Control Point characteristic or Buttonless dfu indicate/write - https://nordicsemiconductor.github.io/Nordic-Thingy52-FW/documentation/firmware_architecture.html#arch_battery
+
+    const string UUID_UNKNOWN4_SERVICE         = "0000180a-0000-1000-8000-00805f9b34fb"; //Device info 
+    const string UUID_UNKNOWN4_CHARACTERISTIC1 = "00002a29-0000-1000-8000-00805f9b34fb"; // read  43 4F 4D 4F 44 55 4C 45  Manufacturer Name String
+    const string UUID_UNKNOWN4_CHARACTERISTIC2 = "00002a27-0000-1000-8000-00805f9b34fb"; // read  76 33 2E 32 2E 30 Hardware Revision String
+    const string UUID_UNKNOWN4_CHARACTERISTIC3 = "00002a26-0000-1000-8000-00805f9b34fb"; // read  32 32 31 31 32 32  NRF version    Firmware Revision String
+    const string UUID_UNKNOWN4_CHARACTERISTIC4 = "00002a28-0000-1000-8000-00805f9b34fb"; // read  32 32 31 31 32 32   Software Revision String
+
+
+    const string UUID_UNKNOWN5_SERVICE         = "00001580-0000-1000-8000-00805f9b34fb"; 
+    const string UUID_UNKNOWN5_CHARACTERISTIC1 = "00001581-0000-1000-8000-00805f9b34fb"; //notify client characteristic configuration "disabled"
+
+    const string UUID_UNKNOWN6_SERVICE         = "00002554-1212-efde-1523-785feabcd123"; //Security?
+    const string UUID_UNKNOWN6_CHARACTERISTIC1 = "00002555-1212-efde-1523-785feabcd123";   // private key  write 
+    const string UUID_UNKNOWN6_CHARACTERISTIC2 = "00002556-1212-efde-1523-785feabcd123";   // public key  read 1A 00 00 00 24 00 71 00 00 00 3A 42 00 00 75 19 00 00 00 00
+    const string UUID_UNKNOWN6_CHARACTERISTIC3 = "00002557-1212-efde-1523-785feabcd123";   // security hash write -
+    const string UUID_UNKNOWN6_CHARACTERISTIC4 = "00002558-1212-efde-1523-785feabcd123";   // auth   read 01
+
+    const string UUID_METRICS_SERVICE                          = "00001554-1212-efde-1523-785feabcd123";
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER_ID       = "00001564-1212-efde-1523-785feabcd123";// read write
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER          = "0000155f-1212-efde-1523-785feabcd123";//read write
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";// notify read
+
+
 
     List<string> debugNotificationText = new List<string> {
         "2 1",
@@ -102,14 +135,6 @@ public class BikeManager : MonoBehaviour {
     private void Awake() {
         DontDestroyOnLoad(this);
         instance = this;
-
-        /*
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x04 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x07 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x09 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x00, 0x09 }));
-        Debug.Log(BitConverter.ToUInt16(new byte[] { 0x58, 0x10 }));
-        */
     }
 
     private void OnEnable() {
@@ -201,7 +226,14 @@ public class BikeManager : MonoBehaviour {
         speedText.text = state.getReadableWheelSpeed();
         speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
 
+        rangeText.text = state.getReadableRange();
+        rangeUnitsText.text = state.getMetric() ? "km" : "mi";
+
         tempUnitsText.text = state.getMetric() ? "°C" : "°F";
+
+        voltText.text = state.getReadableVoltage();
+
+        levelText.text = state.getReadableBatteryLevel();
 
         totalText.text = state.getReadableTotal();
         totalUnitsText.text = state.getMetric() ? "km" : "mi";
@@ -283,6 +315,7 @@ public class BikeManager : MonoBehaviour {
                 if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
             }
         });
+        Debug.Log(device);
     }
 
     IEnumerator getStartupInfoRoutine() {
@@ -290,6 +323,47 @@ public class BikeManager : MonoBehaviour {
         registerSettings();
         yield return new WaitUntil(() => registerAvailable);
         registerTotal();
+        yield return new WaitUntil(() => registerAvailable);
+        registerPedal();
+        yield return new WaitUntil(() => registerAvailable);
+        registerPower();
+        yield return new WaitUntil(() => registerAvailable);
+        registerSpeed();
+
+        /*
+         * yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC1));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC2));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC3));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN1_SERVICE, UUID_UNKNOWN1_CHARACTERISTIC4));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN2_SERVICE, UUID_UNKNOWN2_CHARACTERISTIC1));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN3_SERVICE, UUID_UNKNOWN3_CHARACTERISTIC1));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC1));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC2));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC3));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN4_SERVICE, UUID_UNKNOWN4_CHARACTERISTIC4));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN5_SERVICE, UUID_UNKNOWN5_CHARACTERISTIC1));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC1));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC2));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC3));
+        yield return new WaitForSecondsRealtime(6);
+        Debug.Log("### " + NativeBLE.readCharacteristic(UUID_UNKNOWN6_SERVICE, UUID_UNKNOWN6_CHARACTERISTIC4));
+        */
+        Debug.Log("### Done");
+        
     }
 
     void disconnect() {
@@ -314,24 +388,42 @@ public class BikeManager : MonoBehaviour {
     #region COMS
 
     public void applySettings() {
-        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER, currentBikeState.getData());
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER, currentBikeState.getData());
     }
 
     //Notifications
     public void subscribeNotifications(bool subscribe) {
-        NativeBLE.subscribeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_NOTIFIER, subscribe);
+        NativeBLE.subscribeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER, subscribe);
     }
 
     //Register
     public void registerSettings() {
         registerAvailable = false;
-        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
         Debug.Log("Registering settings");
     }
 
     public void registerTotal() {
         registerAvailable = false;
-        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
+        Debug.Log("Registering total");
+    }
+
+    public void registerPedal() {
+        registerAvailable = false;
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, PEDAL_ID);
+        Debug.Log("Registering total");
+    }
+
+    public void registerPower() {
+        registerAvailable = false;
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, POWER_ID);
+        Debug.Log("Registering total");
+    }
+
+    public void registerSpeed() {
+        registerAvailable = false;
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SPEED_ID);
         Debug.Log("Registering total");
     }
 
@@ -340,7 +432,7 @@ public class BikeManager : MonoBehaviour {
     }
 
     public void readRegister() {
-        NativeBLE.readCharacteristic(UUID_METRICS_SERVICE, UUID_CHARACTERISTIC_REGISTER);
+        NativeBLE.readCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER);
         Debug.Log("Reading register");
     }
 
@@ -352,24 +444,22 @@ public class BikeManager : MonoBehaviour {
             if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
         }
 
-        if (characteristic == UUID_CHARACTERISTIC_REGISTER_NOTIFIER) {
-            Debug.Log("Recieved notification");
+        if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER) {
+            //Debug.Log("Recieved notification");
 
-        } else if (characteristic == UUID_CHARACTERISTIC_REGISTER) {
+        } else if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER) {
             registerAvailable = true;
-            Debug.Log("Recieved register");
-
+           // Debug.Log("Recieved register");
         } else {
-            string s = "Received " + characteristic + " : \n";
-            foreach (byte b in data) s += (int)b + " ";
+            string s = "### Received " + characteristic + " : \n";
+            s += BitConverter.ToString(data).Replace("-", " ");
             Debug.Log(s);
         }
     }
 
 
     void updateNotificationDebug(byte[] data) {
-        string debugString = "";
-        foreach (byte b in data) debugString += (int)b + " ";
+        string debugString = BitConverter.ToString(data).Replace("-", " ");
 
         if (data[0] == 0x02) {
             if (data[0] == 0x02 && data[1] == 0x01) debugNotificationText[0] = debugString;
