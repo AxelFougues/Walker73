@@ -1,5 +1,8 @@
 # Walker73
 Walker73 is an alternative open-source Bluetooth dashboard for e-bikes/scooters equipped with a Comodule Diamond Display.
+
+<a href='https://play.google.com/store/apps/details?id=com.AzApps.Walker73&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+
 - Fast auto connects to your bike's Bluetooth
 - Auto applies previous settings, bypass EU mode reset
 - No need for an internet connection or an account, fully privacy-friendly
