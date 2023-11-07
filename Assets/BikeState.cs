@@ -6,14 +6,14 @@ using UnityEngine;
 [Serializable]
 public class BikeState : MonoBehaviour {
     public static List<string> modeDescriptorsName = new List<string> {
-        "US-CLASS1",
-        "US-CLASS2",
-        "US-CLASS3",
-        "US-OFF-ROAD",
-        "EU-EPAC",
-        "EU-MID",
-        "EU-HIGH",
-        "EU-OFF-ROAD",
+        "US CLASS1",
+        "US CLASS2",
+        "US CLASS3",
+        "US OFF-ROAD",
+        "EU EPAC",
+        "EU MID",
+        "EU HIGH",
+        "EU OFF-ROAD",
     };
 
     public static List<float> modeDescriptorsSpeed = new List<float> {
@@ -99,9 +99,9 @@ public class BikeState : MonoBehaviour {
     public bool getMetric() => metric;
     public string getModeDescriptorName() {return modeDescriptorsName[mode];}
     public float getModeDescriptorSpeed() { if (metric) return modeDescriptorsSpeed[mode]; else return modeDescriptorsSpeedImperial[mode]; }
-    public string getModeDescriptorSpeedReadable() { if (metric) return getModeDescriptorSpeed() + "km/h"; else return getModeDescriptorSpeed() + "mph"; }
+    public string getModeDescriptorSpeedReadable() { float speed = getModeDescriptorSpeed(); if (speed >= 0) { if (metric) return getModeDescriptorSpeed() + "km/h"; else return getModeDescriptorSpeed() + "mph"; } else return "MAX"; }
     public int getModeDescriptorPower() { return modeDescriptorsPower[mode]; }
-    public string getModeDescriptorPowerReadable() { return getModeDescriptorPower() + "W"; }
+    public string getModeDescriptorPowerReadable() { int power = getModeDescriptorPower(); return power>=0? power + "W": "MAX"; }
     public bool getModeDescriptorThrottle() { return modeDescriptorsThrottle[mode]; }
     public string getModeDescriptorThrottleReadable() { return getModeDescriptorThrottle()? "ENABLED": "DISABLED"; }
 
