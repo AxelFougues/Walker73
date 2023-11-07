@@ -43,7 +43,10 @@ public class BikeManager : MonoBehaviour {
     [Space]
     public Button modeButton;
     public TMP_Text modeText;
-    public TMP_Text modeDescriptorText;
+    public TMP_Text modeDescriptorNameText;
+    public TMP_Text modeDescriptorSpeedText;
+    public TMP_Text modeDescriptorPowerText;
+    public TMP_Text modeDescriptorThrottleText;
     public TMP_Text speedText;
     public TMP_Text speedUnitsText;
     [Space]
@@ -230,7 +233,10 @@ public class BikeManager : MonoBehaviour {
 
     void refreshDisplay(BikeState state) {
         if(modeText!= null) modeText.text = state.getMode().ToString();
-        if (modeDescriptorText != null) modeDescriptorText.text = state.getModeDescriptor();
+        if (modeDescriptorNameText != null) modeDescriptorNameText.text = state.getModeDescriptorName();
+        if (modeDescriptorSpeedText != null) modeDescriptorSpeedText.text = state.getModeDescriptorSpeedReadable();
+        if (modeDescriptorPowerText != null) modeDescriptorPowerText.text = state.getModeDescriptorPowerReadable();
+        if (modeDescriptorThrottleText != null) modeDescriptorThrottleText.text = state.getModeDescriptorThrottleReadable();
 
         if (assistText != null) assistText.text = state.getAssist().ToString();
         if (lightGraphic != null) lightGraphic.sprite = state.getLight() ? lightOn : lightOff;

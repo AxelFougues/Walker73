@@ -5,26 +5,59 @@ using UnityEngine;
 
 [Serializable]
 public class BikeState : MonoBehaviour {
-    public static List<string> modeDescriptors = new List<string> {
-        "US CLASS1 32.2km/h 750W",
-        "US CLASS2 32.2km/h 750W Throttle",
-        "US CLASS3 45km/h 750W",
-        "US OFF-ROAD Unlimited Throttle",
-        "EU EPAC 25km/h 250W",
-        "EU MID 35km/h 250W",
-        "EU HIGH 45km/h 850W",
-        "EU OFF-ROAD Unlimited Throttle",
+    public static List<string> modeDescriptorsName = new List<string> {
+        "US-CLASS1",
+        "US-CLASS2",
+        "US-CLASS3",
+        "US-OFF-ROAD",
+        "EU-EPAC",
+        "EU-MID",
+        "EU-HIGH",
+        "EU-OFF-ROAD",
     };
 
-    public static List<string> modeDescriptorsImperial = new List<string> {
-        "US CLASS1 20mph 750W",
-        "US CLASS2 20mph 750W Throttle",
-        "US CLASS3 28mph 750W",
-        "US OFF-ROAD Unlimited Throttle",
-        "EU EPAC 15.5mph 250W",
-        "EU MID 22mph 250W",
-        "EU HIGH 28mph 850W",
-        "EU OFF-ROAD Unlimited Throttle",
+    public static List<float> modeDescriptorsSpeed = new List<float> {
+        32.2f,
+        32.2f,
+        45f,
+        -1,
+        25f,
+        35f,
+        45f,
+        -1f
+    };
+
+    public static List<float> modeDescriptorsSpeedImperial = new List<float> {
+        20f,
+        20f,
+        28f,
+        -1f,
+        15.5f,
+        22f,
+        28f,
+        -1f
+    };
+
+    public static List<int> modeDescriptorsPower = new List<int> {
+        750,
+        750,
+        750,
+        -1,
+        250,
+        250,
+        850,
+        -1
+    };
+
+    public static List<bool> modeDescriptorsThrottle = new List<bool> {
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true
     };
 
     //settings
@@ -64,7 +97,13 @@ public class BikeState : MonoBehaviour {
     public float getBatteryLevel() => batteryLevel;
     public float getVoltage() => voltage;
     public bool getMetric() => metric;
-    public string getModeDescriptor() { if (metric) return modeDescriptors[mode]; else return modeDescriptorsImperial[mode]; }
+    public string getModeDescriptorName() {return modeDescriptorsName[mode];}
+    public float getModeDescriptorSpeed() { if (metric) return modeDescriptorsSpeed[mode]; else return modeDescriptorsSpeedImperial[mode]; }
+    public string getModeDescriptorSpeedReadable() { if (metric) return getModeDescriptorSpeed() + "km/h"; else return getModeDescriptorSpeed() + "mph"; }
+    public int getModeDescriptorPower() { return modeDescriptorsPower[mode]; }
+    public string getModeDescriptorPowerReadable() { return getModeDescriptorPower() + "W"; }
+    public bool getModeDescriptorThrottle() { return modeDescriptorsThrottle[mode]; }
+    public string getModeDescriptorThrottleReadable() { return getModeDescriptorThrottle()? "ENABLED": "DISABLED"; }
 
     public int changeMode(bool save = true) {
         mode++;
