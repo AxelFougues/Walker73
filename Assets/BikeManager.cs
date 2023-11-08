@@ -246,6 +246,7 @@ public class BikeManager : MonoBehaviour {
         if (rangeUnitsText != null) rangeUnitsText.text = state.getMetric() ? "km" : "mi";
 
         if (levelText != null) levelText.text = state.getReadableBatteryLevel();
+        if (levelGraphic != null) levelGraphic.sprite = batteryLevels[Mathf.RoundToInt(Mathf.Lerp(0,4, state.getBatteryLevel()/100f))];
 
         if (totalText != null) totalText.text = state.getReadableTotal();
         if (totalUnitsText != null) totalUnitsText.text = state.getMetric() ? "km" : "mi";
