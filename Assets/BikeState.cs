@@ -82,7 +82,14 @@ public class BikeState : MonoBehaviour {
     ushort rawRange = 0;
     float batteryLevel = 0;
     float range = 0;
-    float voltage = 0;
+
+    //device
+    string deviceName = "N/A";
+    string manufacturerName = "N/A";
+    string softwareVersion = "N/A";
+    string hardwareVersion = "N/A";
+
+
 
     private void Awake() {
         mode = PlayerPrefs.GetInt("mode", 3);
@@ -91,14 +98,16 @@ public class BikeState : MonoBehaviour {
         metric = PlayerPrefs.GetInt("metric", 0) == 1;
     }
 
-
     //SETTINGS
 
+    public string getDeviceName() => deviceName;
+    public string getManufaturerName() => manufacturerName;
+    public string getHardwareVersion() => hardwareVersion;
+    public string getSoftwareVersion() => softwareVersion;
     public int getMode() => mode;
     public int getAssist() => assist;
     public bool getLight() => light;
     public float getBatteryLevel() => batteryLevel;
-    public float getVoltage() => voltage;
     public bool getMetric() => metric;
     public string getModeDescriptorName() {return modeDescriptorsName[mode];}
     public float getModeDescriptorSpeed() { if (metric) return modeDescriptorsSpeed[mode]; else return modeDescriptorsSpeedImperial[mode]; }
@@ -138,6 +147,22 @@ public class BikeState : MonoBehaviour {
         metric = !metric;
         if (save) PlayerPrefs.SetInt("metric", metric ? 1 : 0);
         return metric;
+    }
+
+    public void setDeviceName(string deviceName) {
+        this.deviceName = deviceName;
+    }
+
+    public void setManufacturerName(string manufacturerName) {
+        this.manufacturerName = manufacturerName;
+    }
+
+    public void setSoftwareVersion(string softwareVesrion) {
+        this.softwareVersion = softwareVesrion;
+    }
+
+    public void setHardwareVersion(string hardwareVersion) {
+        this.hardwareVersion = hardwareVersion;
     }
 
     public byte[] getData() {
@@ -201,9 +226,6 @@ public class BikeState : MonoBehaviour {
         return getRange().ToString("0.0");
     }
 
-    public string getReadableVoltage() {
-        return getVoltage().ToString("0.0");
-    }
 
     //DATA RECEIVE
 
@@ -251,7 +273,6 @@ public class BikeState : MonoBehaviour {
         rawRange = BitConverter.ToUInt16(new byte[] { data[8], data[9] });
         rangeFromRawRange();
         batteryLevelFromRawRange();
-        voltageFromBatteryLevel();
 
         return true;
     }
@@ -286,9 +307,6 @@ public class BikeState : MonoBehaviour {
         batteryLevel = (rawRange / PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM")) * 100f;
     }
 
-    void voltageFromBatteryLevel() {
-        voltage = BikeManager.instance.li_ionDischargeCurve.Evaluate(batteryLevel); //Mathf.Lerp(BikeManager.MIN_VOLTAGE_V, BikeManager.MAX_VOLTAGE_V, batteryLevel / 100f);
-    }
 
     //OTHER
 

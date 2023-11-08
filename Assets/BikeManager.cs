@@ -23,8 +23,6 @@ public class BikeManager : MonoBehaviour {
     public static byte[] SETTINGS_ID = { 0x03, 0x00 };
     public static byte[] POWER_ID = { 0x04, 0x01 };
 
-    public AnimationCurve li_ionDischargeCurve;
-
     public Button themeButton;
     [Header("Loading")]
     public GameObject loadingOverlay;
@@ -69,6 +67,11 @@ public class BikeManager : MonoBehaviour {
     public Toggle autoConnectToggle;
     public Button unitsButton;
     public Button prefsButton;
+    [Space]
+    public TMP_Text deviceNameText;
+    public TMP_Text manufacturerNameText;
+    public TMP_Text softwareVersionText;
+    public TMP_Text hardwareVersionText;
     [Space]
     [Header("Debug")]
     public TMP_Text notifText;
@@ -338,6 +341,11 @@ public class BikeManager : MonoBehaviour {
         registerPower();
         yield return new WaitUntil(() => registerAvailable);
         registerSpeed();
+        yield return new WaitUntil(() => registerAvailable);
+        readDeviceName();
+        readManufacturerName();
+        readSoftwareVersion();
+        readHardwareVersion();
     }
 
     void disconnect() {
@@ -371,31 +379,31 @@ public class BikeManager : MonoBehaviour {
     }
 
     //Register
-    public void registerSettings() {
+    void registerSettings() {
         registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
         Debug.Log("Registering settings");
     }
 
-    public void registerTotal() {
+    void registerTotal() {
         registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
         Debug.Log("Registering total");
     }
 
-    public void registerPedal() {
+    void registerPedal() {
         registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, PEDAL_ID);
         Debug.Log("Registering total");
     }
 
-    public void registerPower() {
+    void registerPower() {
         registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, POWER_ID);
         Debug.Log("Registering total");
     }
 
-    public void registerSpeed() {
+    void registerSpeed() {
         registerAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SPEED_ID);
         Debug.Log("Registering total");
@@ -405,25 +413,71 @@ public class BikeManager : MonoBehaviour {
         readRegister();
     }
 
-    public void readRegister() {
+    void readRegister() {
         NativeBLE.readCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER);
         Debug.Log("Reading register");
     }
 
-    
+    //Other reads
+
+    void readDeviceName() {
+        NativeBLE.readCharacteristic(UUID_GENERIC_ACCESS_SERVICE, UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC);
+        Debug.Log("Reading device name");
+    }
+
+    void readManufacturerName() {
+        NativeBLE.readCharacteristic(UUID_DEVICE_INFO_SERVICE, UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC);
+        Debug.Log("Reading manufacturer");
+    }
+
+    void readSoftwareVersion() {
+        NativeBLE.readCharacteristic(UUID_DEVICE_INFO_SERVICE, UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC);
+        Debug.Log("Reading software v.");
+    }
+
+    void readHardwareVersion() {
+        NativeBLE.readCharacteristic(UUID_DEVICE_INFO_SERVICE, UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC);
+        Debug.Log("Reading hardware v.");
+    }
+
     //Results
     void onCharacteristicRead(string characteristic, byte[] data) {
-        if (data != null && data.Length == 10) { //Valid data
-            updateNotificationDebug(data);
-            if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
-        }
+        //New bike data
+        if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER || characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER) {
 
-        if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER) {
-            //Debug.Log("Recieved notification");
-
-        } else if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER) {
-            registerAvailable = true;
-           // Debug.Log("Recieved register");
+            if (data != null && data.Length == 10) { //Valid data
+                updateNotificationDebug(data);
+                if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
+            }
+            if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER) registerAvailable = true;
+        //New device name
+        } else if (characteristic == UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC) {
+            if (data != null && data.Length > 0) {
+                string deviceName = BitConverter.ToString(data);
+                currentBikeState.setDeviceName(deviceName);
+                deviceNameText.text = deviceName;
+            }
+        //New manufacturer name
+        } else if (characteristic == UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC) {
+            if (data != null && data.Length > 0) {
+                string manufacturerName = BitConverter.ToString(data);
+                currentBikeState.setManufacturerName(manufacturerName);
+                manufacturerNameText.text = manufacturerName;
+            }
+        //New software version
+        } else if (characteristic == UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC) {
+            if (data != null && data.Length > 0) {
+                string softwareVersion = BitConverter.ToString(data);
+                currentBikeState.setSoftwareVersion(softwareVersion);
+                softwareVersionText.text = softwareVersion;
+            }
+        //New hardware version
+        } else if (characteristic == UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC) {
+            if (data != null && data.Length > 0) {
+                string hardwareVersion = BitConverter.ToString(data);
+                currentBikeState.setHardwareVersion(hardwareVersion);
+                hardwareVersionText.text = hardwareVersion;
+            }
         } else {
             string s = "### Received " + characteristic + " : \n";
             s += BitConverter.ToString(data).Replace("-", " ");
