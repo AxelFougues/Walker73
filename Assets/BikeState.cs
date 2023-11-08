@@ -60,6 +60,9 @@ public class BikeState : MonoBehaviour {
         true
     };
 
+    public const int MAX_MODE = 7;
+    public const int MAX_ASSIST = 4;
+
     //settings
     bool metric = true;
     int mode;
@@ -107,14 +110,14 @@ public class BikeState : MonoBehaviour {
 
     public int changeMode(bool save = true) {
         mode++;
-        if (mode > 8) mode = 0;
+        if (mode > MAX_MODE) mode = 0;
         if (save) PlayerPrefs.SetInt("mode", mode);
         return mode;
     }
 
     public int changeAssist(bool save = true) {
         assist++;
-        if (assist > 5) assist = 0;
+        if (assist > MAX_ASSIST) assist = 0;
         if (save) PlayerPrefs.SetInt("assist", assist);
         return assist;
     }
@@ -246,7 +249,7 @@ public class BikeState : MonoBehaviour {
         rawPedal = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
         pedalRPMFromRawPower();
         rawRange = BitConverter.ToUInt16(new byte[] { data[8], data[9] });
-        rangeFromBatteryLevel();
+        rangeFromRawRange();
         batteryLevelFromRawRange();
         voltageFromBatteryLevel();
 
@@ -274,8 +277,9 @@ public class BikeState : MonoBehaviour {
         pedalRPM = 0.2189381 * Mathf.Pow(rawPedal, 0.02422947f);
     }
 
-    void rangeFromBatteryLevel() {
-        range = (rawRange / PlayerPrefs.GetFloat("BASE_TOTAL_RANGE_KM")) * PlayerPrefs.GetFloat("REAL_TOTAL_RANGE_KM");
+    void rangeFromRawRange() {
+        float clampedRaw = Mathf.Clamp(rawRange, 0f, PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM"));
+        range = (clampedRaw / PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM")) * PlayerPrefs.GetFloat("REAL_MAX_RANGE_KM");
     }
 
     void batteryLevelFromRawRange() {

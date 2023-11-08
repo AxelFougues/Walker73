@@ -55,11 +55,6 @@ public class BikeManager : MonoBehaviour {
     public Button assistButton;
     public TMP_Text assistText;
     [Space]
-    public TMP_Text tempText;
-    public TMP_Text tempUnitsText;
-    public TMP_Text voltText;
-    public TMP_Text voltUnitsText;
-    [Space]
     public Button lightButton;
     public Image lightGraphic;
     public TMP_Text rangeText;
@@ -246,10 +241,6 @@ public class BikeManager : MonoBehaviour {
 
         if (rangeText != null) rangeText.text = state.getReadableRange();
         if (rangeUnitsText != null) rangeUnitsText.text = state.getMetric() ? "km" : "mi";
-
-        if (tempUnitsText != null) tempUnitsText.text = state.getMetric() ? "°C" : "°F";
-
-        if (voltText != null) voltText.text = state.getReadableVoltage();
 
         if (levelText != null) levelText.text = state.getReadableBatteryLevel();
 
