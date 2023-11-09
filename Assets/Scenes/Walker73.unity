@@ -13039,9 +13039,9 @@ MonoBehaviour:
   unitsButton: {fileID: 825316391}
   prefsButton: {fileID: 1835396043}
   deviceNameText: {fileID: 974606734}
-  manufacturerNameText: {fileID: 985097814}
-  softwareVersionText: {fileID: 186379478}
-  hardwareVersionText: {fileID: 145735877}
+  manufacturerNameText: {fileID: 145735877}
+  softwareVersionText: {fileID: 985097814}
+  hardwareVersionText: {fileID: 186379478}
   notifText: {fileID: 2095445305}
   prefsOverlay: {fileID: 464400561}
   lightOn: {fileID: 21300000, guid: 5604dae65d72e9a46889f29f2970ffd1, type: 3}

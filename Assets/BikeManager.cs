@@ -130,7 +130,7 @@ public class BikeManager : MonoBehaviour {
 
     //Internal
     BikeState currentBikeState;
-    bool registerAvailable = true;
+    bool readAvailable = true;
 
     #region INITIALIZATION
     private void Awake() {
@@ -331,20 +331,23 @@ public class BikeManager : MonoBehaviour {
     }
 
     IEnumerator getStartupInfoRoutine() {
-        yield return new WaitUntil(() => registerAvailable);
+        yield return new WaitUntil(() => readAvailable);
         registerSettings();
-        yield return new WaitUntil(() => registerAvailable);
+        yield return new WaitUntil(() => readAvailable);
         registerTotal();
-        yield return new WaitUntil(() => registerAvailable);
+        yield return new WaitUntil(() => readAvailable);
         registerPedal();
-        yield return new WaitUntil(() => registerAvailable);
+        yield return new WaitUntil(() => readAvailable);
         registerPower();
-        yield return new WaitUntil(() => registerAvailable);
+        yield return new WaitUntil(() => readAvailable);
         registerSpeed();
-        yield return new WaitUntil(() => registerAvailable);
+        yield return new WaitUntil(() => readAvailable);
         readDeviceName();
+        yield return new WaitUntil(() => readAvailable);
         readManufacturerName();
+        yield return new WaitUntil(() => readAvailable);
         readSoftwareVersion();
+        yield return new WaitUntil(() => readAvailable);
         readHardwareVersion();
     }
 
@@ -380,31 +383,31 @@ public class BikeManager : MonoBehaviour {
 
     //Register
     void registerSettings() {
-        registerAvailable = false;
+        readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
         Debug.Log("Registering settings");
     }
 
     void registerTotal() {
-        registerAvailable = false;
+        readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, TOTAL_ID);
         Debug.Log("Registering total");
     }
 
     void registerPedal() {
-        registerAvailable = false;
+        readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, PEDAL_ID);
         Debug.Log("Registering total");
     }
 
     void registerPower() {
-        registerAvailable = false;
+        readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, POWER_ID);
         Debug.Log("Registering total");
     }
 
     void registerSpeed() {
-        registerAvailable = false;
+        readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SPEED_ID);
         Debug.Log("Registering total");
     }
@@ -421,21 +424,25 @@ public class BikeManager : MonoBehaviour {
     //Other reads
 
     void readDeviceName() {
+        readAvailable = false;
         NativeBLE.readCharacteristic(UUID_GENERIC_ACCESS_SERVICE, UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC);
         Debug.Log("Reading device name");
     }
 
     void readManufacturerName() {
+        readAvailable = false;
         NativeBLE.readCharacteristic(UUID_DEVICE_INFO_SERVICE, UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC);
         Debug.Log("Reading manufacturer");
     }
 
     void readSoftwareVersion() {
+        readAvailable = false;
         NativeBLE.readCharacteristic(UUID_DEVICE_INFO_SERVICE, UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC);
         Debug.Log("Reading software v.");
     }
 
     void readHardwareVersion() {
+        readAvailable = false;
         NativeBLE.readCharacteristic(UUID_DEVICE_INFO_SERVICE, UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC);
         Debug.Log("Reading hardware v.");
     }
@@ -449,13 +456,14 @@ public class BikeManager : MonoBehaviour {
                 updateNotificationDebug(data);
                 if (currentBikeState.processData(data)) refreshDisplay(currentBikeState);
             }
-            if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER) registerAvailable = true;
+            if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER) readAvailable = true;
         //New device name
         } else if (characteristic == UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC) {
             if (data != null && data.Length > 0) {
                 string deviceName = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setDeviceName(deviceName);
                 deviceNameText.text = deviceName;
+                readAvailable = true;
             }
         //New manufacturer name
         } else if (characteristic == UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC) {
@@ -463,6 +471,7 @@ public class BikeManager : MonoBehaviour {
                 string manufacturerName = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setManufacturerName(manufacturerName);
                 manufacturerNameText.text = manufacturerName;
+                readAvailable = true;
             }
         //New software version
         } else if (characteristic == UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC) {
@@ -470,6 +479,7 @@ public class BikeManager : MonoBehaviour {
                 string softwareVersion = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setSoftwareVersion(softwareVersion);
                 softwareVersionText.text = softwareVersion;
+                readAvailable = true;
             }
         //New hardware version
         } else if (characteristic == UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC) {
@@ -477,6 +487,7 @@ public class BikeManager : MonoBehaviour {
                 string hardwareVersion = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setHardwareVersion(hardwareVersion);
                 hardwareVersionText.text = hardwareVersion;
+                readAvailable = true;
             }
         } else {
             string s = "### Received " + characteristic + " : \n";

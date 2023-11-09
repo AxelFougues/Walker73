@@ -80,7 +80,7 @@ public class BikeState : MonoBehaviour {
     ushort rawPedal = 0;
 
     ushort rawRange = 0;
-    float batteryLevel = 0;
+    float batteryLevel = 100;
     float range = 0;
 
     //device
