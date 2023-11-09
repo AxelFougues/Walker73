@@ -72,7 +72,6 @@ public class BikeState : MonoBehaviour {
     //metrics
     double wheelSpeed = 0f;
     double wheelRPM = 0f;
-    ushort rawWheel = 0;
 
     float total = 0;
 
@@ -256,8 +255,7 @@ public class BikeState : MonoBehaviour {
     }
 
     bool processWheelData(byte[] data) {
-        rawWheel = BitConverter.ToUInt16(new byte[] { data[2], data[3] });
-        wheelSpeedFromRaw();
+        wheelSpeed = BitConverter.ToUInt16(new byte[] { data[2], data[3] }) / 100;
         wheelRPMFromSpeed();
         return true;
     }
@@ -282,10 +280,6 @@ public class BikeState : MonoBehaviour {
     }
 
 
-    void wheelSpeedFromRaw() {
-        wheelSpeed = 0.01963741 * Mathf.Pow(rawWheel, 0.9211116f);
-    }
-
     void wheelRPMFromSpeed() {
         wheelRPM =  wheelSpeed/PlayerPrefs.GetFloat("WHEEL_DIAMETRER_M") /0.1885f;
     }
@@ -295,7 +289,7 @@ public class BikeState : MonoBehaviour {
     }
 
     void pedalRPMFromRawPower() {
-        pedalRPM = 0.2189381 * Mathf.Pow(rawPedal, 0.02422947f);
+        pedalRPM = 0.2189381 * rawPedal;
     }
 
     void rangeFromRawRange() {

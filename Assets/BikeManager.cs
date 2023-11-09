@@ -145,6 +145,10 @@ public class BikeManager : MonoBehaviour {
         if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
         if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
 
+
+
+        Debug.Log(0.2189381f * Mathf.Pow(1f, 0.02422947f));
+
     }
 
     private void OnEnable() {
