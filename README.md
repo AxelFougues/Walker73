@@ -94,21 +94,18 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 | :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
 | WHEEL         |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
 | TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
-| PEDAL         |  0x02 | 0x03  | **PSPEED** | **PSPEED** | Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
+| PEDAL         |  0x02 | 0x03  | **CADENCE** | **CADENCE** | Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
 | SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
 | POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00      | 0x00      |
 
-- WSPEED : UInt16, wheel speed (km/h) ~= ```0.009876614 * WSPEED + 1.228228```
-- PSPEED : UInt16, pedal RPM ~=  ```0.01926005 * PSPEED + 1.051926```
+- WSPEED : UInt16, wheel speed (km/h) ~= ```WSPEED / 100```
+- CADENCE : UInt16, pedal RPM ~=  ```0.2189381 * PSPEED```
 - TOTAL : UInt16, total (km) ~= ```TOTAL / 10```
 - ASSIST : pedal assist level (0-4)
 - WALK : walk (push along) assist (0/90?)
 - LIGHT : headlight on (1/0)
 - MODE : riding power mode (0-7)
 - RANGE : remaining range from battery in km
-
-> The linear approximations to turn WSPEED and PSPEED into real units do not pass through 0 which is not ideal.
-Instead here are some slightly more costly power approximations that do zero out: wheel speed (km/h) ~= ```0.01963741 * WSPEED ^ 0.9211116f``` and pedal RPM ~=  ```0.2189381 * PSPEED ^ 0.02422947f```
 
 | MODE  |NAME      |EU/US  | Max assist| Max power| Throttle | Description    |
 | :---: | :------: | :---: | :--------:| :------: | :------: | :------------- |
