@@ -28,27 +28,25 @@ extern void ConfigurationSection_IsModified_m65E5503E4AB960336F17AF49AD94FDCA63E
 extern void ConfigurationSection_ResetModified_m3A4EF275904DF31400B33FD9C4F22537D2922844 (void);
 // 0x00000008 System.String System.Configuration.ConfigurationSection::SerializeSection(System.Configuration.ConfigurationElement,System.String,System.Configuration.ConfigurationSaveMode)
 extern void ConfigurationSection_SerializeSection_m4526B82EBA81F4B2A049AA668905A27C58A07540 (void);
-// 0x00000009 System.Int32 System.Configuration.ConfigurationElementCollection::get_Count()
-extern void ConfigurationElementCollection_get_Count_mB6BF33F872437348CD9E6FEFF15892F2298AC426 (void);
-// 0x0000000A System.Void System.Configuration.ConfigurationCollectionAttribute::.ctor(System.Type)
+// 0x00000009 System.Void System.Configuration.ConfigurationCollectionAttribute::.ctor(System.Type)
 extern void ConfigurationCollectionAttribute__ctor_m1C1204D379E75BB9D1AC794CAD78B0C95FDEDB8D (void);
-// 0x0000000B System.Void System.Configuration.IgnoreSection::.ctor()
+// 0x0000000A System.Void System.Configuration.IgnoreSection::.ctor()
 extern void IgnoreSection__ctor_mDF97B44EFE0B08DF0D7E89F7B79553E010597066 (void);
-// 0x0000000C System.Configuration.ConfigurationPropertyCollection System.Configuration.IgnoreSection::get_Properties()
+// 0x0000000B System.Configuration.ConfigurationPropertyCollection System.Configuration.IgnoreSection::get_Properties()
 extern void IgnoreSection_get_Properties_mE3DBA6242176B6E6438CEEBEB3A48319E9EFF133 (void);
-// 0x0000000D System.Void System.Configuration.IgnoreSection::DeserializeSection(System.Xml.XmlReader)
+// 0x0000000C System.Void System.Configuration.IgnoreSection::DeserializeSection(System.Xml.XmlReader)
 extern void IgnoreSection_DeserializeSection_m622C6FAE1160DCC952A4E36FC9E2DCB9DCC34CEC (void);
-// 0x0000000E System.Boolean System.Configuration.IgnoreSection::IsModified()
+// 0x0000000D System.Boolean System.Configuration.IgnoreSection::IsModified()
 extern void IgnoreSection_IsModified_mB1D57799DA9AE024B99CB05766D5497A3DD8F19F (void);
-// 0x0000000F System.Void System.Configuration.IgnoreSection::Reset(System.Configuration.ConfigurationElement)
+// 0x0000000E System.Void System.Configuration.IgnoreSection::Reset(System.Configuration.ConfigurationElement)
 extern void IgnoreSection_Reset_m8A41B00CEC8C72D608FEE005D438864B5638B84E (void);
-// 0x00000010 System.Void System.Configuration.IgnoreSection::ResetModified()
+// 0x0000000F System.Void System.Configuration.IgnoreSection::ResetModified()
 extern void IgnoreSection_ResetModified_m13E416D3841F85E3B334CF9EB517FFBE9F7E224C (void);
-// 0x00000011 System.String System.Configuration.IgnoreSection::SerializeSection(System.Configuration.ConfigurationElement,System.String,System.Configuration.ConfigurationSaveMode)
+// 0x00000010 System.String System.Configuration.IgnoreSection::SerializeSection(System.Configuration.ConfigurationElement,System.String,System.Configuration.ConfigurationSaveMode)
 extern void IgnoreSection_SerializeSection_m12BD59834DBCACE13758DA83BD3DEF2B8A6F3DBE (void);
-// 0x00000012 System.Void Unity.ThrowStub::ThrowNotSupportedException()
+// 0x00000011 System.Void Unity.ThrowStub::ThrowNotSupportedException()
 extern void ThrowStub_ThrowNotSupportedException_m7DA107DED77F144138F4555CA0759114B82C1672 (void);
-static Il2CppMethodPointer s_methodPointers[18] = 
+static Il2CppMethodPointer s_methodPointers[17] = 
 {
 	ConfigurationElement_get_Properties_m85E584B7C5EAFA411191A245AF41DEC274DE8F93,
 	ConfigurationElement_IsModified_m03570122B9C781EE3AFC094BDDEA82F56BE2F850,
@@ -58,7 +56,6 @@ static Il2CppMethodPointer s_methodPointers[18] =
 	ConfigurationSection_IsModified_m65E5503E4AB960336F17AF49AD94FDCA63EC7DD0,
 	ConfigurationSection_ResetModified_m3A4EF275904DF31400B33FD9C4F22537D2922844,
 	ConfigurationSection_SerializeSection_m4526B82EBA81F4B2A049AA668905A27C58A07540,
-	ConfigurationElementCollection_get_Count_mB6BF33F872437348CD9E6FEFF15892F2298AC426,
 	ConfigurationCollectionAttribute__ctor_m1C1204D379E75BB9D1AC794CAD78B0C95FDEDB8D,
 	IgnoreSection__ctor_mDF97B44EFE0B08DF0D7E89F7B79553E010597066,
 	IgnoreSection_get_Properties_mE3DBA6242176B6E6438CEEBEB3A48319E9EFF133,
@@ -69,32 +66,31 @@ static Il2CppMethodPointer s_methodPointers[18] =
 	IgnoreSection_SerializeSection_m12BD59834DBCACE13758DA83BD3DEF2B8A6F3DBE,
 	ThrowStub_ThrowNotSupportedException_m7DA107DED77F144138F4555CA0759114B82C1672,
 };
-static const int32_t s_InvokerIndices[18] = 
+static const int32_t s_InvokerIndices[17] = 
 {
-	3385,
-	3327,
-	2817,
-	3477,
-	2817,
-	3327,
-	3477,
+	3346,
+	3288,
+	2800,
+	3438,
+	2800,
+	3288,
+	3438,
 	711,
-	3366,
-	2817,
-	3477,
-	3385,
-	2817,
-	3327,
-	2817,
-	3477,
+	2800,
+	3438,
+	3346,
+	2800,
+	3288,
+	2800,
+	3438,
 	711,
-	5302,
+	5198,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Configuration_CodeGenModule;
 const Il2CppCodeGenModule g_System_Configuration_CodeGenModule = 
 {
 	"System.Configuration.dll",
-	18,
+	17,
 	s_methodPointers,
 	0,
 	NULL,

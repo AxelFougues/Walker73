@@ -145,8 +145,7 @@ public class BikeManager : MonoBehaviour {
         if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
         if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
 
-                
-}
+    }
 
     private void OnEnable() {
         NativeBLE.onScanResult += this.onScanResult;
@@ -454,28 +453,28 @@ public class BikeManager : MonoBehaviour {
         //New device name
         } else if (characteristic == UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC) {
             if (data != null && data.Length > 0) {
-                string deviceName = BitConverter.ToString(data);
+                string deviceName = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setDeviceName(deviceName);
                 deviceNameText.text = deviceName;
             }
         //New manufacturer name
         } else if (characteristic == UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC) {
             if (data != null && data.Length > 0) {
-                string manufacturerName = BitConverter.ToString(data);
+                string manufacturerName = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setManufacturerName(manufacturerName);
                 manufacturerNameText.text = manufacturerName;
             }
         //New software version
         } else if (characteristic == UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC) {
             if (data != null && data.Length > 0) {
-                string softwareVersion = BitConverter.ToString(data);
+                string softwareVersion = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setSoftwareVersion(softwareVersion);
                 softwareVersionText.text = softwareVersion;
             }
         //New hardware version
         } else if (characteristic == UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC) {
             if (data != null && data.Length > 0) {
-                string hardwareVersion = BitConverter.ToString(data);
+                string hardwareVersion = System.Text.Encoding.ASCII.GetString(data);
                 currentBikeState.setHardwareVersion(hardwareVersion);
                 hardwareVersionText.text = hardwareVersion;
             }
