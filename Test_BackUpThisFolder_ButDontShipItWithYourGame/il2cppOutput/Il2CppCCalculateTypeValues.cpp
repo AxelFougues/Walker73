@@ -46547,28 +46547,24 @@ struct BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E  : public MonoBehavio
 	double ___wheelSpeed_15;
 	// System.Double BikeState::wheelRPM
 	double ___wheelRPM_16;
-	// System.UInt16 BikeState::rawWheel
-	uint16_t ___rawWheel_17;
 	// System.Single BikeState::total
-	float ___total_18;
+	float ___total_17;
 	// System.Double BikeState::pedalRPM
-	double ___pedalRPM_19;
-	// System.UInt16 BikeState::rawPedal
-	uint16_t ___rawPedal_20;
+	double ___pedalRPM_18;
 	// System.UInt16 BikeState::rawRange
-	uint16_t ___rawRange_21;
+	uint16_t ___rawRange_19;
 	// System.Single BikeState::batteryLevel
-	float ___batteryLevel_22;
+	float ___batteryLevel_20;
 	// System.Single BikeState::range
-	float ___range_23;
+	float ___range_21;
 	// System.String BikeState::deviceName
-	String_t* ___deviceName_24;
+	String_t* ___deviceName_22;
 	// System.String BikeState::manufacturerName
-	String_t* ___manufacturerName_25;
+	String_t* ___manufacturerName_23;
 	// System.String BikeState::softwareVersion
-	String_t* ___softwareVersion_26;
+	String_t* ___softwareVersion_24;
 	// System.String BikeState::hardwareVersion
-	String_t* ___hardwareVersion_27;
+	String_t* ___hardwareVersion_25;
 };
 
 struct BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E_StaticFields
