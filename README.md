@@ -94,7 +94,7 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 | :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
 | WHEEL         |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
 | TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
-| PEDAL         |  0x02 | 0x03  | **CADENCE** | **CADENCE** | Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
+| PEDAL         |  0x02 | 0x03  | **CADENCE**| **CADENCE**| Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
 | SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
 | POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00      | 0x00      |
 
