@@ -134,10 +134,17 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 | :---------------------------------- | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
 | UUID_CHARACTERISTIC_REGISTER        |  0x00 | 0xD1  | **LIGHT**  | **ASSIST** | **MODE**   | ignored    | ignored    | ignored    | ignored   | ignored   |
 
-Produce 3.0 notification:
-19
-38
-
-Do not write:
-51
-52
+Brutforce writing ```UUID_CHARACTERISTIC_REGISTER``` with IDs [0x00 0x00 to 0x00 0xFF] and data bytes at 0x00 reveals that the following IDs produce a 3-0 notification when written:
+0x00 0x13
+0x00 0x26
+0x00 0x3A
+0x00 0x4C
+0x00 0x5F
+0x00 0x73
+0x00 0x86
+0x00 0x99
+0x00 0xAC
+0x00 0xBF
+0x00 0xD1 //Known 209
+0x00 0xE4
+0x00 0xF7
