@@ -134,5 +134,10 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 | :---------------------------------- | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
 | UUID_CHARACTERISTIC_REGISTER        |  0x00 | 0xD1  | **LIGHT**  | **ASSIST** | **MODE**   | ignored    | ignored    | ignored    | ignored   | ignored   |
 
+Produce 3.0 notification:
+19
+38
 
-
+Do not write:
+51
+52
