@@ -92,9 +92,9 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 
 |  Notification |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8    | Data 9    |
 | :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
-| WHEEL         |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
+| MOTION        |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
 | TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
-| PEDAL         |  0x02 | 0x03  | **CADENCE** | **CADENCE** | Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
+| RIDE          |  0x02 | 0x03  | **CADENCE**| **CADENCE**| Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
 | SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
 | POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00      | 0x00      |
 
@@ -127,3 +127,12 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 |3      |PAS3      |75%           |                |
 |4+     |PAS4      |100%          |                |
 |5+     |-         |0%            |Unimplemented   |
+
+## WRITTING
+
+|  Characteristic                     |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8    | Data 9    |
+| :---------------------------------- | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
+| UUID_CHARACTERISTIC_REGISTER        |  0x00 | 0xD1  | **LIGHT**  | **ASSIST** | **MODE**   | ignored    | ignored    | ignored    | ignored   | ignored   |
+
+
+
