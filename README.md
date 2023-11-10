@@ -96,7 +96,7 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 | TOTAL         |  0x02 | 0x02  | 0x00       | Unknown    | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
 | RIDE          |  0x02 | 0x03  | **CADENCE**| **CADENCE**| Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
 | SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
-| POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | 0x00       | Unknown    | 0x00       | 0x00      | 0x00      |
+| POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | **CAMP**   | **CAMP**   | 0x00       | 0x00      | 0x00      |
 
 - WSPEED : UInt16, wheel speed (km/h) ~= ```WSPEED / 100```
 - CADENCE : UInt16, pedal RPM ~=  ```0.2189381 * PSPEED```
@@ -106,6 +106,7 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 - LIGHT : headlight on (1/0)
 - MODE : riding power mode (0-7)
 - RANGE : remaining range from battery in km
+- CAMP : UInt16, charging current (A) ~= ```CAMP / 1000```
 
 | MODE  |NAME      |EU/US  | Max assist| Max power| Throttle | Description    |
 | :---: | :------: | :---: | :--------:| :------: | :------: | :------------- |
