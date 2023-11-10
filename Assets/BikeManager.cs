@@ -17,16 +17,13 @@ public class BikeManager : MonoBehaviour {
     public static float BASE_MAX_RANGE_KM = 60f;
     public static float REAL_MAX_RANGE_KM = 60f;
 
-    public static byte[] SPEED_ID = { 0x02, 0x01 };
+    public static byte[] MOTION_ID = { 0x02, 0x01 };
     public static byte[] TOTAL_ID = { 0x02, 0x02 };
-    public static byte[] PEDAL_ID = { 0x02, 0x03 };
+    public static byte[] RIDE_ID = { 0x02, 0x03 };
     public static byte[] SETTINGS_ID = { 0x03, 0x00 };
     public static byte[] POWER_ID = { 0x04, 0x01 };
 
-    public Button themeButton;
-    [Header("Loading")]
-    public GameObject loadingOverlay;
-    [Space]
+
     [Header("Scan")]
     public GameObject scanPage;
     public Button scanButton;
@@ -37,7 +34,6 @@ public class BikeManager : MonoBehaviour {
     [Space]
     [Header("Connect")]
     public GameObject connectPage;
-    public Button bikeButton;
     [Space]
     public Button modeButton;
     public TMP_Text modeText;
@@ -45,18 +41,23 @@ public class BikeManager : MonoBehaviour {
     public TMP_Text modeDescriptorSpeedText;
     public TMP_Text modeDescriptorPowerText;
     public TMP_Text modeDescriptorThrottleText;
+    [Space]
     public TMP_Text speedText;
     public TMP_Text speedUnitsText;
-    [Space]
-    public Image levelGraphic;
-    public TMP_Text levelText;
     public Button assistButton;
     public TMP_Text assistText;
     [Space]
-    public Button lightButton;
-    public Image lightGraphic;
+    public Image levelGraphic;
+    public TMP_Text levelText;
     public TMP_Text rangeText;
     public TMP_Text rangeUnitsText;
+    [Space]
+    public Button lightButton;
+    public Image lightGraphic;
+    public Button unitsButton;
+    public Button prefsButton;
+    public Button themeButton;
+    public Image walkGraphic;
     [Space]
     public TMP_Text wheelRPMText;
     public TMP_Text pedalRPMText;
@@ -65,8 +66,8 @@ public class BikeManager : MonoBehaviour {
     [Space]
     public Toggle autoApplyToggle;
     public Toggle autoConnectToggle;
-    public Button unitsButton;
-    public Button prefsButton;
+    public Button bikeButton;
+    public Toggle debugToggle;  
     [Space]
     public TMP_Text deviceNameText;
     public TMP_Text manufacturerNameText;
@@ -74,12 +75,18 @@ public class BikeManager : MonoBehaviour {
     public TMP_Text hardwareVersionText;
     [Space]
     [Header("Debug")]
+    public List<GameObject> debugLines;
     public TMP_Text notifText;
     public GameObject prefsOverlay;
+    [Space]
+    [Header("Loading")]
+    public GameObject loadingOverlay;
     [Space]
     [Header("Resources")]
     public Sprite lightOn;
     public Sprite lightOff;
+    public Sprite walkOn;
+    public Sprite walkOff;
     public List<Sprite> batteryLevels;
     public Sprite batteryCharging;
 
@@ -145,8 +152,6 @@ public class BikeManager : MonoBehaviour {
         if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
         if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
 
-        notifText.gameObject.SetActive(Debug.isDebugBuild);
-
     }
 
     private void OnEnable() {
@@ -178,6 +183,13 @@ public class BikeManager : MonoBehaviour {
                 ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
                 PlayerPrefs.SetString("theme", DeviceTheme.DARK.ToString());
             }
+        });
+
+        debugToggle.isOn = PlayerPrefs.GetInt("debug", 0) == 1;
+        foreach (GameObject line in debugLines) line.SetActive(debugToggle.isOn);
+        debugToggle.onValueChanged.AddListener(delegate {
+            PlayerPrefs.SetInt("debug", debugToggle.isOn ? 1 : 0);
+            foreach (GameObject line in debugLines) line.SetActive(debugToggle.isOn);
         });
         //
         scanButton.onClick.AddListener(delegate {
@@ -239,6 +251,7 @@ public class BikeManager : MonoBehaviour {
 
         if (assistText != null) assistText.text = state.getAssist().ToString();
         if (lightGraphic != null) lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
+        if (walkGraphic != null) walkGraphic.sprite = state.getWalk() ? walkOn : walkOff;
 
         if (speedText != null) speedText.text = state.getReadableWheelSpeed();
         if (speedUnitsText != null) speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
@@ -398,7 +411,7 @@ public class BikeManager : MonoBehaviour {
 
     void registerPedal() {
         readAvailable = false;
-        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, PEDAL_ID);
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, RIDE_ID);
         Debug.Log("Registering total");
     }
 
@@ -410,7 +423,7 @@ public class BikeManager : MonoBehaviour {
 
     void registerSpeed() {
         readAvailable = false;
-        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SPEED_ID);
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, MOTION_ID);
         Debug.Log("Registering total");
     }
 
@@ -515,7 +528,7 @@ public class BikeManager : MonoBehaviour {
         }
 
         //debug text
-        notifText.text = debugNotificationText[0] + "\n" + debugNotificationText[1] + "\n" + debugNotificationText[2] + "\n" + debugNotificationText[3] + "\n" + debugNotificationText[4];
+        notifText.text = debugNotificationText[0] + " MOTION\n" + debugNotificationText[1] + " TOTAL\n" + debugNotificationText[2] + " RIDE\n" + debugNotificationText[3] + " SETTINGS\n" + debugNotificationText[4] + " POWER";
     }
 
 

@@ -26809,6 +26809,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Delegate_get_Target_m6E203F111
 		return L_0;
 	}
 }
+// System.IntPtr System.Delegate::GetNativeFunctionPointer()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Delegate_GetNativeFunctionPointer_m33154447FC68C796BC39378ED738569E7DF8D1B4 (Delegate_t* __this, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = (intptr_t)__this->___method_ptr_0;
+		return L_0;
+	}
+}
 // System.Delegate System.Delegate::CreateDelegate_internal(System.Type,System.Object,System.Reflection.MethodInfo,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_CreateDelegate_internal_mBA6CFDB235B7F91DBAAD074AF07DA167291E3872 (Type_t* ___type0, RuntimeObject* ___target1, MethodInfo_t* ___info2, bool ___throwOnBindFailure3, const RuntimeMethod* method) 
 {

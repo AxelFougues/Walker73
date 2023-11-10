@@ -67,6 +67,7 @@ public class BikeState : MonoBehaviour {
     bool metric = true;
     int mode;
     int assist;
+    bool walk;
     bool light;
 
     //metrics
@@ -105,6 +106,7 @@ public class BikeState : MonoBehaviour {
     public int getMode() => mode;
     public int getAssist() => assist;
     public bool getLight() => light;
+    public bool getWalk() => walk;
     public float getBatteryLevel() => batteryLevel;
     public bool getMetric() => metric;
     public string getModeDescriptorName() {return modeDescriptorsName[mode];}
@@ -231,9 +233,9 @@ public class BikeState : MonoBehaviour {
         if (data == null || data.Length != 10) return false;
 
         if (dataIsId(data, BikeManager.SETTINGS_ID)) return processSettingsData(data);
-        else if (dataIsId(data, BikeManager.SPEED_ID)) return processWheelData(data);
+        else if (dataIsId(data, BikeManager.MOTION_ID)) return processMotionData(data);
         else if (dataIsId(data, BikeManager.TOTAL_ID)) return processTotalData(data);
-        else if (dataIsId(data, BikeManager.PEDAL_ID)) return processPedalData(data);
+        else if (dataIsId(data, BikeManager.RIDE_ID)) return processRideData(data);
         else if (dataIsId(data, BikeManager.POWER_ID)) return processPowerData(data);
 
         return false;
@@ -247,13 +249,14 @@ public class BikeState : MonoBehaviour {
         //if (data[4] > 0x01) return false;
         //if (data[2] > 0x04) return false;
         //if (data[5] > 0x07) return false;
+        walk = data[3] == 0x00;
         light = data[4] == 0x01;
         assist = data[2];
         mode = data[5];
         return true;
     }
 
-    bool processWheelData(byte[] data) {
+    bool processMotionData(byte[] data) {
         wheelSpeed = BitConverter.ToUInt16(new byte[] { data[2], data[3] }) / 100;
         wheelRPMFromSpeed();
         return true;
@@ -264,7 +267,7 @@ public class BikeState : MonoBehaviour {
         return true;
     }
 
-    bool processPedalData(byte[] data) {
+    bool processRideData(byte[] data) {
         pedalRPM = 0.2189381 * BitConverter.ToUInt16(new byte[] { data[2], data[3] });
         rawRange = BitConverter.ToUInt16(new byte[] { data[8], data[9] });
         rangeFromRawRange();
