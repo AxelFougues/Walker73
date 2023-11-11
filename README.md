@@ -87,16 +87,16 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 
 > (2) DFU Control Point characteristic or Buttonless DFU, see: https://nordicsemiconductor.github.io/Nordic-Thingy52-FW/documentation/firmware_architecture.html#arch_battery
 
-## Notifications
+## Notifications / Register
 Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER``` subscritpion or writing 2 byte ID at ```UUID_CHARACTERISTIC_REGISTER_ID``` and then reading ```UUID_CHARACTERISTIC_REGISTER```.
 
-|  Notification |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8    | Data 9    |
-| :------------ | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
-| MOTION        |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
-| TOTAL         |  0x02 | 0x02  | 0x00       | 0x4E (1)   | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
-| RIDE          |  0x02 | 0x03  | **CADENCE**| **CADENCE**| Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
-| SETTINGS      |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
-| POWER         |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | **CAMP**   | **CAMP**   | 0x00       | 0x00      | 0x00      |
+|  Notification & Register |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8    | Data 9    |
+| :----------------------- | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
+| MOTION                   |  0x02 | 0x01  | **WSPEED** | **WSPEED** | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
+| TOTAL                    |  0x02 | 0x02  | 0x00       | 0x4E (1)   | 0x00       | 0x00       | **TOTAL**  | **TOTAL**  | 0x00      | 0x00      |
+| RIDE                     |  0x02 | 0x03  | **CADENCE**| **CADENCE**| Unknown    | Unknown    | Unknown    | 0x00       | **RANGE** | **RANGE** |
+| SETTINGS                 |  0x03 | 0x00  | **ASSIST** | **WALK**   | **LIGHT**  | **MODE**   | 0x00       | 0x00       | 0x00      | 0x00      |
+| POWER                    |  0x04 | 0x01  | Unknown    | 0x00       | 0x00       | **CAMP**   | **CAMP**   | 0x00       | 0x00      | 0x00      |
 
 - WSPEED : UInt16, wheel speed (km/h) ~= ```WSPEED / 100```
 - CADENCE : UInt16, pedal RPM ~=  ```0.2189381 * PSPEED```
@@ -109,6 +109,19 @@ Getting settings and bike state from ```UUID_CHARACTERISTIC_REGISTER_NOTIFIER```
 - CAMP : UInt16, charging current (A) ~= ```CAMP / 1000```
 
 > (1) Flickers between 0x4E and 0x4D when motor is running
+
+
+When brutforce registering ids (0x00 0x00 to 0x09 0x09) only the following ones returned a corresponding register. While 0x00 0x00 seems to contain some data the rest seem empty.
+
+|  Register only           |  ID 0 |  ID 1 | Data 2     | Data 3     | Data 4     | Data 5     | Data 6     | Data 7     | Data 8    | Data 9    |
+| :----------------------- | :---: | :---: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-------: | :-------: |
+| Unknown                  |  0x00 | 0x00  | 0x00       | 0x01       | 0x07       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
+| Unknown                  |  0x00 | 0x01  | 0x00       | 0x00       | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
+|                          |  ...  | ...   |            |            |            |            |            |            |           |           |
+| Unknown                  |  0x00 | 0x06  | 0x00       | 0x00       | 0x00       | 0x00       | 0x00       | 0x00       | 0x00      | 0x00      |
+
+
+
 
 | MODE  |NAME      |EU/US  | Max assist| Max power| Throttle | Description    |
 | :---: | :------: | :---: | :--------:| :------: | :------: | :------------- |
