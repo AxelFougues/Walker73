@@ -17,6 +17,7 @@ public class BikeManager : MonoBehaviour {
     public static float BASE_MAX_RANGE_KM = 60f;
     public static float REAL_MAX_RANGE_KM = 60f;
 
+    public static byte[] MYSTERY_ID = { 0x00, 0x00 };
     public static byte[] MOTION_ID = { 0x02, 0x01 };
     public static byte[] TOTAL_ID = { 0x02, 0x02 };
     public static byte[] RIDE_ID = { 0x02, 0x03 };
@@ -35,6 +36,11 @@ public class BikeManager : MonoBehaviour {
     [Header("Connect")]
     public GameObject connectPage;
     [Space]
+    public GameObject walkGraphic;
+    public GameObject limpGraphic;
+    public GameObject brakesGraphic;
+    public GameObject indicatorsSideBar;
+    [Space]
     public Button modeButton;
     public TMP_Text modeText;
     public TMP_Text modeDescriptorNameText;
@@ -47,17 +53,19 @@ public class BikeManager : MonoBehaviour {
     public Button assistButton;
     public TMP_Text assistText;
     [Space]
+    public Toggle batteryToggle;
     public Image levelGraphic;
     public TMP_Text levelText;
     public TMP_Text rangeText;
     public TMP_Text rangeUnitsText;
+    public TMP_Text voltText;
+    public TMP_Text ampText;
     [Space]
     public Button lightButton;
     public Image lightGraphic;
     public Button unitsButton;
     public Button prefsButton;
     public Button themeButton;
-    public Image walkGraphic;
     [Space]
     public TMP_Text wheelRPMText;
     public TMP_Text pedalRPMText;
@@ -85,10 +93,9 @@ public class BikeManager : MonoBehaviour {
     [Header("Resources")]
     public Sprite lightOn;
     public Sprite lightOff;
-    public Sprite walkOn;
-    public Sprite walkOff;
     public List<Sprite> batteryLevels;
     public Sprite batteryCharging;
+
 
 
     //BT protocol
@@ -128,6 +135,7 @@ public class BikeManager : MonoBehaviour {
 
 
     List<string> debugNotificationText = new List<string> {
+        "0 0",
         "2 1",
         "2 2",
         "2 3",
@@ -162,6 +170,7 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.onCharacteristicRead += this.onCharacteristicRead;
         NativeBLE.onCharacteristicWrite += this.onCharacteristicWrite;
         NativeBLE.onCharacteristicChanged += this.onCharacteristicRead;
+        NativeBLE.onCharacteristicWrite += this.onWrite;
     }
 
     private void Start() {
@@ -174,6 +183,15 @@ public class BikeManager : MonoBehaviour {
 
         currentBikeState = gameObject.AddComponent<BikeState>();
         refreshDisplay(currentBikeState);
+
+        batteryToggle.isOn = PlayerPrefs.GetInt("batteryLevel", 1) == 1;
+        levelText.gameObject.SetActive(batteryToggle.isOn);
+        rangeText.gameObject.SetActive(!batteryToggle.isOn);
+        batteryToggle.onValueChanged.AddListener(delegate {
+            PlayerPrefs.SetInt("batteryLevel", batteryToggle.isOn ? 1 : 0);
+            levelText.gameObject.SetActive(batteryToggle.isOn);
+            rangeText.gameObject.SetActive(!batteryToggle.isOn);
+        });
 
         themeButton.onClick.AddListener(delegate {
             if (ColorManager.instance.theme == ColorManager.instance.darkTheme) {
@@ -243,6 +261,7 @@ public class BikeManager : MonoBehaviour {
     }
 
     void refreshDisplay(BikeState state) {
+
         if(modeText!= null) modeText.text = state.getMode().ToString();
         if (modeDescriptorNameText != null) modeDescriptorNameText.text = state.getModeDescriptorName();
         if (modeDescriptorSpeedText != null) modeDescriptorSpeedText.text = state.getModeDescriptorSpeedReadable();
@@ -251,7 +270,11 @@ public class BikeManager : MonoBehaviour {
 
         if (assistText != null) assistText.text = state.getAssist().ToString();
         if (lightGraphic != null) lightGraphic.sprite = state.getLight() ? lightOn : lightOff;
-        if (walkGraphic != null) walkGraphic.sprite = state.getWalk() ? walkOn : walkOff;
+
+        if (walkGraphic != null) walkGraphic.SetActive(state.getWalk());
+        if (limpGraphic != null) limpGraphic.SetActive(state.getLimp());
+        if (brakesGraphic != null) brakesGraphic.SetActive(state.getBrakes());
+
 
         if (speedText != null) speedText.text = state.getReadableWheelSpeed();
         if (speedUnitsText != null) speedUnitsText.text = state.getMetric() ? "kmh" : "mph";
@@ -260,7 +283,12 @@ public class BikeManager : MonoBehaviour {
         if (rangeUnitsText != null) rangeUnitsText.text = state.getMetric() ? "km" : "mi";
 
         if (levelText != null) levelText.text = state.getReadableBatteryLevel();
-        if (levelGraphic != null) levelGraphic.sprite = batteryLevels[Mathf.RoundToInt(Mathf.Lerp(0,4, state.getBatteryLevel()/100f))];
+        if (levelGraphic != null) {
+            if (state.getCharging()) levelGraphic.sprite = batteryCharging;
+            else levelGraphic.sprite = batteryLevels[Mathf.RoundToInt(Mathf.Lerp(0, 4, state.getBatteryLevel() / 100f))];
+        }
+        if (voltText != null) voltText.text = state.getReadableBatteryVolt();
+        if (ampText != null) ampText.text = state.getReadableBatteryChargeCurrent();
 
         if (totalText != null) totalText.text = state.getReadableTotal();
         if (totalUnitsText != null) totalUnitsText.text = state.getMetric() ? "km" : "mi";
@@ -364,6 +392,9 @@ public class BikeManager : MonoBehaviour {
         readSoftwareVersion();
         yield return new WaitUntil(() => readAvailable);
         readHardwareVersion();
+        yield return new WaitUntil(() => readAvailable);
+        registerCustom(new byte[] { 0x00, 0x00 });
+
     }
 
     void disconnect() {
@@ -391,12 +422,29 @@ public class BikeManager : MonoBehaviour {
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER, currentBikeState.getData());
     }
 
+    /*public void tryApplySettings(byte id) {
+        byte[] data = new byte[] { 0x00, id, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+        Debug.Log(id + " : " + NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER, data));
+    }
+    */
+
+    void onWrite(string s) {
+        Debug.Log("Written " + s);
+    }
+
     //Notifications
     public void subscribeNotifications(bool subscribe) {
         NativeBLE.subscribeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER, subscribe);
     }
 
     //Register
+
+    void registerCustom(byte[] id) {
+        readAvailable = false;
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, id);
+        Debug.Log("Registering: " + BitConverter.ToString(id).Replace("-", " "));
+    }
+
     void registerSettings() {
         readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, SETTINGS_ID);
@@ -425,6 +473,12 @@ public class BikeManager : MonoBehaviour {
         readAvailable = false;
         NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, MOTION_ID);
         Debug.Log("Registering total");
+    }
+
+    void registerMystery() {
+        readAvailable = false;
+        NativeBLE.writeCharacteristic(UUID_METRICS_SERVICE, UUID_METRICS_CHARACTERISTIC_REGISTER_ID, MYSTERY_ID);
+        Debug.Log("Registering mystery");
     }
 
     void onCharacteristicWrite(string characteristic) {
@@ -464,6 +518,7 @@ public class BikeManager : MonoBehaviour {
 
     //Results
     void onCharacteristicRead(string characteristic, byte[] data) {
+        
         //New bike data
         if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER || characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER) {
 
@@ -506,7 +561,7 @@ public class BikeManager : MonoBehaviour {
             }
         } else {
             string s = "### Received " + characteristic + " : \n";
-            s += BitConverter.ToString(data).Replace("-", " ");
+            s += "%%% " + BitConverter.ToString(data).Replace("-", " ");
             Debug.Log(s);
         }
     }
@@ -515,20 +570,26 @@ public class BikeManager : MonoBehaviour {
     void updateNotificationDebug(byte[] data) {
         string debugString = BitConverter.ToString(data).Replace("-", " ");
 
-        if (data[0] == 0x02) {
-            if (data[0] == 0x02 && data[1] == 0x01) debugNotificationText[0] = debugString;
-            else if (data[0] == 0x02 && data[1] == 0x02) {
-                debugNotificationText[1] = debugString;
-            } else if (data[0] == 0x02 && data[1] == 0x03) debugNotificationText[2] = debugString;
-        } else if (data[0] == 0x03) {
-            debugNotificationText[3] = debugString;
+        if (dataIsId(data, MYSTERY_ID)) debugNotificationText[0] = debugString;
+        else if (dataIsId(data, MOTION_ID)) debugNotificationText[1] = debugString;
+        else if (dataIsId(data, TOTAL_ID)) debugNotificationText[2] = debugString;
+        else if (dataIsId(data, RIDE_ID)) debugNotificationText[3] = debugString;
+        else if (dataIsId(data, SETTINGS_ID)) debugNotificationText[4] = debugString;
+        else if (dataIsId(data, POWER_ID)) debugNotificationText[5] = debugString;
+        else Debug.Log("Unknown notif: " + debugString);
 
-        } else if (data[0] == 0x04) {
-            debugNotificationText[4] = debugString;
-        }
 
         //debug text
-        notifText.text = debugNotificationText[0] + " MOTION\n" + debugNotificationText[1] + " TOTAL\n" + debugNotificationText[2] + " RIDE\n" + debugNotificationText[3] + " SETTINGS\n" + debugNotificationText[4] + " POWER";
+        notifText.text = debugNotificationText[0] + " MYSTERY\n"
+            + debugNotificationText[1] + " MOTION\n"
+            + debugNotificationText[2] + " TOTAL\n" 
+            + debugNotificationText[3] + " RIDE\n" 
+            + debugNotificationText[4] + " SETTINGS\n"
+            + debugNotificationText[5] + " POWER";
+    }
+
+    public bool dataIsId(byte[] data, byte[] id) {
+        return data[0] == id[0] && data[1] == id[1];
     }
 
 

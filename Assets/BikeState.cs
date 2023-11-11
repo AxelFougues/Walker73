@@ -80,6 +80,8 @@ public class BikeState : MonoBehaviour {
 
     ushort rawRange = 0;
     float batteryLevel = 100;
+    float batteryVolt = 0;
+    float batteryChargeCurrent = 0;
     float range = 0;
 
     //device
@@ -108,6 +110,8 @@ public class BikeState : MonoBehaviour {
     public bool getLight() => light;
     public bool getWalk() => walk;
     public float getBatteryLevel() => batteryLevel;
+    public float getBatteryVolt() => batteryVolt;
+    public float getBatteryChargeCurrent() => batteryChargeCurrent;
     public bool getMetric() => metric;
     public string getModeDescriptorName() {return modeDescriptorsName[mode];}
     public float getModeDescriptorSpeed() { if (metric) return modeDescriptorsSpeed[mode]; else return modeDescriptorsSpeedImperial[mode]; }
@@ -213,8 +217,20 @@ public class BikeState : MonoBehaviour {
 
     //RANGE
 
+    public string getReadableBatteryVolt() {
+        return getBatteryVolt().ToString(); //getBatteryVolt().ToString("0.0");
+    }
+
+    public string getReadableBatteryChargeCurrent() {
+        return getBatteryChargeCurrent().ToString("0.000");
+    }
+
     public string getReadableBatteryLevel() {
         return Mathf.RoundToInt(getBatteryLevel()).ToString();
+    }
+
+    public bool getCharging() {
+        return batteryChargeCurrent > 0.1f;
     }
 
     public float getRange() {
@@ -226,6 +242,14 @@ public class BikeState : MonoBehaviour {
         return getRange().ToString("0.0");
     }
 
+    public bool getLimp() {
+        return batteryVolt < 41f;
+    }
+
+    public bool getBrakes() {
+        return false; //Temporary block until value is found
+        return wheelSpeed < 1f;
+    }
 
     //DATA RECEIVE
 
@@ -263,7 +287,7 @@ public class BikeState : MonoBehaviour {
     }
 
     bool processTotalData(byte[] data) {
-        total = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 10;
+        total = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 10f;
         return true;
     }
 
@@ -277,6 +301,8 @@ public class BikeState : MonoBehaviour {
     }
 
     bool processPowerData(byte[] data) {
+        batteryVolt = ((float)data[2] + (float)data[3] * 256f); //BitConverter.ToUInt16(new byte[] { data[2], data[3] });
+        batteryChargeCurrent = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 1000f;
         return false;
     }
 
