@@ -243,6 +243,7 @@ public class BikeState : MonoBehaviour {
     }
 
     public bool getLimp() {
+        return false;
         return batteryVolt < 41f;
     }
 
