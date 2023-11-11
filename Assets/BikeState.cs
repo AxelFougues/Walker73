@@ -293,8 +293,8 @@ public class BikeState : MonoBehaviour {
     }
 
     bool processRideData(byte[] data) {
-        pedalRPM = 0.2189381 * BitConverter.ToUInt16(new byte[] { data[2], data[3] });
-        rawRange = BitConverter.ToUInt16(new byte[] { data[8], data[9] });
+        pedalRPM = (float)data[3] * 5f;
+        rawRange = (ushort)data[8];
         rangeFromRawRange();
         batteryLevelFromRawRange();
 

@@ -24,6 +24,39 @@ public class BikeManager : MonoBehaviour {
     public static byte[] SETTINGS_ID = { 0x03, 0x00 };
     public static byte[] POWER_ID = { 0x04, 0x01 };
 
+    //BT protocol
+    const string UUID_GENERIC_ACCESS_SERVICE =                   "00001800-0000-1000-8000-00805f9b34fb";
+    const string UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC =       "00002a00-0000-1000-8000-00805f9b34fb"; // 53 55 50 45 52 37 33
+    const string UUID_GENERIC_ACCESS_APPEARANCE_CHARACTERISTIC = "00002a01-0000-1000-8000-00805f9b34fb"; //00 04 
+    const string UUID_GENERIC_ACCESS_PPCP_CHARACTERISTIC =       "00002a04-0000-1000-8000-00805f9b34fb"; //0C 00 24 00 00 00 00 01
+    const string UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC =        "00002aa6-0000-1000-8000-00805f9b34fb"; //01
+
+    const string UUID_GENERIC_ATTRIBUTE_SERVICE = "00001801-0000-1000-8000-00805f9b34fb";
+    const string UUID_GENERIC_ATTRIBUTE_SERVICE_CHANGED_CHARACTERISTIC = "00002a05-0000-1000-8000-00805f9b34fb";
+
+    const string UUID_SECURE_DFU_SERVICE = "0000fe59-0000-1000-8000-00805f9b34fb";
+    const string UUID_SECURE_DFU_BUTTONLESS_DFU_CHARACTERISTIC = "8ec90003-f315-4f60-9fb8-838830daea50";
+
+    const string UUID_DEVICE_INFO_SERVICE =                     "0000180a-0000-1000-8000-00805f9b34fb";
+    const string UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC = "00002a29-0000-1000-8000-00805f9b34fb"; // 43 4F 4D 4F 44 55 4C 45
+    const string UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC =     "00002a27-0000-1000-8000-00805f9b34fb"; // 76 33 2E 32 2E 30
+    const string UUID_DEVICE_INFO_FIRMWARE_CHARACTERISTIC =     "00002a26-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
+    const string UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC =     "00002a28-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
+
+
+    const string UUID_UNKNOWN_SERVICE = "00001580-0000-1000-8000-00805f9b34fb";
+    const string UUID_UNKNOWN_CHARACTERISTIC = "00001581-0000-1000-8000-00805f9b34fb";
+
+    const string UUID_SECURITY_SERVICE = "00002554-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_PRIVATE_KEY_CHARACTERISTIC = "00002555-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_PUBLIC_KEY_CHARACTERISTIC = "00002556-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_HASH_CHARACTERISTIC = "00002557-1212-efde-1523-785feabcd123";
+    const string UUID_SECURITY_AUTH_CHARACTERISTIC = "00002558-1212-efde-1523-785feabcd123";
+
+    const string UUID_METRICS_SERVICE = "00001554-1212-efde-1523-785feabcd123";
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER_ID = "00001564-1212-efde-1523-785feabcd123";
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER = "0000155f-1212-efde-1523-785feabcd123";
+    const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
 
     [Header("Scan")]
     public GameObject scanPage;
@@ -98,39 +131,7 @@ public class BikeManager : MonoBehaviour {
 
 
 
-    //BT protocol
-    const string UUID_GENERIC_ACCESS_SERVICE         = "00001800-0000-1000-8000-00805f9b34fb";
-    const string UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC = "00002a00-0000-1000-8000-00805f9b34fb"; // 53 55 50 45 52 37 33
-    const string UUID_GENERIC_ACCESS_APPEARANCE_CHARACTERISTIC = "00002a01-0000-1000-8000-00805f9b34fb"; //00 04 
-    const string UUID_GENERIC_ACCESS_PPCP_CHARACTERISTIC = "00002a04-0000-1000-8000-00805f9b34fb"; //0C 00 24 00 00 00 00 01
-    const string UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC = "00002aa6-0000-1000-8000-00805f9b34fb"; //01
-
-    const string UUID_GENERIC_ATTRIBUTE_SERVICE         = "00001801-0000-1000-8000-00805f9b34fb";
-    const string UUID_GENERIC_ATTRIBUTE_SERVICE_CHANGED_CHARACTERISTIC = "00002a05-0000-1000-8000-00805f9b34fb";
-
-    const string UUID_SECURE_DFU_SERVICE         = "0000fe59-0000-1000-8000-00805f9b34fb";
-    const string UUID_SECURE_DFU_BUTTONLESS_DFU_CHARACTERISTIC = "8ec90003-f315-4f60-9fb8-838830daea50";
-
-    const string UUID_DEVICE_INFO_SERVICE         = "0000180a-0000-1000-8000-00805f9b34fb"; 
-    const string UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC = "00002a29-0000-1000-8000-00805f9b34fb"; // 43 4F 4D 4F 44 55 4C 45
-    const string UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC = "00002a27-0000-1000-8000-00805f9b34fb"; // 76 33 2E 32 2E 30
-    const string UUID_DEVICE_INFO_FIRMWARE_CHARACTERISTIC = "00002a26-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
-    const string UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC = "00002a28-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
-
-
-    const string UUID_UNKNOWN_SERVICE         = "00001580-0000-1000-8000-00805f9b34fb"; 
-    const string UUID_UNKNOWN_CHARACTERISTIC = "00001581-0000-1000-8000-00805f9b34fb";
-
-    const string UUID_SECURITY_SERVICE         = "00002554-1212-efde-1523-785feabcd123";
-    const string UUID_SECURITY_PRIVATE_KEY_CHARACTERISTIC = "00002555-1212-efde-1523-785feabcd123";
-    const string UUID_SECURITY_PUBLIC_KEY_CHARACTERISTIC = "00002556-1212-efde-1523-785feabcd123";
-    const string UUID_SECURITY_HASH_CHARACTERISTIC = "00002557-1212-efde-1523-785feabcd123";
-    const string UUID_SECURITY_AUTH_CHARACTERISTIC = "00002558-1212-efde-1523-785feabcd123";
-
-    const string UUID_METRICS_SERVICE                          = "00001554-1212-efde-1523-785feabcd123";
-    const string UUID_METRICS_CHARACTERISTIC_REGISTER_ID       = "00001564-1212-efde-1523-785feabcd123";
-    const string UUID_METRICS_CHARACTERISTIC_REGISTER          = "0000155f-1212-efde-1523-785feabcd123";
-    const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
+   
 
 
 
@@ -374,6 +375,7 @@ public class BikeManager : MonoBehaviour {
     }
 
     IEnumerator getStartupInfoRoutine() {
+
         yield return new WaitUntil(() => readAvailable);
         registerSettings();
         yield return new WaitUntil(() => readAvailable);
@@ -393,7 +395,7 @@ public class BikeManager : MonoBehaviour {
         yield return new WaitUntil(() => readAvailable);
         readHardwareVersion();
         yield return new WaitUntil(() => readAvailable);
-        registerCustom(new byte[] { 0x00, 0x00 });
+        registerCustom(new byte[] { 0x00, 0x00 });      
 
     }
 
@@ -518,7 +520,7 @@ public class BikeManager : MonoBehaviour {
 
     //Results
     void onCharacteristicRead(string characteristic, byte[] data) {
-        
+
         //New bike data
         if (characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER || characteristic == UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER) {
 
