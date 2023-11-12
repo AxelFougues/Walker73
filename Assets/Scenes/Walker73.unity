@@ -4355,13 +4355,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fc53f1bff0c6e46af45a333a0b5e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBackground: 0
+  isBackground: 1
   isPanel: 0
   isHighlight: 0
   isBase: 0
   isBaseNegative: 0
   isAccent: 0
-  isHalfTone: 1
+  isHalfTone: 0
   gradientSide: 1
   overrideTheme: {fileID: 0}
   sprite: {fileID: 356785581}
@@ -13744,8 +13744,8 @@ MonoBehaviour:
   isBackground: 0
   isPanel: 0
   isHighlight: 0
-  isBase: 1
-  isBaseNegative: 0
+  isBase: 0
+  isBaseNegative: 1
   isAccent: 0
   isHalfTone: 0
   gradientSide: 1
@@ -13835,7 +13835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15076,6 +15076,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20789bd03686bc74e87dc994ca7c7608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dischargeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2.8
+      inSlope: 7.0000005
+      outSlope: 7.0000005
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1
+      value: 3.5
+      inSlope: 6.075051
+      outSlope: 6.075051
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.25298333
+    - serializedVersion: 3
+      time: 0.2
+      value: 3.7
+      inSlope: 0.24098521
+      outSlope: 0.24098521
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.09228321
+    - serializedVersion: 3
+      time: 0.8
+      value: 3.75
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.34367535
+    - serializedVersion: 3
+      time: 1
+      value: 4.2
+      inSlope: 5.130628
+      outSlope: 5.130628
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.119331785
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   scanPage: {fileID: 1215729413}
   scanButton: {fileID: 1212168476}
   scanButtonText: {fileID: 2086790333}

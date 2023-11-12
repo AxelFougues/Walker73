@@ -9,7 +9,6 @@ using static NativeBLE;
 public class BikeManager : MonoBehaviour {
     public static BikeManager instance;
 
-
     public static float PEDAL_DIAMETRER_M = 0.125f;
     public static float WHEEL_DIAMETRER_M = 0.57f;
     public static float MAX_VOLTAGE_V = 54.6f;
@@ -25,11 +24,11 @@ public class BikeManager : MonoBehaviour {
     public static byte[] POWER_ID = { 0x04, 0x01 };
 
     //BT protocol
-    const string UUID_GENERIC_ACCESS_SERVICE =                   "00001800-0000-1000-8000-00805f9b34fb";
-    const string UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC =       "00002a00-0000-1000-8000-00805f9b34fb"; // 53 55 50 45 52 37 33
+    const string UUID_GENERIC_ACCESS_SERVICE = "00001800-0000-1000-8000-00805f9b34fb";
+    const string UUID_GENERIC_ACCESS_NAME_CHARACTERISTIC = "00002a00-0000-1000-8000-00805f9b34fb"; // 53 55 50 45 52 37 33
     const string UUID_GENERIC_ACCESS_APPEARANCE_CHARACTERISTIC = "00002a01-0000-1000-8000-00805f9b34fb"; //00 04 
-    const string UUID_GENERIC_ACCESS_PPCP_CHARACTERISTIC =       "00002a04-0000-1000-8000-00805f9b34fb"; //0C 00 24 00 00 00 00 01
-    const string UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC =        "00002aa6-0000-1000-8000-00805f9b34fb"; //01
+    const string UUID_GENERIC_ACCESS_PPCP_CHARACTERISTIC = "00002a04-0000-1000-8000-00805f9b34fb"; //0C 00 24 00 00 00 00 01
+    const string UUID_GENERIC_ACCESS_CAR_CHARACTERISTIC = "00002aa6-0000-1000-8000-00805f9b34fb"; //01
 
     const string UUID_GENERIC_ATTRIBUTE_SERVICE = "00001801-0000-1000-8000-00805f9b34fb";
     const string UUID_GENERIC_ATTRIBUTE_SERVICE_CHANGED_CHARACTERISTIC = "00002a05-0000-1000-8000-00805f9b34fb";
@@ -37,11 +36,11 @@ public class BikeManager : MonoBehaviour {
     const string UUID_SECURE_DFU_SERVICE = "0000fe59-0000-1000-8000-00805f9b34fb";
     const string UUID_SECURE_DFU_BUTTONLESS_DFU_CHARACTERISTIC = "8ec90003-f315-4f60-9fb8-838830daea50";
 
-    const string UUID_DEVICE_INFO_SERVICE =                     "0000180a-0000-1000-8000-00805f9b34fb";
+    const string UUID_DEVICE_INFO_SERVICE = "0000180a-0000-1000-8000-00805f9b34fb";
     const string UUID_DEVICE_INFO_MANUFACTURER_CHARACTERISTIC = "00002a29-0000-1000-8000-00805f9b34fb"; // 43 4F 4D 4F 44 55 4C 45
-    const string UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC =     "00002a27-0000-1000-8000-00805f9b34fb"; // 76 33 2E 32 2E 30
-    const string UUID_DEVICE_INFO_FIRMWARE_CHARACTERISTIC =     "00002a26-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
-    const string UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC =     "00002a28-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
+    const string UUID_DEVICE_INFO_HARDWARE_CHARACTERISTIC = "00002a27-0000-1000-8000-00805f9b34fb"; // 76 33 2E 32 2E 30
+    const string UUID_DEVICE_INFO_FIRMWARE_CHARACTERISTIC = "00002a26-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
+    const string UUID_DEVICE_INFO_SOFTWARE_CHARACTERISTIC = "00002a28-0000-1000-8000-00805f9b34fb"; // 32 32 31 31 32 32
 
 
     const string UUID_UNKNOWN_SERVICE = "00001580-0000-1000-8000-00805f9b34fb";
@@ -59,6 +58,38 @@ public class BikeManager : MonoBehaviour {
     const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
 
 
+    public class BikeNotification{
+        public string name;
+        public byte[] id = new byte[]{ 0x00, 0x00 };
+
+        public BikeNotification(string name, byte[] id) {
+            this.name = name;
+            this.id = id;
+        }
+
+        public bool dataIsNotification(byte[] data) {
+            return data[0] == id[0] && data[1] == id[1];
+        }
+
+        public override string ToString() {
+            return name + BitConverter.ToString(id).Replace("-", " ");
+        }
+    }
+
+    public List<BikeNotification> watchedNotifications = new List<BikeNotification> {
+        new BikeNotification("MOTION", MOTION_ID),
+        new BikeNotification("TOTAL", TOTAL_ID),
+        new BikeNotification("RIDE", RIDE_ID),
+        new BikeNotification("SETTINGS", SETTINGS_ID),
+        new BikeNotification("POWER", POWER_ID),
+        new BikeNotification("MYSTERY", MYSTERY_ID),
+        new BikeNotification("UNKNOWN1", new byte[]{0x00, 0x01}),
+        new BikeNotification("UNKNOWN2", new byte[]{0x00, 0x02}),
+        new BikeNotification("UNKNOWN3", new byte[]{0x00, 0x03}),
+        new BikeNotification("UNKNOWN4", new byte[]{0x00, 0x04}),
+        new BikeNotification("UNKNOWN5", new byte[]{0x00, 0x05}),
+        new BikeNotification("UNKNOWN6", new byte[]{0x00, 0x06}),
+    };
 
     public AnimationCurve dischargeCurve;
     [Space]
@@ -134,19 +165,9 @@ public class BikeManager : MonoBehaviour {
     public Sprite batteryCharging;
 
 
+    Dictionary<BikeNotification, string> debugNotifValues = new Dictionary<BikeNotification, string>();
 
-   
-
-
-
-    List<string> debugNotificationText = new List<string> {
-        "0 0",
-        "2 1",
-        "2 2",
-        "2 3",
-        "3 0",
-        "4 1"
-    };
+    
 
     //Internal
     BikeState currentBikeState;
@@ -576,27 +597,27 @@ public class BikeManager : MonoBehaviour {
     void updateNotificationDebug(byte[] data) {
         string debugString = BitConverter.ToString(data).Replace("-", " ");
 
-        if (dataIsId(data, MYSTERY_ID)) debugNotificationText[0] = debugString;
-        else if (dataIsId(data, MOTION_ID)) debugNotificationText[1] = debugString;
-        else if (dataIsId(data, TOTAL_ID)) debugNotificationText[2] = debugString;
-        else if (dataIsId(data, RIDE_ID)) debugNotificationText[3] = debugString;
-        else if (dataIsId(data, SETTINGS_ID)) debugNotificationText[4] = debugString;
-        else if (dataIsId(data, POWER_ID)) debugNotificationText[5] = debugString;
-        else Debug.Log("Unknown notif: " + debugString);
+        string finalText = "";
+        bool identified = false;
+        foreach (BikeNotification bn in watchedNotifications) {
+            if (!identified && bn.dataIsNotification(data)) {
+                if (debugNotifValues.ContainsKey(bn)) debugNotifValues[bn] = debugString;
+                else debugNotifValues.Add(bn, debugString);
+                identified = true;
+            }
+            if (debugNotifValues.ContainsKey(bn)) finalText += debugNotifValues[bn];
+            else finalText +=  BitConverter.ToString(bn.id).Replace(" - ", " ") + " -- -- -- -- -- -- -- --";
+            finalText += " " + bn.name + "\n";
+        }
+        if (!identified) {
+            watchedNotifications.Add(new BikeNotification("UNEXPECTED", new byte[] { data[0], data[1] }));
+            debugNotifValues.Add(watchedNotifications[watchedNotifications.Count - 1], debugString);
+        }
 
-
-        //debug text
-        notifText.text = debugNotificationText[0] + " MYSTERY\n"
-            + debugNotificationText[1] + " MOTION\n"
-            + debugNotificationText[2] + " TOTAL\n" 
-            + debugNotificationText[3] + " RIDE\n" 
-            + debugNotificationText[4] + " SETTINGS\n"
-            + debugNotificationText[5] + " POWER";
+        notifText.text = finalText;
     }
 
-    public bool dataIsId(byte[] data, byte[] id) {
-        return data[0] == id[0] && data[1] == id[1];
-    }
+    
 
 
     #endregion
