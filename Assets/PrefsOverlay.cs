@@ -16,6 +16,7 @@ public class PrefsOverlay : MonoBehaviour{
     private void Start() {
         closeButton.onClick.AddListener(delegate {
             gameObject.SetActive(false);
+            BikeManager.instance.applySettings();
         });
 
         wheelDiam.text = PlayerPrefs.GetFloat("WHEEL_DIAMETRER_M").ToString();

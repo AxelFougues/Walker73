@@ -58,6 +58,10 @@ public class BikeManager : MonoBehaviour {
     const string UUID_METRICS_CHARACTERISTIC_REGISTER = "0000155f-1212-efde-1523-785feabcd123";
     const string UUID_METRICS_CHARACTERISTIC_REGISTER_NOTIFIER = "0000155e-1212-efde-1523-785feabcd123";
 
+
+
+    public AnimationCurve dischargeCurve;
+    [Space]
     [Header("Scan")]
     public GameObject scanPage;
     public Button scanButton;
@@ -395,7 +399,7 @@ public class BikeManager : MonoBehaviour {
         yield return new WaitUntil(() => readAvailable);
         readHardwareVersion();
         yield return new WaitUntil(() => readAvailable);
-        registerCustom(new byte[] { 0x00, 0x00 });      
+        registerMystery();    
 
     }
 
@@ -431,7 +435,7 @@ public class BikeManager : MonoBehaviour {
     */
 
     void onWrite(string s) {
-        Debug.Log("Written " + s);
+        
     }
 
     //Notifications

@@ -218,7 +218,7 @@ public class BikeState : MonoBehaviour {
     //RANGE
 
     public string getReadableBatteryVolt() {
-        return getBatteryVolt().ToString(); //getBatteryVolt().ToString("0.0");
+        return getBatteryVolt().ToString("0.0");
     }
 
     public string getReadableBatteryChargeCurrent() {
@@ -297,7 +297,7 @@ public class BikeState : MonoBehaviour {
         rawRange = (ushort)data[8];
         rangeFromRawRange();
         batteryLevelFromRawRange();
-
+        batteryVoltageFromBatteryLevel();
         return true;
     }
 
@@ -320,6 +320,9 @@ public class BikeState : MonoBehaviour {
         batteryLevel = (rawRange / PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM")) * 100f;
     }
 
+    void batteryVoltageFromBatteryLevel() {
+        batteryVolt = BikeManager.instance.dischargeCurve.Evaluate(batteryLevel);
+    }
 
     //OTHER
 
