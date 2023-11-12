@@ -5688,6 +5688,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF5243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Single_TryParse_mF23E88B4B12DDC9E82179BB2483A714005BF006F (String_t* ___s0, float* ___result1, const RuntimeMethod* method) ;
 // System.Void DeviceLine/<>c__DisplayClass4_0::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_m86919AE88A49EE868424E01D6788FF68EA1B3B67 (U3CU3Ec__DisplayClass4_0_tFA7DA44E6B354F710994EB2033A441844601EF8F* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 UnityEngine.UI.GridLayoutGroup::get_spacing()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GridLayoutGroup_get_spacing_m19BC15652BF18D051B0998C14F13DB83191F3E58 (GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 UnityEngine.UI.GridLayoutGroup::get_cellSize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D (GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) ;
 // UnityEngine.Camera UnityEngine.Camera::get_main()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Camera_get_main_mF222B707D3BF8CC9C7544609EFC71CFB62E81D43 (const RuntimeMethod* method) ;
 // System.Single UnityEngine.Camera::get_aspect()
@@ -5702,12 +5708,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RectOffset_get_left_mA406D7AFF76E4850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RectOffset_get_right_m07C826B0BC79B0CBC01F5FF489D456C553F047BF (RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* __this, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Screen::get_height()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m624DD2D53F34087064E3B9D09AC2207DB4E86CA8 (const RuntimeMethod* method) ;
-// UnityEngine.Vector2 UnityEngine.UI.GridLayoutGroup::get_cellSize()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D (GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UI.GridLayoutGroup::set_cellSize(UnityEngine.Vector2)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridLayoutGroup_set_cellSize_m0A3FF07694BDBF52D973597978FC87B0941BE5F9 (GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.UI.GridLayoutGroup::set_spacing(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridLayoutGroup_set_spacing_mA5550A683F7B4A7A1510B267B5D4CACEB8981306 (GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UI.LayoutRebuilder::ForceRebuildLayoutImmediate(UnityEngine.RectTransform)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LayoutRebuilder_ForceRebuildLayoutImmediate_m1DFB9F055F838E4CB32A471460AEA23D85DA8B57 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___layoutRoot0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.EventSystems.UIBehaviour::Awake()
@@ -12981,8 +12985,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState__ctor_m7ED683829739BB253DF0CAF
 		__this->___pedalRPM_19 = (0.0);
 		// ushort rawRange = 0;
 		__this->___rawRange_20 = (uint16_t)0;
-		// float batteryLevel = 100;
-		__this->___batteryLevel_21 = (100.0f);
+		// float batteryLevel = 0;
+		__this->___batteryLevel_21 = (0.0f);
 		// float batteryVolt = 0;
 		__this->___batteryVolt_22 = (0.0f);
 		// float batteryChargeCurrent = 0;
@@ -16672,67 +16676,112 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSizer_Awake_m99CB86A3C1494A1DBA7D21F
 // System.Void GridSizer::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridSizer_Start_m76C6AE94BEDB324833A02DF9264D50CBCDEC209D (GridSizer_tBDEE62222551F6B901C982B2658AEDE705667D16* __this, const RuntimeMethod* method) 
 {
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* G_B2_0 = NULL;
 	GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* G_B1_0 = NULL;
 	int32_t G_B3_0 = 0;
 	GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* G_B3_1 = NULL;
 	{
-		// grid.cellSize = new Vector2(Camera.main.aspect > 1 ? Screen.height : Screen.width - (grid.padding.left + grid.padding.right), grid.cellSize.y);
+		// Vector2 spacingRatio = new Vector2(grid.spacing.x / grid.cellSize.x, grid.spacing.y / grid.cellSize.y);
 		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_0 = __this->___grid_4;
-		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_1;
-		L_1 = Camera_get_main_mF222B707D3BF8CC9C7544609EFC71CFB62E81D43(NULL);
-		NullCheck(L_1);
-		float L_2;
-		L_2 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_1, NULL);
-		G_B1_0 = L_0;
-		if ((((float)L_2) > ((float)(1.0f))))
+		NullCheck(L_0);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
+		L_1 = GridLayoutGroup_get_spacing_m19BC15652BF18D051B0998C14F13DB83191F3E58(L_0, NULL);
+		float L_2 = L_1.___x_0;
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_3 = __this->___grid_4;
+		NullCheck(L_3);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		L_4 = GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D(L_3, NULL);
+		float L_5 = L_4.___x_0;
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_6 = __this->___grid_4;
+		NullCheck(L_6);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
+		L_7 = GridLayoutGroup_get_spacing_m19BC15652BF18D051B0998C14F13DB83191F3E58(L_6, NULL);
+		float L_8 = L_7.___y_1;
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_9 = __this->___grid_4;
+		NullCheck(L_9);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10;
+		L_10 = GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D(L_9, NULL);
+		float L_11 = L_10.___y_1;
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_0), ((float)(L_2/L_5)), ((float)(L_8/L_11)), NULL);
+		// grid.cellSize = new Vector2(Camera.main.aspect > 1 ? Screen.height : Screen.width - (grid.padding.left + grid.padding.right), grid.cellSize.y);
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_12 = __this->___grid_4;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_13;
+		L_13 = Camera_get_main_mF222B707D3BF8CC9C7544609EFC71CFB62E81D43(NULL);
+		NullCheck(L_13);
+		float L_14;
+		L_14 = Camera_get_aspect_m48BF8820EA2D55BE0D154BC5546819FB65BE257D(L_13, NULL);
+		G_B1_0 = L_12;
+		if ((((float)L_14) > ((float)(1.0f))))
 		{
-			G_B2_0 = L_0;
-			goto IL_0041;
+			G_B2_0 = L_12;
+			goto IL_008a;
 		}
 	}
 	{
-		int32_t L_3;
-		L_3 = Screen_get_width_mCA5D955A53CF6D29C8C7118D517D0FC84AE8056C(NULL);
-		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_4 = __this->___grid_4;
-		NullCheck(L_4);
-		RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* L_5;
-		L_5 = LayoutGroup_get_padding_m91ABA3C588704717EDC82E72BA6D1B82711FE83C(L_4, NULL);
-		NullCheck(L_5);
-		int32_t L_6;
-		L_6 = RectOffset_get_left_mA406D7AFF76E48507EF143CDB1D157C4D5430D90(L_5, NULL);
-		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_7 = __this->___grid_4;
-		NullCheck(L_7);
-		RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* L_8;
-		L_8 = LayoutGroup_get_padding_m91ABA3C588704717EDC82E72BA6D1B82711FE83C(L_7, NULL);
-		NullCheck(L_8);
-		int32_t L_9;
-		L_9 = RectOffset_get_right_m07C826B0BC79B0CBC01F5FF489D456C553F047BF(L_8, NULL);
-		G_B3_0 = ((int32_t)il2cpp_codegen_subtract(L_3, ((int32_t)il2cpp_codegen_add(L_6, L_9))));
+		int32_t L_15;
+		L_15 = Screen_get_width_mCA5D955A53CF6D29C8C7118D517D0FC84AE8056C(NULL);
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_16 = __this->___grid_4;
+		NullCheck(L_16);
+		RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* L_17;
+		L_17 = LayoutGroup_get_padding_m91ABA3C588704717EDC82E72BA6D1B82711FE83C(L_16, NULL);
+		NullCheck(L_17);
+		int32_t L_18;
+		L_18 = RectOffset_get_left_mA406D7AFF76E48507EF143CDB1D157C4D5430D90(L_17, NULL);
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_19 = __this->___grid_4;
+		NullCheck(L_19);
+		RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* L_20;
+		L_20 = LayoutGroup_get_padding_m91ABA3C588704717EDC82E72BA6D1B82711FE83C(L_19, NULL);
+		NullCheck(L_20);
+		int32_t L_21;
+		L_21 = RectOffset_get_right_m07C826B0BC79B0CBC01F5FF489D456C553F047BF(L_20, NULL);
+		G_B3_0 = ((int32_t)il2cpp_codegen_subtract(L_15, ((int32_t)il2cpp_codegen_add(L_18, L_21))));
 		G_B3_1 = G_B1_0;
-		goto IL_0046;
+		goto IL_008f;
 	}
 
-IL_0041:
+IL_008a:
 	{
-		int32_t L_10;
-		L_10 = Screen_get_height_m624DD2D53F34087064E3B9D09AC2207DB4E86CA8(NULL);
-		G_B3_0 = L_10;
+		int32_t L_22;
+		L_22 = Screen_get_height_m624DD2D53F34087064E3B9D09AC2207DB4E86CA8(NULL);
+		G_B3_0 = L_22;
 		G_B3_1 = G_B2_0;
 	}
 
-IL_0046:
+IL_008f:
 	{
-		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_11 = __this->___grid_4;
-		NullCheck(L_11);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12;
-		L_12 = GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D(L_11, NULL);
-		float L_13 = L_12.___y_1;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14;
-		memset((&L_14), 0, sizeof(L_14));
-		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_14), ((float)G_B3_0), L_13, /*hidden argument*/NULL);
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_23 = __this->___grid_4;
+		NullCheck(L_23);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24;
+		L_24 = GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D(L_23, NULL);
+		float L_25 = L_24.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26;
+		memset((&L_26), 0, sizeof(L_26));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_26), ((float)G_B3_0), L_25, /*hidden argument*/NULL);
 		NullCheck(G_B3_1);
-		GridLayoutGroup_set_cellSize_m0A3FF07694BDBF52D973597978FC87B0941BE5F9(G_B3_1, L_14, NULL);
+		GridLayoutGroup_set_cellSize_m0A3FF07694BDBF52D973597978FC87B0941BE5F9(G_B3_1, L_26, NULL);
+		// grid.spacing = new Vector2(grid.cellSize.x * spacingRatio.x, grid.cellSize.y * spacingRatio.y);
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_27 = __this->___grid_4;
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_28 = __this->___grid_4;
+		NullCheck(L_28);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29;
+		L_29 = GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D(L_28, NULL);
+		float L_30 = L_29.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = V_0;
+		float L_32 = L_31.___x_0;
+		GridLayoutGroup_tEE9C68F88C13E6BD716BBD356D008ACFB63F1940* L_33 = __this->___grid_4;
+		NullCheck(L_33);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_34;
+		L_34 = GridLayoutGroup_get_cellSize_m30D8A051F44C8EE0C87B6D6CDDC00C2592A78B6D(L_33, NULL);
+		float L_35 = L_34.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_36 = V_0;
+		float L_37 = L_36.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_38;
+		memset((&L_38), 0, sizeof(L_38));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_38), ((float)il2cpp_codegen_multiply(L_30, L_32)), ((float)il2cpp_codegen_multiply(L_35, L_37)), /*hidden argument*/NULL);
+		NullCheck(L_27);
+		GridLayoutGroup_set_spacing_mA5550A683F7B4A7A1510B267B5D4CACEB8981306(L_27, L_38, NULL);
 		// }
 		return;
 	}
