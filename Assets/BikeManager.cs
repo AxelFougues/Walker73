@@ -142,7 +142,8 @@ public class BikeManager : MonoBehaviour {
     public Toggle autoApplyToggle;
     public Toggle autoConnectToggle;
     public Button bikeButton;
-    public Toggle debugToggle;  
+    public Toggle debugToggle;
+    public Toggle deviceThemeToggle;
     [Space]
     public TMP_Text deviceNameText;
     public TMP_Text manufacturerNameText;
@@ -221,6 +222,14 @@ public class BikeManager : MonoBehaviour {
             ampText.gameObject.SetActive(!batteryToggle.isOn);
         });
 
+        deviceThemeToggle.isOn = PlayerPrefs.GetInt("deviceTheme", 1) == 1;
+        deviceThemeToggle.onValueChanged.AddListener(delegate {
+            PlayerPrefs.SetInt("deviceTheme", deviceThemeToggle.isOn ? 1 : 0);
+            StartCoroutine(setThemeRoutine());
+            if (deviceThemeToggle.isOn) NativeBLE.doToast("Using device theme");
+            else NativeBLE.doToast("Using last selected theme");
+        });
+
         themeButton.onClick.AddListener(delegate {
             if (ColorManager.instance.theme == ColorManager.instance.darkTheme) {
                 ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
@@ -236,6 +245,8 @@ public class BikeManager : MonoBehaviour {
         debugToggle.onValueChanged.AddListener(delegate {
             PlayerPrefs.SetInt("debug", debugToggle.isOn ? 1 : 0);
             foreach (GameObject line in debugLines) line.SetActive(debugToggle.isOn);
+            if(debugToggle.isOn) NativeBLE.doToast("Showing debug info");
+            else NativeBLE.doToast("Debug info hidden");
         });
         //
         scanButton.onClick.AddListener(delegate {
@@ -265,10 +276,14 @@ public class BikeManager : MonoBehaviour {
         autoApplyToggle.isOn = PlayerPrefs.GetInt("auto", 1) == 1;
         autoApplyToggle.onValueChanged.AddListener(delegate {
             PlayerPrefs.SetInt("auto", autoApplyToggle.isOn ? 1 : 0);
+            if (autoApplyToggle.isOn) NativeBLE.doToast("App settings apply on connect");
+            else NativeBLE.doToast("Bike settings loaded on connect");
         });
         unitsButton.onClick.AddListener(delegate {
             currentBikeState.toggleMetric();
             refreshDisplay(currentBikeState);
+            if (!currentBikeState.getMetric()) NativeBLE.doToast("Freedom units!");
+            else NativeBLE.doToast("Bigger numbers!");
         });
         prefsButton.onClick.AddListener(delegate {
             prefsOverlay.SetActive(true);
@@ -281,11 +296,13 @@ public class BikeManager : MonoBehaviour {
 
     IEnumerator setThemeRoutine() {
         yield return new WaitForEndOfFrame();
-        if (PlayerPrefs.HasKey("theme")) {
+        if (PlayerPrefs.HasKey("theme") && PlayerPrefs.GetInt("deviceTheme", 1) == 0) {
             if (PlayerPrefs.GetString("theme", "") == DeviceTheme.DARK.ToString()) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
             else ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
-        } else if (NativeBLE.androidTheme == DeviceTheme.DARK) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
-        else if (NativeBLE.androidTheme == DeviceTheme.LIGHT) ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
+        } else {
+            if (NativeBLE.androidTheme == DeviceTheme.DARK) ColorManager.instance.setTheme(ColorManager.instance.darkTheme);
+            else ColorManager.instance.setTheme(ColorManager.instance.lightTheme);
+        }
     }
 
     void refreshDisplay(BikeState state) {
@@ -393,9 +410,11 @@ public class BikeManager : MonoBehaviour {
                 ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
                 if (connectedDevice != null) PlayerPrefs.SetInt(connectedDevice.deviceInfo.address, 1);
                 else autoConnectToggle.isOn = false;
+                NativeBLE.doToast("Will connect to bike automatically");
             } else {
                 ConnectedDevice connectedDevice = NativeBLE.getConnectedDevice();
                 if (connectedDevice != null && PlayerPrefs.HasKey(connectedDevice.deviceInfo.address)) PlayerPrefs.DeleteKey(connectedDevice.deviceInfo.address);
+                NativeBLE.doToast("Won't connect automatically");
             }
         });
         Debug.Log(device);

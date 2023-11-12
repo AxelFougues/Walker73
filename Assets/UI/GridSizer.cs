@@ -4,11 +4,8 @@ using UnityEngine.UI;
 public class GridSizer : MonoBehaviour{
 
     public GridLayoutGroup grid;
+    
 
-    private void Awake() {
-
-        
-    }
 
     private void Start() {
         Vector2 spacingRatio = new Vector2(grid.spacing.x / grid.cellSize.x, grid.spacing.y / grid.cellSize.y);

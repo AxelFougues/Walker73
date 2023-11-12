@@ -76,6 +76,7 @@ public class NativeBLE : MonoBehaviour{
         }
 
         androidTheme = getDeviceTheme();
+        Debug.Log(androidTheme);
     }
 
     public static ConnectedDevice getConnectedDevice() {
@@ -310,6 +311,18 @@ public class NativeBLE : MonoBehaviour{
             }
         }
         return DeviceTheme.UNSPECIFIED;
+    }
+
+    public static void doToast(string text) {
+        AndroidJavaClass unityClass;
+        AndroidJavaObject unityActivity;
+        if (Application.platform == RuntimePlatform.Android) {
+            unityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            unityActivity = unityClass.GetStatic<AndroidJavaObject>("currentActivity");
+            if (unityActivity != null) {
+                unityActivity.Call("androidToast", text);
+            }
+        }
     }
 
     void messageFromAndroid(string message) {

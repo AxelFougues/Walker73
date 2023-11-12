@@ -34,6 +34,7 @@ import android.os.Parcel;
 import android.os.ParcelUuid;
 import android.provider.Settings;
 import android.view.ContextThemeWrapper;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.unity3d.player.UnityPlayer;
@@ -455,6 +456,10 @@ public class NativeBLE extends UnityPlayerActivity {
         }
 
         return 0;  // Unspecified
+    }
+
+    public void androidToast(String text){
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 
     //MORE
