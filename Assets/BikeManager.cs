@@ -11,8 +11,7 @@ public class BikeManager : MonoBehaviour {
 
     public static float PEDAL_DIAMETRER_M = 0.125f;
     public static float WHEEL_DIAMETRER_M = 0.57f;
-    public static float MAX_VOLTAGE_V = 54.6f;
-    public static float MIN_VOLTAGE_V = 32.5f;
+    public static float CELL_S_COUNT = 13;
     public static float BASE_MAX_RANGE_KM = 60f;
     public static float REAL_MAX_RANGE_KM = 60f;
 
@@ -181,8 +180,7 @@ public class BikeManager : MonoBehaviour {
 
         if (!PlayerPrefs.HasKey("PEDAL_DIAMETRER_M")) PlayerPrefs.SetFloat("PEDAL_DIAMETRER_M", PEDAL_DIAMETRER_M);
         if (!PlayerPrefs.HasKey("WHEEL_DIAMETRER_M")) PlayerPrefs.SetFloat("WHEEL_DIAMETRER_M", WHEEL_DIAMETRER_M);
-        if (!PlayerPrefs.HasKey("MAX_VOLTAGE_V")) PlayerPrefs.SetFloat("MAX_VOLTAGE_V", MAX_VOLTAGE_V);
-        if (!PlayerPrefs.HasKey("MIN_VOLTAGE_V")) PlayerPrefs.SetFloat("MIN_VOLTAGE_V", MIN_VOLTAGE_V);
+        if (!PlayerPrefs.HasKey("CELL_S_COUNT")) PlayerPrefs.SetFloat("CELL_S_COUNT", CELL_S_COUNT);
         if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
         if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
 
@@ -212,11 +210,15 @@ public class BikeManager : MonoBehaviour {
 
         batteryToggle.isOn = PlayerPrefs.GetInt("batteryLevel", 1) == 1;
         levelText.gameObject.SetActive(batteryToggle.isOn);
-        rangeText.gameObject.SetActive(!batteryToggle.isOn);
+        voltText.gameObject.SetActive(!batteryToggle.isOn);
+        rangeText.gameObject.SetActive(batteryToggle.isOn);
+        ampText.gameObject.SetActive(!batteryToggle.isOn);
         batteryToggle.onValueChanged.AddListener(delegate {
             PlayerPrefs.SetInt("batteryLevel", batteryToggle.isOn ? 1 : 0);
             levelText.gameObject.SetActive(batteryToggle.isOn);
-            rangeText.gameObject.SetActive(!batteryToggle.isOn);
+            voltText.gameObject.SetActive(!batteryToggle.isOn);
+            rangeText.gameObject.SetActive(batteryToggle.isOn);
+            ampText.gameObject.SetActive(!batteryToggle.isOn);
         });
 
         themeButton.onClick.AddListener(delegate {
@@ -311,7 +313,7 @@ public class BikeManager : MonoBehaviour {
         if (levelText != null) levelText.text = state.getReadableBatteryLevel();
         if (levelGraphic != null) {
             if (state.getCharging()) levelGraphic.sprite = batteryCharging;
-            else levelGraphic.sprite = batteryLevels[Mathf.RoundToInt(Mathf.Lerp(0, 4, state.getBatteryLevel() / 100f))];
+            else levelGraphic.sprite = batteryLevels[Mathf.RoundToInt(Mathf.Lerp(0, 4, state.getBatteryLevel() ))];
         }
         if (voltText != null) voltText.text = state.getReadableBatteryVolt();
         if (ampText != null) ampText.text = state.getReadableBatteryChargeCurrent();
@@ -606,7 +608,7 @@ public class BikeManager : MonoBehaviour {
                 identified = true;
             }
             if (debugNotifValues.ContainsKey(bn)) finalText += debugNotifValues[bn];
-            else finalText +=  BitConverter.ToString(bn.id).Replace(" - ", " ") + " -- -- -- -- -- -- -- --";
+            else finalText +=  BitConverter.ToString(bn.id).Replace("-", " ") + " -- -- -- -- -- -- -- --";
             finalText += " " + bn.name + "\n";
         }
         if (!identified) {

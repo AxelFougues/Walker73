@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class PrefsOverlay : MonoBehaviour{
     public TMP_InputField wheelDiam;
-    public TMP_InputField maxVoltage;
-    public TMP_InputField minVoltage;
+    public TMP_InputField cellSCount;
     public TMP_InputField baseMaxRange;
     public TMP_InputField realMaxRange;
     [Space]
@@ -30,25 +29,14 @@ public class PrefsOverlay : MonoBehaviour{
             }
         });
 
-        maxVoltage.text = PlayerPrefs.GetFloat("MAX_VOLTAGE_V").ToString();
-        maxVoltage.onValueChanged.AddListener(delegate {
+        cellSCount.text = PlayerPrefs.GetFloat("CELL_S_COUNT").ToString();
+        cellSCount.onValueChanged.AddListener(delegate {
             float newMax = -1;
-            if (float.TryParse(maxVoltage.text, out newMax) && newMax > 0) {
-                PlayerPrefs.SetFloat("MAX_VOLTAGE_V", newMax);
+            if (float.TryParse(cellSCount.text, out newMax) && newMax > 0) {
+                PlayerPrefs.SetFloat("CELL_S_COUNT", newMax);
             } else {
-                PlayerPrefs.SetFloat("MAX_VOLTAGE_V", BikeManager.MAX_VOLTAGE_V);
-                maxVoltage.text = PlayerPrefs.GetFloat("MAX_VOLTAGE_V").ToString();
-            }
-        });
-
-        minVoltage.text = PlayerPrefs.GetFloat("MIN_VOLTAGE_V").ToString();
-        minVoltage.onValueChanged.AddListener(delegate {
-            float newMin = -1;
-            if (float.TryParse(minVoltage.text, out newMin) && newMin > 0) {
-                PlayerPrefs.SetFloat("MIN_VOLTAGE_V", newMin);
-            } else {
-                PlayerPrefs.SetFloat("MIN_VOLTAGE_V", BikeManager.MIN_VOLTAGE_V);
-                minVoltage.text = PlayerPrefs.GetFloat("MIN_VOLTAGE_V").ToString();
+                PlayerPrefs.SetFloat("CELL_S_COUNT", BikeManager.CELL_S_COUNT);
+                cellSCount.text = PlayerPrefs.GetFloat("CELL_S_COUNT").ToString();
             }
         });
 

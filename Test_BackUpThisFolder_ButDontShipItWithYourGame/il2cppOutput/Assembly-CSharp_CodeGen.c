@@ -80,48 +80,48 @@ extern void BikeManager_updateNotificationDebug_m217526E292627D155B50364CD6AEA94
 extern void BikeManager__ctor_m6C2113CE9A0F4F0565E68D7DDC8D6B2DC479804D (void);
 // 0x00000022 System.Void BikeManager::.cctor()
 extern void BikeManager__cctor_m595BD005278BCCCDF9A7E3827B396E90B369A9C3 (void);
-// 0x00000023 System.Void BikeManager::<Start>b__99_0(System.Boolean)
-extern void BikeManager_U3CStartU3Eb__99_0_mBCDD29FBF44767FB153D543DB66F0CFD641F147D (void);
-// 0x00000024 System.Void BikeManager::<Start>b__99_2(System.Boolean)
-extern void BikeManager_U3CStartU3Eb__99_2_mFED551E37794B71EB6F8C10313B0B4932F421D6E (void);
-// 0x00000025 System.Void BikeManager::<Start>b__99_3()
-extern void BikeManager_U3CStartU3Eb__99_3_mDEC0D590F861A989AA124CB5397CC0BF27B7E5B8 (void);
-// 0x00000026 System.Void BikeManager::<Start>b__99_4()
-extern void BikeManager_U3CStartU3Eb__99_4_mF0C09CF294CF2CAE01E526998B91E1C139DCDD1E (void);
-// 0x00000027 System.Void BikeManager::<Start>b__99_5()
-extern void BikeManager_U3CStartU3Eb__99_5_mBA5E9ECF74BA209637AB6B0A2BFB8485B97D6298 (void);
-// 0x00000028 System.Void BikeManager::<Start>b__99_6()
-extern void BikeManager_U3CStartU3Eb__99_6_m09EF5A3784B7AA4E6842C5692D315CA85B28EDF0 (void);
-// 0x00000029 System.Void BikeManager::<Start>b__99_7()
-extern void BikeManager_U3CStartU3Eb__99_7_mEA2C0191555BF88B1509F96FCA40313EDED3CD8E (void);
-// 0x0000002A System.Void BikeManager::<Start>b__99_8(System.Boolean)
-extern void BikeManager_U3CStartU3Eb__99_8_mCBA7ED415BC39161BB8249CCAA81CFF2A341491D (void);
-// 0x0000002B System.Void BikeManager::<Start>b__99_9()
-extern void BikeManager_U3CStartU3Eb__99_9_mA2224B7223B2F26EBD00FFEFFC04D1DD6B1A8901 (void);
-// 0x0000002C System.Void BikeManager::<Start>b__99_10()
-extern void BikeManager_U3CStartU3Eb__99_10_m6A3358706DAED486AE37A6BD44DB9938100180AE (void);
-// 0x0000002D System.Void BikeManager::<onServicesDiscovered>b__107_0(System.Boolean)
-extern void BikeManager_U3ConServicesDiscoveredU3Eb__107_0_mB0827630D12AF264E647EE70E48EFAAF14731CF5 (void);
-// 0x0000002E System.Boolean BikeManager::<getStartupInfoRoutine>b__108_0()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_0_mE74BE2ABA32CE8A21C1C7930831963D9B9411084 (void);
-// 0x0000002F System.Boolean BikeManager::<getStartupInfoRoutine>b__108_1()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_1_mC78E4F53C526E55EBB0F0EAE2760034A58CC0C5F (void);
-// 0x00000030 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_2()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_2_m4D55717F03AF61DC37D1551123CBA9A86F2B5A5A (void);
-// 0x00000031 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_3()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_3_m3178FEFA1AB81D39FDB2DE33DBF1816E7510E790 (void);
-// 0x00000032 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_4()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_4_m24784201EE7FDE75EBEB1984A0CD5D48F0CBB88C (void);
-// 0x00000033 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_5()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_5_m306747ADE5F08BB4B6B6B2332BC2697AED489242 (void);
-// 0x00000034 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_6()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_6_m0F3F2DE2075C7F4EAF667E4F101C6689593D691B (void);
-// 0x00000035 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_7()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_7_m8F6058A068B53E8F5A42449B4A76C6FB03742F87 (void);
-// 0x00000036 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_8()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_8_m54C865048BC547898498A398B3121B3AEC7F0EB5 (void);
-// 0x00000037 System.Boolean BikeManager::<getStartupInfoRoutine>b__108_9()
-extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__108_9_m38034B98AAFA6B4D651FD91B5EE5D73F979C10E6 (void);
+// 0x00000023 System.Void BikeManager::<Start>b__98_0(System.Boolean)
+extern void BikeManager_U3CStartU3Eb__98_0_m42BFA6CFDC6D20D89EDDC0C3229FDD6D79BC5830 (void);
+// 0x00000024 System.Void BikeManager::<Start>b__98_2(System.Boolean)
+extern void BikeManager_U3CStartU3Eb__98_2_mAF7B9E7BD07C8179EE797088BF7F65EFEB05B98A (void);
+// 0x00000025 System.Void BikeManager::<Start>b__98_3()
+extern void BikeManager_U3CStartU3Eb__98_3_m8888542E916FC10C37E0A023F740D40C3F657236 (void);
+// 0x00000026 System.Void BikeManager::<Start>b__98_4()
+extern void BikeManager_U3CStartU3Eb__98_4_m2CC5F331C5514FF2A6D3F6C730DB87FFAE33CE60 (void);
+// 0x00000027 System.Void BikeManager::<Start>b__98_5()
+extern void BikeManager_U3CStartU3Eb__98_5_mC0661408B35205BE7CC19256D36BD266832E0EE3 (void);
+// 0x00000028 System.Void BikeManager::<Start>b__98_6()
+extern void BikeManager_U3CStartU3Eb__98_6_m9F927B0A76D50C1A8F6DF9F288DF4950D3E20D3F (void);
+// 0x00000029 System.Void BikeManager::<Start>b__98_7()
+extern void BikeManager_U3CStartU3Eb__98_7_m6A03B421E0F81652B570E8C8708DA693A33C48F4 (void);
+// 0x0000002A System.Void BikeManager::<Start>b__98_8(System.Boolean)
+extern void BikeManager_U3CStartU3Eb__98_8_m9CF0C5DAB2EAD58619E2F5C4E212EB3B5C500161 (void);
+// 0x0000002B System.Void BikeManager::<Start>b__98_9()
+extern void BikeManager_U3CStartU3Eb__98_9_mB33D9C582AD873855A3500DDFB8141FCC0CFFCCD (void);
+// 0x0000002C System.Void BikeManager::<Start>b__98_10()
+extern void BikeManager_U3CStartU3Eb__98_10_m2047071CA6724738E4C7850754900630A3C2375E (void);
+// 0x0000002D System.Void BikeManager::<onServicesDiscovered>b__106_0(System.Boolean)
+extern void BikeManager_U3ConServicesDiscoveredU3Eb__106_0_mD7995457C540141B41653AB4485EDD3FBAD2F597 (void);
+// 0x0000002E System.Boolean BikeManager::<getStartupInfoRoutine>b__107_0()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_0_m5F0907F06FB97FCC2E59426E602476334A58AD01 (void);
+// 0x0000002F System.Boolean BikeManager::<getStartupInfoRoutine>b__107_1()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_1_m93DAE7445055D318C1399D354B9DECE3B668E6DE (void);
+// 0x00000030 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_2()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_2_mFC6A9783E3633D927F20EB053736F112221A98E6 (void);
+// 0x00000031 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_3()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_3_m3EFC60685A4AB8C3AEE8DF13058EE310D947E4A9 (void);
+// 0x00000032 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_4()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_4_m4A6724C14BCC4C6BA82CEE37DCE415E7B26A3FA0 (void);
+// 0x00000033 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_5()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_5_m013D9F1B4508E437C2F9A0D224DAD58CC14C5437 (void);
+// 0x00000034 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_6()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_6_m73B8B3B497979BA058840BFB67542DCCE2228E68 (void);
+// 0x00000035 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_7()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_7_m382D3EB8DD89FB06EE3E02CDE488967804ADDCD8 (void);
+// 0x00000036 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_8()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_8_m31C1D0973090ACAC64364A2103795D489D9C5B84 (void);
+// 0x00000037 System.Boolean BikeManager::<getStartupInfoRoutine>b__107_9()
+extern void BikeManager_U3CgetStartupInfoRoutineU3Eb__107_9_m0AFF94D9404E3B0CBC62CCF579D9211F56FA58E0 (void);
 // 0x00000038 System.Void BikeManager/BikeNotification::.ctor(System.String,System.Byte[])
 extern void BikeNotification__ctor_mDAB2DDB388D1F42A6C85FF2775F54DA57C9D3FB6 (void);
 // 0x00000039 System.Boolean BikeManager/BikeNotification::dataIsNotification(System.Byte[])
@@ -132,44 +132,44 @@ extern void BikeNotification_ToString_m03A7EAB72CEEED4B05E24A5160321658AAEF6221 
 extern void U3CU3Ec__cctor_mB8820353BD8AB96927BFE96420C9D00DABC217D0 (void);
 // 0x0000003C System.Void BikeManager/<>c::.ctor()
 extern void U3CU3Ec__ctor_mA94EF8086F7B1619E26C6AB6476569E11C558FC7 (void);
-// 0x0000003D System.Void BikeManager/<>c::<Start>b__99_1()
-extern void U3CU3Ec_U3CStartU3Eb__99_1_m7A7B9E8DE53D86C0B189396FDB89459D42CB35A8 (void);
-// 0x0000003E System.Void BikeManager/<setThemeRoutine>d__100::.ctor(System.Int32)
-extern void U3CsetThemeRoutineU3Ed__100__ctor_m089BE04891B93219BB1363B26C0B2599897DD2BC (void);
-// 0x0000003F System.Void BikeManager/<setThemeRoutine>d__100::System.IDisposable.Dispose()
-extern void U3CsetThemeRoutineU3Ed__100_System_IDisposable_Dispose_m18A3336104B8D244F9E9E21EABA773DAFD420307 (void);
-// 0x00000040 System.Boolean BikeManager/<setThemeRoutine>d__100::MoveNext()
-extern void U3CsetThemeRoutineU3Ed__100_MoveNext_m6F7B39585024BDE396FCA4ADCB15561DF994C011 (void);
-// 0x00000041 System.Object BikeManager/<setThemeRoutine>d__100::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CsetThemeRoutineU3Ed__100_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m630628230ECB75CE108BA9B8B1BD6849039AC88F (void);
-// 0x00000042 System.Void BikeManager/<setThemeRoutine>d__100::System.Collections.IEnumerator.Reset()
-extern void U3CsetThemeRoutineU3Ed__100_System_Collections_IEnumerator_Reset_m1A159B9075C5FF616C7648D4D581C32F8A0B0C86 (void);
-// 0x00000043 System.Object BikeManager/<setThemeRoutine>d__100::System.Collections.IEnumerator.get_Current()
-extern void U3CsetThemeRoutineU3Ed__100_System_Collections_IEnumerator_get_Current_m3355053B6A7988350B864D819B5F232E3254FC77 (void);
-// 0x00000044 System.Void BikeManager/<scanRoutine>d__103::.ctor(System.Int32)
-extern void U3CscanRoutineU3Ed__103__ctor_mBE78BF22823D9B74369E83932C6A871C68132387 (void);
-// 0x00000045 System.Void BikeManager/<scanRoutine>d__103::System.IDisposable.Dispose()
-extern void U3CscanRoutineU3Ed__103_System_IDisposable_Dispose_m03C7DE81F87F039756B257030BAA0D511264F3A4 (void);
-// 0x00000046 System.Boolean BikeManager/<scanRoutine>d__103::MoveNext()
-extern void U3CscanRoutineU3Ed__103_MoveNext_m5732ADEFFC609095C916C03F764B634923ACA18C (void);
-// 0x00000047 System.Object BikeManager/<scanRoutine>d__103::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CscanRoutineU3Ed__103_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFC08704DA67553AF1F7938A512D8090FDC5CF5E7 (void);
-// 0x00000048 System.Void BikeManager/<scanRoutine>d__103::System.Collections.IEnumerator.Reset()
-extern void U3CscanRoutineU3Ed__103_System_Collections_IEnumerator_Reset_m39A7588BDCA378B1FA0DD04AFF6710CB912A61FE (void);
-// 0x00000049 System.Object BikeManager/<scanRoutine>d__103::System.Collections.IEnumerator.get_Current()
-extern void U3CscanRoutineU3Ed__103_System_Collections_IEnumerator_get_Current_m1D1810FC1CCADDBDA5D6FC45D3093131DB3B3E6F (void);
-// 0x0000004A System.Void BikeManager/<getStartupInfoRoutine>d__108::.ctor(System.Int32)
-extern void U3CgetStartupInfoRoutineU3Ed__108__ctor_m327D4ABEDA36DD1AAC37D42D72F8DCCEA8CEDCF2 (void);
-// 0x0000004B System.Void BikeManager/<getStartupInfoRoutine>d__108::System.IDisposable.Dispose()
-extern void U3CgetStartupInfoRoutineU3Ed__108_System_IDisposable_Dispose_m157A6406243AA585EBFB7760DDA55526D1CB8699 (void);
-// 0x0000004C System.Boolean BikeManager/<getStartupInfoRoutine>d__108::MoveNext()
-extern void U3CgetStartupInfoRoutineU3Ed__108_MoveNext_m0F9F711EE3BD2916B69550864F0AC5BC0F604EAE (void);
-// 0x0000004D System.Object BikeManager/<getStartupInfoRoutine>d__108::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CgetStartupInfoRoutineU3Ed__108_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB2910FFA1AE09DEE05DC2F4747E0A24B54EDC542 (void);
-// 0x0000004E System.Void BikeManager/<getStartupInfoRoutine>d__108::System.Collections.IEnumerator.Reset()
-extern void U3CgetStartupInfoRoutineU3Ed__108_System_Collections_IEnumerator_Reset_mB74A4F694191768018C8E2B74E9474850A1D7FB4 (void);
-// 0x0000004F System.Object BikeManager/<getStartupInfoRoutine>d__108::System.Collections.IEnumerator.get_Current()
-extern void U3CgetStartupInfoRoutineU3Ed__108_System_Collections_IEnumerator_get_Current_m674CADE24EB69FFA7A6C8BD3403B4BC2D5EDF00A (void);
+// 0x0000003D System.Void BikeManager/<>c::<Start>b__98_1()
+extern void U3CU3Ec_U3CStartU3Eb__98_1_m3530B4B89CCD88F5B3FDF28353B65CC754288452 (void);
+// 0x0000003E System.Void BikeManager/<setThemeRoutine>d__99::.ctor(System.Int32)
+extern void U3CsetThemeRoutineU3Ed__99__ctor_m8EF3595B57217A58C538B0849E083FE117D88877 (void);
+// 0x0000003F System.Void BikeManager/<setThemeRoutine>d__99::System.IDisposable.Dispose()
+extern void U3CsetThemeRoutineU3Ed__99_System_IDisposable_Dispose_mDDAA915D4DDEBE7FFD07B69F43BA57253FFB4F5E (void);
+// 0x00000040 System.Boolean BikeManager/<setThemeRoutine>d__99::MoveNext()
+extern void U3CsetThemeRoutineU3Ed__99_MoveNext_m5A5AD48C42D5D8944C548C418EBA988FBE2FC5D6 (void);
+// 0x00000041 System.Object BikeManager/<setThemeRoutine>d__99::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CsetThemeRoutineU3Ed__99_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDF1535C24E5A14AE685BF88A3E6A9540F74713C5 (void);
+// 0x00000042 System.Void BikeManager/<setThemeRoutine>d__99::System.Collections.IEnumerator.Reset()
+extern void U3CsetThemeRoutineU3Ed__99_System_Collections_IEnumerator_Reset_m1BE402911217D66FBCF6E0EDFE420899E2FC1719 (void);
+// 0x00000043 System.Object BikeManager/<setThemeRoutine>d__99::System.Collections.IEnumerator.get_Current()
+extern void U3CsetThemeRoutineU3Ed__99_System_Collections_IEnumerator_get_Current_m1273B8ADBD6D3EC366959F11A223B2CA917FDC85 (void);
+// 0x00000044 System.Void BikeManager/<scanRoutine>d__102::.ctor(System.Int32)
+extern void U3CscanRoutineU3Ed__102__ctor_m129142B12ABAC538A288AB6D56702CF5D16B3F35 (void);
+// 0x00000045 System.Void BikeManager/<scanRoutine>d__102::System.IDisposable.Dispose()
+extern void U3CscanRoutineU3Ed__102_System_IDisposable_Dispose_mCF74E782860FC80EB04CA8D26E6BB4A2E53BD509 (void);
+// 0x00000046 System.Boolean BikeManager/<scanRoutine>d__102::MoveNext()
+extern void U3CscanRoutineU3Ed__102_MoveNext_m4DB649C4AFFD5E1F32973C8808E5229BA697386E (void);
+// 0x00000047 System.Object BikeManager/<scanRoutine>d__102::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CscanRoutineU3Ed__102_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEC8DB15DC153977B588BA9342DC33E8C0360DDB2 (void);
+// 0x00000048 System.Void BikeManager/<scanRoutine>d__102::System.Collections.IEnumerator.Reset()
+extern void U3CscanRoutineU3Ed__102_System_Collections_IEnumerator_Reset_m3A09278921A33C3BC3E621D285DE8FBA474C334B (void);
+// 0x00000049 System.Object BikeManager/<scanRoutine>d__102::System.Collections.IEnumerator.get_Current()
+extern void U3CscanRoutineU3Ed__102_System_Collections_IEnumerator_get_Current_m5CE716A67CFB4017B26BC21B0AAAFD652677191F (void);
+// 0x0000004A System.Void BikeManager/<getStartupInfoRoutine>d__107::.ctor(System.Int32)
+extern void U3CgetStartupInfoRoutineU3Ed__107__ctor_mF9EE9644BD162F12C11D35BDC75F03F32C132B6A (void);
+// 0x0000004B System.Void BikeManager/<getStartupInfoRoutine>d__107::System.IDisposable.Dispose()
+extern void U3CgetStartupInfoRoutineU3Ed__107_System_IDisposable_Dispose_mB06039873842BCBD2A9AE51704CC36638E200D9D (void);
+// 0x0000004C System.Boolean BikeManager/<getStartupInfoRoutine>d__107::MoveNext()
+extern void U3CgetStartupInfoRoutineU3Ed__107_MoveNext_m49BB69726A0491C2D3234D6B68CDF52D3329B6B6 (void);
+// 0x0000004D System.Object BikeManager/<getStartupInfoRoutine>d__107::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CgetStartupInfoRoutineU3Ed__107_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m521C98BC708A81F2B82F0396269BA2CAFAEE7D35 (void);
+// 0x0000004E System.Void BikeManager/<getStartupInfoRoutine>d__107::System.Collections.IEnumerator.Reset()
+extern void U3CgetStartupInfoRoutineU3Ed__107_System_Collections_IEnumerator_Reset_m2245E4752DF0A8600105BC1B0FD554868B300726 (void);
+// 0x0000004F System.Object BikeManager/<getStartupInfoRoutine>d__107::System.Collections.IEnumerator.get_Current()
+extern void U3CgetStartupInfoRoutineU3Ed__107_System_Collections_IEnumerator_get_Current_m250CD911E37A6F2417ED20316BDA9DB491ED6042 (void);
 // 0x00000050 System.Void BikeState::Awake()
 extern void BikeState_Awake_m215A48389DC48A0E01D4462C91561F20FDFB53E8 (void);
 // 0x00000051 System.String BikeState::getDeviceName()
@@ -384,128 +384,126 @@ extern void UpdateAndroidLib__ctor_m0A6EDD2FDD19F2B0B6DC2D3EB9CC8BB9753B1A27 (vo
 extern void PrefsOverlay_Start_mB5BE5DE0CC979E71D2F8F741AC94EBA3E13B07F4 (void);
 // 0x000000BA System.Void PrefsOverlay::.ctor()
 extern void PrefsOverlay__ctor_m9C898BA525173BFE4507DD3DAECF8D2F52570152 (void);
-// 0x000000BB System.Void PrefsOverlay::<Start>b__6_0()
-extern void PrefsOverlay_U3CStartU3Eb__6_0_mEAE746C82060FEF5CC289347C52CED20BB862B3B (void);
-// 0x000000BC System.Void PrefsOverlay::<Start>b__6_1(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__6_1_m9D91B79F8B2011000AFCC58BCBCE62845C7530CC (void);
-// 0x000000BD System.Void PrefsOverlay::<Start>b__6_2(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__6_2_mB1EF41E6FC37862FF7967D6452FE6B28FDB5C622 (void);
-// 0x000000BE System.Void PrefsOverlay::<Start>b__6_3(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__6_3_m0BEB6172975B546E79EDF33C03A9BAB76FD56980 (void);
-// 0x000000BF System.Void PrefsOverlay::<Start>b__6_4(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__6_4_mFF0A54CF1D323154820690701F5AB2F7F3C4D51D (void);
-// 0x000000C0 System.Void PrefsOverlay::<Start>b__6_5(System.String)
-extern void PrefsOverlay_U3CStartU3Eb__6_5_mBBE6E66F5B15F6AF89BE53D4FE57C877055C493E (void);
-// 0x000000C1 System.Void DeviceLine::set(NativeBLE/BtleDevice)
+// 0x000000BB System.Void PrefsOverlay::<Start>b__5_0()
+extern void PrefsOverlay_U3CStartU3Eb__5_0_mB19C546D3F92A198718F1D89D9802C7CA904B6BD (void);
+// 0x000000BC System.Void PrefsOverlay::<Start>b__5_1(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__5_1_m45EA8EF48504337B53FDC10F7F8D13FB789AC63F (void);
+// 0x000000BD System.Void PrefsOverlay::<Start>b__5_2(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__5_2_mBCAE39FC4AD740D0DDE86C328B289E5D9B09F32C (void);
+// 0x000000BE System.Void PrefsOverlay::<Start>b__5_3(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__5_3_m3B35FF52CB9CAFD9FFE6CD795D364D6382A695FA (void);
+// 0x000000BF System.Void PrefsOverlay::<Start>b__5_4(System.String)
+extern void PrefsOverlay_U3CStartU3Eb__5_4_m5F0C53136F6A83AF00931FCDE9241DC6287CEAB4 (void);
+// 0x000000C0 System.Void DeviceLine::set(NativeBLE/BtleDevice)
 extern void DeviceLine_set_mDFC8EDF332B9D7AC14971452751359E68750A2EA (void);
-// 0x000000C2 System.Void DeviceLine::.ctor()
+// 0x000000C1 System.Void DeviceLine::.ctor()
 extern void DeviceLine__ctor_m2FA3D847B099D6439256F84F643231857C8864A6 (void);
-// 0x000000C3 System.Void DeviceLine/<>c__DisplayClass4_0::.ctor()
+// 0x000000C2 System.Void DeviceLine/<>c__DisplayClass4_0::.ctor()
 extern void U3CU3Ec__DisplayClass4_0__ctor_m86919AE88A49EE868424E01D6788FF68EA1B3B67 (void);
-// 0x000000C4 System.Void DeviceLine/<>c__DisplayClass4_0::<set>b__0()
+// 0x000000C3 System.Void DeviceLine/<>c__DisplayClass4_0::<set>b__0()
 extern void U3CU3Ec__DisplayClass4_0_U3CsetU3Eb__0_m8056FE72A0F57A8DE95063D8121BA9C2676CD3F4 (void);
-// 0x000000C5 System.Void GridSizer::Awake()
+// 0x000000C4 System.Void GridSizer::Awake()
 extern void GridSizer_Awake_m99CB86A3C1494A1DBA7D21FF5AE057ECAB45CA3F (void);
-// 0x000000C6 System.Void GridSizer::Start()
+// 0x000000C5 System.Void GridSizer::Start()
 extern void GridSizer_Start_m76C6AE94BEDB324833A02DF9264D50CBCDEC209D (void);
-// 0x000000C7 System.Void GridSizer::Update()
+// 0x000000C6 System.Void GridSizer::Update()
 extern void GridSizer_Update_m1E71DB72CE47E6708A05C75C870655B571D3FDF6 (void);
-// 0x000000C8 System.Void GridSizer::.ctor()
+// 0x000000C7 System.Void GridSizer::.ctor()
 extern void GridSizer__ctor_m2E8954D06AAAE908484D0B54F0B20E2940276DEA (void);
-// 0x000000C9 System.Void NestedChildScrollRect::Awake()
+// 0x000000C8 System.Void NestedChildScrollRect::Awake()
 extern void NestedChildScrollRect_Awake_m12F9FF68E209D47D6C771B3CCC7867ACD3A61B7C (void);
-// 0x000000CA System.Void NestedChildScrollRect::Update()
+// 0x000000C9 System.Void NestedChildScrollRect::Update()
 extern void NestedChildScrollRect_Update_m53873D0F02679210566780FEADB7475E1437B113 (void);
-// 0x000000CB UnityEngine.UI.ScrollRect NestedChildScrollRect::GetScrollParent(UnityEngine.Transform)
+// 0x000000CA UnityEngine.UI.ScrollRect NestedChildScrollRect::GetScrollParent(UnityEngine.Transform)
 extern void NestedChildScrollRect_GetScrollParent_m6B64ED6836AB578539F15380970421E01D8C5672 (void);
-// 0x000000CC System.Boolean NestedChildScrollRect::IsPotentialParentDrag(UnityEngine.Vector2)
+// 0x000000CB System.Boolean NestedChildScrollRect::IsPotentialParentDrag(UnityEngine.Vector2)
 extern void NestedChildScrollRect_IsPotentialParentDrag_mBA497B8C44C4D5A35F5DF48EB6130E633C9523E7 (void);
-// 0x000000CD System.Void NestedChildScrollRect::OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
+// 0x000000CC System.Void NestedChildScrollRect::OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)
 extern void NestedChildScrollRect_OnInitializePotentialDrag_m811736789587CBC19FEE5B1D93759B6C5A862E81 (void);
-// 0x000000CE System.Void NestedChildScrollRect::OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
+// 0x000000CD System.Void NestedChildScrollRect::OnBeginDrag(UnityEngine.EventSystems.PointerEventData)
 extern void NestedChildScrollRect_OnBeginDrag_m78B3A1A73D7E131E1FC837125085551DE0E6D6ED (void);
-// 0x000000CF System.Void NestedChildScrollRect::OnDrag(UnityEngine.EventSystems.PointerEventData)
+// 0x000000CE System.Void NestedChildScrollRect::OnDrag(UnityEngine.EventSystems.PointerEventData)
 extern void NestedChildScrollRect_OnDrag_m75EA4E2D5261033C6A511E4468D75C425DCD905F (void);
-// 0x000000D0 System.Void NestedChildScrollRect::OnEndDrag(UnityEngine.EventSystems.PointerEventData)
+// 0x000000CF System.Void NestedChildScrollRect::OnEndDrag(UnityEngine.EventSystems.PointerEventData)
 extern void NestedChildScrollRect_OnEndDrag_m74D0BEAF303712B4C5A73E2DE5367D63D891AB06 (void);
-// 0x000000D1 System.Void NestedChildScrollRect::.ctor()
+// 0x000000D0 System.Void NestedChildScrollRect::.ctor()
 extern void NestedChildScrollRect__ctor_m6562B0F83638FB8747FFBDAA6E4EB91952A31691 (void);
-// 0x000000D2 System.Void SetDirty::Reset()
+// 0x000000D1 System.Void SetDirty::Reset()
 extern void SetDirty_Reset_mFFB38B988274FE9A89FADC826D8F535DC6EDCD42 (void);
-// 0x000000D3 System.Void SetDirty::Update()
+// 0x000000D2 System.Void SetDirty::Update()
 extern void SetDirty_Update_m02FC3FBCBA5C96D8AFC323360A4C51CBF7F438F3 (void);
-// 0x000000D4 System.Void SetDirty::.ctor()
+// 0x000000D3 System.Void SetDirty::.ctor()
 extern void SetDirty__ctor_mBF6E96BE9BBF395746DDD8020E04AB2636E93FEF (void);
-// 0x000000D5 System.Void UICornersGradient::ModifyMesh(UnityEngine.UI.VertexHelper)
+// 0x000000D4 System.Void UICornersGradient::ModifyMesh(UnityEngine.UI.VertexHelper)
 extern void UICornersGradient_ModifyMesh_m9D78970784283ADD9071770C53C7AD7D86D80D97 (void);
-// 0x000000D6 System.Void UICornersGradient::.ctor()
+// 0x000000D5 System.Void UICornersGradient::.ctor()
 extern void UICornersGradient__ctor_m3026DA1148BAA3AA1D06D454E7E868997F7262D1 (void);
-// 0x000000D7 System.Void UIGradient::Start()
+// 0x000000D6 System.Void UIGradient::Start()
 extern void UIGradient_Start_m6BD3344119176FBC3CB2A665380A647A2D51FE99 (void);
-// 0x000000D8 System.Void UIGradient::OnDestroy()
+// 0x000000D7 System.Void UIGradient::OnDestroy()
 extern void UIGradient_OnDestroy_m33E37DA655D500909E15E97B3D266F861324A0BB (void);
-// 0x000000D9 System.Void UIGradient::applyTheme(Theme)
+// 0x000000D8 System.Void UIGradient::applyTheme(Theme)
 extern void UIGradient_applyTheme_m4D87FD9D40DFD063E37110F19D0F041393C0AA09 (void);
-// 0x000000DA System.Void UIGradient::ModifyMesh(UnityEngine.UI.VertexHelper)
+// 0x000000D9 System.Void UIGradient::ModifyMesh(UnityEngine.UI.VertexHelper)
 extern void UIGradient_ModifyMesh_m6FE4D8E65AE7DE39F7A160FC492990467C022F7A (void);
-// 0x000000DB System.Void UIGradient::.ctor()
+// 0x000000DA System.Void UIGradient::.ctor()
 extern void UIGradient__ctor_mA38009A3EC8C02142F07CEC062C1FC9929489364 (void);
-// 0x000000DC UIGradientUtils/Matrix2x3 UIGradientUtils::LocalPositionMatrix(UnityEngine.Rect,UnityEngine.Vector2)
+// 0x000000DB UIGradientUtils/Matrix2x3 UIGradientUtils::LocalPositionMatrix(UnityEngine.Rect,UnityEngine.Vector2)
 extern void UIGradientUtils_LocalPositionMatrix_mC4BFBFEA9283D58A9638CFAB91C4B631F8C58BA4 (void);
-// 0x000000DD UnityEngine.Vector2[] UIGradientUtils::get_VerticePositions()
+// 0x000000DC UnityEngine.Vector2[] UIGradientUtils::get_VerticePositions()
 extern void UIGradientUtils_get_VerticePositions_mAC75FFE9AB10942297980854FF20A4C3EAFB2B3E (void);
-// 0x000000DE UnityEngine.Vector2 UIGradientUtils::RotationDir(System.Single)
+// 0x000000DD UnityEngine.Vector2 UIGradientUtils::RotationDir(System.Single)
 extern void UIGradientUtils_RotationDir_m9937D69F61B434C40D2C13A73DA5BEB9D3B9BD53 (void);
-// 0x000000DF UnityEngine.Vector2 UIGradientUtils::CompensateAspectRatio(UnityEngine.Rect,UnityEngine.Vector2)
+// 0x000000DE UnityEngine.Vector2 UIGradientUtils::CompensateAspectRatio(UnityEngine.Rect,UnityEngine.Vector2)
 extern void UIGradientUtils_CompensateAspectRatio_m31366057DA05A74913C54413ACBB9142EF898F4F (void);
-// 0x000000E0 System.Single UIGradientUtils::InverseLerp(System.Single,System.Single,System.Single)
+// 0x000000DF System.Single UIGradientUtils::InverseLerp(System.Single,System.Single,System.Single)
 extern void UIGradientUtils_InverseLerp_mB6D040C0C4AAC4E9436B207DA912FFB5865E58EB (void);
-// 0x000000E1 UnityEngine.Color UIGradientUtils::Bilerp(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Vector2)
+// 0x000000E0 UnityEngine.Color UIGradientUtils::Bilerp(UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Color,UnityEngine.Vector2)
 extern void UIGradientUtils_Bilerp_m00E5214C814309B321680DF6E37D26134087206F (void);
-// 0x000000E2 System.Void UIGradientUtils::Lerp(UnityEngine.UIVertex,UnityEngine.UIVertex,System.Single,UnityEngine.UIVertex&)
+// 0x000000E1 System.Void UIGradientUtils::Lerp(UnityEngine.UIVertex,UnityEngine.UIVertex,System.Single,UnityEngine.UIVertex&)
 extern void UIGradientUtils_Lerp_m90320B1080DD721ADB0D1399BC83AA3A51664DA3 (void);
-// 0x000000E3 System.Void UIGradientUtils::.cctor()
+// 0x000000E2 System.Void UIGradientUtils::.cctor()
 extern void UIGradientUtils__cctor_mA8914FF2B84C0D0A678D1CAF2386D6168F5A1772 (void);
-// 0x000000E4 System.Void UIGradientUtils/Matrix2x3::.ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+// 0x000000E3 System.Void UIGradientUtils/Matrix2x3::.ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
 extern void Matrix2x3__ctor_m2F844612BA97BB76F8362F98C5956800F8A29E08 (void);
-// 0x000000E5 UnityEngine.Vector2 UIGradientUtils/Matrix2x3::op_Multiply(UIGradientUtils/Matrix2x3,UnityEngine.Vector2)
+// 0x000000E4 UnityEngine.Vector2 UIGradientUtils/Matrix2x3::op_Multiply(UIGradientUtils/Matrix2x3,UnityEngine.Vector2)
 extern void Matrix2x3_op_Multiply_m7BD31B929BCBDD3909B6976A6A06E732FD13D974 (void);
-// 0x000000E6 System.Void ColorManager::Awake()
+// 0x000000E5 System.Void ColorManager::Awake()
 extern void ColorManager_Awake_mB27B0C922D2E93490354AD78F180A65853DD677E (void);
-// 0x000000E7 System.Void ColorManager::setTheme(Theme)
+// 0x000000E6 System.Void ColorManager::setTheme(Theme)
 extern void ColorManager_setTheme_m4CB9E60AE1702C031BBE5BBE931D6105874C40D9 (void);
-// 0x000000E8 System.Void ColorManager::.ctor()
+// 0x000000E7 System.Void ColorManager::.ctor()
 extern void ColorManager__ctor_m34F9D117233FB6D8A8B95C0C6C7A703FA89FB495 (void);
-// 0x000000E9 UnityEngine.Sprite SpecialTheme::getBackground()
+// 0x000000E8 UnityEngine.Sprite SpecialTheme::getBackground()
 extern void SpecialTheme_getBackground_mE5DF02C493A00D49BB123117166B58294CB58631 (void);
-// 0x000000EA System.Void SpecialTheme::.ctor()
+// 0x000000E9 System.Void SpecialTheme::.ctor()
 extern void SpecialTheme__ctor_m491849B935F0C10BAAE720A14C4D4D73D6A69CAD (void);
-// 0x000000EB UnityEngine.Sprite Theme::getBackground()
+// 0x000000EA UnityEngine.Sprite Theme::getBackground()
 extern void Theme_getBackground_m3C4CFCF3F1B5C4D73F75D1C8BF91FA99657907F7 (void);
-// 0x000000EC System.Void Theme::.ctor()
+// 0x000000EB System.Void Theme::.ctor()
 extern void Theme__ctor_m885AC9FD2479A5232EC1F9E0F4D567B846F2AACD (void);
-// 0x000000ED System.Void ThemedElement::Start()
+// 0x000000EC System.Void ThemedElement::Start()
 extern void ThemedElement_Start_m1BEC214B2B273DE8D1192D594A83045E2ADE86DF (void);
-// 0x000000EE System.Void ThemedElement::OnDestroy()
+// 0x000000ED System.Void ThemedElement::OnDestroy()
 extern void ThemedElement_OnDestroy_m2F52BC8A3E2F33885144AC78DBE41128A25A9E38 (void);
-// 0x000000EF UnityEngine.Color ThemedElement::getColor(UnityEngine.Color,Theme)
+// 0x000000EE UnityEngine.Color ThemedElement::getColor(UnityEngine.Color,Theme)
 extern void ThemedElement_getColor_m8963D1312EE8A5C5606B5273F8D81E77F3AC752E (void);
-// 0x000000F0 System.Void ThemedElement::applyTheme(Theme)
-// 0x000000F1 System.Void ThemedElement::.ctor()
+// 0x000000EF System.Void ThemedElement::applyTheme(Theme)
+// 0x000000F0 System.Void ThemedElement::.ctor()
 extern void ThemedElement__ctor_m673D306B3C7AFDC642FC5C0AB4DAE4A8F753EF63 (void);
-// 0x000000F2 System.Void ThemedSpecialImage::applyTheme(Theme)
+// 0x000000F1 System.Void ThemedSpecialImage::applyTheme(Theme)
 extern void ThemedSpecialImage_applyTheme_mC111AB3E5FE9D8E7F9AF383B8C64C2B2D047D4BA (void);
-// 0x000000F3 System.Void ThemedSpecialImage::.ctor()
+// 0x000000F2 System.Void ThemedSpecialImage::.ctor()
 extern void ThemedSpecialImage__ctor_m4606A2CEFE7420D7C6C4B904159D0F104872BD05 (void);
-// 0x000000F4 System.Void ThemedSprite::applyTheme(Theme)
+// 0x000000F3 System.Void ThemedSprite::applyTheme(Theme)
 extern void ThemedSprite_applyTheme_m83A2D07F17D0FE3515C85365F6F9C45FD5EA5590 (void);
-// 0x000000F5 System.Void ThemedSprite::.ctor()
+// 0x000000F4 System.Void ThemedSprite::.ctor()
 extern void ThemedSprite__ctor_mB6319EC42F07CD1CE9E7FC05C3B51DE893BFA434 (void);
-// 0x000000F6 System.Void ThemedText::applyTheme(Theme)
+// 0x000000F5 System.Void ThemedText::applyTheme(Theme)
 extern void ThemedText_applyTheme_m7290C652C36E1889E31964A5740C2BB76677F576 (void);
-// 0x000000F7 System.Void ThemedText::.ctor()
+// 0x000000F6 System.Void ThemedText::.ctor()
 extern void ThemedText__ctor_m89752E2639616ED9D9D989A143C30F4585FB0248 (void);
-static Il2CppMethodPointer s_methodPointers[247] = 
+static Il2CppMethodPointer s_methodPointers[246] = 
 {
 	BikeManager_Awake_mC46FC3E98B8827E5ED80C0AF400FAC93BF95CCA5,
 	BikeManager_OnEnable_mFBD1D5AC31C64C71096A199C7256D784AFC852B1,
@@ -541,51 +539,51 @@ static Il2CppMethodPointer s_methodPointers[247] =
 	BikeManager_updateNotificationDebug_m217526E292627D155B50364CD6AEA944BE0EF428,
 	BikeManager__ctor_m6C2113CE9A0F4F0565E68D7DDC8D6B2DC479804D,
 	BikeManager__cctor_m595BD005278BCCCDF9A7E3827B396E90B369A9C3,
-	BikeManager_U3CStartU3Eb__99_0_mBCDD29FBF44767FB153D543DB66F0CFD641F147D,
-	BikeManager_U3CStartU3Eb__99_2_mFED551E37794B71EB6F8C10313B0B4932F421D6E,
-	BikeManager_U3CStartU3Eb__99_3_mDEC0D590F861A989AA124CB5397CC0BF27B7E5B8,
-	BikeManager_U3CStartU3Eb__99_4_mF0C09CF294CF2CAE01E526998B91E1C139DCDD1E,
-	BikeManager_U3CStartU3Eb__99_5_mBA5E9ECF74BA209637AB6B0A2BFB8485B97D6298,
-	BikeManager_U3CStartU3Eb__99_6_m09EF5A3784B7AA4E6842C5692D315CA85B28EDF0,
-	BikeManager_U3CStartU3Eb__99_7_mEA2C0191555BF88B1509F96FCA40313EDED3CD8E,
-	BikeManager_U3CStartU3Eb__99_8_mCBA7ED415BC39161BB8249CCAA81CFF2A341491D,
-	BikeManager_U3CStartU3Eb__99_9_mA2224B7223B2F26EBD00FFEFFC04D1DD6B1A8901,
-	BikeManager_U3CStartU3Eb__99_10_m6A3358706DAED486AE37A6BD44DB9938100180AE,
-	BikeManager_U3ConServicesDiscoveredU3Eb__107_0_mB0827630D12AF264E647EE70E48EFAAF14731CF5,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_0_mE74BE2ABA32CE8A21C1C7930831963D9B9411084,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_1_mC78E4F53C526E55EBB0F0EAE2760034A58CC0C5F,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_2_m4D55717F03AF61DC37D1551123CBA9A86F2B5A5A,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_3_m3178FEFA1AB81D39FDB2DE33DBF1816E7510E790,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_4_m24784201EE7FDE75EBEB1984A0CD5D48F0CBB88C,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_5_m306747ADE5F08BB4B6B6B2332BC2697AED489242,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_6_m0F3F2DE2075C7F4EAF667E4F101C6689593D691B,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_7_m8F6058A068B53E8F5A42449B4A76C6FB03742F87,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_8_m54C865048BC547898498A398B3121B3AEC7F0EB5,
-	BikeManager_U3CgetStartupInfoRoutineU3Eb__108_9_m38034B98AAFA6B4D651FD91B5EE5D73F979C10E6,
+	BikeManager_U3CStartU3Eb__98_0_m42BFA6CFDC6D20D89EDDC0C3229FDD6D79BC5830,
+	BikeManager_U3CStartU3Eb__98_2_mAF7B9E7BD07C8179EE797088BF7F65EFEB05B98A,
+	BikeManager_U3CStartU3Eb__98_3_m8888542E916FC10C37E0A023F740D40C3F657236,
+	BikeManager_U3CStartU3Eb__98_4_m2CC5F331C5514FF2A6D3F6C730DB87FFAE33CE60,
+	BikeManager_U3CStartU3Eb__98_5_mC0661408B35205BE7CC19256D36BD266832E0EE3,
+	BikeManager_U3CStartU3Eb__98_6_m9F927B0A76D50C1A8F6DF9F288DF4950D3E20D3F,
+	BikeManager_U3CStartU3Eb__98_7_m6A03B421E0F81652B570E8C8708DA693A33C48F4,
+	BikeManager_U3CStartU3Eb__98_8_m9CF0C5DAB2EAD58619E2F5C4E212EB3B5C500161,
+	BikeManager_U3CStartU3Eb__98_9_mB33D9C582AD873855A3500DDFB8141FCC0CFFCCD,
+	BikeManager_U3CStartU3Eb__98_10_m2047071CA6724738E4C7850754900630A3C2375E,
+	BikeManager_U3ConServicesDiscoveredU3Eb__106_0_mD7995457C540141B41653AB4485EDD3FBAD2F597,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_0_m5F0907F06FB97FCC2E59426E602476334A58AD01,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_1_m93DAE7445055D318C1399D354B9DECE3B668E6DE,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_2_mFC6A9783E3633D927F20EB053736F112221A98E6,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_3_m3EFC60685A4AB8C3AEE8DF13058EE310D947E4A9,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_4_m4A6724C14BCC4C6BA82CEE37DCE415E7B26A3FA0,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_5_m013D9F1B4508E437C2F9A0D224DAD58CC14C5437,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_6_m73B8B3B497979BA058840BFB67542DCCE2228E68,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_7_m382D3EB8DD89FB06EE3E02CDE488967804ADDCD8,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_8_m31C1D0973090ACAC64364A2103795D489D9C5B84,
+	BikeManager_U3CgetStartupInfoRoutineU3Eb__107_9_m0AFF94D9404E3B0CBC62CCF579D9211F56FA58E0,
 	BikeNotification__ctor_mDAB2DDB388D1F42A6C85FF2775F54DA57C9D3FB6,
 	BikeNotification_dataIsNotification_m3EEFB220A75E85496B907B37569308557EE8A8B0,
 	BikeNotification_ToString_m03A7EAB72CEEED4B05E24A5160321658AAEF6221,
 	U3CU3Ec__cctor_mB8820353BD8AB96927BFE96420C9D00DABC217D0,
 	U3CU3Ec__ctor_mA94EF8086F7B1619E26C6AB6476569E11C558FC7,
-	U3CU3Ec_U3CStartU3Eb__99_1_m7A7B9E8DE53D86C0B189396FDB89459D42CB35A8,
-	U3CsetThemeRoutineU3Ed__100__ctor_m089BE04891B93219BB1363B26C0B2599897DD2BC,
-	U3CsetThemeRoutineU3Ed__100_System_IDisposable_Dispose_m18A3336104B8D244F9E9E21EABA773DAFD420307,
-	U3CsetThemeRoutineU3Ed__100_MoveNext_m6F7B39585024BDE396FCA4ADCB15561DF994C011,
-	U3CsetThemeRoutineU3Ed__100_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m630628230ECB75CE108BA9B8B1BD6849039AC88F,
-	U3CsetThemeRoutineU3Ed__100_System_Collections_IEnumerator_Reset_m1A159B9075C5FF616C7648D4D581C32F8A0B0C86,
-	U3CsetThemeRoutineU3Ed__100_System_Collections_IEnumerator_get_Current_m3355053B6A7988350B864D819B5F232E3254FC77,
-	U3CscanRoutineU3Ed__103__ctor_mBE78BF22823D9B74369E83932C6A871C68132387,
-	U3CscanRoutineU3Ed__103_System_IDisposable_Dispose_m03C7DE81F87F039756B257030BAA0D511264F3A4,
-	U3CscanRoutineU3Ed__103_MoveNext_m5732ADEFFC609095C916C03F764B634923ACA18C,
-	U3CscanRoutineU3Ed__103_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFC08704DA67553AF1F7938A512D8090FDC5CF5E7,
-	U3CscanRoutineU3Ed__103_System_Collections_IEnumerator_Reset_m39A7588BDCA378B1FA0DD04AFF6710CB912A61FE,
-	U3CscanRoutineU3Ed__103_System_Collections_IEnumerator_get_Current_m1D1810FC1CCADDBDA5D6FC45D3093131DB3B3E6F,
-	U3CgetStartupInfoRoutineU3Ed__108__ctor_m327D4ABEDA36DD1AAC37D42D72F8DCCEA8CEDCF2,
-	U3CgetStartupInfoRoutineU3Ed__108_System_IDisposable_Dispose_m157A6406243AA585EBFB7760DDA55526D1CB8699,
-	U3CgetStartupInfoRoutineU3Ed__108_MoveNext_m0F9F711EE3BD2916B69550864F0AC5BC0F604EAE,
-	U3CgetStartupInfoRoutineU3Ed__108_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB2910FFA1AE09DEE05DC2F4747E0A24B54EDC542,
-	U3CgetStartupInfoRoutineU3Ed__108_System_Collections_IEnumerator_Reset_mB74A4F694191768018C8E2B74E9474850A1D7FB4,
-	U3CgetStartupInfoRoutineU3Ed__108_System_Collections_IEnumerator_get_Current_m674CADE24EB69FFA7A6C8BD3403B4BC2D5EDF00A,
+	U3CU3Ec_U3CStartU3Eb__98_1_m3530B4B89CCD88F5B3FDF28353B65CC754288452,
+	U3CsetThemeRoutineU3Ed__99__ctor_m8EF3595B57217A58C538B0849E083FE117D88877,
+	U3CsetThemeRoutineU3Ed__99_System_IDisposable_Dispose_mDDAA915D4DDEBE7FFD07B69F43BA57253FFB4F5E,
+	U3CsetThemeRoutineU3Ed__99_MoveNext_m5A5AD48C42D5D8944C548C418EBA988FBE2FC5D6,
+	U3CsetThemeRoutineU3Ed__99_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDF1535C24E5A14AE685BF88A3E6A9540F74713C5,
+	U3CsetThemeRoutineU3Ed__99_System_Collections_IEnumerator_Reset_m1BE402911217D66FBCF6E0EDFE420899E2FC1719,
+	U3CsetThemeRoutineU3Ed__99_System_Collections_IEnumerator_get_Current_m1273B8ADBD6D3EC366959F11A223B2CA917FDC85,
+	U3CscanRoutineU3Ed__102__ctor_m129142B12ABAC538A288AB6D56702CF5D16B3F35,
+	U3CscanRoutineU3Ed__102_System_IDisposable_Dispose_mCF74E782860FC80EB04CA8D26E6BB4A2E53BD509,
+	U3CscanRoutineU3Ed__102_MoveNext_m4DB649C4AFFD5E1F32973C8808E5229BA697386E,
+	U3CscanRoutineU3Ed__102_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEC8DB15DC153977B588BA9342DC33E8C0360DDB2,
+	U3CscanRoutineU3Ed__102_System_Collections_IEnumerator_Reset_m3A09278921A33C3BC3E621D285DE8FBA474C334B,
+	U3CscanRoutineU3Ed__102_System_Collections_IEnumerator_get_Current_m5CE716A67CFB4017B26BC21B0AAAFD652677191F,
+	U3CgetStartupInfoRoutineU3Ed__107__ctor_mF9EE9644BD162F12C11D35BDC75F03F32C132B6A,
+	U3CgetStartupInfoRoutineU3Ed__107_System_IDisposable_Dispose_mB06039873842BCBD2A9AE51704CC36638E200D9D,
+	U3CgetStartupInfoRoutineU3Ed__107_MoveNext_m49BB69726A0491C2D3234D6B68CDF52D3329B6B6,
+	U3CgetStartupInfoRoutineU3Ed__107_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m521C98BC708A81F2B82F0396269BA2CAFAEE7D35,
+	U3CgetStartupInfoRoutineU3Ed__107_System_Collections_IEnumerator_Reset_m2245E4752DF0A8600105BC1B0FD554868B300726,
+	U3CgetStartupInfoRoutineU3Ed__107_System_Collections_IEnumerator_get_Current_m250CD911E37A6F2417ED20316BDA9DB491ED6042,
 	BikeState_Awake_m215A48389DC48A0E01D4462C91561F20FDFB53E8,
 	BikeState_getDeviceName_mFBF2B5C78DFA710C85187A436714E9E64F3CB963,
 	BikeState_getManufaturerName_mFBCFA41297F7AE69857F459D77FC9395EE81B430,
@@ -693,12 +691,11 @@ static Il2CppMethodPointer s_methodPointers[247] =
 	UpdateAndroidLib__ctor_m0A6EDD2FDD19F2B0B6DC2D3EB9CC8BB9753B1A27,
 	PrefsOverlay_Start_mB5BE5DE0CC979E71D2F8F741AC94EBA3E13B07F4,
 	PrefsOverlay__ctor_m9C898BA525173BFE4507DD3DAECF8D2F52570152,
-	PrefsOverlay_U3CStartU3Eb__6_0_mEAE746C82060FEF5CC289347C52CED20BB862B3B,
-	PrefsOverlay_U3CStartU3Eb__6_1_m9D91B79F8B2011000AFCC58BCBCE62845C7530CC,
-	PrefsOverlay_U3CStartU3Eb__6_2_mB1EF41E6FC37862FF7967D6452FE6B28FDB5C622,
-	PrefsOverlay_U3CStartU3Eb__6_3_m0BEB6172975B546E79EDF33C03A9BAB76FD56980,
-	PrefsOverlay_U3CStartU3Eb__6_4_mFF0A54CF1D323154820690701F5AB2F7F3C4D51D,
-	PrefsOverlay_U3CStartU3Eb__6_5_mBBE6E66F5B15F6AF89BE53D4FE57C877055C493E,
+	PrefsOverlay_U3CStartU3Eb__5_0_mB19C546D3F92A198718F1D89D9802C7CA904B6BD,
+	PrefsOverlay_U3CStartU3Eb__5_1_m45EA8EF48504337B53FDC10F7F8D13FB789AC63F,
+	PrefsOverlay_U3CStartU3Eb__5_2_mBCAE39FC4AD740D0DDE86C328B289E5D9B09F32C,
+	PrefsOverlay_U3CStartU3Eb__5_3_m3B35FF52CB9CAFD9FFE6CD795D364D6382A695FA,
+	PrefsOverlay_U3CStartU3Eb__5_4_m5F0C53136F6A83AF00931FCDE9241DC6287CEAB4,
 	DeviceLine_set_mDFC8EDF332B9D7AC14971452751359E68750A2EA,
 	DeviceLine__ctor_m2FA3D847B099D6439256F84F643231857C8864A6,
 	U3CU3Ec__DisplayClass4_0__ctor_m86919AE88A49EE868424E01D6788FF68EA1B3B67,
@@ -758,9 +755,9 @@ static Il2CppMethodPointer s_methodPointers[247] =
 extern void Matrix2x3__ctor_m2F844612BA97BB76F8362F98C5956800F8A29E08_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x060000E4, Matrix2x3__ctor_m2F844612BA97BB76F8362F98C5956800F8A29E08_AdjustorThunk },
+	{ 0x060000E3, Matrix2x3__ctor_m2F844612BA97BB76F8362F98C5956800F8A29E08_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[247] = 
+static const int32_t s_InvokerIndices[246] = 
 {
 	3477,
 	3477,
@@ -954,7 +951,6 @@ static const int32_t s_InvokerIndices[247] =
 	2817,
 	2817,
 	2817,
-	2817,
 	3477,
 	3477,
 	3477,
@@ -1014,7 +1010,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	247,
+	246,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

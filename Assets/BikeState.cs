@@ -222,11 +222,11 @@ public class BikeState : MonoBehaviour {
     }
 
     public string getReadableBatteryChargeCurrent() {
-        return getBatteryChargeCurrent().ToString("0.000");
+        return getBatteryChargeCurrent().ToString("0.00");
     }
 
     public string getReadableBatteryLevel() {
-        return Mathf.RoundToInt(getBatteryLevel()).ToString();
+        return Mathf.RoundToInt(getBatteryLevel()*100f).ToString();
     }
 
     public bool getCharging() {
@@ -243,7 +243,6 @@ public class BikeState : MonoBehaviour {
     }
 
     public bool getLimp() {
-        return false;
         return batteryVolt < 41f;
     }
 
@@ -302,7 +301,6 @@ public class BikeState : MonoBehaviour {
     }
 
     bool processPowerData(byte[] data) {
-        batteryVolt = ((float)data[2] + (float)data[3] * 256f); //BitConverter.ToUInt16(new byte[] { data[2], data[3] });
         batteryChargeCurrent = BitConverter.ToUInt16(new byte[] { data[6], data[7] }) / 1000f;
         return false;
     }
@@ -317,11 +315,11 @@ public class BikeState : MonoBehaviour {
     }
 
     void batteryLevelFromRawRange() {
-        batteryLevel = (rawRange / PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM")) * 100f;
+        batteryLevel = Mathf.Clamp01(rawRange / PlayerPrefs.GetFloat("BASE_MAX_RANGE_KM"));
     }
 
     void batteryVoltageFromBatteryLevel() {
-        batteryVolt = BikeManager.instance.dischargeCurve.Evaluate(batteryLevel);
+        batteryVolt = BikeManager.instance.dischargeCurve.Evaluate(Mathf.Clamp01(batteryLevel)) * PlayerPrefs.GetFloat("CELL_S_COUNT");
     }
 
     //OTHER
