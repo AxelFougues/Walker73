@@ -503,7 +503,11 @@ extern void ThemedSprite__ctor_mB6319EC42F07CD1CE9E7FC05C3B51DE893BFA434 (void);
 extern void ThemedText_applyTheme_m7290C652C36E1889E31964A5740C2BB76677F576 (void);
 // 0x000000F6 System.Void ThemedText::.ctor()
 extern void ThemedText__ctor_m89752E2639616ED9D9D989A143C30F4585FB0248 (void);
-static Il2CppMethodPointer s_methodPointers[246] = 
+// 0x000000F7 System.Void VersionText::Start()
+extern void VersionText_Start_m69C91A42119BC80699EECA1F43D91F2A35B337C1 (void);
+// 0x000000F8 System.Void VersionText::.ctor()
+extern void VersionText__ctor_mA6B50DB797DF2CB063B98E6237E63AF96BEFDBC8 (void);
+static Il2CppMethodPointer s_methodPointers[248] = 
 {
 	BikeManager_Awake_mC46FC3E98B8827E5ED80C0AF400FAC93BF95CCA5,
 	BikeManager_OnEnable_mFBD1D5AC31C64C71096A199C7256D784AFC852B1,
@@ -751,13 +755,15 @@ static Il2CppMethodPointer s_methodPointers[246] =
 	ThemedSprite__ctor_mB6319EC42F07CD1CE9E7FC05C3B51DE893BFA434,
 	ThemedText_applyTheme_m7290C652C36E1889E31964A5740C2BB76677F576,
 	ThemedText__ctor_m89752E2639616ED9D9D989A143C30F4585FB0248,
+	VersionText_Start_m69C91A42119BC80699EECA1F43D91F2A35B337C1,
+	VersionText__ctor_mA6B50DB797DF2CB063B98E6237E63AF96BEFDBC8,
 };
 extern void Matrix2x3__ctor_m2F844612BA97BB76F8362F98C5956800F8A29E08_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
 	{ 0x060000E3, Matrix2x3__ctor_m2F844612BA97BB76F8362F98C5956800F8A29E08_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[246] = 
+static const int32_t s_InvokerIndices[248] = 
 {
 	3477,
 	3477,
@@ -1005,12 +1011,14 @@ static const int32_t s_InvokerIndices[246] =
 	3477,
 	2817,
 	3477,
+	3477,
+	3477,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	246,
+	248,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

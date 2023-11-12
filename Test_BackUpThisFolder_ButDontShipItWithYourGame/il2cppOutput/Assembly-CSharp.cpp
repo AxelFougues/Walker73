@@ -445,6 +445,8 @@ struct UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7;
 struct UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977;
 // UpdateAndroidLib
 struct UpdateAndroidLib_t2148D519B61D9123ABBCF1A39B2EDFC2598FA666;
+// VersionText
+struct VersionText_tB956430E3D78C256C053002BDE08240A116B5362;
 // UnityEngine.UI.VertexHelper
 struct VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE;
 // System.Void
@@ -591,6 +593,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral3463DA4BFE7371BE5AC7127107E20BA06ECCDB66
 IL2CPP_EXTERN_C String_t* _stringLiteral3ACC4CC1ADEC59220C31AAE3AEFE4D604CB500A9;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
 IL2CPP_EXTERN_C String_t* _stringLiteral3D43DF74797DFF0D83D8893007B6A02F0C30F090;
+IL2CPP_EXTERN_C String_t* _stringLiteral3E321812348924F7AA224F948AC80E9E5A7841FE;
 IL2CPP_EXTERN_C String_t* _stringLiteral3EBE2B6FCD45790E33ED18CC89F249FAA8BF371A;
 IL2CPP_EXTERN_C String_t* _stringLiteral3EE6FC8EA5E51DD58258E457E93BA382764F7E37;
 IL2CPP_EXTERN_C String_t* _stringLiteral44DC795B82CA633B7F62BD1359979D340878C2EE;
@@ -3562,6 +3565,17 @@ struct UpdateAndroidLib_t2148D519B61D9123ABBCF1A39B2EDFC2598FA666  : public Mono
 	String_t* ___localLibPath_6;
 };
 
+// VersionText
+struct VersionText_tB956430E3D78C256C053002BDE08240A116B5362  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// TMPro.TMP_Text VersionText::text
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___text_4;
+	// System.String VersionText::prefix
+	String_t* ___prefix_5;
+	// System.String VersionText::sufix
+	String_t* ___sufix_6;
+};
+
 // UnityEngine.UI.BaseMeshEffect
 struct BaseMeshEffect_t87C453D6DAE52C072B2E613F65A5FE45C9B3990D  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
 {
@@ -5828,6 +5842,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThemedElement__ctor_m673D306B3C7AFDC642FC5C0AB4DAE4A8F753EF63 (ThemedElement_t9B23725E5CA349B8770294CC22AF81F45D86F2C6* __this, const RuntimeMethod* method) ;
 // UnityEngine.Color ThemedElement::getColor(UnityEngine.Color,Theme)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ThemedElement_getColor_m8963D1312EE8A5C5606B5273F8D81E77F3AC752E (ThemedElement_t9B23725E5CA349B8770294CC22AF81F45D86F2C6* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___original0, Theme_tB91F583874A5EA696DB8E8E2B24B02E62C5DB25E* ___theme1, const RuntimeMethod* method) ;
+// System.String UnityEngine.Application::get_version()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_version_mD6AC9813ABCAD4D2A1F764F99E26068CA5B830F2 (const RuntimeMethod* method) ;
 // System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___r0, float ___g1, float ___b2, float ___a3, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Color32::.ctor(System.Byte,System.Byte,System.Byte,System.Byte)
@@ -19310,6 +19326,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThemedText__ctor_m89752E2639616ED9D9D989
 {
 	{
 		ThemedElement__ctor_m673D306B3C7AFDC642FC5C0AB4DAE4A8F753EF63(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void VersionText::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VersionText_Start_m69C91A42119BC80699EECA1F43D91F2A35B337C1 (VersionText_tB956430E3D78C256C053002BDE08240A116B5362* __this, const RuntimeMethod* method) 
+{
+	{
+		// text.text = prefix + Application.version + sufix;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___text_4;
+		String_t* L_1 = __this->___prefix_5;
+		String_t* L_2;
+		L_2 = Application_get_version_mD6AC9813ABCAD4D2A1F764F99E26068CA5B830F2(NULL);
+		String_t* L_3 = __this->___sufix_6;
+		String_t* L_4;
+		L_4 = String_Concat_m9B13B47FCB3DF61144D9647DDA05F527377251B0(L_1, L_2, L_3, NULL);
+		NullCheck(L_0);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, L_4);
+		// }
+		return;
+	}
+}
+// System.Void VersionText::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VersionText__ctor_mA6B50DB797DF2CB063B98E6237E63AF96BEFDBC8 (VersionText_tB956430E3D78C256C053002BDE08240A116B5362* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3E321812348924F7AA224F948AC80E9E5A7841FE);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// [SerializeField] string prefix = "v ";
+		__this->___prefix_5 = _stringLiteral3E321812348924F7AA224F948AC80E9E5A7841FE;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___prefix_5), (void*)_stringLiteral3E321812348924F7AA224F948AC80E9E5A7841FE);
+		// [SerializeField] string sufix = "";
+		__this->___sufix_6 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___sufix_6), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }

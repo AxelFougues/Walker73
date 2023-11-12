@@ -79,7 +79,7 @@ public class BikeState : MonoBehaviour {
     double pedalRPM = 0f;
 
     ushort rawRange = 0;
-    float batteryLevel = 100;
+    float batteryLevel = 0;
     float batteryVolt = 0;
     float batteryChargeCurrent = 0;
     float range = 0;
