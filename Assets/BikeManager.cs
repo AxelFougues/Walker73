@@ -108,7 +108,7 @@ public class BikeManager : MonoBehaviour {
     public GameObject brakesGraphic;
     public GameObject indicatorsSideBar;
     [Space]
-    public Button modeButton;
+    public HoldButton modeButton;
     public TMP_Text modeText;
     public TMP_Text modeDescriptorNameText;
     public TMP_Text modeDescriptorSpeedText;
@@ -253,10 +253,14 @@ public class BikeManager : MonoBehaviour {
             scan();
         });
         //
-        modeButton.onClick.AddListener(delegate {
+        modeButton.onHold += delegate {
+            modeText.text = currentBikeState.setMode(4).ToString();
+            applySettings();
+        };
+        modeButton.onClick += delegate {
             modeText.text = currentBikeState.changeMode().ToString();
             applySettings();
-        });
+        };
         //
         assistButton.onClick.AddListener(delegate {
             assistText.text = currentBikeState.changeAssist().ToString();

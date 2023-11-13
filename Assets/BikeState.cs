@@ -121,6 +121,12 @@ public class BikeState : MonoBehaviour {
     public bool getModeDescriptorThrottle() { return modeDescriptorsThrottle[mode]; }
     public string getModeDescriptorThrottleReadable() { return getModeDescriptorThrottle()? "ENABLED": "DISABLED"; }
 
+    public int setMode(int mode, bool save = true) {
+        this.mode = Mathf.Clamp(mode, 0, MAX_MODE);
+        if (save) PlayerPrefs.SetInt("mode", mode);
+        return mode;
+    }
+
     public int changeMode(bool save = true) {
         mode++;
         if (mode > MAX_MODE) mode = 0;

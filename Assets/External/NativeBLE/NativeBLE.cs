@@ -76,7 +76,6 @@ public class NativeBLE : MonoBehaviour{
         }
 
         androidTheme = getDeviceTheme();
-        Debug.Log(androidTheme);
     }
 
     public static ConnectedDevice getConnectedDevice() {
