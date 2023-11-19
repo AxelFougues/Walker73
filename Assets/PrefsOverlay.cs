@@ -14,6 +14,7 @@ public class PrefsOverlay : MonoBehaviour{
     public Button closeButton;
 
     private void Start() {
+
         closeButton.onClick.AddListener(delegate {
             gameObject.SetActive(false);
             BikeManager.instance.applySettings();

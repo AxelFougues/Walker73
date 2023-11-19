@@ -178,6 +178,8 @@ public class BikeManager : MonoBehaviour {
     private void Awake() {
         DontDestroyOnLoad(this);
         instance = this;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        Application.runInBackground = true;
         //Base Prefs
 
         if (!PlayerPrefs.HasKey("PEDAL_DIAMETRER_M")) PlayerPrefs.SetFloat("PEDAL_DIAMETRER_M", PEDAL_DIAMETRER_M);

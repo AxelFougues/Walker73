@@ -5120,6 +5120,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_AddListener_m05523324671470
 
 // System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m303AA1C4DC810349F285B4809E426CBBA8F834F9 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___target0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Screen::set_sleepTimeout(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_set_sleepTimeout_m82D427509929D2F21494141B9BE5D3E3CE96A22A (int32_t ___value0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Application::set_runInBackground(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_set_runInBackground_mF66D0FBF81A7EB10E9EB64666E02F1FF488D8C70 (bool ___value0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_HasKey_m9EB15A18BE611107251F2E2F6CE70636F88CAB5F (String_t* ___key0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.PlayerPrefs::SetFloat(System.String,System.Single)
@@ -5548,6 +5552,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float BikeState_getBatteryVolt_m9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D (float* __this, String_t* ___format0, const RuntimeMethod* method) ;
 // System.Single BikeState::getBatteryChargeCurrent()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float BikeState_getBatteryChargeCurrent_mF55A4BA218D0ADDF1C8EEC5BF942EA536BE79A5E_inline (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
+// System.Single UnityEngine.PlayerPrefs::GetFloat(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float PlayerPrefs_GetFloat_mF682C7FE84BAE6EED61B6623E7D4458ECDDBE896 (String_t* ___key0, const RuntimeMethod* method) ;
 // System.Single BikeState::getRange()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float BikeState_getRange_m6E16DA709455E217274B5D41FEAFFD36E67EF42A (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
 // System.Boolean BikeState::dataIsId(System.Byte[],System.Byte[])
@@ -5577,8 +5583,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState_rangeFromRawRange_m596BC99507F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState_batteryLevelFromRawRange_m050FEA50B3D2070181C15C2015C4B2C07754805B (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
 // System.Void BikeState::batteryVoltageFromBatteryLevel()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeState_batteryVoltageFromBatteryLevel_m2CF8FAC70A8CE557B593CB5D322217DDC0043723 (BikeState_tD2B5E928A658CBDAFD20BC4999D689200CCA682E* __this, const RuntimeMethod* method) ;
-// System.Single UnityEngine.PlayerPrefs::GetFloat(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float PlayerPrefs_GetFloat_mF682C7FE84BAE6EED61B6623E7D4458ECDDBE896 (String_t* ___key0, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_m154E404AF275A3B2EC99ECAA3879B4CB9F0606DC_inline (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Mathf::Clamp01(System.Single)
@@ -6037,6 +6041,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Awake_mC46FC3E98B8827E5ED80C
 		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
 		((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___instance_4 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___instance_4), (void*)__this);
+		// Screen.sleepTimeout = SleepTimeout.NeverSleep;
+		Screen_set_sleepTimeout_m82D427509929D2F21494141B9BE5D3E3CE96A22A((-1), NULL);
+		// Application.runInBackground = true;
+		Application_set_runInBackground_mF66D0FBF81A7EB10E9EB64666E02F1FF488D8C70((bool)1, NULL);
 		// if (!PlayerPrefs.HasKey("PEDAL_DIAMETRER_M")) PlayerPrefs.SetFloat("PEDAL_DIAMETRER_M", PEDAL_DIAMETRER_M);
 		bool L_0;
 		L_0 = PlayerPrefs_HasKey_m9EB15A18BE611107251F2E2F6CE70636F88CAB5F(_stringLiteral087F3D3F658DEFBCA6AB0168219D13FB0249191D, NULL);
@@ -6044,7 +6052,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Awake_mC46FC3E98B8827E5ED80C
 		bool L_1 = V_0;
 		if (!L_1)
 		{
-			goto IL_002f;
+			goto IL_003d;
 		}
 	}
 	{
@@ -6054,7 +6062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager_Awake_mC46FC3E98B8827E5ED80C
 		PlayerPrefs_SetFloat_m91048D03E901CC01EAD6FEF8F27148F9D2D72DBF(_stringLiteral087F3D3F658DEFBCA6AB0168219D13FB0249191D, L_2, NULL);
 	}
 
-IL_002f:
+IL_003d:
 	{
 		// if (!PlayerPrefs.HasKey("WHEEL_DIAMETRER_M")) PlayerPrefs.SetFloat("WHEEL_DIAMETRER_M", WHEEL_DIAMETRER_M);
 		bool L_3;
@@ -6063,7 +6071,7 @@ IL_002f:
 		bool L_4 = V_1;
 		if (!L_4)
 		{
-			goto IL_0050;
+			goto IL_005e;
 		}
 	}
 	{
@@ -6073,7 +6081,7 @@ IL_002f:
 		PlayerPrefs_SetFloat_m91048D03E901CC01EAD6FEF8F27148F9D2D72DBF(_stringLiteral6C105931798A6E0F4CDF5C0CEBB6A065309F5C11, L_5, NULL);
 	}
 
-IL_0050:
+IL_005e:
 	{
 		// if (!PlayerPrefs.HasKey("CELL_S_COUNT")) PlayerPrefs.SetFloat("CELL_S_COUNT", CELL_S_COUNT);
 		bool L_6;
@@ -6082,7 +6090,7 @@ IL_0050:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0071;
+			goto IL_007f;
 		}
 	}
 	{
@@ -6092,7 +6100,7 @@ IL_0050:
 		PlayerPrefs_SetFloat_m91048D03E901CC01EAD6FEF8F27148F9D2D72DBF(_stringLiteral93A6494116988A27CCCCAAE7A324E67C3DB3F7B0, L_8, NULL);
 	}
 
-IL_0071:
+IL_007f:
 	{
 		// if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
 		bool L_9;
@@ -6101,7 +6109,7 @@ IL_0071:
 		bool L_10 = V_3;
 		if (!L_10)
 		{
-			goto IL_0092;
+			goto IL_00a0;
 		}
 	}
 	{
@@ -6111,7 +6119,7 @@ IL_0071:
 		PlayerPrefs_SetFloat_m91048D03E901CC01EAD6FEF8F27148F9D2D72DBF(_stringLiteral6190C8C58AB0CADDD1FF4AF35BEDE29299F25F2F, L_11, NULL);
 	}
 
-IL_0092:
+IL_00a0:
 	{
 		// if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
 		bool L_12;
@@ -6120,7 +6128,7 @@ IL_0092:
 		bool L_13 = V_4;
 		if (!L_13)
 		{
-			goto IL_00b5;
+			goto IL_00c3;
 		}
 	}
 	{
@@ -6130,7 +6138,7 @@ IL_0092:
 		PlayerPrefs_SetFloat_m91048D03E901CC01EAD6FEF8F27148F9D2D72DBF(_stringLiteralDDF93BDF210E9E295C20672F087C9A8993190874, L_14, NULL);
 	}
 
-IL_00b5:
+IL_00c3:
 	{
 		// if (!PlayerPrefs.HasKey("CHARGE_CURRENT_THRESHOLD")) PlayerPrefs.SetFloat("CHARGE_CURRENT_THRESHOLD", CHARGE_CURRENT_THRESHOLD);
 		bool L_15;
@@ -6139,7 +6147,7 @@ IL_00b5:
 		bool L_16 = V_5;
 		if (!L_16)
 		{
-			goto IL_00d8;
+			goto IL_00e6;
 		}
 	}
 	{
@@ -6149,7 +6157,7 @@ IL_00b5:
 		PlayerPrefs_SetFloat_m91048D03E901CC01EAD6FEF8F27148F9D2D72DBF(_stringLiteral5855772980F5A1632639F59CB87407E8C0F38E88, L_17, NULL);
 	}
 
-IL_00d8:
+IL_00e6:
 	{
 		// }
 		return;
@@ -9233,8 +9241,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BikeManager__cctor_m595BD005278BCCCDF9A7
 		((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___BASE_MAX_RANGE_KM_8 = (60.0f);
 		// public static float REAL_MAX_RANGE_KM = 60f;
 		((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___REAL_MAX_RANGE_KM_9 = (60.0f);
-		// public static float CHARGE_CURRENT_THRESHOLD = 0.2f;
-		((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___CHARGE_CURRENT_THRESHOLD_10 = (0.200000003f);
+		// public static float CHARGE_CURRENT_THRESHOLD = 2f;
+		((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___CHARGE_CURRENT_THRESHOLD_10 = (2.0f);
 		// public static byte[] MYSTERY_ID = { 0x00, 0x00 };
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)2);
 		((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___MYSTERY_ID_11 = L_0;
@@ -12532,20 +12540,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BikeState_getCharging_m7DC868847267FED6A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5855772980F5A1632639F59CB87407E8C0F38E88);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	{
-		// return batteryChargeCurrent >= BikeManager.CHARGE_CURRENT_THRESHOLD;
+		// return batteryChargeCurrent >= PlayerPrefs.GetFloat("CHARGE_CURRENT_THRESHOLD");
 		float L_0 = __this->___batteryChargeCurrent_23;
-		il2cpp_codegen_runtime_class_init_inline(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var);
-		float L_1 = ((BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_StaticFields*)il2cpp_codegen_static_fields_for(BikeManager_tFCF82DDB0EF9D94BDBD97B797DC09DBDFAA7AD3D_il2cpp_TypeInfo_var))->___CHARGE_CURRENT_THRESHOLD_10;
+		float L_1;
+		L_1 = PlayerPrefs_GetFloat_mF682C7FE84BAE6EED61B6623E7D4458ECDDBE896(_stringLiteral5855772980F5A1632639F59CB87407E8C0F38E88, NULL);
 		V_0 = (bool)((((int32_t)((!(((float)L_0) >= ((float)L_1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0014;
+		goto IL_0019;
 	}
 
-IL_0014:
+IL_0019:
 	{
 		// }
 		bool L_2 = V_0;

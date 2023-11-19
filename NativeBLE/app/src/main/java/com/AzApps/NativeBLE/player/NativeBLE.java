@@ -32,8 +32,11 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.ParcelUuid;
+import android.os.PowerManager;
 import android.provider.Settings;
 import android.view.ContextThemeWrapper;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -60,6 +63,7 @@ public class NativeBLE extends UnityPlayerActivity {
     private BluetoothLeScanner bluetoothLeScanner;
     private boolean scanning;
     private final Handler handler = new Handler();
+    private PowerManager.WakeLock wakeLock;
 
     private static final long SCAN_PERIOD = 5000;
 
@@ -68,24 +72,14 @@ public class NativeBLE extends UnityPlayerActivity {
     BluetoothGatt bluetoothGatt;
 
     //ACTIVITY LIFECYCLE
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initialize();
     }
-/*
-//These don't seem necessary
 
-    public void onPause() {
-        super.onPause();
-        Toast.makeText(this, "Pause", Toast.LENGTH_SHORT).show();
-    }
 
-    public void onResume() {
-        super.onResume();
-        Toast.makeText(this, "Resume", Toast.LENGTH_SHORT).show();
-    }
-*/
 
     @SuppressLint("UnspecifiedImmutableFlag")
     void initialize() {
