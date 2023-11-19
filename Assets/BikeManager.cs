@@ -14,7 +14,7 @@ public class BikeManager : MonoBehaviour {
     public static float CELL_S_COUNT = 13;
     public static float BASE_MAX_RANGE_KM = 60f;
     public static float REAL_MAX_RANGE_KM = 60f;
-    public static float CHARGE_CURRENT_THRESHOLD = 0.2f;
+    public static float CHARGE_CURRENT_THRESHOLD = 2f;
 
     public static byte[] MYSTERY_ID = { 0x00, 0x00 };
     public static byte[] MOTION_ID = { 0x02, 0x01 };

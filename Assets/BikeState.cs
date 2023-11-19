@@ -236,7 +236,7 @@ public class BikeState : MonoBehaviour {
     }
 
     public bool getCharging() {
-        return batteryChargeCurrent >= BikeManager.CHARGE_CURRENT_THRESHOLD;
+        return batteryChargeCurrent >= PlayerPrefs.GetFloat("CHARGE_CURRENT_THRESHOLD");
     }
 
     public float getRange() {
