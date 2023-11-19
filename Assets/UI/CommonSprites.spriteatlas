@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CommonSprites
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a023243844eb9e14cbd701727f8e3451, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 7b9a31503bfce7149af5deaff833b6f5, type: 3}
+  - {fileID: 21300000, guid: f86e8481ff5fbb847be3589364bf0966, type: 3}
+  - {fileID: 21300000, guid: 1096cba1dd4349f4ca1f1a86caeac087, type: 3}
+  - {fileID: 21300000, guid: 6e5a2532e3393894ea8deb30c6f81702, type: 3}
+  - {fileID: 21300000, guid: 43f5fd62fd1826c499e42648e248c769, type: 3}
+  - {fileID: 21300000, guid: 48ca25836de3348499ad86d7e6c2ac57, type: 3}
+  - {fileID: 21300000, guid: 9a2e35742efc9584b96f12aad0bdd187, type: 3}
+  - {fileID: 21300000, guid: f55bfe35e14835a4c9801d0cdb1c96b2, type: 3}
+  - {fileID: 21300000, guid: cf94d316b04b11c4c8bf93465d60ec1b, type: 3}
+  - {fileID: 21300000, guid: 97aed376e85abe64aa18c8a7b5a2c908, type: 3}
+  - {fileID: 21300000, guid: 219ea9766111a4f41a57e565699a5782, type: 3}
+  - {fileID: 21300000, guid: dbedc38651081514789df4fe8124a0da, type: 3}
+  - {fileID: 21300000, guid: 8f3cebc60b6ba834b911419810414345, type: 3}
+  - {fileID: 21300000, guid: 8965b3e6ec227904e93105b5c545792e, type: 3}
+  - {fileID: 21300000, guid: 5604dae65d72e9a46889f29f2970ffd1, type: 3}
+  - {fileID: 21300000, guid: fc683607a9f0bdf43aa198a668d56411, type: 3}
+  - {fileID: 21300000, guid: 7244217723b4e204ea74e11bfbd3e595, type: 3}
+  - {fileID: 21300000, guid: a967e68756e0fd249987761e6994dfe1, type: 3}
+  - {fileID: 21300000, guid: c7af8408ee536fb449e16976512fc4fb, type: 3}
+  - {fileID: 21300000, guid: f32c9b88b2a32d34a9040e8bba073171, type: 3}
+  - {fileID: 21300000, guid: 11f662f8f778a4749af60618b915cab7, type: 3}
+  - {fileID: 21300000, guid: 137134696c574cd4e8ba16fa52008869, type: 3}
+  - {fileID: 21300000, guid: c53a51c96766bab4a81d34022bb9feb0, type: 3}
+  - {fileID: 21300000, guid: 861dbee9814329f458c3fb71152de20d, type: 3}
+  - {fileID: 21300000, guid: 6590820aebb73d54c8b1725858f3ce38, type: 3}
+  - {fileID: 21300000, guid: 76ff767ab944caa40a4dbd5a7430e336, type: 3}
+  - {fileID: 21300000, guid: 7c6d818ac767d614fb81f21ad43bc2cd, type: 3}
+  - {fileID: 21300000, guid: bd17089a7ea6ec84ab5d27f8417ffa31, type: 3}
+  - {fileID: 21300000, guid: d4a357ea8c2666944be2b8fe642040a8, type: 3}
+  - {fileID: 21300000, guid: 8bf66ffb19d0a43448fac361eab81525, type: 3}
+  - {fileID: 21300000, guid: bd424f2c925226b4b97e040cb5994b6d, type: 3}
+  - {fileID: 21300000, guid: 9e50677c9c12b4842aa1060d8e4d89be, type: 3}
+  - {fileID: 21300000, guid: 12f5677c317a20f41a3a297be030c22e, type: 3}
+  - {fileID: 21300000, guid: 5dc3c48c9e4fa9540a50124cea27d947, type: 3}
+  - {fileID: 21300000, guid: aa55679cf36eda547a627ff8b3e22c8c, type: 3}
+  - {fileID: 21300000, guid: 32a20a6d8579ee647a1a84114f5046fd, type: 3}
+  - {fileID: 21300000, guid: 2551589df7eba8342adfb67a49a05baa, type: 3}
+  - {fileID: 21300000, guid: 286491bd7c9d7ef47887b93d477fc203, type: 3}
+  - {fileID: 21300000, guid: 14109ffda5b9e7048bd59dfee823df3f, type: 3}
+  - {fileID: 21300000, guid: 4619400ee875b17418f4ccc5e0e41872, type: 3}
+  - {fileID: 21300000, guid: c9213d3e947c7744ebc8f4c71cb5ce7f, type: 3}
+  - {fileID: 21300000, guid: 1baadf4e91c3f8d47a7faa1952c1999b, type: 3}
+  - {fileID: 21300000, guid: 3712127e02d041d4c89e6041d43fb157, type: 3}
+  - {fileID: 21300000, guid: 6fc5849f0f4b76f4a9ed3126f7af32b9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - sign-out
+  - bookmark
+  - motorbike
+  - 25
+  - dashboard
+  - night-mode
+  - Circle
+  - 0
+  - 75
+  - limp-battery
+  - CircleThickOutline
+  - brightness
+  - empty-battery
+  - info
+  - on
+  - ruler
+  - 50
+  - 100
+  - brake-disc
+  - settings
+  - send
+  - radio_button_checked_FILL0_wght700_GRAD0_opsz48
+  - pin
+  - dashboard (1)
+  - setting
+  - walkingOff
+  - racing
+  - RoundedCornersSingleSide
+  - off
+  - automation
+  - message-code
+  - flash
+  - parking
+  - RoundedCornersOutlineSingleSide
+  - code
+  - power
+  - FadedCorners
+  - refresh-page-option
+  - RoundedCornersOutline
+  - walking
+  - RoundedCorners
+  - sand-watch
+  - radio_button_unchecked_FILL0_wght700_GRAD0_opsz48
+  - sign-in
+  m_RenderDataMap: {}
+  m_Tag: CommonSprites
+  m_IsVariant: 0
