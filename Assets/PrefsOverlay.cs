@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PrefsOverlay : MonoBehaviour{
     public TMP_InputField wheelDiam;
     public TMP_InputField cellSCount;
+    public TMP_InputField chargeCurent;
     public TMP_InputField baseMaxRange;
     public TMP_InputField realMaxRange;
     [Space]
@@ -37,6 +38,17 @@ public class PrefsOverlay : MonoBehaviour{
             } else {
                 PlayerPrefs.SetFloat("CELL_S_COUNT", BikeManager.CELL_S_COUNT);
                 cellSCount.text = PlayerPrefs.GetFloat("CELL_S_COUNT").ToString();
+            }
+        });
+
+        chargeCurent.text = PlayerPrefs.GetFloat("CHARGE_CURRENT_THRESHOLD").ToString();
+        chargeCurent.onValueChanged.AddListener(delegate {
+            float newCurrent = -1;
+            if (float.TryParse(chargeCurent.text, out newCurrent) && newCurrent > 0) {
+                PlayerPrefs.SetFloat("CHARGE_CURRENT_THRESHOLD", newCurrent);
+            } else {
+                PlayerPrefs.SetFloat("CHARGE_CURRENT_THRESHOLD", BikeManager.CHARGE_CURRENT_THRESHOLD);
+                chargeCurent.text = PlayerPrefs.GetFloat("CHARGE_CURRENT_THRESHOLD").ToString();
             }
         });
 

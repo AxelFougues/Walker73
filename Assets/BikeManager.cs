@@ -14,6 +14,7 @@ public class BikeManager : MonoBehaviour {
     public static float CELL_S_COUNT = 13;
     public static float BASE_MAX_RANGE_KM = 60f;
     public static float REAL_MAX_RANGE_KM = 60f;
+    public static float CHARGE_CURRENT_THRESHOLD = 0.2f;
 
     public static byte[] MYSTERY_ID = { 0x00, 0x00 };
     public static byte[] MOTION_ID = { 0x02, 0x01 };
@@ -184,6 +185,7 @@ public class BikeManager : MonoBehaviour {
         if (!PlayerPrefs.HasKey("CELL_S_COUNT")) PlayerPrefs.SetFloat("CELL_S_COUNT", CELL_S_COUNT);
         if (!PlayerPrefs.HasKey("BASE_MAX_RANGE_KM")) PlayerPrefs.SetFloat("BASE_MAX_RANGE_KM", BASE_MAX_RANGE_KM);
         if (!PlayerPrefs.HasKey("REAL_MAX_RANGE_KM")) PlayerPrefs.SetFloat("REAL_MAX_RANGE_KM", REAL_MAX_RANGE_KM);
+        if (!PlayerPrefs.HasKey("CHARGE_CURRENT_THRESHOLD")) PlayerPrefs.SetFloat("CHARGE_CURRENT_THRESHOLD", CHARGE_CURRENT_THRESHOLD);
 
     }
 
