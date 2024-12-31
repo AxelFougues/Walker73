@@ -1,6 +1,6 @@
 ![Walker 73](https://github.com/AxelFougues/Walker73/blob/main/GithubGraphic.png?raw=true)
 
-Join the [SuperDuper discord](https://discord.gg/STvgARZYaw) friends and collaborators of W73.
+For support and more info join the [SuperDuper discord](https://discord.gg/STvgARZYaw), friends and collaborators of W73.
 
 Walker73 is an alternative open-source Bluetooth dashboard for e-bikes/scooters equipped with a Comodule Diamond Display.
 - Fast auto connects to your bike's Bluetooth
