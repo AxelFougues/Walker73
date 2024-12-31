@@ -54,3 +54,5 @@ The project is currently on Unity 2021.3.4f1 and is ready to build with the targ
 
 # Reverse engineering BLE
 See the [WIKI](https://github.com/AxelFougues/Walker73/wiki)
+
+[SuperDuper discord](https://discord.gg/STvgARZYaw) friends of W73.
